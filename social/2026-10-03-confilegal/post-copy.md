@@ -33,7 +33,7 @@ The column, in Spanish: https://confilegal.com/20260926-interpretacion-normativa
 
 Our founder, published in Madrid.
 
-Confilegal, Spain's news site for the legal profession, ran Adrian A. Holguin's column on a case every operator in a regulated industry should know.
+Confilegal, Spain's news site for the legal profession, ran a column by Adrian A. Holguin, founder of CannaShark Consulting and principal of Holguin & Company, on a case every operator in a regulated industry should know.
 
 A watch company was fined €133,251 for 515 cash payments. A court annulled it. Not because the argument was clever, but because every payment was on the books and traceable from origin to destination.
 
@@ -51,7 +51,7 @@ Story (1080×1920): add a link sticker to the column.
 
 Our founder, published in Madrid.
 
-Confilegal, Spain's news site for the legal profession, ran Adrian A. Holguin's column on Sept. 26. The case: a watch company fined €133,251 for 515 cash payments of exactly €1,000, and a court that annulled the fine because the company's reading of the rule was a reasonable mistake.
+Confilegal, Spain's news site for the legal profession, ran a column by Adrian A. Holguin, founder of CannaShark Consulting and principal of Holguin & Company, on Sept. 26. The case: a watch company fined €133,251 for 515 cash payments of exactly €1,000, and a court that annulled the fine because the company's reading of the rule was a reasonable mistake.
 
 It counted as reasonable because every payment was on the books and traceable. That is the same discipline we build for cannabis operators here: write the interpretation down before anyone asks, make every transaction traceable, and do it in the quiet weeks.
 
@@ -61,7 +61,7 @@ Column in Spanish: https://confilegal.com/20260926-interpretacion-normativa-traz
 
 ## Google Business Profile — landscape image, Learn more button to the column
 
-CannaShark founder Adrian A. Holguin was published in Confilegal, Spain's news site for the legal profession, based in Madrid. His column covers a court decision that annulled a €133,251 fine over 515 cash payments, and why the company's documented, traceable records made the difference. The same approach CannaShark builds for cannabis and regulated operators in the U.S.: write the interpretation down before anyone asks, make every transaction traceable, and do it before the inspection.
+Adrian A. Holguin, founder of CannaShark Consulting and principal of Holguin & Company, was published in Confilegal, Spain's news site for the legal profession, based in Madrid. His column covers a court decision that annulled a €133,251 fine over 515 cash payments, and why the company's documented, traceable records made the difference. The same approach CannaShark builds for cannabis and regulated operators in the U.S.: write the interpretation down before anyone asks, make every transaction traceable, and do it before the inspection.
 
 ---
 
