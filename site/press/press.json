@@ -3,7 +3,9 @@
     "name": "CannaShark Consulting",
     "legalName": "CannaShark Consulting, LLC",
     "url": "https://cannasharkconsulting.com",
-    "sameAs": ["https://linkedin.com/in/adrianholguin"],
+    "sameAs": [
+      "https://linkedin.com/in/adrianholguin"
+    ],
     "location": "Santa Clarita, California"
   },
   "author": {
@@ -25,15 +27,26 @@
       "outletUrl": "https://missouriindependent.com",
       "url": "https://missouriindependent.com/2026/10/02/missouri-tightened-the-rules-the-wait-still-leaves-microbusiness-owners-vulnerable/",
       "datePublished": "2026-10-02",
-      "summary": "Missouri's May 2026 microbusiness rules fixed the paperwork problem: they define majority ownership and operation, let regulators review ownership arrangements before a license issues, require a compliance course, and make the eligible owner the primary contact with the state. What no rule can remove is the gap between winning a license and opening, when a new licensee holds something valuable and has little experience defending it.",
+      "summary": "Missouri's May 2026 microbusiness rules are aimed at the right problem and stop just short of solving it. They spell out what it means to majority-own and operate a license, let regulators review ownership arrangements before a license issues, require a compliance course before applying and again after the award, and make eligible owners the primary point of contact with regulators. All of that reaches the contract. None of it reaches the wait between a winning draw and an open door, which is when somebody offers to carry the license for you.",
       "keyFacts": [
-        "Missouri drew its final round of microbusiness applicants on September 9, 2026.",
-        "The state received 888 applications and expects to issue roughly 77 licenses starting in December 2026.",
-        "The May 2026 rules require eligible owners to be the primary point of contact with regulators during the application, which limits how consultants can make themselves indispensable.",
-        "A first-round winner who opened the state's first microbusiness dispensary needed about two years to open, not the six months he expected.",
-        "The piece argues the most important protection for a new licensee is knowing when not to sign."
+        "Missouri drew its final round of marijuana microbusiness applicants on September 9, 2026. The state received 888 applications and expects to issue approximately 77 licenses beginning in December.",
+        "Forty-six licenses from the first two rounds are active but not yet approved to operate. As of August 18, 2026, only 21 microbusinesses were operating.",
+        "Jimi Poe, a first-round winner and the first to open a microbusiness dispensary, told the division's podcast it took him two years rather than the six months he expected.",
+        "Terms to watch for: equity that vests on signature rather than delivery, a management agreement wearing a consulting label, fees calculated on gross rather than net, and standard operating procedures that do not describe your building.",
+        "Lesley Turek, the division's chief equity officer, has advised licensees to run proposed agreements past the division so regulators can flag compliance problems. It costs nothing.",
+        "The most important protection for Missouri's newest cannabis entrepreneurs may not be another rule. It may be knowing when not to sign."
       ],
-      "topics": ["Missouri cannabis microbusiness program", "cannabis licensing", "predatory contracts", "license lottery", "compliance"]
+      "topics": [
+        "Missouri cannabis microbusiness program",
+        "cannabis licensing",
+        "predatory contracts",
+        "license lottery",
+        "compliance"
+      ],
+      "pullQuote": "All of that reaches the contract. None of it reaches the wait.",
+      "authorBioAsPublished": "Adrian A. Holguin, J.D., M.B.A., is founder and president of CannaShark Consulting, a national consulting firm based in California that handles licensing, compliance and operations for cannabis operators.",
+      "editor": "Jason Hancock, Editor-in-chief, Missouri Independent",
+      "verifiedAgainst": "Editor's final edited draft (Sept 22, 2026), approved by the author for publication without changes."
     },
     {
       "id": "marijuana-moment-2026-09-10",
@@ -51,7 +64,12 @@
         "Realistic depictions of fruit that reflect an actual ingredient or growing region remain allowed.",
         "Packaging artwork is typically locked weeks or months before a print run, so the compliance deadline arrives well before the legal one."
       ],
-      "topics": ["California cannabis packaging", "AB 2249", "cannabis labeling compliance", "Department of Cannabis Control"]
+      "topics": [
+        "California cannabis packaging",
+        "AB 2249",
+        "cannabis labeling compliance",
+        "Department of Cannabis Control"
+      ]
     }
   ]
 }
