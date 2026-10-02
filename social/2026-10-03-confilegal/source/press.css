@@ -1,0 +1,60 @@
+@font-face{font-family:"Inter";src:url("../fonts/inter-var.woff2") format("woff2");font-weight:100 900;font-style:normal}
+@font-face{font-family:"Archivo";src:url("../fonts/archivo-var.woff2") format("woff2");font-weight:100 900;font-style:normal}
+@font-face{font-family:"Playfair Display";src:url("../fonts/playfair-normal.woff2") format("woff2");font-weight:400 900;font-style:normal}
+@font-face{font-family:"Playfair Display";src:url("../fonts/playfair-italic.woff2") format("woff2");font-weight:400 900;font-style:italic}
+
+:root{
+  --paper:#F4F2EC;      /* light ground, a flipped palette from the Missouri set */
+  --paper2:#FFFFFF;
+  --ink:#0B1118;
+  --ink2:#2B3440;
+  --mute:#6B7684;
+  --teal:#7ED4D0;       /* CannaShark brand */
+  --teal-deep:#1F8F8A; /* teal readable on light */
+  --rule:rgba(11,17,24,.12);
+  --stamp:#C0392B;      /* one red stamp, the only warm color */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.card{position:relative;overflow:hidden;background:
+  radial-gradient(900px 600px at 100% 0%, rgba(126,212,208,.35), transparent 60%),
+  var(--paper)}
+/* paper texture: faint ruled lines */
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(0deg, rgba(11,17,24,.035) 0 1px, transparent 1px 28px);opacity:.9}
+.eyebrow{font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-deep);display:flex;align-items:center;gap:14px}
+.eyebrow .rule{height:2px;background:var(--teal-deep);width:44px;border-radius:2px}
+.h{font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.03em;line-height:.98;color:var(--ink);text-wrap:balance}
+.h .accent{color:var(--teal-deep)}
+.lede{font-family:"Inter",sans-serif;font-weight:500;color:var(--ink2);line-height:1.4}
+/* the clipping */
+.clip{position:relative;background:var(--paper2);border:1px solid var(--rule);box-shadow:0 30px 60px -30px rgba(11,17,24,.35), 0 2px 0 rgba(11,17,24,.06);transform:rotate(-1.6deg)}
+.clip .mast{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double var(--ink);font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.clip .mast b{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:-.01em;text-transform:none}
+.clip .mast span{font-weight:600;color:var(--mute);letter-spacing:.14em}
+.clip .sec{font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-deep)}
+.clip .es{font-family:"Playfair Display",serif;font-weight:800;line-height:1.05;letter-spacing:-.01em;color:var(--ink);text-wrap:balance}
+.clip .by{font-family:"Playfair Display",serif;font-style:italic;color:var(--ink2)}
+.clip .body{font-family:"Playfair Display",serif;color:var(--ink2);line-height:1.45;column-count:2;column-gap:28px;column-rule:1px solid var(--rule)}
+.clip .body p{margin-bottom:.6em}
+/* stamp */
+.stamp{position:absolute;border:4px solid var(--stamp);color:var(--stamp);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.12em;text-align:center;line-height:1.1;opacity:.85;transform:rotate(10deg);mix-blend-mode:multiply}
+.stamp small{font-weight:700;letter-spacing:.18em}
+.stamp i{display:block;width:70%;height:2px;background:var(--stamp);margin:6px 0}
+/* facts */
+.facts{display:flex;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.fact{flex:1;padding:16px 20px;border-right:1px solid var(--rule)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1;color:var(--ink)}
+.fact span{display:block;font-family:"Archivo",sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+.fact.cool b{color:var(--teal-deep)}
+.foot{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.who{font-family:"Inter",sans-serif;color:var(--ink);line-height:1.35}
+.who b{font-weight:700}
+.who span{color:var(--mute);display:block;font-weight:500}
+.logo{display:block}
+.quote{font-family:"Playfair Display",serif;font-weight:600;letter-spacing:-.01em;line-height:1.15;color:var(--ink);text-wrap:balance}
+.quote .q{color:var(--teal-deep);font-weight:800;line-height:.5;display:block}
+.trans{font-family:"Inter",sans-serif;font-weight:500;color:var(--mute);line-height:1.4}
+.pin{display:inline-flex;align-items:center;gap:10px;font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);background:var(--teal);border-radius:999px;padding:10px 18px}
+.pin::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ink)}
