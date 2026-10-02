@@ -98,7 +98,7 @@ Typical engagements
 • A fixed two-month implementation engagement, no retainer, systems handed to your team at the end
 
 Expert witness practice
-Cannabis financial damages, operational-loss analysis, OSHA/Cal-OSHA compliance, product liability, and premises liability. Retained by counsel on both sides.
+Cannabis financial damages, operational-loss analysis, OSHA/Cal-OSHA compliance, product liability, and premises liability. Retained by both plaintiff and defense counsel.
 
 Also: hemp, kratom, and other plant-alkaloid manufacturers on compliance and operations.
 
