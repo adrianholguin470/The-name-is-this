@@ -1,0 +1,54 @@
+@font-face{font-family:"Inter";src:url("../fonts/inter-var.woff2") format("woff2");font-weight:100 900;font-style:normal}
+@font-face{font-family:"Archivo";src:url("../fonts/archivo-var.woff2") format("woff2");font-weight:100 900;font-style:normal}
+@font-face{font-family:"Bebas Neue";src:url("../fonts/bebas.woff2") format("woff2");font-weight:400;font-style:normal}
+
+:root{
+  --ink:#070B12;          /* ground */
+  --ink2:#0D1420;         /* panel */
+  --line:rgba(126,212,208,.18);
+  --teal:#7ED4D0;         /* CannaShark brand */
+  --teal-dim:rgba(126,212,208,.55);
+  --bone:#F4F6F8;
+  --mute:#8B97AA;
+  --warn:#F2B35C;         /* the "wait" */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--ink);color:var(--bone);font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.card{position:relative;overflow:hidden;background:
+  radial-gradient(1200px 700px at 85% 110%, rgba(126,212,208,.16), transparent 60%),
+  radial-gradient(900px 500px at -10% -20%, rgba(126,212,208,.08), transparent 55%),
+  var(--ink);}
+/* fine grid */
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:72px 72px;opacity:.35;
+  -webkit-mask-image:radial-gradient(ellipse at 70% 60%, #000 20%, transparent 75%);mask-image:radial-gradient(ellipse at 70% 60%, #000 20%, transparent 75%);}
+.shark{position:absolute;pointer-events:none;opacity:.10;filter:drop-shadow(0 0 60px rgba(126,212,208,.35))}
+.eyebrow{font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:14px}
+.eyebrow .rule{height:2px;background:var(--teal);width:44px;border-radius:2px}
+.h{font-family:"Bebas Neue","Archivo",sans-serif;font-weight:400;line-height:.92;letter-spacing:.005em;text-wrap:balance}
+.h .accent{color:var(--teal)}
+.lede{font-family:"Inter",sans-serif;font-weight:500;color:var(--mute);line-height:1.35}
+.stats{display:flex;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(13,20,32,.75);backdrop-filter:blur(4px)}
+.stat{flex:1;padding:18px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+.stat span{display:block;font-family:"Archivo",sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+.stat.hot b{color:var(--warn)}
+.stat.cool b{color:var(--teal)}
+/* the wait bar */
+.wait{display:flex;flex-direction:column;gap:10px}
+.wait .bar{position:relative;height:10px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden}
+.wait .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:linear-gradient(90deg,var(--teal),var(--teal-dim))}
+.wait .bar em{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,var(--warn) 0 6px,transparent 6px 12px);opacity:.9}
+.wait .labels{display:flex;justify-content:space-between;font-family:"Archivo",sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.wait .labels .w{color:var(--warn)}
+.foot{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.by{font-family:"Inter",sans-serif;color:var(--bone);line-height:1.35}
+.by b{font-weight:700}
+.by span{color:var(--mute);display:block;font-weight:500}
+.logo{display:block}
+.quote{font-family:"Inter",sans-serif;font-weight:600;letter-spacing:-.015em;line-height:1.18;text-wrap:balance}
+.quote .q{color:var(--teal);font-family:"Bebas Neue",sans-serif;font-weight:400;line-height:.6;display:block}
+.src{font-family:"Archivo",sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.src b{color:var(--bone);font-weight:700}
