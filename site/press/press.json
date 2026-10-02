@@ -1,0 +1,57 @@
+{
+  "organization": {
+    "name": "CannaShark Consulting",
+    "legalName": "CannaShark Consulting, LLC",
+    "url": "https://cannasharkconsulting.com",
+    "sameAs": ["https://linkedin.com/in/adrianholguin"],
+    "location": "Santa Clarita, California"
+  },
+  "author": {
+    "name": "Adrian A. Holguin",
+    "honorificSuffix": "J.D., M.B.A.",
+    "jobTitle": "Founder & President",
+    "url": "https://cannasharkconsulting.com",
+    "sameAs": [
+      "https://linkedin.com/in/adrianholguin",
+      "https://app.qwoted.com/sources/adrian-holguin"
+    ]
+  },
+  "articles": [
+    {
+      "id": "missouri-independent-2026-10-02",
+      "type": "Commentary",
+      "headline": "Missouri tightened the rules. The wait still leaves microbusiness owners vulnerable",
+      "outlet": "Missouri Independent",
+      "outletUrl": "https://missouriindependent.com",
+      "url": "https://missouriindependent.com/2026/10/02/missouri-tightened-the-rules-the-wait-still-leaves-microbusiness-owners-vulnerable/",
+      "datePublished": "2026-10-02",
+      "summary": "Missouri's May 2026 microbusiness rules fixed the paperwork problem: they define majority ownership and operation, let regulators review ownership arrangements before a license issues, require a compliance course, and make the eligible owner the primary contact with the state. What no rule can remove is the gap between winning a license and opening, when a new licensee holds something valuable and has little experience defending it.",
+      "keyFacts": [
+        "Missouri drew its final round of microbusiness applicants on September 9, 2026.",
+        "The state received 888 applications and expects to issue roughly 77 licenses starting in December 2026.",
+        "The May 2026 rules require eligible owners to be the primary point of contact with regulators during the application, which limits how consultants can make themselves indispensable.",
+        "A first-round winner who opened the state's first microbusiness dispensary needed about two years to open, not the six months he expected.",
+        "The piece argues the most important protection for a new licensee is knowing when not to sign."
+      ],
+      "topics": ["Missouri cannabis microbusiness program", "cannabis licensing", "predatory contracts", "license lottery", "compliance"]
+    },
+    {
+      "id": "marijuana-moment-2026-09-10",
+      "type": "Op-Ed",
+      "headline": "California Marijuana Businesses Should Act Now To Comply With New Packaging Rules That Don't Take Effect Until 2028",
+      "outlet": "Marijuana Moment",
+      "outletUrl": "https://www.marijuanamoment.net",
+      "url": "https://www.marijuanamoment.net/california-marijuana-businesses-should-act-now-to-comply-with-new-packaging-rules-that-dont-take-effect-until-2028-op-ed/",
+      "datePublished": "2026-09-10",
+      "summary": "AB 2249 draws a clearer line around what California cannabis packaging, labels and ads may look like, with the new definition taking effect January 1, 2028. Because artwork is locked with the printer months before a run and boxes then sit in a warehouse, the real decision point for operators lands in the next two quarters, not in 2028.",
+      "keyFacts": [
+        "Governor Gavin Newsom signed AB 2249 on August 31, 2026.",
+        "The new packaging definition takes effect on January 1, 2028.",
+        "Prohibited: cartoon characters such as dragons, unicorns or wizards; anyone who looks under 21; imagery of candy, cereal or desserts marketed to children; bubble or balloon lettering; packaging that mimics a non-cannabis product aimed at kids.",
+        "Realistic depictions of fruit that reflect an actual ingredient or growing region remain allowed.",
+        "Packaging artwork is typically locked weeks or months before a print run, so the compliance deadline arrives well before the legal one."
+      ],
+      "topics": ["California cannabis packaging", "AB 2249", "cannabis labeling compliance", "Department of Cannabis Control"]
+    }
+  ]
+}
