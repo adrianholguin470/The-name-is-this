@@ -21,7 +21,7 @@ What interested me was why it counted as reasonable. Every one of the 515 paymen
 
 That is the work we do for cannabis operators in the United States, and it translates. Write down the interpretation you adopted and why, before anyone asks. Make every transaction traceable. Do it in the quiet weeks, because almost nobody starts until the notice arrives.
 
-Thank you to Carlos Berbell, director of Confilegal, for taking the column, and to Bárbara Hermida, whose reporting on the case prompted it.
+Thank you to the Confilegal team for running the column, and to Bárbara Hermida, whose reporting on the case prompted it.
 
 The column, in Spanish: https://confilegal.com/20260926-interpretacion-normativa-trazabilidad-defensa-sanciones/
 
@@ -71,5 +71,5 @@ CannaShark founder Adrian A. Holguin was published in Confilegal, Spain's news s
 
 ## Rules applied
 - No phone number in public posts. No exclamation points. Operator voice.
-- Facts limited to what the published column and the Confilegal thread confirm: €133,251, 515 payments of €1,000, TSJ Canarias, Sept. 26 publication, Carlos Berbell as director, Bárbara Hermida's reporting.
+- Facts limited to what the published column and the Confilegal thread confirm: €133,251, 515 payments of €1,000, TSJ Canarias, Sept. 26 publication, Bárbara Hermida's reporting.
 - Slide 1 references Confilegal's name and newspaper form in CannaShark type and teal; it does not reproduce Confilegal's logo.
