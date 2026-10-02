@@ -47,10 +47,10 @@ Drop: Budgeting, Financial Reporting, Financial Analysis. They read as
 bookkeeping and attract the wrong requests (the Dhaka and Indianapolis leads
 are the symptom).
 
-### Service description (500 char max — this one is 502)
+### Service description (500 char max — this one is 497)
 
 ```
-Cannabis operators: licensing, compliance and operations that run without you in the room. I have owned and stood up licensed facilities in California and other legal states, so the advice comes from the operator side. Typical work: license applications and audit readiness, SOPs and METRC, multi-site integration, financial modeling for the next license, and a fixed two-month implementation engagement. Also expert witness on cannabis damages and Cal-OSHA. Message me with one line on your situation.
+Cannabis operators: licensing, compliance and operations that run without you in the room. I have owned and stood up licensed facilities in California and other legal states, so the advice comes from the operator side. Typical work: license applications and audit readiness, SOPs and METRC, multi-site integration, financial modeling for the next license, and a fixed two-month implementation engagement. Also expert witness on cannabis damages and Cal-OSHA. Message me one line on your situation.
 ```
 
 ### Pricing field
