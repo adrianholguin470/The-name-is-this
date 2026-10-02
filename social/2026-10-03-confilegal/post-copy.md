@@ -25,7 +25,7 @@ Thank you to Carlos Berbell, director of Confilegal, for taking the column, and 
 
 The column, in Spanish: https://confilegal.com/20260926-interpretacion-normativa-trazabilidad-defensa-sanciones/
 
-#Compliance #RegulatedIndustries #CannabisCompliance #Trazabilidad #Confilegal #CannabisBusiness
+#Compliance #RegulatedIndustries #Trazabilidad #Confilegal #BusinessStrategy #RiskManagement
 
 ---
 
@@ -41,7 +41,7 @@ Swipe for the English version and the three things to do before an inspection.
 
 Column in Spanish at the link in bio.
 
-#Compliance #RegulatedIndustries #CannabisCompliance #CannabisBusiness #Madrid #Spain #Confilegal #CannaShark #Trazabilidad #SmallBusiness
+#Compliance #RegulatedIndustries #Madrid #Spain #Confilegal #CannaShark #Trazabilidad #SmallBusiness #BusinessStrategy #RiskManagement
 
 Story (1080×1920): add a link sticker to the column.
 
