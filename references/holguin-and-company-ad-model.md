@@ -4,242 +4,261 @@
 (see `references/viral-coach.md`), then mark every place we copy them and every place we
 deliberately diverge because our product, buyer, and price point are different.
 
-**Last updated:** 2026-10-02.
+**Last updated:** 2026-10-02. Built from the Holguin & Company and CannaShark Consulting Group
+sub-accounts in HighLevel (funnels, pipelines, calendars, forms, knowledge bases) plus public
+profiles of CannaShark and Adrian Holguin. holguincompany.com itself was blocked by this
+session's network policy, so site copy is not quoted here.
 
 ---
 
-## 0. Assumptions (confirm or correct these first)
+## 0. What we actually are (ground truth from our own systems)
 
-Public footprint found for Adrian Holguín: founder and CEO of Holguin Companies, Southampton
-NY. Divisions: estate/property management, construction, cabinetry, furniture. Clients are
-Hamptons (and some West Palm Beach) estates valued roughly $5M to $180M, plus hotels and
-vineyards. Billing of about $250k in 2024 with a stated projection of $1.5M for 2025. Left
-St. John's University to build it. Featured in Forbes Ecuador. 4.9 stars on Angi.
+| Item | Detail |
+|---|---|
+| Firm | Holguin & Company, holguincompany.com. Beverly Hills, 9903 Santa Monica Blvd STE 199. |
+| Sister brand | CannaShark Consulting Group, same address. Regulated-industry (cannabis) specialist. |
+| Founder | Adrian Holguin, J.D., M.B.A. Born and raised in Los Angeles. Consulted in consumer goods, banking, and tech during law and business school, entered cannabis through a financial-consulting firm for operators, founded CannaShark. Featured in Swagger Magazine's "Kings of Swagger" (Nov 2020) and MJBizDaily's new-generation entrepreneurs piece. |
+| What we sell | Business performance consulting for owners: diagnose the constraint, then execute across strategy, finance, revenue, operations, systems, and selected regulated-industry matters. |
+| Core product | **Business Performance Diagnostic → written findings + prioritized 90-Day Roadmap.** Then one of three paths: Self-Execute, Guided 90-Day Execution, Embedded 90-Day Buildout. |
+| CannaShark services | Licensing and regulatory compliance, business development and strategy, facility design and operations, M&A, product design and development, expert witness. |
+| Entry call | "The Business Evaluation Call," 30 min, Google Meet, auto-confirm (live on H&C). CannaShark runs "Discovery Call, 30 min" (live) and "Operator Review, 15 min" (built, inactive). |
+| Pipelines (both brands) | 1 Lead Capture: New Lead → Outreach Started → Engaged → Resource Requested → Appointment Requested → Appointment Scheduled → Callback Requested → Resource Delivered. 2 Sales Process: Discovery Completed → Qualified → Proposal In Progress → Sent → Viewed → Scope Revision → Verbal Approval → Deposit Pending → Closed Won / Lost / Not Now-Nurture. 3 Client Delivery: Onboarding → Documents → Access → Kickoff → Active → Waiting on Client → Milestone → Expansion Opportunity → Referral Opportunity. |
+| Original ladder (archived pipeline) | Evaluation Call Booked → Held → Diagnostic Proposed → Diagnostic & Roadmap Delivered → Engagement Proposed → Execute & Grow. This is the cleanest statement of the offer ladder we have. |
+| Forms on CannaShark | Free Resources, Business Fit Call, Business Diagnostic Application, Call back Request, Roadmap Lead Form, Newsletter Sign-Up, Claim Our Offer. |
+| AI reply playbooks (knowledge bases) | "If They Ask for Pricing," "If They Say Not Right Now," "If They Ask for the Checklist," "E-mail Marketing Replies." |
+| Gaps on the H&C sub-account today | One Home page, no forms, no products, no lead magnet, no knowledge bases. Everything else lives on CannaShark. |
 
-What is *not* public is what "Holguin & Company, the consulting firm" sells, so this document
-assumes:
-
-> **Primary track (A):** Holguin & Company is the advisory arm. It sells estate-operations
-> consulting to owners of $5M+ homes and the people who act for them (family offices,
-> private-wealth advisors, estate managers, architects, brokers): how to staff, budget,
-> vendor, and run a property so it never becomes the owner's problem. Engagements are
-> retainers or project fees in the mid five to six figures per year. This is the
-> "possibly higher ticket" case.
-
-> **Secondary track (B):** Holguin & Company also (or instead) consults for trade and
-> home-service operators who want to move upmarket into luxury estates. Ticket is closer to
-> Viral Coach's ($5k to $50k). If this is the real business, the Viral Coach playbook
-> transfers almost one-to-one and the diverge notes below mostly collapse.
-
-Everything below is written for Track A and footnoted for Track B.
+**Ticket.** Not confirmed. Working assumption: the Diagnostic is a fixed fee in the low-to-mid
+four figures to low five figures, Guided and Embedded execution run five figures per quarter,
+and regulated-industry work (licensing, M&A, expert witness) can exceed that. So the floor may
+sit *below* Viral Coach's roughly $6k entry and the ceiling above their coaching tiers but
+below their $50k to $199k enterprise band. Fill in real numbers in section 5.
 
 ---
 
 ## 1. Side-by-side: where we overlap and where we don't
 
-| Dimension | Viral Coach | Holguin & Company (Track A) | Copy / Diverge |
+| Dimension | Viral Coach | Holguin & Company | Copy / Diverge |
 |---|---|---|---|
-| Buyer | Founders doing $1M to $50M who want leads | UHNW owners and their gatekeepers who want zero friction at the property | Diverge: our buyer does not want attention, they want to be left alone |
-| Buyer count | Tens of thousands reachable | A few thousand households in our geography | Diverge: precision beats reach |
-| Core promise | Repeatable virality, leads | A home that "feels as good as it looks," handled by one accountable party | Copy the single-sentence promise, change the content |
-| Founder story | Accountant → TikTok finance star → agency | Left university, built a Hamptons estate business by 27, bills seven figures, Forbes feature | Copy: founder-led, young, improbable, proven |
-| Proof stack | 10B views, 1M leads, 3,000 clients, big logos | Years in the Hamptons, dollar value under management, response times, retention, zero-incident seasons, press | Copy the mechanic, swap vanity numbers for stewardship numbers |
-| Trust layers | Free community → call → program | Referral or content → private consultation → scoped engagement | Copy the layered "trust onion," cut the mass community |
-| Top of funnel | Free Skool group, 30k members | Private resource (owner's seasonal checklist, vendor vetting standard) and a referral program for advisors | Diverge: gated and small, not open and big |
-| CTA | "See if you qualify" free call | "Request a private property review" (limited slots per season) | Copy the selectivity frame, raise the formality |
-| Creative style | Phone-shot founder talking head, captions | Founder on site at real properties, quiet, cinematic b-roll, captions, no hype | Copy founder-led; diverge on tone and production |
-| Paid media | Meta lookalikes, pooled proof, retargeting, SMS | Meta/IG geo + interest + income proxies, LinkedIn to advisors, retargeting, email not SMS | Copy structure, diverge on channels and follow-up |
-| Price disclosure | Hidden, high-pressure calls (a review complaint) | Publish a floor ("engagements begin at $X") | Diverge deliberately; it fixes their weakness |
-| Guarantee | 30-day with conditions | Service-level commitments, not refunds | Diverge |
-
-Track B note: for trade operators the buyer, buyer count, top of funnel, and CTA rows move
-back toward the Viral Coach column.
+| What the buyer wants | More attention and leads | Margin, cash, control, capacity, compliance | Diverge. They sell upside; we sell relief and control. |
+| Buyer | Founders at $1M to $50M who post content | Owner-operators at roughly $1M to $20M who are the bottleneck, plus regulated operators | Overlap in size; diverge in psychology. |
+| Core message | "You don't need to go viral. You need a system." | "You don't need more leads. You need to find the constraint." | Copy the shape, invert the content. |
+| Founder authority | Follower count and brand deals | J.D. + M.B.A., cross-industry consulting, regulated-industry track record | Diverge: credential and casework, not audience size. |
+| Proof stack | 10B views, 1M leads, 3,000 clients | Years, industries, licenses secured, margin recovered, roadmaps delivered | Copy the mechanic, swap the metrics. |
+| Front-end offer | Free call → high-ticket program | Free Evaluation Call → paid, fixed-price Diagnostic → execution | Copy "sell what cold buys, then diagnose and expand." Diverge: our diagnostic is the product, not a sales call. |
+| Top of funnel | Free Skool community, 30k | Free resource (checklist) + newsletter; small private operator roundtable later | Diverge: no mass community yet. |
+| Creative | Phone-shot founder talking head | Founder talking head plus whiteboard, P&L teardown, facility walk | Copy founder-led; add "show the work." |
+| Channels | TikTok, Reels, Meta ads, SMS | LinkedIn and YouTube first, Reels second, Meta and YouTube ads, email + SMS | Diverge on channel mix. |
+| Pricing | Hidden, high-pressure (review complaint) | Diagnostic price published | Diverge on purpose. |
+| Second brand | None | CannaShark for regulated operators | Ours alone. Route traffic by industry. |
 
 ---
 
 ## 2. Positioning, in their format
 
-**Core message (one line, repeated everywhere):**
-"Your home should feel as good as it looks. We make sure it does, so you never think about it."
+**Core message (one line, everywhere):**
+"Find the constraint. Fix it in 90 days."
 
-**Category we claim:** estate operations advisory for the Hamptons, not "property management."
-Management is a commodity with dozens of vendors. Advisory sits above them and chooses them.
+**Supporting line:** "Business performance consulting for owners who are tired of being the
+bottleneck. We diagnose where time, margin, capacity, and control are leaking, hand you a
+prioritized 90-Day Roadmap, and execute it with you if you want us to."
 
-**Who it's for / not for (say both out loud, like they do):**
-For: owners of $5M+ homes, family offices, and advisors who are tired of being the project
-manager for their own house. Not for: seasonal renters, single-service jobs, anyone shopping
-on hourly rate.
+**Category we claim:** business performance consulting, not "business coaching" and not
+"fractional COO." Coaching sells mindset; we sell a written diagnostic and a roadmap with
+owners' names on the tasks.
+
+**For / not for (say both, like they do):**
+For: owner-operators doing $1M to $20M whose growth stalled on cash, workflow, team, or
+compliance, and regulated operators who need licensing, facility, or M&A work done right.
+Not for: pre-revenue founders, anyone shopping for motivation, anyone who wants someone else
+to run the company for them indefinitely.
+
+**Brand routing:** cannabis and other regulated operators → CannaShark. Every other owner →
+Holguin & Company. Same engine, same pipelines, two front doors.
 
 ---
 
 ## 3. Proof stack (our version of "10B views, 1M leads, 3,000 clients")
 
-Pick five, write them identically, use them on the site, the IG bio, every ad, every deck.
-Fill in real numbers; placeholders are marked.
+Pick five, write them identically, use them on the site, LinkedIn banner, every ad, every
+proposal. Fill in real figures; placeholders are marked.
 
-1. Serving Hamptons estates since 2008
-2. $[X]M in residential property under care (homes from $5M to $180M)
-3. [X] estates, [X]% retained season over season
-4. [X]-minute average emergency response, [X] zero-incident storm seasons
-5. Three in-house divisions (construction, cabinetry, furniture) so nothing is subcontracted blind
+1. [X] years advising owners across [X] industries, with cannabis as the deepest specialty
+2. [X] Diagnostics and 90-Day Roadmaps delivered
+3. $[X]M in margin, cash, or cost recovered for clients (or $[X]M in licenses and facilities brought online)
+4. [X] licenses secured / [X] facilities designed / [X] transactions supported
+5. Founder-led by a J.D., M.B.A.; team with 33+ years combined experience
 
-Authority layer: Forbes Ecuador feature, Angi 4.9, named client types (hotels, vineyards,
-West Palm Beach). Add two or three local press pieces and a trade publication quote within
-12 months; Viral Coach uses press to retell the founder story and so should we.
+Authority layer: Swagger Magazine, MJBizDaily, Brainz-style executive contributions, any
+expert-witness engagements that can be named. Add two trade-press or podcast placements in the
+next 12 months and retell the founder story on each.
 
-Founder story, 20 seconds: "I left college at 20 to look after other people's homes in the
-Hamptons. By 27 we were responsible for $[X]M of property and billing seven figures. I
-built Holguin & Company because the owners kept asking me the same question: how do I make
-this house run without me."
+Founder story, 20 seconds: "I grew up in LA, got a law degree and an MBA, and spent those
+years consulting for consumer goods, banking, and tech companies. Then a friend pulled me into
+cannabis right as it legalized, and I learned how to run a business when the rules change
+every quarter. I built Holguin & Company because most owners don't have a growth problem.
+They have a constraint they can't see from the inside."
 
 ---
 
-## 4. Funnel, in their shape
+## 4. Funnel, in their shape, mapped to our pipelines
 
 ```
-Founder-led organic content (IG Reels, LinkedIn, YouTube Shorts)
-  shot on real properties, aimed at owners AND their advisors
+Founder-led organic (LinkedIn posts, YouTube long-form, Shorts/Reels cuts)
+        │  Pipeline 1: New Lead → Outreach Started → Engaged
+        ▼
+Paid amplification of the proven organic pieces (Meta, YouTube, LinkedIn)
         │
         ▼
-Paid amplification of the proven organic pieces
-  (Meta/IG geo-fenced Hamptons + NYC + Palm Beach; LinkedIn to family-office / wealth titles)
+Free resource, gated by email  → Pipeline 1: Resource Requested → Resource Delivered
+  "The Owner's Constraint Checklist" (the thing the AI already answers "if they ask for the checklist")
         │
         ▼
-Private lead magnet (gated, email)
-  "The Hamptons Estate Owner's Seasonal Standard" or "How to vet an estate vendor: our 40-point checklist"
+Nurture: email + SMS, 5 to 7 touches, AI replies using the playbooks already built
         │
         ▼
-Email nurture (not SMS): 5 to 7 quiet, useful notes over 3 weeks
+"Book the Business Evaluation Call" (30 min)  → Appointment Requested → Scheduled
         │
         ▼
-"Request a private property review"  (limited slots per season, on-site or video)
+Pipeline 2: Discovery Completed → Qualified → Diagnostic proposal → Deposit → Closed Won
         │
         ▼
-Scoped proposal → retainer or project engagement
+Diagnostic & 90-Day Roadmap delivered  →  Self-Execute / Guided / Embedded
         │
         ▼
-Referral loop: advisors and existing owners introduce the next one
+Pipeline 3: ... → Milestone → Expansion Opportunity → Referral Opportunity
 ```
 
 **Copied from Viral Coach:** organic first, paid only on proven pieces; a free asset before
-the call; automated follow-up; a selective call CTA; a back-end diagnosis that expands the
-engagement (they sell "organic growth" then expand to offer, funnel, ads; we sell "one
-review" then expand to full advisory and the three divisions).
+the call; automated follow-up; a named call CTA; and their expansion move. They sell "organic
+growth" because that is what cold buys, then expand into offer, funnel, and ads. We sell "find
+the constraint" because that is the visible pain, then expand from Diagnostic into Guided or
+Embedded execution and, for regulated operators, licensing, facility, and M&A work.
 
-**Diverged:** no open community (UHNW owners will not join a Skool group; advisors might
-join a small private roundtable later). Email over SMS. Fewer, slower touches. Referral
-loop is a first-class channel, not an afterthought.
+**Diverged:** no open community. Email-led nurture with SMS as a secondary. The Diagnostic is
+a paid product with a published price, so the call qualifies for the Diagnostic rather than
+pitching a program. Referral and expansion are already pipeline stages; make them the loudest
+part of delivery.
 
-Track B: reinstate the free community and SMS; the audience behaves like Viral Coach's.
+**Already built in HighLevel:** all three pipelines, the Evaluation Call calendar, the AI reply
+playbooks, the forms on CannaShark. **To build on H&C:** the free resource and its form, the
+Diagnostic application form, products and prices, the nurture sequence, and the pages beyond
+Home. The cheapest path is to clone CannaShark's forms and knowledge bases into the H&C
+sub-account and rename.
 
 ---
 
-## 5. Offer ladder (our version of theirs)
+## 5. Offer ladder (their format)
 
 | Tier | What it is | Price frame | Viral Coach analogue |
 |---|---|---|---|
-| Free | Seasonal standard PDF, vendor checklist, monthly owner's note | $0 | Free Skool community |
-| Entry | Private Property Review: on-site audit, written findings, 90-day plan | Fixed fee, published (e.g. "from $[X]") | Core program (~$6k) |
-| Core | Estate Operations Retainer: ongoing advisory, vendor management, reporting | Monthly/annual retainer | Done-with-you tier |
-| Full | Holguin Companies execution: construction, cabinetry, furniture, full management | Project and contract pricing | Enterprise consulting |
-| Partner | Advisor program for family offices, brokers, architects: referral terms and co-branded reviews | Revenue share | (none; this is ours) |
+| Free | Owner's Constraint Checklist, newsletter, short-form content | $0 | Free Skool community |
+| Entry | Business Evaluation Call, 30 min | $0, qualifies for the Diagnostic | "See if you qualify" call |
+| Core product | Business Performance Diagnostic + 90-Day Roadmap | Fixed fee, **published** (fill: $[X]) | Core program (~$6k) |
+| Execution | Guided 90-Day Execution | Monthly or quarterly retainer | Done-with-you tier |
+| Execution+ | Embedded 90-Day Buildout | Higher retainer or project fee | Enterprise consulting |
+| Specialist | CannaShark: licensing, compliance, facility design, M&A, product dev, expert witness | Project pricing | (none; ours alone) |
 
-Publish the entry price. It is the single biggest differentiator from Viral Coach's
-review-site complaints and it pre-qualifies better than a "see if you qualify" call ever will.
+Publish the Diagnostic price. It is the single clearest break from Viral Coach's review-site
+complaints, it pre-qualifies better than any call script, and a fixed-price diagnostic is the
+most "consultant" thing we can do that a coach cannot.
 
 ---
 
 ## 6. Creative system (their principles, our execution)
 
 ### 6a. Hook library (write 30 before shooting anything)
-Hooks for owners:
-- "The most expensive thing in a $20M house is the thing nobody checked in March."
-- "Here's what your property manager isn't telling you about your generator."
-- "Three questions I ask before I take on an estate. Most owners can't answer the second one."
-- "This is what a storm-ready Hamptons house looks like on a Tuesday in October."
-- "I've walked into [X] estates after a bad winter. Same three failures every time."
+Constraint hooks:
+- "You don't have a growth problem. You have a constraint you can't see from inside the building."
+- "Here's the number I ask for first in every business. Most owners don't know it."
+- "If you're the only person who can approve things, you're not the CEO. You're the bottleneck."
+- "The business is doing $4M and the owner takes home less than their ops manager. Here's why."
+- "Three signs your margin problem is actually a scheduling problem."
 
-Hooks for advisors / family offices:
-- "If you're a family office and the house is on your plate, this is how we take it off."
-- "Why brokers send us their buyers the week after closing."
-- "One number to ask any estate manager for: their response time last August."
+Diagnostic hooks:
+- "What a 90-Day Roadmap actually looks like. Page one."
+- "I spent two days inside a client's operation. Here's what we found in the first four hours."
+- "Why I charge a fixed price for the diagnostic and tell you the number up front."
 
-Hooks with the founder story:
-- "I left college at 20 to look after other people's homes. Here's what that taught me about yours."
-- "Billing seven figures at 27 looking after houses I'll never own. This is why owners trust that."
+Regulated-operator hooks (CannaShark front door):
+- "Your license is the cheapest part of your facility. Here's the expensive part nobody budgets."
+- "Compliance isn't a department. It's a workflow. Here's how we build it in."
+- "What an expert witness sees in a cannabis P&L that the owner doesn't."
 
-Track B hooks ("How I got into $100M homes as a tradesman," "What luxury clients actually
-pay for") sit beside these if that audience is real.
+Founder-story hooks:
+- "Law degree, MBA, and then I went into the one industry where the rules change every quarter."
+- "Born in LA, built for operators. Why I stopped consulting for banks and started working with owners."
 
 ### 6b. Formats (ranked)
-1. Founder on site, 20 to 45 seconds, captioned, one idea per video. Quiet confidence, no hype.
-2. Silent walkthrough b-roll with on-screen text: "What we check every week at a $40M estate."
-3. Before/after from the construction, cabinetry, and furniture divisions (proof the advisory can execute).
-4. Owner or advisor testimonial, face optional, name withheld if needed. Discretion is the product.
-5. Founder story long-form (2 to 4 minutes) for YouTube and LinkedIn, cut into Shorts.
+1. Founder talking head, 30 to 60 seconds, captioned, one idea per video. Direct, not hyped.
+2. Whiteboard or notebook: draw the constraint, the fix, the 90-day timeline.
+3. Redacted P&L or workflow teardown on screen, founder narrating.
+4. Facility or office walk (with permission, no product shots for cannabis).
+5. Client result in the client's words, name withheld if needed. Regulated clients prefer discretion.
+6. Long-form LinkedIn posts and 8 to 15 minute YouTube videos, cut into Shorts.
 
 ### 6c. Rules borrowed straight from Viral Coach
 - First three seconds decide everything; test hooks organically, promote winners as ads.
-- Content pillars, four only: (1) what goes wrong in estates, (2) how we run one, (3) the
-  three divisions at work, (4) the founder's story and standards.
-- Visual consistency: same framing, type, and color across every post so the feed is one brand.
-- Clear CTA every time, always to the same two destinations: the free standard or the review.
-- Build the second-wave assets (lead magnet, nurture, review booking page) before any spend.
+- Four content pillars only: (1) constraints owners can't see, (2) how a Diagnostic works,
+  (3) regulated-industry realities, (4) the founder's standards and story.
+- Visual consistency: same framing, type, and color so the feed is one brand.
+- Clear CTA every time, to one of two places: the checklist or the Evaluation Call.
+- Build the second-wave assets (checklist, nurture, booking page, Diagnostic page) before any spend.
 - Pooled social proof: run paid from one post ID so engagement accrues on one creative.
 
 ### 6d. Rules we break on purpose
-- No "going viral" language. Our buyer reads it as a red flag.
-- No countdown timers, no fake scarcity. Real scarcity only: slots per season.
-- Price floor published. Guarantee expressed as service levels, not refunds.
+- No "scale to $X/month" promises. We sell found margin and control, with real client numbers only.
+- Published Diagnostic price; no "see if you qualify" theater.
+- No cannabis product imagery or consumption in any paid creative. Consulting services are
+  advertisable; product is not. Keep CannaShark creative about operations, compliance, and finance.
 
 ---
 
 ## 7. Paid media plan (their playbook, our targeting)
 
-- **Meta / Instagram:** geo-fence Southampton, East Hampton, Sag Harbor, Bridgehampton,
-  Water Mill, Montauk, plus Manhattan zips and Palm Beach. Interest and behavior layers for
-  luxury real estate, private aviation, yachting, art. Promote the three best-performing
-  organic Reels. Retarget video viewers (50%+) and site visitors with the lead magnet, then
-  the review CTA.
-- **LinkedIn:** sponsored founder posts to family-office, private-wealth, and estate-manager
-  titles in NY, CT, and FL. Lead-gen form for the vendor-vetting checklist.
-- **YouTube:** founder story and walkthroughs as in-feed ads to the same geos; cheap
-  retargeting pool.
-- **Follow-up:** email sequence, then a personal note from Adrian, then a call invitation.
-  No SMS for owners. SMS is fine for Track B.
-- **Measurement:** optimise on booked reviews, not leads. Like Viral Coach's service-business
-  note, the pixel will not see the sale; accept the slow loop and track review → proposal →
-  signed in a simple sheet.
-- **Budget order:** $0 until 30 hooks are shot and the lead magnet exists; then small daily
-  spend only on proven organic winners.
+- **Meta / Instagram:** Los Angeles and California first, then national. Interest and behavior
+  layers for small-business owners, B2B, specific trades. Promote the three best organic Reels.
+  Retarget 50%+ video viewers and site visitors with the checklist, then the Evaluation Call.
+  For CannaShark, target cannabis trade publications and conferences by interest, keep copy
+  about compliance and operations, and expect stricter review.
+- **LinkedIn:** sponsored founder posts to owner, CEO, COO, and CFO titles at $1M to $20M
+  companies in CA, then national. Lead-gen form for the checklist.
+- **YouTube:** founder long-form as in-feed ads to the same audiences; cheap retargeting pool.
+- **Follow-up:** email first, SMS second, AI replies on the existing playbooks, then a personal
+  note from Adrian, then the call link.
+- **Measurement:** optimise on booked Evaluation Calls and Diagnostics sold, not leads. The
+  pixel will not see the sale; track Call → Diagnostic → Execution in pipeline 2.
+- **Budget order:** $0 until 30 hooks are shot and the checklist exists; then small daily spend
+  only on proven organic winners.
 
 ---
 
 ## 8. What the "expert panel" seat should say about this plan
 
-Viral Coach lens: the machine is right (founder-led, hook-first, proven-organic-to-paid,
-gated asset, selective call, automated follow-up, repeated proof stack). The two places it
-would push back are "no community" and "published price." The answer: our buyer count is
-too small and too private for a community to be anything but a liability, and published
-pricing is the one lesson their own reviews teach. Revisit both if Track B becomes real.
+Viral Coach lens: the machine is right (founder-led, hook-first, proven-organic-to-paid, gated
+asset, named call CTA, automated follow-up, repeated proof stack, diagnose-then-expand). Two
+pushbacks: "no community" and "published price." The answer: our buyer is a time-poor owner
+who wants a fixed-price answer, not a group; and published pricing is the one lesson their
+own reviews teach. Revisit the community once the newsletter list passes a few thousand.
 
 ---
 
 ## 9. Next steps
 
-1. Confirm Track A vs Track B (or both) and the real price points.
+1. Confirm the Diagnostic price and the Guided / Embedded retainer bands; fill section 5.
 2. Fill the five proof-stack numbers in section 3 with real figures.
-3. Write the 30 hooks, shoot 10 in one afternoon on one property.
-4. Build the lead magnet and the review booking page.
-5. Publish the entry price.
-6. Then, and only then, turn on paid against the top three organic performers.
-7. Pull Viral Coach's live ads (see open items in `references/viral-coach.md`) and
-   add a "their ad / our equivalent" table here.
+3. Clone CannaShark forms and knowledge bases into the H&C sub-account; build the checklist,
+   the Diagnostic application, products and prices, and the nurture sequence.
+4. Write the 30 hooks; shoot 10 in one afternoon.
+5. Publish the Diagnostic price on holguincompany.com.
+6. Then turn on paid against the top three organic performers.
+7. Pull Viral Coach's live ads (open items in `references/viral-coach.md`) and add a
+   "their ad / our equivalent" table here.
 
-## Sources on Holguin Companies
+## Sources
 
-- https://www.holguin-companies.com/ and division pages
-- https://holguinestatemanagement.com/
-- https://www.linkedin.com/in/adrian-holguin-148023234/
-- https://www.forbes.com.ec/movimiento-inspirador/el-housekeeper-hamptons-ambateno-n73531
-- https://www.angi.com/companylist/us/ny/southampton/holguin-estate-management-reviews-1.htm
+- HighLevel sub-accounts: Holguin & Company (hLql8kZCEo7GMT34NQdL), CannaShark Consulting Group (ei9azGLkgzf0iZFkQrJo): funnels, pipelines, calendars, forms, knowledge bases, read 2026-10-02.
+- https://cannasharkconsulting.com/ (home, services, about-us, cannabis-operations-consultant, licensing-regulatory-compliance)
+- https://www.linkedin.com/in/adrianholguin/ and https://www.linkedin.com/company/cannashark-cannabis-consulting
+- https://www.swaggermagazine.com/style/kings-of-swagger/california-cannabis-entrepreneur-adrian-holguin/
+- https://mjbizdaily.com/new-generation-of-marijuana-entrepreneurs-is-making-its-mark/
