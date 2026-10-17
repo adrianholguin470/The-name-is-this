@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500011,
+  "due": "2026-10-15",
+  "group": "g_vbx",
+  "notes": "Kevin's Oct 8 package has one file per creditor in schedule order plus a README. Exact matches for 10 creditors; the four listed here have nothing on file yet. MORR is 50 cents off.",
+  "order": 30,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud. Update the VBX Labs debt schedule dated October 4, 2026 before it goes to the buyer's counsel. Correct Leasing Innovations to $42,999.77 per their June 15, 2026 statement (the old figure was the January 2025 balance; rent accrued through September 2025 plus late charges, less $21,500 paid). Then draft four short statement requests I can send today: to EDD for the account showing $30,716.62, to First Insurance Funding for the financed policy balance, to the Los Angeles Fire Department Fire Prevention Bureau for the CUPA fee, and to CDTFA for any balance. Each should state the entity (VBX Labs LLC), the account or policy number if I give it to you, and ask for a current itemized statement by email. Give me a checklist of what to attach to the revised schedule.",
+  "section": "Debts & creditors",
+  "source": "Kevin's email 'VBX debt schedule: supporting documents for each line' (Oct 8)",
+  "status": "working",
+  "title": "Correct the VBX debt schedule before it goes to Dana: Leasing Innovations is $42,999.77 (not $17,606.21); add support for EDD $30,716.62, First Insurance Funding, Fire Prevention Bureau CUPA fee and CDTFA",
+  "updatedAt": 1791824500011
+}

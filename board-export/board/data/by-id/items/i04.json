@@ -1,0 +1,16 @@
+{
+  "completedAt": 1792168693812,
+  "createdAt": 1791824500004,
+  "due": "2026-10-16",
+  "group": "g_vbx",
+  "notes": "$30,000 gross over 12 months to Starpoint's trust account; $18,000 remained as of Oct 4. Only the unsigned copy has been circulated. 664.6 order was entered by agreement (Lalo confirmed to Dana, Oct 9).",
+  "order": 13,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud. Help me close out Dana Cisneros's diligence question on Derakhshannia v. VBX Labs LLC and Kevin Doud (LASC 24CHCV03246). Search my Gmail and files for the executed (signed) General Release and Settlement Agreement revised Feb 2, 2026 and for every $2,500 payment to Starpoint's trust account. Build a payment table (date, amount, remaining balance; $18,000 remained as of Oct 4, 2026) and the date the next payment is due. Draft an email to Steve Baghoomian, copying Adrian, attaching the executed agreement and the payment table, and noting that the June 5, 2026 CCP 664.6 order was entered by agreement, as Lalo confirmed to Dana on Oct 9. If the signed copy is not in my email, tell me exactly who to ask for it.",
+  "section": "Litigation",
+  "source": "Kevin's 'Case documents 1 of 2' (Oct 7); Lalo's reply (Oct 9)",
+  "status": "done",
+  "title": "Derakhshannia settlement: send the executed settlement agreement to Steve and Dana; keep the $2,500 every-30-day payments current",
+  "updatedAt": 1792168693812
+}

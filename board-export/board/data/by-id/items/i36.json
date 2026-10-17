@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791829200036,
+  "due": "2026-10-17",
+  "group": "g_kmd",
+  "notes": "BOBBY WORKBOOK, companion to tasks 1 and 2 (Sept 30). Goal: let Bobby retrieve KMD business records in his own working session and produce source-backed answers.\n\nSteps: (1) Confirm the email provider and mailbox holding Kevin's KMD records; for Gmail enable the Google Workspace connectors in Team admin settings, then authenticate the authorized account via Customize → Connectors. (2) Team membership does not expose Kevin's mailbox and Kevin connecting his own email does not share it with Bobby; test from Bobby's session; use an authorized shared mailbox or move the relevant threads into the shared reference area. (3) Email first, Drive only where the files live; start with search/read; inspect permission prompts. (4) Test search for one known KMD thread (date, sender, subject, evidence link). The Gmail connector does not read attachment contents; download and upload to the reference area. (5) Save findings where the authorized team can reach them.\nDone when: Bobby can retrieve the required records and produce source-backed answers; limitations recorded.\n\nAI PROMPT (copy into Claude):\n\"Search the authorized KMD business mailbox and connected documents for the review email campaign offering 10% off, the Secretary of State address update, and the KMD Analytical DBA or fictitious business name filing. For each, show status, exact entity or business name, dates, message subject and sender, evidence link, and next action. Distinguish drafts, sent messages, receipts, and accepted filings. Read the relevant threads. If an attachment is needed but inaccessible, identify it and ask me to upload it. Do not infer completion from a payment receipt or prepare unrelated emails.\"\n\nReference: https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+  "order": 33,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "Search the authorized KMD business mailbox and connected documents for the review email campaign offering 10% off, the Secretary of State address update, and the KMD Analytical DBA or fictitious business name filing. For each, show status, exact entity or business name, dates, message subject and sender, evidence link, and next action. Distinguish drafts, sent messages, receipts, and accepted filings. Read the relevant threads. If an attachment is needed but inaccessible, identify it and ask me to upload it. Do not infer completion from a payment receipt or prepare unrelated emails.",
+  "section": "Systems & AI setup",
+  "source": "Bobby KMD Action Plan workbook (Sept 30), 'Connect Claude to the company records' — see Files tab",
+  "status": "not_started",
+  "title": "Workbook — Connect Claude to the company records (Kevin's KMD mailbox and the Drive folders that hold the files) so Bobby can find records without asking Kevin",
+  "updatedAt": 1791829200036
+}

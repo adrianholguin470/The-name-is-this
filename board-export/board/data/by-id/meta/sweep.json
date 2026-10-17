@@ -1,0 +1,37 @@
+{
+  "lastSweepAt": "2026-10-17T01:46:42Z",
+  "lastSweepNote": "Oct 16 sweep: two new emails from Kevin's side. Filed the final VBX promissory note DocuSign forward (f25, noted on the Liu deal item i05) and the second endotoxin client email review copy (f26, awaiting Adrian's approval; no item per Adrian's Oct 16 removal). No board edits from Kevin.",
+  "runs": [
+    {
+      "added": 2,
+      "at": "2026-10-13T00:05:00Z",
+      "filed": 1,
+      "updated": 1
+    },
+    {
+      "added": 0,
+      "at": "2026-10-14T00:02:00Z",
+      "filed": 0,
+      "updated": 0
+    },
+    {
+      "added": 0,
+      "at": "2026-10-15T00:01:00Z",
+      "filed": 0,
+      "updated": 0
+    },
+    {
+      "added": 1,
+      "at": "2026-10-16T00:01:00Z",
+      "filed": 1,
+      "updated": 0
+    },
+    {
+      "added": 0,
+      "at": "2026-10-17T01:46:42Z",
+      "filed": 2,
+      "updated": 1
+    }
+  ],
+  "schedule": "Daily 6:45 PM Pacific"
+}

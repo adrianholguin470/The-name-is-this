@@ -1,0 +1,17 @@
+{
+  "completedAt": "",
+  "createdAt": 1791911200000,
+  "due": "2026-10-17",
+  "group": "g_kmd",
+  "milestone": false,
+  "notes": "Added Oct 13 at Adrian's request. KMD GROUP LLC already sends Zelle payments (Oct 4 and Oct 9), so an account exists; what needs closing out is: which account is the operating account for the dba, that payroll (new hire at $30/hr biweekly) draws from it, who the signers and online-banking admins are, and that the details land in the KMD Account and Password Register (Workbook #11). Add the bank name, account nickname and any open to-dos (debit cards, Zelle limits, QuickBooks feed) in this thread.",
+  "order": 62,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "I am Kevin Doud, owner of KMD Group LLC dba KMD Analytical. Help me finalize the company banking. Using my Gmail, find the bank(s) where KMD Group LLC holds accounts (search: Chase, Wells Fargo, Bank of America, business checking, statement, Zelle, debit card) and list each account with its purpose. Then give me a checklist to confirm: (1) the operating account used for customer payments and vendor bills, (2) the account payroll will be funded from and that it is connected to the payroll provider, (3) who is an authorized signer and who has online banking admin access, (4) Zelle and daily transfer limits, (5) whether the account feeds QuickBooks or the bookkeeping system. For anything missing, draft the email or the steps to fix it today. Keep the answer to one page.",
+  "section": "Banking",
+  "source": "Adrian, Oct 13 ('banking')",
+  "status": "not_started",
+  "title": "Banking: finalize KMD Group LLC (dba KMD Analytical) business banking — operating account confirmed, payroll funding source set, online access and signers recorded",
+  "updatedAt": 1791911200000
+}

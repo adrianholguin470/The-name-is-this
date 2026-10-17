@@ -1,0 +1,43 @@
+{
+  "collection": "groups",
+  "count": 4,
+  "exportedAt": "2026-10-17T01:50:00Z",
+  "documents": [
+    {
+      "doc_id": "g_kmd",
+      "data": {
+        "color": "#00a389",
+        "createdAt": 1791824500000,
+        "name": "KMD Analytical",
+        "order": 2
+      }
+    },
+    {
+      "doc_id": "g_personal",
+      "data": {
+        "color": "#fdab3d",
+        "createdAt": 1791824500000,
+        "name": "Personal (Kevin & Angelica)",
+        "order": 4
+      }
+    },
+    {
+      "doc_id": "g_vbx",
+      "data": {
+        "color": "#0073ea",
+        "createdAt": 1791824500000,
+        "name": "VBX Labs",
+        "order": 1
+      }
+    },
+    {
+      "doc_id": "g_wy",
+      "data": {
+        "color": "#a25ddc",
+        "createdAt": 1791824500000,
+        "name": "Wyoming entities (VHC · VHCRE · ZC Ventures · AKZC)",
+        "order": 3
+      }
+    }
+  ]
+}

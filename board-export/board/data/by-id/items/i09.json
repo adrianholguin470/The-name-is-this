@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500009,
+  "due": "2026-10-13",
+  "group": "g_vbx",
+  "notes": "VHC Limited Liability Company, EIN 99-0616959, 30 N Gould St Ste R, Sheridan WY 82801. Kevin is listed as sole member on the CP 575 letter dated Jan 9, 2024.",
+  "order": 22,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud. I need to give our tax preparer Prakash Joshi (Valley Income Tax, 805-991-6548) the responsible-party details for VHC Limited Liability Company by phone, not email, including my SSN. Write me a 60-second call script that confirms his secure method, gives the information in order (legal name VHC Limited Liability Company, EIN 99-0616959, address 30 N Gould St Ste R, Sheridan WY 82801, responsible party Kevin Doud, sole member), and asks him to confirm receipt and his filing date for the 2024 Form 1120-S. Then draft a one-line follow-up email, without the SSN, confirming the call happened.",
+  "section": "Taxes (Prakash / IRS)",
+  "source": "Kevin's email 'VBX: what Prakash asked for this morning' (Oct 5)",
+  "status": "not_started",
+  "title": "Kevin to call Prakash with the VHC responsible-party SSN (by phone, not email)",
+  "updatedAt": 1791824500009
+}

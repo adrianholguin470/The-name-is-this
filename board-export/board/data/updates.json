@@ -1,0 +1,117 @@
+{
+  "collection": "updates",
+  "count": 11,
+  "exportedAt": "2026-10-17T01:50:00Z",
+  "documents": [
+    {
+      "doc_id": "u_20261016_i05_signed",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792195200100,
+        "itemId": "i05",
+        "text": "Marked done Oct 16. Evidence: Adrian reported in the Kevin/Steve/Adrian group text that the Liu contract was signed. No DocuSign completion or signed copies have reached Adrian's email yet, so the next step is to get the executed set into the file cabinet. Prompt refreshed to the closing checklist."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i19_balance",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792206000100,
+        "itemId": "i19",
+        "text": "Oct 16 (Adrian): balance now $1,000, owed immediately. Two $1,000 Zelle payments from KMD Group LLC landed Oct 4 and Oct 9 against the $3,000 that was open. Engagement resets Oct 22; next $5,000 due in advance that day. Priority raised to critical. Still need the signed letter back."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i19_dates",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792209600100,
+        "itemId": "i19",
+        "text": "Oct 16 (Adrian): payments received so far are $2,000 on Sept 22, $1,000 on Oct 4 and $1,000 on Oct 9, $4,000 in total. $1,000 owed now; $5,000 due Oct 22. Signed-letter language removed from the item."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i41_split",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792202400021,
+        "itemId": "i41",
+        "text": "Oct 16: at Adrian's request the channels are now separate action items in this section (Google Business Profile, Yelp, MapQuest, Apple Maps, Bing Places, Instagram, LinkedIn, Facebook, YouTube, Reddit, and one item to reserve TikTok/X/Threads). This item is now the register and final cross-platform check; mark it Done when every channel item is Done."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i43_reset",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792206000200,
+        "itemId": "i43",
+        "text": "Oct 16 (Adrian): engagement period one ends Oct 21 and resets Oct 22. Due date moved to Oct 21 and status set to working: Kevin and Bobby owe one complete end-of-period update covering all 11 workbook tasks, including the profile items now split out one per channel."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i47_check",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792195200200,
+        "itemId": "i47",
+        "text": "The Liu deal signed this week (see the deal item). Kevin: was the license renewal confirmed to Dana before signing, and is Liu's addition to the license now in motion? If yes, mark this done with the date."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i47_open",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792198800200,
+        "itemId": "i47",
+        "text": "Oct 16: Adrian confirmed the renewal has NOT been submitted. Item stays open, status set to working, due Oct 20. Retitled and prompt refreshed to filing the renewal and confirming to Dana."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i48_check",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792195200300,
+        "itemId": "i48",
+        "text": "The Liu deal signed this week. Kevin: confirm whether Liu's $178,000 payment to the landlord has gone out and the 3-day notice threat is withdrawn. If yes, mark this done with the date and attach the landlord confirmation."
+      }
+    },
+    {
+      "doc_id": "u_20261016_i48_done",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792198800100,
+        "itemId": "i48",
+        "text": "Marked done Oct 16. Evidence: Adrian confirmed the landlord payment was made. Remaining housekeeping is in the prompt: file the payment confirmation and get the landlord's written acknowledgment that the notice is withdrawn."
+      }
+    },
+    {
+      "doc_id": "u_20261017_i05_note",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792201602240,
+        "itemId": "i05",
+        "text": "Oct 16: Kevin forwarded the DocuSign link for the 'New final Vbx promissory note' (PDF attached, filed under Files as f25). Status stays done. Still missing from Adrian's email: executed copies of the Pledge, Call Option, Management Agreement and Loan Agreement. Prompt refreshed to pull all five from DocuSign and send them to Adrian and Steve."
+      }
+    },
+    {
+      "doc_id": "u_sweep_20261012_i05",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1791850000100,
+        "itemId": "i05",
+        "text": "Nightly sweep (Oct 12): Kevin forwarded the 'VBX Final documents' thread at 1:12 PM. Dana rejected Steve's Oct 12 Section 14 redline and restated the deal as Pledge 100% / Call Option 77.24% / Management 100% then 85%, with a 2 PM window to reverse the changes before DocuSign. Item retitled, priority raised to critical, prompt refreshed. The earlier 41.8%-cap framing is superseded. Decision for Adrian and Kevin: keep Section 14 and risk the signing, or accept Dana's structure with a narrower protection for the 22.76%."
+      }
+    }
+  ]
+}

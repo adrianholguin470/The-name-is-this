@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500017,
+  "due": "2026-10-14",
+  "group": "g_kmd",
+  "notes": "BOBBY WORKBOOK TASK 9 (Sept 30). Goal: confirm the DBA was filed under the correct owner (county filing, separate from the Secretary of State record) and whether required publication is complete.\n\nSteps: (1) Search Kevin's email for 'DBA', 'fictitious business name', 'FBN', 'KMD Analytical', 'county clerk', 'publication', 'affidavit'; locate application, filed statement, receipt, newspaper documents. (2) Verify business name, registrant, address, county, filing number and date on the official county registry (LA County: lavote.gov → County Clerk → Fictitious Business Names). (3) Match the county record to the stamped filing; a state LLC registration, trademark, domain or receipt is not a DBA. (4) Check publication requirements; confirm newspaper schedule, completion and filed proof/affidavit. (5) If nothing found, check for a pending application before starting another; track the deadline.\nDone when: county filing and any required publication are independently confirmed, or the remaining step and deadline are documented.\n\nSTATUS (Oct 5): VitalChek order 227790652 (placed Sept 28, $36.75) still needs identity verification and payment before LA County processes the statement. PIN is in Kevin's forwarded email.\n\nAI PROMPT (copy into Claude):\n\"Find evidence of the KMD Analytical DBA or fictitious business name filing in the authorized email and documents. Separate application, accepted county filing, publication, and proof of publication. Extract the exact business name, registrant, address, county, filing number, dates, and evidence links. Compare them with the official county record I provide. Identify missing evidence and the next action. Do not infer that Secretary of State registration also completes a DBA filing.\"\n\nReference: https://www.lavote.gov/home/county-clerk/fictitious-business-names/filing/requirements",
+  "order": 20,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "Find evidence of the KMD Analytical DBA or fictitious business name filing in the authorized email and documents, including VitalChek order 227790652 placed September 28, 2026 for the Los Angeles County Registrar-Recorder. Separate application, accepted county filing, publication, and proof of publication. Extract the exact business name, registrant, address, county, filing number, dates, and evidence links. Tell me the exact steps left to finish identity verification and the $36.75 payment, and what publication is required afterward and by when. Do not infer that Secretary of State registration also completes a DBA filing.",
+  "section": "Entity & filings",
+  "source": "Bobby KMD Action Plan workbook (Sept 30), task 9; 'Fwd: VitalChek Order - Action Required' (Oct 5)",
+  "status": "not_started",
+  "title": "Workbook #9 — Confirm the KMD Analytical DBA / fictitious business name filing and publication (VitalChek order 227790652 needs ID verification + $36.75)",
+  "updatedAt": 1791829200000
+}

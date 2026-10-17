@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500008,
+  "due": "2026-10-14",
+  "group": "g_vbx",
+  "notes": "If VHC is itself an S corporation it affects whether VHC can hold VBX's S-corp shares. The form is on the Jan 10, 2024 thread in the kmdgroupla mailbox. Adrian told Kevin to sign and return it at the time.",
+  "order": 21,
+  "owner": "Both",
+  "priority": "high",
+  "prompt": "I am Kevin Doud, sole member of VHC Limited Liability Company (Wyoming, EIN 99-0616959). On January 10, 2024 Best Wyoming Registered Agent emailed me a Form 2553 S-corporation election for VHC with the subject 'VHC Limited Liability Company - S-Corp', and Adrian told me to sign and return it. Search my kmdgroupla and 365hydrodesign Gmail for that thread and anything after it (signed form, fax or upload confirmation, IRS CP261 acceptance letter) and tell me whether the election was actually filed and accepted. Then draft a two-paragraph note to Prakash Joshi, copying Adrian, stating the answer with the evidence, because it decides whether VHC can hold VBX's S-corporation shares. If it is unclear, list the exact steps to find out from the IRS.",
+  "section": "Taxes (Prakash / IRS)",
+  "source": "Kevin's email 'VBX: findings on your seven points' (Oct 5)",
+  "status": "not_started",
+  "title": "Confirm whether VHC's own Form 2553 S-corp election (Jan 10, 2024, from Best Wyoming) was signed and filed, and tell Prakash either way",
+  "updatedAt": 1791824500008
+}

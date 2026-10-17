@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500019,
+  "due": "2026-10-22",
+  "group": "g_kmd",
+  "notes": "Updated Oct 16 by Adrian. First period Sept 22 to Oct 21, $5,000 fee. Received by Zelle from KMD Group LLC: $2,000 on Sept 22, $1,000 on Oct 4, $1,000 on Oct 9, total $4,000. Balance owed now: $1,000. The engagement resets on Oct 22, when the next $5,000 is due in advance. Fee steps to $9,000 at $150k monthly revenue and $11,000 at $225k.",
+  "order": 60,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. Adrian Holguin's engagement for KMD Group LLC dba KMD Analytical is $5,000 a month paid in advance on the 22nd. I have paid $2,000 on Sept 22, $1,000 on Oct 4 and $1,000 on Oct 9 by Zelle ($4,000 total), so $1,000 is owed immediately and the engagement resets October 22 with the next $5,000 due. Using my Gmail and bank alerts, confirm those three Zelle payments, then (1) tell me the exact amounts and dates to send: $1,000 today and $5,000 on October 22; (2) note my daily Zelle limit and whether the $5,000 needs to be split or sent by wire or check; (3) draft a short reply to Adrian confirming the $1,000 is sent and the October 22 payment is scheduled. Keep the reply under 80 words.",
+  "section": "Engagement with Adrian",
+  "source": "Adrian's email 'KMD Group LLC — Business Operations and Strategy Engagement Letter' (Sept 30)",
+  "status": "working",
+  "title": "KMD Group LLC engagement: $4,000 received (Sept 22 $2,000, Oct 4 $1,000, Oct 9 $1,000); $1,000 owed immediately; engagement resets Oct 22 with the next $5,000 due in advance",
+  "updatedAt": 1792209600000
+}

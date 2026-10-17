@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791830600044,
+  "due": "",
+  "group": "g_personal",
+  "notes": "Steps: pick the listing agent and confirm commission; sign the listing agreement; agree the list price from recent comparable sales; complete seller disclosures; set the go-live date on the MLS. Note: Peter Ryan's Sept 28 email proposed a deed of trust on the house as security; confirm with Steve or Peter whether any lien or pending agreement affects a sale before signing the listing.",
+  "order": 11,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "I am Kevin Doud and I am putting my current house on the market. Give me a checklist to get it officially listed within two weeks: how to pick and vet a listing agent (three questions and the commission range to expect), what the listing agreement commits me to, how to set the list price from comparable sales, the California seller disclosures I will have to complete, and the order of operations from signing to going live on the MLS. Then draft a short message I can send to two or three agents asking for a listing presentation this week. Also list the questions I should ask my lawyer first if there is any lien, deed of trust or pending legal matter attached to the property.",
+  "section": "Home",
+  "source": "Adrian, Oct 12 2026",
+  "status": "not_started",
+  "title": "House: officially list the current house for sale (choose the agent, sign the listing agreement, set the price, go live on the MLS)",
+  "updatedAt": 1791830600044
+}

@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500013,
+  "due": "2026-10-13",
+  "group": "g_vbx",
+  "notes": "Steve's office will not continue without an active trust deposit. New engagement letters are coming for each matter (VBX acquisition, Anthony Gennette). Kevin asked Ani for a payment link Sept 23.",
+  "order": 40,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "I am Kevin Doud. Baghoomian Law asked for a $6,500 trust deposit on September 23, 2026 and will not continue work without an active deposit. Search my Gmail for the payment link from Ani Telimi, any receipts, and my Zelle or bank confirmations since September 23. Tell me what has been paid, the date, and what remains. Then draft a short email to Ani (ani@baghoomianlaw.com), copying Steve Baghoomian and Adrian Holguin, confirming the amounts and dates paid and the date the balance will be sent. If nothing has been paid, draft the email asking for the payment link again and committing to a date.",
+  "section": "Counsel & fees",
+  "source": "Email 'VBX Labs + Other Matters' (Sept 23–24)",
+  "status": "working",
+  "title": "Baghoomian Law trust deposit: confirm the $6,500 is funded ($3,000 was available Sept 23, balance the following week)",
+  "updatedAt": 1791824500013
+}

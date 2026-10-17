@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500012,
+  "due": "2026-10-16",
+  "group": "g_vbx",
+  "notes": "The workbook (Google Sheets, last edited Oct 4) lists larger balances than the Oct 4 schedule for several creditors. Decide which figure is current and note which are being negotiated down.",
+  "order": 31,
+  "owner": "Adrian",
+  "priority": "medium",
+  "prompt": "I am Adrian Holguin. Reconcile two lists of VBX Labs LLC liabilities: the Strategic Attack Plan workbook (City of Los Angeles Office of Finance $653,340.88 and $35,778.25, Linde Gas $179,097.41, EDD $144,681.54, Franchise Tax Board $17,265.57 and $23,447, Charles P. Crowley judgment $3,566.97, Main Electric Supply $7,347.46, Derakhshannia $20,000) and Kevin's October 4, 2026 debt schedule, which I will paste below. Produce a table with creditor, workbook figure, Oct 4 figure, which is current and why, documentation on file, and what is being negotiated. End with the list of creditors still missing a current statement and a one-paragraph disclosure note for the buyer's counsel.",
+  "section": "Debts & creditors",
+  "source": "Google Sheet 'Strategic Attack Plan - Squashing Financial & Legal Issues'; Kevin's 'VBX Labs: debts, contracts and liabilities (item 4)' (Oct 4)",
+  "status": "not_started",
+  "title": "Reconcile the Oct 4 debt schedule against the Strategic Attack Plan workbook (City of LA Office of Finance $653k, Linde Gas $179k, EDD $144k, FTB) so the disclosure to Dana is complete",
+  "updatedAt": 1791824500012
+}

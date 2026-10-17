@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500021,
+  "due": "2026-10-17",
+  "group": "g_kmd",
+  "notes": "Gennette's Sept 22 email demanded 50% equity, account access and transaction logs within 24 hours and threatened an injunction, fraud claims and investor notification. Steve sent a cease-and-desist Sept 23 and says the matter 'looks like it's going to be a mess'.",
+  "order": 50,
+  "owner": "Both",
+  "priority": "high",
+  "prompt": "I am Kevin Doud, 100% owner of KMD Group LLC dba KMD Analytical. On September 22, 2026 Anthony Gennette emailed a 24-hour demand claiming 50% ownership, over $200,000 in revenue and $80,000 owed, and threatened an injunction, fraud claims and contacting our investor. Steve Baghoomian sent a cease-and-desist on September 23. Using my Gmail, build a dated timeline of every message with Anthony from the first week of the lab to today, and a list of the documents I should preserve (payment-processor logs, the 'week one' email he cites, receipts for columns and standards he bought, any written agreement). Then draft an email to Steve, copying Adrian, asking him to confirm the scope and budget for this matter and whether we should respond further or wait. Do not draft anything to Anthony.",
+  "section": "Disputes",
+  "source": "Emails 'STRICTLY CONFIDENTIAL / URGENT' (Sept 22), 'CEASE AND DESIST' (Sept 23), 'VBX Labs + Other Matters' (Sept 24)",
+  "status": "waiting",
+  "title": "Anthony Gennette dispute: agree scope and time allocation with Steve, and preserve the record (payment-queue logs, week-one email, equipment receipts) in case he files",
+  "updatedAt": 1791824500021
+}

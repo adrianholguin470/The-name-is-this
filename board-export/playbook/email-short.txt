@@ -1,0 +1,18 @@
+To: 365hydrodesign@gmail.com
+Cc: kmdgroupla@gmail.com
+Subject: Kevin's Board Playbook: 3 steps to get started
+Attachment: Kevins-Board-Playbook.pdf
+
+Kevin,
+
+Attached is Kevin's Board Playbook (PDF). It explains the shared action board and gives you three vetted prompts for your own Claude system. Here is all you need to do to get going:
+
+1. Open the board: https://claude.ai/artifact/37akxGp77L8HE1miRxPVDT. Sign in as kmdgroupla@gmail.com and confirm the header chip says "editing as Kevin."
+
+2. In Claude, create a project called "Action Dashboard" and paste the safety rules from page 3 of the PDF into the project instructions.
+
+3. Schedule the three prompts from the PDF to run daily at 6:45 PM Pacific. That is the same time my sweep runs, so the board stays in sync.
+
+Everything else is in the PDF. Call or text me with any questions.
+
+Adrian

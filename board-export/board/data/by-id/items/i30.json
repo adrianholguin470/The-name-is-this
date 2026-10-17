@@ -1,0 +1,16 @@
+{
+  "createdAt": 1791825500030,
+  "due": "2026-11-02",
+  "group": "g_personal",
+  "milestone": true,
+  "notes": "Three-week jury trial. Who sits at counsel table depends on the Flores Ryan decision (see the Flores Ryan item). Trial goes forward because Dehbibi's counsel dropped the BRP depositions (Sept 28).",
+  "order": 6,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. The Dehbibi v. Silly Billy jury trial begins November 2, 2026 and may run three weeks. Build a two-week countdown plan from today: documents to organize by claim (negligence, fraud, false imprisonment, willful misconduct, alter ego), questions for our lawyer each week, logistics (time off work for Angelica and me, lab coverage at KMD Analytical), and a one-page 'what to expect in the first day of trial' explainer in plain language.",
+  "section": "Silly Billy / Dehbibi trial",
+  "source": "Peter Ryan's email (Sept 28)",
+  "status": "not_started",
+  "title": "Court date: Silly Billy / Dehbibi jury trial begins (LASC)",
+  "updatedAt": 1791825500030
+}

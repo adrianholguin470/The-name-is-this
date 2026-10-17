@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500027,
+  "due": "2026-10-16",
+  "group": "g_personal",
+  "notes": "$6,500 was past due under the weekly plan as of Sept 25. Payments on record: $2,000 May, $500 Aug, $1,000 mid-Sept.",
+  "order": 2,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "I am Kevin Doud. I promised Peter Ryan (Flores Ryan) $2,500 by October 2, 2026 and $1,000 every week through the November 2 trial, on top of $2,000 paid in May, $500 in August and $1,000 in mid-September. Using my Gmail and the bank or Zelle confirmations I paste below, build a payment log with dates and running balance against the $17,298.49 owed, and a weekly reminder schedule from today to November 2. Draft a short email to Peter confirming the payments made so far with dates and the next payment date.",
+  "section": "Silly Billy / Dehbibi trial",
+  "source": "Kevin's reply to Peter Ryan (Sept 28)",
+  "status": "working",
+  "title": "Keep the Flores Ryan payments going: $2,500 promised by Oct 2, then $1,000 weekly through trial",
+  "updatedAt": 1791824500027
+}

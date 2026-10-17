@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500026,
+  "due": "2026-10-14",
+  "group": "g_personal",
+  "notes": "Peter Ryan's deadline for signed loan documents or payment was Oct 2; otherwise he moves to be relieved as counsel. Kevin refused to self-represent (Sept 28). Peter recommends independent counsel review the loan paperwork. Angelica must consent in writing too.",
+  "order": 1,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. In Dehbibi v. Silly Billy, my wife Angelica and I are personally sued and trial starts November 2, 2026. Our lawyer Peter Ryan (Flores Ryan) says we owe $17,298.49 and gave two options to stay on through trial: pay the balance plus a $50,000 retainer, or sign a secured line of credit up to $117,298.49 at 10% with a deed of trust on our home. Otherwise he moves to be relieved. Build a one-page decision memo comparing four options with numbers and risks: (1) pay and retain Peter, (2) sign the line of credit, (3) hire cheaper trial counsel now, (4) self-represent with Peter consulting. Include the questions an independent lawyer should answer before we sign anything secured by the house. Then draft a short reply to Peter, copying Adrian, that buys us time without conceding the motion to be relieved.",
+  "section": "Silly Billy / Dehbibi trial",
+  "source": "Emails 'Trial Representation and Payment Arrangements' and 'A Friendly Reminder from Flores Ryan' (Sept 28–29)",
+  "status": "stuck",
+  "title": "Silly Billy / Dehbibi trial (Nov 2): decide the Flores Ryan arrangement — pay the $17,298.49 balance plus a $50,000 trial retainer, sign the secured line of credit (up to $117,298.49 at 10%, deed of trust on Shoshone Ave), hire cheaper trial counsel, or self-represent",
+  "updatedAt": 1791824500026
+}

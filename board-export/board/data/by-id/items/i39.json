@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791829200039,
+  "due": "2026-10-16",
+  "group": "g_kmd",
+  "notes": "BOBBY WORKBOOK TASK 7 (Sept 30). Goal: genuine Google reviews for KMD. First confirm whether the existing review emails were sent.\n\nSteps: (1) Check authorized email and GoHighLevel history, then ask Kevin the specific question: did the Google review emails go out, and on what date? (2) Verify against sent messages or campaign logs: send date, audience count, campaign identifier; drafts and scheduled sends are not sent. (3) Check replies and new public Google reviews since the send date; keep them separate; do not attribute reviews without evidence. (4) If unsent, locate the existing approved email and campaign with Kevin; use that copy; verify the official review link, customer list, sender, unsubscribe settings. (5) Confirm any 10% promotion is independent of leaving a review (Google policy); fix wording through the company process; send a test, then launch. (6) Report to Adrian: Kevin's confirmation, send status and date, replies and new reviews, actions completed, exact blocker if unsent.\n\nAI PROMPT (copy into Claude):\n\"Help me complete KMD Analytical's Google review task using the existing campaign. Search authorized email and GoHighLevel history for the review request and verify whether it was sent. Give me the evidence, date, audience count, replies, and new public Google reviews, marking unknown facts clearly. Help me ask Kevin only the specific confirmation still needed. If unsent, locate the existing approved copy and give me steps to test and send it. Do not draft a new email. Check the review link, audience, unsubscribe settings, and that any discount is independent of leaving a review. Finish with a concise status update for Adrian.\"\n\nReference: https://support.google.com/contributionpolicy/answer/7400114",
+  "order": 41,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "Help me complete KMD Analytical's Google review task using the existing campaign. Search authorized email and GoHighLevel history for the review request and verify whether it was sent. Give me the evidence, date, audience count, replies, and new public Google reviews, marking unknown facts clearly. Help me ask Kevin only the specific confirmation still needed. If unsent, locate the existing approved copy and give me steps to test and send it. Do not draft a new email. Check the review link, audience, unsubscribe settings, and that any discount is independent of leaving a review. Finish with a concise status update for Adrian.",
+  "section": "Marketing, profiles & reviews",
+  "source": "Bobby KMD Action Plan workbook (Sept 30), task 7 — see Files tab",
+  "status": "not_started",
+  "title": "Workbook #7 — Confirm with Kevin whether the Google review email campaign (10% offer) went out; if not, send the existing approved campaign",
+  "updatedAt": 1791829200039
+}

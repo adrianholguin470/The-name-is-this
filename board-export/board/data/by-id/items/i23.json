@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500023,
+  "due": "2026-10-15",
+  "group": "g_wy",
+  "notes": "Reminders Oct 2 and Oct 5. Use the 'Provide Required Information' link in the agent's email or the Filing Orders page of the account.",
+  "order": 20,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud, owner of VHCRE LLC (Wyoming). Best Wyoming Registered Agent emailed on October 2 and October 5, 2026 that they need information from me to complete the Wyoming annual renewal filing. Tell me exactly what a Wyoming LLC annual report asks for (principal office address, mailing address, assets located in Wyoming for the license tax, signer) and the typical fee, then give me a filled-in draft of each answer using the company facts I paste below, so I can enter them on the 'Provide Required Information' page in one sitting. Tell me what confirmation document I should save afterward and where it will appear in the Best Wyoming account.",
+  "section": "VHCRE",
+  "source": "Emails 'VHCRE LLC - Action required to complete WY Renewal Filing' (Oct 2, Oct 5)",
+  "status": "not_started",
+  "title": "VHCRE LLC: provide the information Best Wyoming Registered Agent needs to complete the Wyoming renewal filing",
+  "updatedAt": 1791824500023
+}

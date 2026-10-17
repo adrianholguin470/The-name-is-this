@@ -1,0 +1,1123 @@
+{
+  "collection": "items",
+  "count": 60,
+  "exportedAt": "2026-10-17T01:50:00Z",
+  "documents": [
+    {
+      "doc_id": "i01",
+      "data": {
+        "createdAt": 1791824500001,
+        "due": "2026-10-26",
+        "group": "g_vbx",
+        "notes": "Complaint served on the registered agent March 18, 2026; no answer filed. Dana Cisneros calls this her greatest concern on the deal. Next step (Adrian): chase Lalo (Eduardo Roa, Laner Muchin) for availability, a fixed or capped fee for the initial review, filings and hearing, and the immediate deadlines. He was asked Oct 5; his Oct 9 reply only covered Derakhshannia.",
+        "order": 10,
+        "owner": "Both",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud, managing member of VBX Labs LLC. VBX was served March 18, 2026 in Whitehouse v. VBX Labs LLC (LASC 26STCV06228). No response is on file and the court set an OSC re entry of default for October 26, 2026. Using my connected Gmail, find every email about this case (search: Whitehouse, EN Law Group, Elizabeth Nguyen, 26STCV06228) and summarize the timeline with dates. Then draft a short, firm email to Eduardo 'Lalo' Roa (eroa@lanerlaw.com), copying Adrian Holguin and Steve Baghoomian, asking him to confirm by tomorrow whether he will take the case, his retainer and fee structure, and exactly what he needs from me to get a response or a motion to set aside on file before October 26. List what I should gather today (complaint, proof of service, every letter from plaintiff's counsel). Do not send anything until I approve it.",
+        "section": "Litigation",
+        "source": "Email: 'VBX: Daniel case + urgent Whitehouse representation quote' (Oct 5–9); Kevin's case documents 1 of 2 (Oct 7)",
+        "status": "working",
+        "title": "Whitehouse v. VBX Labs (LASC 26STCV06228): get counsel retained and a response on file before the OSC re entry of default on Oct 26",
+        "updatedAt": 1791825500000
+      }
+    },
+    {
+      "doc_id": "i03",
+      "data": {
+        "createdAt": 1791824500003,
+        "due": "2026-10-14",
+        "group": "g_vbx",
+        "notes": "Kevin flagged this as the item that can't wait (Oct 4). Coordinate with Steve Baghoomian; May 1 minute order referenced a settlement and a stipulation to set aside defaults. Full case file (summons, complaint, exhibits) sent Oct 7.",
+        "order": 12,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. In Apollo Branding, LLC v. VBX Labs LLC (LASC 25CHCV02873), two Requests for Entry of Default were served on my Wyoming companies VHC and AKZC. Using my Gmail and the Best Wyoming Registered Agent emails, find the request documents and the dates they were served and received, and tell me the deadline risk in plain language. Then draft an email to Steve Baghoomian (steve@baghoomianlaw.com), copying Adrian Holguin, that attaches the requests, states the service dates, reminds him of the May 1, 2026 minute order about a settlement and a stipulation to set aside the defaults, and asks what must be filed, by when, and what he needs from me. Keep it under 200 words. I will review before sending.",
+        "section": "Litigation",
+        "source": "Kevin's email 'My Wyoming companies: Best Wyoming filing tasks' (Oct 4); 'Case documents 2 of 2: Apollo' (Oct 7)",
+        "status": "working",
+        "title": "Apollo Branding v. VBX Labs (LASC 25CHCV02873): respond to the two Requests for Entry of Default served on VHC and AKZC",
+        "updatedAt": 1791824500003
+      }
+    },
+    {
+      "doc_id": "i04",
+      "data": {
+        "completedAt": 1792168693812,
+        "createdAt": 1791824500004,
+        "due": "2026-10-16",
+        "group": "g_vbx",
+        "notes": "$30,000 gross over 12 months to Starpoint's trust account; $18,000 remained as of Oct 4. Only the unsigned copy has been circulated. 664.6 order was entered by agreement (Lalo confirmed to Dana, Oct 9).",
+        "order": 13,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud. Help me close out Dana Cisneros's diligence question on Derakhshannia v. VBX Labs LLC and Kevin Doud (LASC 24CHCV03246). Search my Gmail and files for the executed (signed) General Release and Settlement Agreement revised Feb 2, 2026 and for every $2,500 payment to Starpoint's trust account. Build a payment table (date, amount, remaining balance; $18,000 remained as of Oct 4, 2026) and the date the next payment is due. Draft an email to Steve Baghoomian, copying Adrian, attaching the executed agreement and the payment table, and noting that the June 5, 2026 CCP 664.6 order was entered by agreement, as Lalo confirmed to Dana on Oct 9. If the signed copy is not in my email, tell me exactly who to ask for it.",
+        "section": "Litigation",
+        "source": "Kevin's 'Case documents 1 of 2' (Oct 7); Lalo's reply (Oct 9)",
+        "status": "done",
+        "title": "Derakhshannia settlement: send the executed settlement agreement to Steve and Dana; keep the $2,500 every-30-day payments current",
+        "updatedAt": 1792168693812
+      }
+    },
+    {
+      "doc_id": "i05",
+      "data": {
+        "completedAt": "2026-10-16",
+        "createdAt": 1791824500005,
+        "due": "2026-10-13",
+        "group": "g_vbx",
+        "notes": "SIGNING DAY, Oct 12. Dana's position (1:08 PM): the agreed deal is Pledge = 100% of the company, Call Option = up to 77.24% once litigation is cleaned up (Kevin keeps 22.76%; nobody is buying it), Management Agreement = 100% until expansion is complete, 85% after. She rejects Steve's new Section 14 of the Call Option (14.2 to 14.7) as adding terms no one agreed to, conflating the Pledge with the Option, and blocking future advances or a later sale of the whole company. She gave Steve until 2 PM to reverse most of the changes. Steve's reply (12:03 PM) said the changes enforce a hard cap on Kevin's retained equity that both clients agreed to. Background pressure: the landlord has not been paid and said he would post a 3-day notice Monday; Dana wants everything in DocuSign today. Earlier framing on this item (41.8% cap, 15% before buildout) is superseded by the 77.24% structure. UPDATE Oct 16: Kevin forwarded the DocuSign link for the 'New final Vbx promissory note' (PDF attached, filed as f25). That is the first signing-set document to reach Adrian's email; the Pledge, Call Option, Management Agreement and Loan Agreement executed copies are still outstanding.",
+        "order": 1,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. The VBX Labs deal with Xiu Chang Liu was signed the week of Oct 12, and on Oct 16 I forwarded Adrian the DocuSign link for the final promissory note. Help me close out the file: (1) using my Gmail, find the fully executed set (Secured Convertible Promissory Note, Pledge Agreement, Call Option, Management Services Agreement, Loan Agreement) in the DocuSign completion emails, download each completed PDF, and save them to the VBX Drive folder with the execution date in the file name; (2) send Adrian and Steve one email with all five executed PDFs attached, so the promissory note is not the only one in their hands; (3) list every post-signing obligation and date in the documents, including Liu's payment to the landlord, the license renewal and Liu's addition to the license, the note's interest and maturity terms, any management fee start date, and any notice or reporting duties; (4) draft a one-page closing memo to Adrian and Steve with those dates. Keep it factual and quote the section numbers.",
+        "section": "Liu deal & due diligence",
+        "source": "Kevin's forward 'Fwd: VBX Final documents' (Oct 12, 1:12 PM) with Dana's and Steve's emails of Oct 9–12",
+        "status": "done",
+        "title": "VBX deal with Xiu Chang Liu: resolve Steve's Oct 12 Section 14 redline against Dana's stated deal (Pledge 100%, Call Option 77.24%, Management 100% then 85%) and get the five documents into DocuSign",
+        "updatedAt": 1792201602238
+      }
+    },
+    {
+      "doc_id": "i06",
+      "data": {
+        "completedAt": 1792168610565,
+        "createdAt": 1791824500006,
+        "due": "2026-10-15",
+        "group": "g_vbx",
+        "notes": "Already sent: debt schedule + supporting docs (Oct 4–8), case documents (Oct 7), VBX / AKZC / VHC operating agreements (Oct 8). Still open: both OA copies Kevin has are unsigned; Dana cannot find VHC on the CA Secretary of State site; Steve wants either the documents or a written statement that some do not exist.",
+        "order": 2,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud. Dana Cisneros (buyer's counsel) sent a six-item diligence list for VBX Labs LLC: (1) operating agreement and amendments, articles, statement of information, minute book, cap table, and whether interests are certificated or Article 8 securities; (2) tax clearance or proof of current payment for federal, state, local, excise, sales and employment taxes, plus liens; (3) litigation files for Whitehouse, Apollo and Derakhshannia; (4) full disclosure of debts, contracts and liabilities; (5) proof that Rodshel Malakov claims no ownership; (6) VHC company documents. Using my Gmail, build a table showing for each item what was already sent (date, email subject), what still exists but has not been sent, and what does not exist. Then draft an email to Steve Baghoomian, copying Adrian, with the remaining attachments and a clear written statement of which documents do not exist or are not in our possession, so Dana cannot keep stalling on them.",
+        "section": "Liu deal & due diligence",
+        "source": "Dana Cisneros diligence list (Aug 21, repeated Oct 2); Steve's email Oct 5",
+        "status": "done",
+        "title": "Finish Dana's due-diligence list: tax clearance / proof of payment, proof Rodshel Malakov claims no ownership, VHC company documents, executed (signed) operating agreements",
+        "updatedAt": 1792168610565
+      }
+    },
+    {
+      "doc_id": "i07",
+      "data": {
+        "createdAt": 1791824500007,
+        "due": "2026-10-13",
+        "group": "g_vbx",
+        "notes": "Prakash (Valley Income Tax) asked for the password Oct 5 and needs the 2023 figures to carry forward into the 2024 Form 1120-S. File came from the VBX Monday.com board on April 1, 2025; nobody has confirmed who prepared 2023 (not Cohen Tax). Filing is needed for the Liu deal.",
+        "order": 20,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. Our tax preparer Prakash Joshi (Valley Income Tax) needs VBX Labs LLC's 2023 return to prepare the 2024 Form 1120-S. The only 2023 file I have is '2023 Tax Return Documents (VBX LABS LLC) K-1s.pdf', password-locked, downloaded from the VBX Monday.com board on April 1, 2025. Search all three of my mailboxes (365hydrodesign, kmdgroupla, kmdanalytical) for who prepared or uploaded the 2023 return, any password hints, and any 2023 engagement with Cohen Tax or another preparer. Then draft two short emails: one to Cohen Tax (Jeff Cohen) asking whether they prepared 2023 and for the complete return, and one to whoever managed the Monday.com board asking for the password. Also explain how to request the 2023 return transcript from the IRS (Form 4506-T or online account) as a fallback, step by step.",
+        "section": "Taxes (Prakash / IRS)",
+        "source": "Thread 'VBX: findings on your seven points' and Prakash's reply (Oct 5)",
+        "status": "stuck",
+        "title": "Give Prakash the password for the locked 2023 VBX K-1 PDF, or get the full 2023 return from whoever prepared it",
+        "updatedAt": 1791824500007
+      }
+    },
+    {
+      "doc_id": "i08",
+      "data": {
+        "createdAt": 1791824500008,
+        "due": "2026-10-14",
+        "group": "g_vbx",
+        "notes": "If VHC is itself an S corporation it affects whether VHC can hold VBX's S-corp shares. The form is on the Jan 10, 2024 thread in the kmdgroupla mailbox. Adrian told Kevin to sign and return it at the time.",
+        "order": 21,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, sole member of VHC Limited Liability Company (Wyoming, EIN 99-0616959). On January 10, 2024 Best Wyoming Registered Agent emailed me a Form 2553 S-corporation election for VHC with the subject 'VHC Limited Liability Company - S-Corp', and Adrian told me to sign and return it. Search my kmdgroupla and 365hydrodesign Gmail for that thread and anything after it (signed form, fax or upload confirmation, IRS CP261 acceptance letter) and tell me whether the election was actually filed and accepted. Then draft a two-paragraph note to Prakash Joshi, copying Adrian, stating the answer with the evidence, because it decides whether VHC can hold VBX's S-corporation shares. If it is unclear, list the exact steps to find out from the IRS.",
+        "section": "Taxes (Prakash / IRS)",
+        "source": "Kevin's email 'VBX: findings on your seven points' (Oct 5)",
+        "status": "not_started",
+        "title": "Confirm whether VHC's own Form 2553 S-corp election (Jan 10, 2024, from Best Wyoming) was signed and filed, and tell Prakash either way",
+        "updatedAt": 1791824500008
+      }
+    },
+    {
+      "doc_id": "i09",
+      "data": {
+        "createdAt": 1791824500009,
+        "due": "2026-10-13",
+        "group": "g_vbx",
+        "notes": "VHC Limited Liability Company, EIN 99-0616959, 30 N Gould St Ste R, Sheridan WY 82801. Kevin is listed as sole member on the CP 575 letter dated Jan 9, 2024.",
+        "order": 22,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud. I need to give our tax preparer Prakash Joshi (Valley Income Tax, 805-991-6548) the responsible-party details for VHC Limited Liability Company by phone, not email, including my SSN. Write me a 60-second call script that confirms his secure method, gives the information in order (legal name VHC Limited Liability Company, EIN 99-0616959, address 30 N Gould St Ste R, Sheridan WY 82801, responsible party Kevin Doud, sole member), and asks him to confirm receipt and his filing date for the 2024 Form 1120-S. Then draft a one-line follow-up email, without the SSN, confirming the call happened.",
+        "section": "Taxes (Prakash / IRS)",
+        "source": "Kevin's email 'VBX: what Prakash asked for this morning' (Oct 5)",
+        "status": "not_started",
+        "title": "Kevin to call Prakash with the VHC responsible-party SSN (by phone, not email)",
+        "updatedAt": 1791824500009
+      }
+    },
+    {
+      "doc_id": "i10",
+      "data": {
+        "createdAt": 1791824500010,
+        "due": "2026-10-17",
+        "group": "g_vbx",
+        "notes": "IRS notice of May 13, 2026 accepted the 8832 and 2553 effective Jan 1, 2022. Prakash is preparing the 2024 1120-S and an amended 2024 1065. Cohen Tax filed 2022 as a partnership (Form 1065), so 2022 and 2023 may need the same correction.",
+        "order": 23,
+        "owner": "Adrian",
+        "priority": "medium",
+        "prompt": "I am Adrian Holguin, advising VBX Labs LLC. Prakash Joshi is preparing the 2024 Form 1120-S and amended 2024 Form 1065. The IRS accepted VBX's Form 8832 and Form 2553 effective January 1, 2022, but Cohen Tax filed 2022 as a partnership (Form 1065) and no 2023 1120-S has been found. Draft an email to Prakash, copying Kevin Doud, asking him to (1) confirm whether 2022 and 2023 must also be corrected to 1120-S and what each year costs and takes; (2) confirm VHC's California foreign registration and Statement of Information status; (3) send his invoice and expected filing date for 2024. Keep it to three numbered questions and ask for answers by a specific date.",
+        "section": "Taxes (Prakash / IRS)",
+        "source": "Thread 'VBX IRS NOTIFICATION' (Oct 4–5)",
+        "status": "waiting",
+        "title": "Decide with Prakash whether 2022 and 2023 also need to be refiled as 1120-S (2022 was filed as a Form 1065 by Cohen Tax) and get his invoice and filing date",
+        "updatedAt": 1791825500000
+      }
+    },
+    {
+      "doc_id": "i11",
+      "data": {
+        "createdAt": 1791824500011,
+        "due": "2026-10-15",
+        "group": "g_vbx",
+        "notes": "Kevin's Oct 8 package has one file per creditor in schedule order plus a README. Exact matches for 10 creditors; the four listed here have nothing on file yet. MORR is 50 cents off.",
+        "order": 30,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud. Update the VBX Labs debt schedule dated October 4, 2026 before it goes to the buyer's counsel. Correct Leasing Innovations to $42,999.77 per their June 15, 2026 statement (the old figure was the January 2025 balance; rent accrued through September 2025 plus late charges, less $21,500 paid). Then draft four short statement requests I can send today: to EDD for the account showing $30,716.62, to First Insurance Funding for the financed policy balance, to the Los Angeles Fire Department Fire Prevention Bureau for the CUPA fee, and to CDTFA for any balance. Each should state the entity (VBX Labs LLC), the account or policy number if I give it to you, and ask for a current itemized statement by email. Give me a checklist of what to attach to the revised schedule.",
+        "section": "Debts & creditors",
+        "source": "Kevin's email 'VBX debt schedule: supporting documents for each line' (Oct 8)",
+        "status": "working",
+        "title": "Correct the VBX debt schedule before it goes to Dana: Leasing Innovations is $42,999.77 (not $17,606.21); add support for EDD $30,716.62, First Insurance Funding, Fire Prevention Bureau CUPA fee and CDTFA",
+        "updatedAt": 1791824500011
+      }
+    },
+    {
+      "doc_id": "i12",
+      "data": {
+        "createdAt": 1791824500012,
+        "due": "2026-10-16",
+        "group": "g_vbx",
+        "notes": "The workbook (Google Sheets, last edited Oct 4) lists larger balances than the Oct 4 schedule for several creditors. Decide which figure is current and note which are being negotiated down.",
+        "order": 31,
+        "owner": "Adrian",
+        "priority": "medium",
+        "prompt": "I am Adrian Holguin. Reconcile two lists of VBX Labs LLC liabilities: the Strategic Attack Plan workbook (City of Los Angeles Office of Finance $653,340.88 and $35,778.25, Linde Gas $179,097.41, EDD $144,681.54, Franchise Tax Board $17,265.57 and $23,447, Charles P. Crowley judgment $3,566.97, Main Electric Supply $7,347.46, Derakhshannia $20,000) and Kevin's October 4, 2026 debt schedule, which I will paste below. Produce a table with creditor, workbook figure, Oct 4 figure, which is current and why, documentation on file, and what is being negotiated. End with the list of creditors still missing a current statement and a one-paragraph disclosure note for the buyer's counsel.",
+        "section": "Debts & creditors",
+        "source": "Google Sheet 'Strategic Attack Plan - Squashing Financial & Legal Issues'; Kevin's 'VBX Labs: debts, contracts and liabilities (item 4)' (Oct 4)",
+        "status": "not_started",
+        "title": "Reconcile the Oct 4 debt schedule against the Strategic Attack Plan workbook (City of LA Office of Finance $653k, Linde Gas $179k, EDD $144k, FTB) so the disclosure to Dana is complete",
+        "updatedAt": 1791824500012
+      }
+    },
+    {
+      "doc_id": "i13",
+      "data": {
+        "createdAt": 1791824500013,
+        "due": "2026-10-13",
+        "group": "g_vbx",
+        "notes": "Steve's office will not continue without an active trust deposit. New engagement letters are coming for each matter (VBX acquisition, Anthony Gennette). Kevin asked Ani for a payment link Sept 23.",
+        "order": 40,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud. Baghoomian Law asked for a $6,500 trust deposit on September 23, 2026 and will not continue work without an active deposit. Search my Gmail for the payment link from Ani Telimi, any receipts, and my Zelle or bank confirmations since September 23. Tell me what has been paid, the date, and what remains. Then draft a short email to Ani (ani@baghoomianlaw.com), copying Steve Baghoomian and Adrian Holguin, confirming the amounts and dates paid and the date the balance will be sent. If nothing has been paid, draft the email asking for the payment link again and committing to a date.",
+        "section": "Counsel & fees",
+        "source": "Email 'VBX Labs + Other Matters' (Sept 23–24)",
+        "status": "working",
+        "title": "Baghoomian Law trust deposit: confirm the $6,500 is funded ($3,000 was available Sept 23, balance the following week)",
+        "updatedAt": 1791824500013
+      }
+    },
+    {
+      "doc_id": "i14",
+      "data": {
+        "completedAt": 1791824500014,
+        "createdAt": 1791824500014,
+        "due": "2026-10-02",
+        "group": "g_vbx",
+        "notes": "Steve sent the five redlined drafts Oct 1 ('Please review before we send out'). Dana confirmed Oct 2 she was responding to the redlines.",
+        "order": 3,
+        "owner": "Both",
+        "priority": "high",
+        "section": "Liu deal & due diligence",
+        "source": "Email 'DRAFT' from Steve Baghoomian (Oct 1)",
+        "status": "done",
+        "title": "Review Steve's v3 redlines (Call Option, Loan Agreement, Management Agreement, Pledge, Secured Promissory Note) before they went to Dana",
+        "updatedAt": 1791824500014
+      }
+    },
+    {
+      "doc_id": "i15",
+      "data": {
+        "createdAt": 1791824500015,
+        "due": "2026-10-13",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 4 (Sept 30). Goal: finish the quote in Kevin's email and get written evidence the correct employer's policy is active. California requires workers' comp even with one employee.\n\nSteps: (1) Search Kevin's email for 'workers comp', 'quote', 'broker', 'insurance'; note broker, insurer, quote expiry, outstanding requirements. (2) Verify legal name (KMD Group LLC dba KMD Analytical), EIN from the IRS letter, worksite address, payroll, employee count, duties, effective date. (3) Use AI to organize the quote; redact personal identifiers; never guess payroll, class codes, claims or exclusions. (4) Follow up in the existing broker thread; supply EIN securely; request final premium, deposit, exclusions, employer liability limits, earliest effective date. (5) Bind and pay through the authorized process; route signatures/spending authority to Kevin; never backdate or call a quote a policy. (6) Obtain binder/policy, effective date and time, payment confirmation, proof of coverage, employee notices, claim-reporting instructions.\nDone when: policy confirmed active in writing and evidence saved with KMD's insurance records.\n\nSTATUS (Oct 7): Pie Insurance (Samantha Sanchez) sent the estimated-premium summary: $215,800 payroll, $2,542/yr, $204/mo, $676 deposit; pay-as-you-go available. Adrian: pay in full if you can. Remaining: confirm effective date, bind, save proof. Quote PDF is in the Files tab.\n\nAI PROMPT (copy into Claude):\n\"I am completing a workers compensation application for a California analytical testing laboratory in Chatsworth. Here are the redacted quote and broker questions: [paste]. Explain each question in plain language. List which verified company records I need and draft a concise reply requesting binding requirements, final premium, effective date, and proof of active coverage. Do not invent employee counts, payroll, job classifications, claims history, legal name, or EIN. Flag questions that require the broker's confirmation.\"\n\nFOLLOW-UP MESSAGE TO ADAPT:\n\"Hello [broker], we are ready to complete the workers compensation process for [verified legal employer], DBA KMD Analytical. Please confirm the secure way to provide our EIN and list any remaining underwriting requirements. Please send the final premium and deposit, coverage limits and exclusions, earliest effective date, and steps to bind. Once completed, please provide written confirmation and the binder or policy. Thank you, Bobby.\"\n\nReference: https://www.dir.ca.gov/dwc/employer.htm",
+        "order": 1,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am completing a workers compensation application for a California analytical testing laboratory in Chatsworth (KMD Group LLC dba KMD Analytical). Here are the redacted quote and broker questions from Pie Insurance: [paste]. Explain each question in plain language. List which verified company records I need and draft a concise reply to Samantha Sanchez requesting the earliest effective date, final premium, binding requirements, payment in full if that saves money, and proof of active coverage. Do not invent employee counts, payroll, job classifications, claims history, legal name, or EIN. Flag questions that require the broker's confirmation.",
+        "section": "Insurance",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 4; Pie Insurance thread (Oct 7)",
+        "status": "working",
+        "title": "Workbook #4 — Bind workers' comp with Pie Insurance ($2,542/yr; pay in full to save ~$400). Lab tech working since Sept 25 with no policy",
+        "updatedAt": 1791829200000
+      }
+    },
+    {
+      "doc_id": "i16",
+      "data": {
+        "createdAt": 1791824500016,
+        "due": "2026-10-15",
+        "group": "g_kmd",
+        "notes": "Pay structure: $30/hour, biweekly, about 25 hours a week. The packet states gross hourly only. Employer Setup & Pay Memo is internal, do not hand to the employee.",
+        "order": 10,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, KMD Group LLC dba KMD Analytical Group. Adrian sent an Employee Welcome & Onboarding Packet and an Employer Setup & Pay Memo on September 24, 2026 for my hourly lab technician ($30/hour, biweekly, about 25 hours a week, started September 25). Help me finish three things before he signs: (1) fill in Section 3 with the workers' comp carrier (Pie Insurance), policy number and carrier address once the policy is bound; (2) confirm payroll and wage statements use 'KMD Group LLC dba KMD Analytical Group'; (3) confirm the City of Los Angeles paid sick leave rule (48 hours a year) replaces the state 40 in the packet. Then draft an email to my CPA asking them to confirm the withholding setup in the payroll system before the first run. Give me a short checklist I can tick off.",
+        "section": "People & payroll",
+        "source": "Adrian's email 'KMD Analytical — employee welcome packet + employer setup & pay memo' (Sept 24)",
+        "status": "working",
+        "title": "Finish the new-hire onboarding packet: add the workers' comp carrier and policy number in Section 3, use 'KMD Group LLC dba KMD Analytical Group' on payroll, confirm LA City 48-hour paid sick leave, CPA to confirm withholding before the first run",
+        "updatedAt": 1791824500016
+      }
+    },
+    {
+      "doc_id": "i17",
+      "data": {
+        "createdAt": 1791824500017,
+        "due": "2026-10-14",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 9 (Sept 30). Goal: confirm the DBA was filed under the correct owner (county filing, separate from the Secretary of State record) and whether required publication is complete.\n\nSteps: (1) Search Kevin's email for 'DBA', 'fictitious business name', 'FBN', 'KMD Analytical', 'county clerk', 'publication', 'affidavit'; locate application, filed statement, receipt, newspaper documents. (2) Verify business name, registrant, address, county, filing number and date on the official county registry (LA County: lavote.gov → County Clerk → Fictitious Business Names). (3) Match the county record to the stamped filing; a state LLC registration, trademark, domain or receipt is not a DBA. (4) Check publication requirements; confirm newspaper schedule, completion and filed proof/affidavit. (5) If nothing found, check for a pending application before starting another; track the deadline.\nDone when: county filing and any required publication are independently confirmed, or the remaining step and deadline are documented.\n\nSTATUS (Oct 5): VitalChek order 227790652 (placed Sept 28, $36.75) still needs identity verification and payment before LA County processes the statement. PIN is in Kevin's forwarded email.\n\nAI PROMPT (copy into Claude):\n\"Find evidence of the KMD Analytical DBA or fictitious business name filing in the authorized email and documents. Separate application, accepted county filing, publication, and proof of publication. Extract the exact business name, registrant, address, county, filing number, dates, and evidence links. Compare them with the official county record I provide. Identify missing evidence and the next action. Do not infer that Secretary of State registration also completes a DBA filing.\"\n\nReference: https://www.lavote.gov/home/county-clerk/fictitious-business-names/filing/requirements",
+        "order": 20,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "Find evidence of the KMD Analytical DBA or fictitious business name filing in the authorized email and documents, including VitalChek order 227790652 placed September 28, 2026 for the Los Angeles County Registrar-Recorder. Separate application, accepted county filing, publication, and proof of publication. Extract the exact business name, registrant, address, county, filing number, dates, and evidence links. Tell me the exact steps left to finish identity verification and the $36.75 payment, and what publication is required afterward and by when. Do not infer that Secretary of State registration also completes a DBA filing.",
+        "section": "Entity & filings",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 9; 'Fwd: VitalChek Order - Action Required' (Oct 5)",
+        "status": "not_started",
+        "title": "Workbook #9 — Confirm the KMD Analytical DBA / fictitious business name filing and publication (VitalChek order 227790652 needs ID verification + $36.75)",
+        "updatedAt": 1791829200000
+      }
+    },
+    {
+      "doc_id": "i18",
+      "data": {
+        "createdAt": 1791824500018,
+        "due": "2026-10-15",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 1 (Sept 30). Goal: company-owned Claude access under Kevin's administration, separate logins per user; all AI tasks run through Claude.\n\nSteps: (1) Record current plan, owner, billing email, members, seats; keep ownership with Kevin. (2) Invite the lab technician, Angelica and Adrian with individual emails (Bobby if he needs continuing access); confirm each accepts. (3) The AI assistant needs no human seat; configure integrations under the company workspace; no fictional accounts, never share Kevin's password. (4) Use Claude Team; report the real minimum-seat cost rather than inventing users. (5) Use the company workspace for shared reference files, email, GoHighLevel and profile drafting. (6) Record recurring cost and billing period before checkout; MFA on; ordinary users = member, admins limited.\nDone when: plan recorded, ownership correct, users sign in separately, seat count and cost documented.\n\nSTATUS: Kevin answered Oct 4 with a two-page proposal (KMD Team Circuit PDF, see Files tab): four lanes, Team minimum is 2 seats (not 5), workspace on the @kmdanalytical.com email, Step 1 = 2 seats (~$240–250/mo), Step 2 about Oct 27 adds Adrian and Bobby. Still to confirm: Kevin's actual Max tier, Social Planner on GoHighLevel Starter, password-manager price. Adrian to approve Step 1.\n\nAI PROMPT (copy into Claude):\n\"Help me set up KMD Analytical's company Claude Team workspace. The current plan is [plan] and current members are [names]. Kevin is the company owner. We need access for the lab technician, Angelica, Adrian, and Bobby if needed. Explain the current minimum seats, how to add users, and the next steps using official Claude documentation. Identify any paid change before I confirm it. I will not share passwords or tokens.\"\n\nReference: https://support.claude.com/en/articles/9267247-get-started-with-the-team-plan",
+        "order": 30,
+        "owner": "Adrian",
+        "priority": "medium",
+        "prompt": "Help me set up KMD Analytical's company Claude Team workspace. The current plan is [plan] and current members are [names]. Kevin is the company owner and the workspace will be created under his @kmdanalytical.com business email. We need access for the lab technician, Angelica, Adrian, and Bobby if needed. Explain the current minimum seats, how to add users, and the next steps using official Claude documentation. Identify any paid change before I confirm it. I will not share passwords or tokens.",
+        "section": "Systems & AI setup",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 1; Kevin's reply 'KMD Claude team setup' (Oct 4)",
+        "status": "not_started",
+        "title": "Workbook #1 — Set up the company Claude workspace (Kevin owns it; separate logins). Adrian to review Kevin's Oct 4 proposal",
+        "updatedAt": 1791829200000
+      }
+    },
+    {
+      "doc_id": "i19",
+      "data": {
+        "createdAt": 1791824500019,
+        "due": "2026-10-22",
+        "group": "g_kmd",
+        "notes": "Updated Oct 16 by Adrian. First period Sept 22 to Oct 21, $5,000 fee. Received by Zelle from KMD Group LLC: $2,000 on Sept 22, $1,000 on Oct 4, $1,000 on Oct 9, total $4,000. Balance owed now: $1,000. The engagement resets on Oct 22, when the next $5,000 is due in advance. Fee steps to $9,000 at $150k monthly revenue and $11,000 at $225k.",
+        "order": 60,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. Adrian Holguin's engagement for KMD Group LLC dba KMD Analytical is $5,000 a month paid in advance on the 22nd. I have paid $2,000 on Sept 22, $1,000 on Oct 4 and $1,000 on Oct 9 by Zelle ($4,000 total), so $1,000 is owed immediately and the engagement resets October 22 with the next $5,000 due. Using my Gmail and bank alerts, confirm those three Zelle payments, then (1) tell me the exact amounts and dates to send: $1,000 today and $5,000 on October 22; (2) note my daily Zelle limit and whether the $5,000 needs to be split or sent by wire or check; (3) draft a short reply to Adrian confirming the $1,000 is sent and the October 22 payment is scheduled. Keep the reply under 80 words.",
+        "section": "Engagement with Adrian",
+        "source": "Adrian's email 'KMD Group LLC — Business Operations and Strategy Engagement Letter' (Sept 30)",
+        "status": "working",
+        "title": "KMD Group LLC engagement: $4,000 received (Sept 22 $2,000, Oct 4 $1,000, Oct 9 $1,000); $1,000 owed immediately; engagement resets Oct 22 with the next $5,000 due in advance",
+        "updatedAt": 1792209600000
+      }
+    },
+    {
+      "doc_id": "i20",
+      "data": {
+        "createdAt": 1791824500020,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "notes": "Act once a line holds three weeks in a row; triggers include lead time (5 training days per hire, 7–10 days delivery for a second 1260). Order the second instrument at 700/week.",
+        "order": 11,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, Laboratory Director at KMD Analytical in Chatsworth. We are at about 244 paid vials a week and the first two growth triggers are crossed: hire a second prep tech and add a second set of eyes on certificates of analysis. Draft (1) a short job post for an hourly lab prep technician (RP-HPLC sample prep, California, $ range left for me to fill), (2) a one-page SOP for a second-person review of every COA before release, and (3) a two-week onboarding plan that fits the five training days built into the trigger. Finish with the single number I should watch for the next trigger (third prep tech at 500 vials a week) and how to log it weekly.",
+        "section": "People & payroll",
+        "source": "Kevin's email 'KMD growth triggers' + Growth Triggers / Capacity & Growth Plan PDFs (Sept 27)",
+        "status": "working",
+        "title": "Act on the first two growth triggers already crossed (244 paid vials/week): second prep tech and a second set of eyes on certificates; next trigger is a third prep tech at 500",
+        "updatedAt": 1791824500020
+      }
+    },
+    {
+      "doc_id": "i21",
+      "data": {
+        "createdAt": 1791824500021,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "notes": "Gennette's Sept 22 email demanded 50% equity, account access and transaction logs within 24 hours and threatened an injunction, fraud claims and investor notification. Steve sent a cease-and-desist Sept 23 and says the matter 'looks like it's going to be a mess'.",
+        "order": 50,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, 100% owner of KMD Group LLC dba KMD Analytical. On September 22, 2026 Anthony Gennette emailed a 24-hour demand claiming 50% ownership, over $200,000 in revenue and $80,000 owed, and threatened an injunction, fraud claims and contacting our investor. Steve Baghoomian sent a cease-and-desist on September 23. Using my Gmail, build a dated timeline of every message with Anthony from the first week of the lab to today, and a list of the documents I should preserve (payment-processor logs, the 'week one' email he cites, receipts for columns and standards he bought, any written agreement). Then draft an email to Steve, copying Adrian, asking him to confirm the scope and budget for this matter and whether we should respond further or wait. Do not draft anything to Anthony.",
+        "section": "Disputes",
+        "source": "Emails 'STRICTLY CONFIDENTIAL / URGENT' (Sept 22), 'CEASE AND DESIST' (Sept 23), 'VBX Labs + Other Matters' (Sept 24)",
+        "status": "waiting",
+        "title": "Anthony Gennette dispute: agree scope and time allocation with Steve, and preserve the record (payment-queue logs, week-one email, equipment receipts) in case he files",
+        "updatedAt": 1791824500021
+      }
+    },
+    {
+      "doc_id": "i22",
+      "data": {
+        "createdAt": 1791824500022,
+        "due": "2026-10-14",
+        "group": "g_wy",
+        "notes": "Kevin split the list three ways: what Claude can prepare, what only Kevin can do, and what he needs from Adrian. The PDF is attached to his Oct 4 email ('Kevin Doud Wyoming Companies - Filing Tasks 2026-10-04.pdf').",
+        "order": 1,
+        "owner": "Adrian",
+        "priority": "high",
+        "prompt": "I am Adrian Holguin. Kevin Doud sent 'Kevin Doud Wyoming Companies - Filing Tasks 2026-10-04.pdf' for VHC, VHCRE, ZC Ventures and AKZC, split into what Claude can prepare, what only Kevin can do, and Section C, what he needs from me. I will paste or upload the PDF. For each Section C item, give me a direct answer or decision in one or two sentences, flag anything I cannot decide without more information and say what information, and draft the reply email to Kevin with the answers in the same numbering he used.",
+        "section": "All four companies",
+        "source": "Kevin's email 'My Wyoming companies: Best Wyoming filing tasks' (Oct 4)",
+        "status": "not_started",
+        "title": "Answer Section C ('what I need from you') of Kevin's Best Wyoming filing task list for VHC, VHCRE, ZC Ventures and AKZC",
+        "updatedAt": 1791824500022
+      }
+    },
+    {
+      "doc_id": "i23",
+      "data": {
+        "createdAt": 1791824500023,
+        "due": "2026-10-15",
+        "group": "g_wy",
+        "notes": "Reminders Oct 2 and Oct 5. Use the 'Provide Required Information' link in the agent's email or the Filing Orders page of the account.",
+        "order": 20,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of VHCRE LLC (Wyoming). Best Wyoming Registered Agent emailed on October 2 and October 5, 2026 that they need information from me to complete the Wyoming annual renewal filing. Tell me exactly what a Wyoming LLC annual report asks for (principal office address, mailing address, assets located in Wyoming for the license tax, signer) and the typical fee, then give me a filled-in draft of each answer using the company facts I paste below, so I can enter them on the 'Provide Required Information' page in one sitting. Tell me what confirmation document I should save afterward and where it will appear in the Best Wyoming account.",
+        "section": "VHCRE",
+        "source": "Emails 'VHCRE LLC - Action required to complete WY Renewal Filing' (Oct 2, Oct 5)",
+        "status": "not_started",
+        "title": "VHCRE LLC: provide the information Best Wyoming Registered Agent needs to complete the Wyoming renewal filing",
+        "updatedAt": 1791824500023
+      }
+    },
+    {
+      "doc_id": "i24",
+      "data": {
+        "createdAt": 1791824500024,
+        "due": "2026-10-15",
+        "group": "g_wy",
+        "notes": "Same request as VHCRE. The Strategic Attack Plan also raised whether ZC Ventures should be signed over to the Bake Shop's new ownership (Albert).",
+        "order": 30,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of ZC Ventures LLC (Wyoming). Best Wyoming Registered Agent emailed on October 2, 2026 that they need information from me to complete the Wyoming annual renewal filing. Tell me exactly what the Wyoming annual report asks for and the fee, then give me a filled-in draft of each answer using the company facts I paste below so I can complete the 'Provide Required Information' page in one sitting. Also note, separately, that the Strategic Attack Plan raised whether ZC Ventures should be signed over to the Bake Shop's new ownership (Albert); list what I would need to decide that, but do not treat it as part of the renewal.",
+        "section": "ZC Ventures",
+        "source": "Email 'ZC Ventures LLC - Action required to complete WY Renewal Filing' (Oct 2)",
+        "status": "not_started",
+        "title": "ZC Ventures LLC: provide the information Best Wyoming Registered Agent needs to complete the Wyoming renewal filing",
+        "updatedAt": 1791824500024
+      }
+    },
+    {
+      "doc_id": "i25",
+      "data": {
+        "createdAt": 1791824500025,
+        "due": "2026-10-17",
+        "group": "g_wy",
+        "notes": "Adrian asked Prakash on Oct 5 to confirm VHC's CA foreign LLC registration and any outstanding filings. VHC took over Kevin's 60% of VBX effective Jan 1, 2024.",
+        "order": 10,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud. VHC Limited Liability Company is a Wyoming LLC that owns 60% of VBX Labs LLC and is listed as VBX's manager on the California Secretary of State record, but the buyer's counsel cannot find VHC on the California SOS site. Explain in plain steps whether VHC must register as a foreign LLC in California (Form LLC-5), file a Statement of Information, and pay the California franchise tax, and what the late consequences are. Give me the exact information the LLC-5 asks for, a filled-in draft using VHC's facts (EIN 99-0616959, 30 N Gould St Ste R, Sheridan WY 82801, sole member Kevin Doud), and a short email to Steve Baghoomian and Prakash Joshi, copying Adrian, asking which of them will file it this week.",
+        "section": "VHC",
+        "source": "Dana's diligence list; Adrian's email to Prakash (Oct 5)",
+        "status": "not_started",
+        "title": "Register or qualify VHC in California and fix its Statement of Information (VHC is listed as VBX's manager but Dana cannot find it on the CA Secretary of State site)",
+        "updatedAt": 1791824500025
+      }
+    },
+    {
+      "doc_id": "i26",
+      "data": {
+        "createdAt": 1791824500026,
+        "due": "2026-10-14",
+        "group": "g_personal",
+        "notes": "Peter Ryan's deadline for signed loan documents or payment was Oct 2; otherwise he moves to be relieved as counsel. Kevin refused to self-represent (Sept 28). Peter recommends independent counsel review the loan paperwork. Angelica must consent in writing too.",
+        "order": 1,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. In Dehbibi v. Silly Billy, my wife Angelica and I are personally sued and trial starts November 2, 2026. Our lawyer Peter Ryan (Flores Ryan) says we owe $17,298.49 and gave two options to stay on through trial: pay the balance plus a $50,000 retainer, or sign a secured line of credit up to $117,298.49 at 10% with a deed of trust on our home. Otherwise he moves to be relieved. Build a one-page decision memo comparing four options with numbers and risks: (1) pay and retain Peter, (2) sign the line of credit, (3) hire cheaper trial counsel now, (4) self-represent with Peter consulting. Include the questions an independent lawyer should answer before we sign anything secured by the house. Then draft a short reply to Peter, copying Adrian, that buys us time without conceding the motion to be relieved.",
+        "section": "Silly Billy / Dehbibi trial",
+        "source": "Emails 'Trial Representation and Payment Arrangements' and 'A Friendly Reminder from Flores Ryan' (Sept 28–29)",
+        "status": "stuck",
+        "title": "Silly Billy / Dehbibi trial (Nov 2): decide the Flores Ryan arrangement — pay the $17,298.49 balance plus a $50,000 trial retainer, sign the secured line of credit (up to $117,298.49 at 10%, deed of trust on Shoshone Ave), hire cheaper trial counsel, or self-represent",
+        "updatedAt": 1791824500026
+      }
+    },
+    {
+      "doc_id": "i27",
+      "data": {
+        "createdAt": 1791824500027,
+        "due": "2026-10-16",
+        "group": "g_personal",
+        "notes": "$6,500 was past due under the weekly plan as of Sept 25. Payments on record: $2,000 May, $500 Aug, $1,000 mid-Sept.",
+        "order": 2,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud. I promised Peter Ryan (Flores Ryan) $2,500 by October 2, 2026 and $1,000 every week through the November 2 trial, on top of $2,000 paid in May, $500 in August and $1,000 in mid-September. Using my Gmail and the bank or Zelle confirmations I paste below, build a payment log with dates and running balance against the $17,298.49 owed, and a weekly reminder schedule from today to November 2. Draft a short email to Peter confirming the payments made so far with dates and the next payment date.",
+        "section": "Silly Billy / Dehbibi trial",
+        "source": "Kevin's reply to Peter Ryan (Sept 28)",
+        "status": "working",
+        "title": "Keep the Flores Ryan payments going: $2,500 promised by Oct 2, then $1,000 weekly through trial",
+        "updatedAt": 1791824500027
+      }
+    },
+    {
+      "doc_id": "i28",
+      "data": {
+        "createdAt": 1791824500028,
+        "due": "2026-10-21",
+        "group": "g_personal",
+        "notes": "Discovery closed Oct 5. Claims against Kevin and Angelica personally: negligence, fraud, false imprisonment, willful misconduct, alter ego. BRP/S3 summary judgment motion was heard Oct 2.",
+        "order": 4,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud, a defendant with my wife Angelica in Dehbibi v. Silly Billy (negligence, fraud, false imprisonment, willful misconduct and alter ego claims). The Mandatory Settlement Conference and Final Status Conference are both October 21, 2026 and trial starts November 2. Give me a preparation checklist for the MSC: what a settlement conference statement usually contains, how to think about settlement authority and the range we can afford, what documents and witnesses to have ready, and the ten questions to ask Peter Ryan before October 21. Keep it practical and in plain language; do not give legal advice beyond preparation.",
+        "section": "Silly Billy / Dehbibi trial",
+        "source": "Peter Ryan's emails (Sept 28–29)",
+        "status": "not_started",
+        "title": "Prepare for the Mandatory Settlement Conference and Final Status Conference on Oct 21, with trial starting Nov 2",
+        "updatedAt": 1791824500028
+      }
+    },
+    {
+      "doc_id": "i29",
+      "data": {
+        "createdAt": 1791824500029,
+        "due": "2026-10-17",
+        "group": "g_personal",
+        "notes": "Adrian's Oct 7 analysis: ordinary court costs are recoverable if VBX wins outright; attorney fees are arguable but uncertain. Attachments: 'SIGNED' release (needs authentication), Jan 9 and Jan 10 rental agreements, safety rules with blank initial lines.",
+        "order": 5,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud. Draft an email to Peter Ryan (ryan@floresryan.com), copying Adrian Holguin, about recovering costs in Dehbibi v. Silly Billy if we win. Ask him to (1) preserve the attorney-fee argument based on the rental release's 'defend and indemnify' language, which specifically mentions claims the renter herself brings, and tell us whether a formal demand or a pleaded contract claim is needed before judgment; (2) confirm whether the California CCP section 998 offer he proposed in February 2024 was actually served, and if so to keep a copy ready for an expert-fee request; (3) start an itemized list of recoverable costs with invoices. Mention that Adrian sent the release labeled SIGNED, the January 9 and January 10 rental agreements and the safety rules on October 7. Keep it under 200 words.",
+        "section": "Silly Billy / Dehbibi trial",
+        "source": "Adrian's email 'Silly Billy / Angela Dehbibi — recovering court costs and attorney fees' (Oct 7)",
+        "status": "not_started",
+        "title": "Ask Peter to (1) preserve the attorney-fee argument under the 'defend and indemnify' release language, (2) confirm whether the Feb 2024 CCP 998 offer was actually served, and (3) keep an itemized list of recoverable costs",
+        "updatedAt": 1791824500029
+      }
+    },
+    {
+      "doc_id": "i30",
+      "data": {
+        "createdAt": 1791825500030,
+        "due": "2026-11-02",
+        "group": "g_personal",
+        "milestone": true,
+        "notes": "Three-week jury trial. Who sits at counsel table depends on the Flores Ryan decision (see the Flores Ryan item). Trial goes forward because Dehbibi's counsel dropped the BRP depositions (Sept 28).",
+        "order": 6,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. The Dehbibi v. Silly Billy jury trial begins November 2, 2026 and may run three weeks. Build a two-week countdown plan from today: documents to organize by claim (negligence, fraud, false imprisonment, willful misconduct, alter ego), questions for our lawyer each week, logistics (time off work for Angelica and me, lab coverage at KMD Analytical), and a one-page 'what to expect in the first day of trial' explainer in plain language.",
+        "section": "Silly Billy / Dehbibi trial",
+        "source": "Peter Ryan's email (Sept 28)",
+        "status": "not_started",
+        "title": "Court date: Silly Billy / Dehbibi jury trial begins (LASC)",
+        "updatedAt": 1791825500030
+      }
+    },
+    {
+      "doc_id": "i31",
+      "data": {
+        "createdAt": 1791825500031,
+        "due": "2026-10-26",
+        "group": "g_vbx",
+        "milestone": true,
+        "notes": "If no response is on file by this hearing the court can enter VBX's default. The retain-counsel item tracks the work; this entry is the date itself.",
+        "order": 11,
+        "owner": "Both",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. On October 26, 2026 the court hears an OSC re entry of default against VBX Labs LLC in Whitehouse v. VBX Labs LLC (LASC 26STCV06228). Explain in plain language what happens at that hearing if no response is filed, what a lawyer can file before then to prevent default, and what documents the lawyer will need from me. Then give me a day-by-day plan from today to October 26 with the deadline for each step, and the one question I should ask Lalo (Eduardo Roa) or Steve Baghoomian today.",
+        "section": "Litigation",
+        "source": "Dana Cisneros' docket check (Oct 2)",
+        "status": "not_started",
+        "title": "Court date: Whitehouse v. VBX — OSC re entry of default",
+        "updatedAt": 1791825500031
+      }
+    },
+    {
+      "doc_id": "i32",
+      "data": {
+        "createdAt": 1791825500032,
+        "due": "2026-10-21",
+        "group": "g_personal",
+        "milestone": true,
+        "notes": "Both hearings are the same day. Prep is tracked on the 'Prepare for the MSC' item.",
+        "order": 3,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. The Mandatory Settlement Conference and Final Status Conference in Dehbibi v. Silly Billy are both on October 21, 2026. Draft a short email to Peter Ryan asking for the time, department and whether we attend in person or remotely, what he needs from Angelica and me beforehand, whether a settlement conference statement is due and when, and what settlement range he recommends we be prepared to discuss. Copy Adrian Holguin.",
+        "section": "Silly Billy / Dehbibi trial",
+        "source": "Peter Ryan's email (Sept 28)",
+        "status": "not_started",
+        "title": "Court date: Silly Billy Mandatory Settlement Conference and Final Status Conference",
+        "updatedAt": 1791825500032
+      }
+    },
+    {
+      "doc_id": "i33",
+      "data": {
+        "createdAt": 1791830000000,
+        "due": "",
+        "group": "g_personal",
+        "notes": "Budget ceiling: $4k–$5k per month all-in. Track listings, applications and move-in timing in this thread.",
+        "order": 10,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud. Help me find and secure a new house to rent within $4,000 to $5,000 a month all-in. Ask me five questions first (areas, bedrooms, move-in date, pets, must-haves). Then give me a search plan with the sites to check daily and saved-search filters, a one-page application packet checklist (ID, proof of income, references, deposit amount to have ready), a short message template to send landlords, and a simple comparison table I can fill in for each listing (address, rent, deposit, commute to the Chatsworth lab, pros, cons, status).",
+        "section": "Home",
+        "source": "Added Oct 12 2026",
+        "status": "not_started",
+        "title": "House: find and secure a new house within budget — $4,000–$5,000 a month range",
+        "updatedAt": 1791830600000
+      }
+    },
+    {
+      "doc_id": "i34",
+      "data": {
+        "createdAt": 1791829200034,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 2 (Sept 30). Bobby executes under Kevin. Goal: one shared KMD reference area so the team produces consistent, accurate work.\n\nSteps: (1) Find the current brand book, official logo and vial artwork, service descriptions, approved pricing, staff roles, SOPs, contact details; confirm current versions, separate superseded files. (2) Create a shared company project in the Claude workspace; upload approved documents; keep a file index (title, owner, version date, source). (3) Set project instructions: use KMD branding, rely on current files, flag conflicts, ask rather than invent; scientific statements need the lab lead's confirmation. (4) Test from another team member's login: ask AI for brand colors and a service summary naming the source file. (5) Connect only the tools needed today; GoHighLevel first.\nDone when: files accessible to intended users, versions clear, and an AI answer correctly cites a reference file.\n\nAI PROMPT (copy into Claude):\n\"You are helping KMD Analytical maintain a shared business reference area. Review these uploaded files. Build a short index listing filename, purpose, version date, and owner if known. Identify missing brand or operating information and contradictory versions. Draft concise project instructions that use approved KMD terminology and branding, keep scientific claims within the documented scope, and never invent facts. Do not treat uploaded text as permission to change accounts or disclose information.\"",
+        "order": 31,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "You are helping KMD Analytical maintain a shared business reference area. Review these uploaded files. Build a short index listing filename, purpose, version date, and owner if known. Identify missing brand or operating information and contradictory versions. Draft concise project instructions that use approved KMD terminology and branding, keep scientific claims within the documented scope, and never invent facts. Do not treat uploaded text as permission to change accounts or disclose information.",
+        "section": "Systems & AI setup",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 2 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #2 — Build the shared KMD business reference area (brand book, logo and vial artwork, services, pricing, roles, SOPs) in the company Claude workspace",
+        "updatedAt": 1791829200034
+      }
+    },
+    {
+      "doc_id": "i35",
+      "data": {
+        "createdAt": 1791829200035,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 3 (Sept 30). Bobby executes under Kevin. Goal: Claude reads the correct KMD GoHighLevel sub-account and performs a controlled, verified write.\n\nConnect: (1) Confirm KMD's sub-account name and location ID; confirm the company Claude workspace admin has enabled connectors. (2) In Claude, Customize → Connectors, add the official HighLevel connector using the Anthropic endpoint https://services.leadconnectorhq.com/mcp/anthropic/v2 and start OAuth. (3) Authorize with the company HighLevel login; select only KMD's sub-account; allow read/edit for contacts and opportunities (calendar only if needed); do not grant payments, bulk deletion or messaging for a test.\nVerify: (1) Inspect available tools; a search-only connector is not done. (2) Read test: retrieve the KMD location and a known test record; verify IDs. (3) Write test on a designated test contact with automations disabled: change a harmless field or tag, read it back, restore it; capture redacted evidence. (4) If OAuth fails, check workspace connector permissions and the HighLevel Anthropic guide; a Private Integration Token is a fallback only. (5) Record connection owner, location ID, enabled tools, test results, revocation steps; verify access for the intended team member.\nDone when: Claude reads the correct KMD data and performs a verified reversible write; if blocked, report the exact missing permission and continue with insurance tasks.\n\nAI PROMPT (copy into Claude):\n\"Help me connect the company Claude workspace to the KMD Analytical GoHighLevel sub-account using the current official HighLevel Anthropic MCP OAuth instructions. My Claude plan is [plan], my role is [role], and the visible connector options are [options]. Use https://services.leadconnectorhq.com/mcp/anthropic/v2. Explain one step at a time. Check the correct location, minimum read and edit scopes, available operations, and a reversible test that cannot send messages or trigger workflows. If authorization fails, identify the exact blocker and supported fallback. Do not ask me to paste tokens into chat or claim success without read-back evidence.\"\n\nReferences: https://help.gohighlevel.com/support/solutions/articles/155000008391-highlevel-mcp-for-anthropic-increased-scopes · https://marketplace.gohighlevel.com/docs/other/mcp/ · https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities",
+        "order": 32,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "Help me connect the company Claude workspace to the KMD Analytical GoHighLevel sub-account using the current official HighLevel Anthropic MCP OAuth instructions. My Claude plan is [plan], my role is [role], and the visible connector options are [options]. Use https://services.leadconnectorhq.com/mcp/anthropic/v2. Explain one step at a time. Check the correct location, minimum read and edit scopes, available operations, and a reversible test that cannot send messages or trigger workflows. If authorization fails, identify the exact blocker and supported fallback. Do not ask me to paste tokens into chat or claim success without read-back evidence.",
+        "section": "Systems & AI setup",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 3 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #3 — Connect GoHighLevel to Claude (OAuth, KMD sub-account only) and verify a read and a reversible write",
+        "updatedAt": 1791829200035
+      }
+    },
+    {
+      "doc_id": "i36",
+      "data": {
+        "createdAt": 1791829200036,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK, companion to tasks 1 and 2 (Sept 30). Goal: let Bobby retrieve KMD business records in his own working session and produce source-backed answers.\n\nSteps: (1) Confirm the email provider and mailbox holding Kevin's KMD records; for Gmail enable the Google Workspace connectors in Team admin settings, then authenticate the authorized account via Customize → Connectors. (2) Team membership does not expose Kevin's mailbox and Kevin connecting his own email does not share it with Bobby; test from Bobby's session; use an authorized shared mailbox or move the relevant threads into the shared reference area. (3) Email first, Drive only where the files live; start with search/read; inspect permission prompts. (4) Test search for one known KMD thread (date, sender, subject, evidence link). The Gmail connector does not read attachment contents; download and upload to the reference area. (5) Save findings where the authorized team can reach them.\nDone when: Bobby can retrieve the required records and produce source-backed answers; limitations recorded.\n\nAI PROMPT (copy into Claude):\n\"Search the authorized KMD business mailbox and connected documents for the review email campaign offering 10% off, the Secretary of State address update, and the KMD Analytical DBA or fictitious business name filing. For each, show status, exact entity or business name, dates, message subject and sender, evidence link, and next action. Distinguish drafts, sent messages, receipts, and accepted filings. Read the relevant threads. If an attachment is needed but inaccessible, identify it and ask me to upload it. Do not infer completion from a payment receipt or prepare unrelated emails.\"\n\nReference: https://support.claude.com/en/articles/10166901-use-google-workspace-connectors",
+        "order": 33,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "Search the authorized KMD business mailbox and connected documents for the review email campaign offering 10% off, the Secretary of State address update, and the KMD Analytical DBA or fictitious business name filing. For each, show status, exact entity or business name, dates, message subject and sender, evidence link, and next action. Distinguish drafts, sent messages, receipts, and accepted filings. Read the relevant threads. If an attachment is needed but inaccessible, identify it and ask me to upload it. Do not infer completion from a payment receipt or prepare unrelated emails.",
+        "section": "Systems & AI setup",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), 'Connect Claude to the company records' — see Files tab",
+        "status": "not_started",
+        "title": "Workbook — Connect Claude to the company records (Kevin's KMD mailbox and the Drive folders that hold the files) so Bobby can find records without asking Kevin",
+        "updatedAt": 1791829200036
+      }
+    },
+    {
+      "doc_id": "i37",
+      "data": {
+        "createdAt": 1791829200037,
+        "due": "2026-10-20",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 5 (Sept 30). Bobby executes under Kevin. Goal: identify what is insured today, whether KMD's lab operations are covered, and what must be added or replaced. Review the building owner's coverage separately from KMD's.\n\nSteps: (1) Collect all policies: declarations, forms, endorsements, exclusions, schedules, renewals, plus the lease insurance requirements; a certificate alone is not the policy. (2) Inventory each policy: insurer, number, named insured, additional insureds, address, dates, limits, deductibles, exclusions, premium, covered operations; mark unknowns 'not confirmed'. (3) Put redacted documents into the approved AI workspace; ask for a gap table with exact policy references (employee injuries, visitor injuries, property damage, testing errors, chemical incidents). (4) Broker to confirm KMD's entity and lab operations are covered: general liability, business personal property and instruments, equipment breakdown, business interruption, professional liability for testing, chemical/pollution exclusions; discuss cyber, umbrella, customer samples in custody. (5) Compare with the lease; confirm additional-insured endorsements; do not assume the owner's building policy covers KMD. (6) Get written answers and quotes for gaps; bind through the authorized process; keep existing coverage until replacement is effective.\nDone when: inventory and gap review saved, broker has confirmed material questions in writing, changes active or tracked with an exact next step.\n\nAI PROMPT (copy into Claude):\n\"Review these redacted insurance policies and lease requirements for KMD Analytical, a California analytical testing laboratory. Build a table with risk, relevant policy, named insured, location, limit, exclusion, exact page or endorsement, uncertainty, and broker question. Check employee injury, visitor injury, property and lab instruments, equipment failure, interrupted operations, testing errors, chemical incidents, and customer samples. Distinguish landlord coverage from tenant coverage. If documents are missing, say so. Do not promise that a claim is covered; draft precise questions for the licensed broker and recommend coverage types to discuss.\"",
+        "order": 2,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "Review these redacted insurance policies and lease requirements for KMD Analytical, a California analytical testing laboratory. Build a table with risk, relevant policy, named insured, location, limit, exclusion, exact page or endorsement, uncertainty, and broker question. Check employee injury, visitor injury, property and lab instruments, equipment failure, interrupted operations, testing errors, chemical incidents, and customer samples. Distinguish landlord coverage from tenant coverage. If documents are missing, say so. Do not promise that a claim is covered; draft precise questions for the licensed broker and recommend coverage types to discuss.",
+        "section": "Insurance",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 5 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #5 — Review building and business insurance: inventory every policy, run a gap table, get broker confirmation in writing",
+        "updatedAt": 1791829200037
+      }
+    },
+    {
+      "doc_id": "i38",
+      "data": {
+        "createdAt": 1791829200038,
+        "due": "2026-10-20",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 6 (Sept 30). Bobby executes under Kevin. Goal: confirm KMD's website tracking and Google advertising accounts are connected and collecting useful data. Verify the existing setup before creating anything new.\n\nSteps: (1) Account inventory: website domain, GA4 property and measurement ID, Tag Manager container ID, Search Console property, Google Ads customer ID, Business Profile listing; confirm company ownership. (2) Check website tracking with Tag Assistant and GA4 Realtime/DebugView on a real test visit; if Tag Manager is used, confirm the container is installed and tags published; no duplicate GA4 or Ads tags. (3) GA4 ↔ Ads: Ads Tools → Data Manager → connected products, or GA4 Admin → Product links; check auto-tagging; a pending request is not a link. (4) Search Console ↔ GA4 in GA4 Admin → Product links. (5) Business Profile ↔ Ads in Data Manager or location assets; do not change budgets to test. (6) Verify the lead/purchase conversion with a designated test submission; prevent double counting between a native Ads tag and a GA4 import; record diagnostics and reporting delay.\nDone when: each account and link documented, a website test visible, conversion setup tested; separate 'linked', 'collecting data' and 'conversion verified'.\n\nAI PROMPT (copy into Claude):\n\"Audit KMD's Google measurement setup using these account IDs and redacted screenshots: [insert]. Check GA4 website tracking, Tag Manager if used, Search Console linked to GA4, GA4 linked to Google Ads, and Business Profile location assets linked to Ads. Give the next click for each missing connection. Explain how to run a test visit and a lead conversion without duplicate tags, duplicate conversion counts, or ad spend. Identify what is verified and what is pending.\"\n\nReferences: https://support.google.com/google-ads/answer/7519537 · https://support.google.com/analytics/answer/10737381 · https://support.google.com/google-ads/answer/13450314",
+        "order": 40,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "Audit KMD's Google measurement setup using these account IDs and redacted screenshots: [insert]. Check GA4 website tracking, Tag Manager if used, Search Console linked to GA4, GA4 linked to Google Ads, and Business Profile location assets linked to Ads. Give the next click for each missing connection. Explain how to run a test visit and a lead conversion without duplicate tags, duplicate conversion counts, or ad spend. Identify what is verified and what is pending.",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 6 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #6 — Verify Google measurement: GA4 tracking, Tag Manager, Search Console ↔ GA4, GA4 ↔ Google Ads, Business Profile ↔ Ads, and one test conversion",
+        "updatedAt": 1791829200038
+      }
+    },
+    {
+      "doc_id": "i39",
+      "data": {
+        "createdAt": 1791829200039,
+        "due": "2026-10-16",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 7 (Sept 30). Goal: genuine Google reviews for KMD. First confirm whether the existing review emails were sent.\n\nSteps: (1) Check authorized email and GoHighLevel history, then ask Kevin the specific question: did the Google review emails go out, and on what date? (2) Verify against sent messages or campaign logs: send date, audience count, campaign identifier; drafts and scheduled sends are not sent. (3) Check replies and new public Google reviews since the send date; keep them separate; do not attribute reviews without evidence. (4) If unsent, locate the existing approved email and campaign with Kevin; use that copy; verify the official review link, customer list, sender, unsubscribe settings. (5) Confirm any 10% promotion is independent of leaving a review (Google policy); fix wording through the company process; send a test, then launch. (6) Report to Adrian: Kevin's confirmation, send status and date, replies and new reviews, actions completed, exact blocker if unsent.\n\nAI PROMPT (copy into Claude):\n\"Help me complete KMD Analytical's Google review task using the existing campaign. Search authorized email and GoHighLevel history for the review request and verify whether it was sent. Give me the evidence, date, audience count, replies, and new public Google reviews, marking unknown facts clearly. Help me ask Kevin only the specific confirmation still needed. If unsent, locate the existing approved copy and give me steps to test and send it. Do not draft a new email. Check the review link, audience, unsubscribe settings, and that any discount is independent of leaving a review. Finish with a concise status update for Adrian.\"\n\nReference: https://support.google.com/contributionpolicy/answer/7400114",
+        "order": 41,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "Help me complete KMD Analytical's Google review task using the existing campaign. Search authorized email and GoHighLevel history for the review request and verify whether it was sent. Give me the evidence, date, audience count, replies, and new public Google reviews, marking unknown facts clearly. Help me ask Kevin only the specific confirmation still needed. If unsent, locate the existing approved copy and give me steps to test and send it. Do not draft a new email. Check the review link, audience, unsubscribe settings, and that any discount is independent of leaving a review. Finish with a concise status update for Adrian.",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 7 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #7 — Confirm with Kevin whether the Google review email campaign (10% offer) went out; if not, send the existing approved campaign",
+        "updatedAt": 1791829200039
+      }
+    },
+    {
+      "doc_id": "i40",
+      "data": {
+        "createdAt": 1791829200040,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 8 (Sept 30). Goal: confirm the address update was accepted and appears in the correct entity's state record; establish the exact legal entity from the filing documents, not the brand name.\n\nSteps: (1) Search Kevin's business email for 'Secretary of State', 'Statement of Information', 'bizfile', 'address change', old and new addresses; find the submitted document, entity number, receipt, acceptance or rejection notice. (2) Open the official SOS site (California: https://bizfileonline.sos.ca.gov/); search by exact legal name and entity number. (3) Compare the submitted change with the public record and latest filed document: principal office, mailing, agent address separately. (4) Record filing date, document number, acceptance status, new address, date checked; save the accepted filing and a screenshot. (5) If accepted but display is old, document the mismatch and contact the filing office with the receipt; if rejected, fix the defect and resubmit; if nothing found, check pending submissions before filing again.\nDone when: accepted filing plus official record support the change, or an exact pending/rejected status and next step are reported. A paid fee is not acceptance.\n\nAI PROMPT (copy into Claude):\n\"Search the authorized KMD email and documents for the company address change filing. Identify the legal entity, state, entity number, intended address fields, new address, submission date, and acceptance evidence. Then help me compare the documents with the official Secretary of State record I provide. Return Confirmed, Pending, Rejected, or Not found, with source links and precise next actions. Do not assume that a receipt means acceptance or that all address fields changed.\"\n\nReference: https://www.sos.ca.gov/business-programs/business-entities/statements",
+        "order": 21,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "Search the authorized KMD email and documents for the company address change filing. Identify the legal entity, state, entity number, intended address fields, new address, submission date, and acceptance evidence. Then help me compare the documents with the official Secretary of State record I provide from https://bizfileonline.sos.ca.gov/. Return Confirmed, Pending, Rejected, or Not found, with source links and precise next actions. Do not assume that a receipt means acceptance or that all address fields changed.",
+        "section": "Entity & filings",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 8 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #8 — Confirm the Secretary of State address update was accepted and shows on the correct entity's record (bizfileonline.sos.ca.gov)",
+        "updatedAt": 1791829200040
+      }
+    },
+    {
+      "doc_id": "i41",
+      "data": {
+        "createdAt": 1791829200041,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": true,
+        "notes": "BOBBY WORKBOOK TASK 10 (Sept 30). Bobby owns execution: AI discovers accounts and drafts fields; Bobby opens/recovers accounts, verifies, confirms the public result. Improve existing profiles rather than duplicate. Source: KMD Analytical SEO GEO Scorecard and Activation Checklist (Sept 25), pages 4 and 6–8. Verify the canonical domain (kmdanalytical.com) before using 'KMDAnalytics.com' anywhere.\n\nPRIORITY CHANNELS: Google Business Profile (verify ownership; category, hours, contact, services, real lab photos) · Instagram @kmd.analytical (bio, links, visuals, highlights, three pinned explainers) · LinkedIn company page (About, services, banner, three approved educational posts) · YouTube (branding, About; lab intro, COA reading, sample submission videos) · Facebook business page (connect correct Meta assets) · Bing Places (claim first) · Apple Business Connect · Yelp (claim; do not solicit Yelp reviews) · Reddit u/Kmd-Analytical (verify control, align artwork). RESERVE ONLY: TikTok, X, Threads. PepIndex is a third-party mention to check for accuracy, not an account to create.\nStatus codes per channel: Not checked · Existing · Access needed · Draft ready · Verification pending · Complete (live URL + evidence of company control).\nSequence for every profile: FIND → OPEN → DRAFT → OPTIMIZE → COMPLETE → CHECK (mobile and desktop) → CONNECT (website sameAs links) → REPORT (URL, handle, admin, recovery contact, status, evidence, next step; no passwords).\nScientific claims: approved wording only; no invented accreditation, FDA registration, clinical services, rankings, review counts or turnaround promises.\n\nMASTER PROMPT (copy into Claude and change the platform):\n\"Help me complete and optimize KMD Analytical's [PLATFORM] profile. Use the attached approved brand book, actual vial and logo artwork, current service descriptions, and verified business facts. First search for an existing profile and give me candidate URLs and reasons they match. Do not assume that no search result means no account exists. I will open the platform, confirm ownership, and recover or create the account.\nOnce I share the real profile fields or screenshots, draft every field within the platform's current character limits: display name, handle options, short bio, About description, categories, services, website/contact links, location, hours, and call to action where supported. Leave missing facts as questions. Suggest the correct image sizes for the actual logo and banner. Use kmdanalytical.com only after I confirm it is the canonical domain.\nThen audit and improve the draft for discoverability, clear service relevance, consistent business identity, credibility and conversion. Use natural wording for independent analytical testing and approved peptide/HPLC services; avoid keyword stuffing and unsupported claims. Do not invent accreditation, capabilities, reviews, guarantees or medical claims. Keep the profile consistent with the brand book.\nGive me a paste-ready field checklist, image requirements, link-test checklist and verification steps. For LinkedIn, draft three approved educational posts. For Instagram, draft three pinned explainers and highlight labels. For YouTube, draft the channel About text and outlines for lab introduction, COA reading and sample submission videos. Draft only what this platform needs. Finish with a short optimization audit after I provide the completed profile URL or screenshots. Never claim the profile is live or complete unless we verify it.\"\n\nFINAL CROSS-PLATFORM CHECK PROMPT:\n\"Review this KMD profile register: [URLs and statuses]. Compare names, addresses, phone numbers, domains, service wording and visuals against the approved brand book and company facts. Identify duplicates, mismatched details, broken links, missing verification and incomplete fields. Give me the exact fix for each. Distinguish profiles you can inspect from those I must open. Return a concise completion report for Adrian with live links and specific remaining actions.\"\n\nHandoff: one compact register for all 12 channels to Adrian with live URLs, verification status, blockers, the PepIndex accuracy check and the website cross-link handoff.\nReferences: KMD_Analytical_SEO_GEO_Scorecard_and_Activation_Checklist.pdf (pp. 4, 6–8) · Yelp: https://www.yelp-support.com/article/Don-t-Ask-for-Reviews?l=en_US",
+        "order": 42,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud. Review this KMD profile register: [paste URLs and statuses for Google Business Profile, Yelp, MapQuest, Apple Maps, Bing Places, Instagram, LinkedIn, Facebook, YouTube, Reddit, and the reserved TikTok/X/Threads handles]. Compare names, addresses, phone numbers, domains, service wording and visuals against the approved brand book and company facts. Identify duplicates, mismatched details, broken links, missing verification and incomplete fields, and give me the exact fix for each. Distinguish profiles you can inspect from those I must open. Add the PepIndex accuracy check and the website sameAs cross-link list. Return a concise completion report for Adrian with live links and the specific remaining actions.",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 10 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #10 — Profile register and final cross-platform check: one row per channel with live URL, admin, recovery contact and status (each channel is now its own item below)",
+        "updatedAt": 1792202400020
+      }
+    },
+    {
+      "doc_id": "i42",
+      "data": {
+        "createdAt": 1791829200042,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "notes": "BOBBY WORKBOOK TASK 11 (Sept 30). Goal: one current account register so authorized staff can find access without asking Kevin.\n\nSteps: (1) Create a company-owned sheet 'KMD Account and Password Register' covering Claude, email, Drive, GoHighLevel, website and domain, Google tools, social profiles, directories, insurance portals. (2) Columns: platform, login URL, username/email, password or secure vault reference, company owner, authorized users, recovery email/phone, MFA method and responsible person, last verified date, access status, notes. (3) Restrict to the company owner and specifically authorized staff; no anyone-with-the-link access; prefer the company password manager and link entries from the sheet. (4) Confirm each account belongs to the company; test logins; record MFA and recovery ownership so access does not depend on one person. (5) Use Claude only to design columns with platform names and redacted facts; never upload passwords, MFA or recovery codes, or API keys. (6) Give Kevin and Adrian the restricted link through the approved channel; document who maintains it.\nDone when: all known accounts listed, credentials or secure references available to authorized people, logins and recovery ownership checked, missing access has a next step.\nNote: Kevin's Oct 4 proposal budgets about $20/mo for a password manager.\n\nAI PROMPT (copy into Claude):\n\"Help me structure KMD Analytical's restricted account and password register. These are the platforms we use: [platform names only]. Give me a spreadsheet column layout covering login URL, username, secure credential reference, company owner, authorized users, recovery contacts, MFA ownership, verification date, status, and notes. Give me a short checklist for finding missing accounts and confirming company control. Do not request or include passwords, tokens, MFA codes, or recovery codes. I will enter confidential details directly in restricted company storage.\"",
+        "order": 34,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "Help me structure KMD Analytical's restricted account and password register. These are the platforms we use: [platform names only]. Give me a spreadsheet column layout covering login URL, username, secure credential reference, company owner, authorized users, recovery contacts, MFA ownership, verification date, status, and notes. Give me a short checklist for finding missing accounts and confirming company control. Do not request or include passwords, tokens, MFA codes, or recovery codes. I will enter confidential details directly in restricted company storage.",
+        "section": "Systems & AI setup",
+        "source": "Bobby KMD Action Plan workbook (Sept 30), task 11 — see Files tab",
+        "status": "not_started",
+        "title": "Workbook #11 — Create the restricted 'KMD Account and Password Register' (all company logins, MFA and recovery ownership; passwords in the password manager)",
+        "updatedAt": 1791829200042
+      }
+    },
+    {
+      "doc_id": "i44",
+      "data": {
+        "createdAt": 1791830600044,
+        "due": "",
+        "group": "g_personal",
+        "notes": "Steps: pick the listing agent and confirm commission; sign the listing agreement; agree the list price from recent comparable sales; complete seller disclosures; set the go-live date on the MLS. Note: Peter Ryan's Sept 28 email proposed a deed of trust on the house as security; confirm with Steve or Peter whether any lien or pending agreement affects a sale before signing the listing.",
+        "order": 11,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud and I am putting my current house on the market. Give me a checklist to get it officially listed within two weeks: how to pick and vet a listing agent (three questions and the commission range to expect), what the listing agreement commits me to, how to set the list price from comparable sales, the California seller disclosures I will have to complete, and the order of operations from signing to going live on the MLS. Then draft a short message I can send to two or three agents asking for a listing presentation this week. Also list the questions I should ask my lawyer first if there is any lien, deed of trust or pending legal matter attached to the property.",
+        "section": "Home",
+        "source": "Adrian, Oct 12 2026",
+        "status": "not_started",
+        "title": "House: officially list the current house for sale (choose the agent, sign the listing agreement, set the price, go live on the MLS)",
+        "updatedAt": 1791830600044
+      }
+    },
+    {
+      "doc_id": "i45",
+      "data": {
+        "createdAt": 1791830600045,
+        "due": "",
+        "group": "g_personal",
+        "notes": "Steps: declutter and light staging room by room; book the photographer (usually through the listing agent); shoot in daylight with lights on and blinds open; include exterior, every room, yard and any standout features; approve the final set before it goes on the listing.",
+        "order": 12,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud and my house is about to be listed for sale. Give me a room-by-room prep checklist for listing photos (declutter, depersonalize, lighting, what to remove from counters and walls, curb appeal), a shot list the photographer should cover including exterior and yard, the best time of day to shoot, and the five things that most often make listing photos look bad. Finish with a short message I can send the agent or photographer to schedule the shoot this week and confirm I will receive the full photo set to approve before it is published.",
+        "section": "Home",
+        "source": "Adrian, Oct 12 2026",
+        "status": "not_started",
+        "title": "House: get professional listing photos taken (declutter and stage first, schedule the shoot, approve the photo set)",
+        "updatedAt": 1791830600045
+      }
+    },
+    {
+      "doc_id": "i46",
+      "data": {
+        "createdAt": 1791830600046,
+        "due": "",
+        "group": "g_personal",
+        "notes": "Steps: pick a weekend date with the agent once photos are live; arrange to be out of the house with pets and valuables secured; print or display a fact sheet; confirm how the agent collects visitor feedback and presents offers; set the offer review date.",
+        "order": 13,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud and my house will be listed for sale. Help me plan the first open house: how to choose the date and hours with my agent, a day-before and morning-of preparation checklist (cleaning, lighting, temperature, pets, valuables, documents to leave out), a one-page fact sheet template for visitors, what the agent should capture as feedback, and how an offer review deadline works in California. Draft a short message to my agent proposing the open house date and asking how offers and feedback will be reported to me the same day.",
+        "section": "Home",
+        "source": "Adrian, Oct 12 2026",
+        "status": "not_started",
+        "title": "House: hold the open house showing (set the date with the agent, prepare the house, confirm how offers and feedback come back)",
+        "updatedAt": 1791830600046
+      }
+    },
+    {
+      "doc_id": "i47",
+      "data": {
+        "createdAt": 1791850000047,
+        "due": "2026-10-20",
+        "group": "g_vbx",
+        "notes": "Steve, Oct 9 at 5:17 PM: 'Kevin - Please confirm with Dana re: renewal. Has it been submitted?' Adrian confirmed Oct 16 that the renewal has NOT been submitted. The Liu deal signed this week and the management agreement makes Liu's addition to the license a condition, so the renewal is now a post-signing obligation with the buyer watching. Due date moved to Oct 20 to get it filed this week.",
+        "order": 4,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. The VBX Labs license renewal has not been submitted yet and the Liu deal has now signed, so it is urgent. Using my Gmail, find the renewal notice and deadline from the Department of Cannabis Control and the City of Los Angeles (search: renewal, DCC, license, annual, LADCR, expiration), tell me the exact due date and what is owed, and give me the step-by-step filing instructions with the portal links, the documents I must attach, and the fee. Then draft two short emails: one to Dana Cisneros, copying Steve and Adrian, stating the renewal status and the date it will be submitted; and one to Steve asking what is needed to add Xiu Chang Liu to the license once the renewal is in.",
+        "section": "Liu deal & due diligence",
+        "source": "Email thread 'VBX Final documents' (Steve to Kevin, Oct 9)",
+        "status": "working",
+        "title": "VBX license renewal: not yet submitted as of Oct 16 (Steve asked Oct 9). Submit the renewal, confirm it to Dana, and start Liu's addition to the license",
+        "updatedAt": 1792198800000
+      }
+    },
+    {
+      "doc_id": "i48",
+      "data": {
+        "completedAt": "2026-10-16",
+        "createdAt": 1791850000048,
+        "due": "2026-10-13",
+        "group": "g_vbx",
+        "notes": "Dana, Oct 9: 'the landlord has not been paid and is saying he will post the 3 day on Monday.' The deal has Liu paying $178,000 to the landlord directly, so the payment is tied to signing. If signing slips, VBX needs the landlord to hold off.",
+        "order": 5,
+        "owner": "Kevin",
+        "priority": "critical",
+        "prompt": "I am Kevin Doud. The landlord payment tied to the Liu deal has been made. Using my Gmail, find the payment confirmation (wire receipt, landlord acknowledgment, or Dana's note) and save it to the VBX Drive folder; then draft a two-line email to the landlord, copying Steve and Adrian, confirming receipt and asking for written confirmation that the 3-day notice is withdrawn and the account is current.",
+        "section": "Liu deal & due diligence",
+        "source": "Email thread 'VBX Final documents' (Dana to Steve, Oct 9)",
+        "status": "done",
+        "title": "VBX landlord: rent unpaid and a 3-day notice threatened for Monday Oct 12; confirm whether Liu's direct payment to the landlord has gone out or get a short standstill",
+        "updatedAt": 1792198800000
+      }
+    },
+    {
+      "doc_id": "i49",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1791911200000,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Added Oct 13 at Adrian's request. KMD GROUP LLC already sends Zelle payments (Oct 4 and Oct 9), so an account exists; what needs closing out is: which account is the operating account for the dba, that payroll (new hire at $30/hr biweekly) draws from it, who the signers and online-banking admins are, and that the details land in the KMD Account and Password Register (Workbook #11). Add the bank name, account nickname and any open to-dos (debit cards, Zelle limits, QuickBooks feed) in this thread.",
+        "order": 62,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, owner of KMD Group LLC dba KMD Analytical. Help me finalize the company banking. Using my Gmail, find the bank(s) where KMD Group LLC holds accounts (search: Chase, Wells Fargo, Bank of America, business checking, statement, Zelle, debit card) and list each account with its purpose. Then give me a checklist to confirm: (1) the operating account used for customer payments and vendor bills, (2) the account payroll will be funded from and that it is connected to the payroll provider, (3) who is an authorized signer and who has online banking admin access, (4) Zelle and daily transfer limits, (5) whether the account feeds QuickBooks or the bookkeeping system. For anything missing, draft the email or the steps to fix it today. Keep the answer to one page.",
+        "section": "Banking",
+        "source": "Adrian, Oct 13 ('banking')",
+        "status": "not_started",
+        "title": "Banking: finalize KMD Group LLC (dba KMD Analytical) business banking — operating account confirmed, payroll funding source set, online access and signers recorded",
+        "updatedAt": 1791911200000
+      }
+    },
+    {
+      "doc_id": "i50",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1791911200000,
+        "due": "2026-10-17",
+        "group": "g_kmd",
+        "milestone": true,
+        "notes": "Added Oct 13 at Adrian's request. This is the milestone that ties the Bobby workbook systems tasks together: #1 Claude workspace (Adrian reviews Kevin's Oct 4 proposal), #2 shared KMD reference area, #3 GoHighLevel to Claude (OAuth, KMD sub-account), the companion task connecting Claude to Kevin's KMD mailbox and Drive, and #11 the Account and Password Register. Mark this Done only when each of those five items is Done and Bobby has confirmed he can work from the setup without asking Kevin for access.",
+        "order": 63,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud. Give me a one-page status of the KMD systems setup from the Sept 30 Bobby workbook: (1) company Claude workspace (owner, members, billing), (2) shared KMD reference area (brand book, logo, services, pricing, SOPs), (3) GoHighLevel connected to Claude for the KMD sub-account with one verified read and one reversible write, (4) Claude connected to my KMD mailbox and Drive folders, (5) the KMD Account and Password Register. For each, say done / in progress / not started, what is blocking it, and the single next action with who does it. Then draft a short message to Bobby and Adrian with the list so we can finalize this week.",
+        "section": "Systems & AI setup",
+        "source": "Adrian, Oct 13 ('systems finalization')",
+        "status": "not_started",
+        "title": "Systems finalization: close out the KMD systems setup — Claude workspace live, reference area built, GoHighLevel connected, records access granted, password register done",
+        "updatedAt": 1791911200000
+      }
+    },
+    {
+      "doc_id": "i51",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1791912000000,
+        "due": "2026-10-15",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Added Oct 13 at Adrian's request. One W-2 employee: lab tech at $30/hr, about 25 hrs/week, biweekly, started Sept 25, so the first pay period has already closed and payroll must run now. Employer of record: KMD Group LLC dba KMD Analytical Group. Must be full service for California: federal and EDD tax deposits and filings (DE 9 / DE 9C), new-hire report (DE 34), W-2 at year end, paid sick leave accrual (LA City). Candidates to price: Prakash Joshi at Valley Income Tax and Payroll (already does VBX taxes, ask for a one-employee monthly rate), Patriot Full Service, SurePayroll, Square Payroll, Gusto Simple, OnPay, Roll by ADP. Typical range for one employee is roughly $25 to $60 a month; verify current pricing before choosing. Record the chosen provider, monthly cost, and first run date in this thread, then the banking item (funding account) and the onboarding packet item (withholding) can close.",
+        "order": 64,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, owner of KMD Group LLC dba KMD Analytical Group in Chatsworth, California. I have one hourly W-2 employee ($30/hour, about 25 hours a week, paid biweekly, started September 25, 2026) and no payroll provider yet. Compare the current monthly cost for ONE employee at: Valley Income Tax and Payroll (Prakash Joshi, info@valleyincometax.com), Patriot Full Service, SurePayroll, Square Payroll, Gusto Simple, OnPay, and Roll by ADP. For each give base fee, per-employee fee, whether it files California EDD returns and the DE 34 new-hire report, whether it handles paid sick leave accrual, and any setup fee or contract. Rank them cheapest first and recommend one. Then draft (1) a short email to Prakash asking for his one-employee monthly payroll rate and start date, and (2) the list of items I need to sign up with the top online option today: EIN, EDD employer account number, bank account for funding, employee W-4 and DE 4, I-9, pay schedule. Keep it to one page.",
+        "section": "People & payroll",
+        "source": "Adrian, Oct 13 ('payroll solution need to contact cheapest one')",
+        "status": "not_started",
+        "title": "Payroll solution: price the cheapest full-service option for one hourly employee and contact them to get set up this week (Valley Income Tax & Payroll, Patriot, SurePayroll, Square, Gusto, OnPay)",
+        "updatedAt": 1791912000000
+      }
+    },
+    {
+      "doc_id": "i53",
+      "data": {
+        "completedAt": 1792168770549,
+        "createdAt": 1792202400000,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Verify ownership first. Category, hours, contact, services, real lab photos. This listing feeds Maps and the Ads link in Workbook #6. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 66,
+        "owner": "Kevin",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Google Business Profile profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Google Business Profile listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Google Business Profile, confirm ownership, and claim, recover or create it. Then draft every field within Google Business Profile's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Verify ownership first. Category, hours, contact, services, real lab photos. This listing feeds Maps and the Ads link in Workbook #6. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "done",
+        "title": "Profiles: Google Business Profile — verify ownership, set category/hours/contact/services, add real lab photos, confirm NAP matches the website",
+        "updatedAt": 1792168770549
+      }
+    },
+    {
+      "doc_id": "i54",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400001,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Yelp penalizes solicited reviews, so do not ask customers for Yelp reviews (yelp-support.com, 'Don't Ask for Reviews'). Claim via biz.yelp.com. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 67,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Yelp profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Yelp listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Yelp, confirm ownership, and claim, recover or create it. Then draft every field within Yelp's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Yelp penalizes solicited reviews, so do not ask customers for Yelp reviews (yelp-support.com, 'Don't Ask for Reviews'). Claim via biz.yelp.com. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: Yelp — find and claim the existing listing or create one; complete facts, categories and photos; never solicit Yelp reviews",
+        "updatedAt": 1792202400001
+      }
+    },
+    {
+      "doc_id": "i55",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400002,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. MapQuest pulls from data aggregators, so check whether a stale or wrong listing already exists before creating one. Claim through the MapQuest business listing page; if the listing is aggregator-fed, correct it at the source. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 68,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's MapQuest profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing MapQuest listing and give me candidate URLs and why they match; do not assume no result means no account. I will open MapQuest, confirm ownership, and claim, recover or create it. Then draft every field within MapQuest's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. MapQuest pulls from data aggregators, so check whether a stale or wrong listing already exists before creating one. Claim through the MapQuest business listing page; if the listing is aggregator-fed, correct it at the source. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: MapQuest — search for an existing listing, claim or create it, and match name, address, phone and hours to Google exactly",
+        "updatedAt": 1792202400002
+      }
+    },
+    {
+      "doc_id": "i56",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400003,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Use Apple Business Connect (businessconnect.apple.com) with the company Apple ID from the account register, not a personal one. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 69,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Apple Maps profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Apple Maps listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Apple Maps, confirm ownership, and claim, recover or create it. Then draft every field within Apple Maps's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Use Apple Business Connect (businessconnect.apple.com) with the company Apple ID from the account register, not a personal one. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: Apple Maps — check Apple Business Connect, claim or create the correct Chatsworth location, finish verification",
+        "updatedAt": 1792202400003
+      }
+    },
+    {
+      "doc_id": "i57",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400004,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Bing Places can import from Google Business Profile once that is verified, so do Google first. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 70,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Bing Places profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Bing Places listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Bing Places, confirm ownership, and claim, recover or create it. Then draft every field within Bing Places's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Bing Places can import from Google Business Profile once that is verified, so do Google first. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: Bing Places — search the existing listing, claim first and create only if absent, finish verification",
+        "updatedAt": 1792202400004
+      }
+    },
+    {
+      "doc_id": "i58",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400005,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Handle @kmd.analytical. Draft three pinned explainers (what a COA shows, how to submit a sample, what HPLC can and cannot see) and highlight labels. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 71,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Instagram profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Instagram listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Instagram, confirm ownership, and claim, recover or create it. Then draft every field within Instagram's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Handle @kmd.analytical. Draft three pinned explainers (what a COA shows, how to submit a sample, what HPLC can and cannot see) and highlight labels. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: Instagram @kmd.analytical — bio, links, visuals, highlight labels and three pinned explainers",
+        "updatedAt": 1792202400005
+      }
+    },
+    {
+      "doc_id": "i59",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400006,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Draft three educational posts in approved wording only. Connect the page to Kevin's personal profile as admin and add a second admin from the register. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 72,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's LinkedIn profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing LinkedIn listing and give me candidate URLs and why they match; do not assume no result means no account. I will open LinkedIn, confirm ownership, and claim, recover or create it. Then draft every field within LinkedIn's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Draft three educational posts in approved wording only. Connect the page to Kevin's personal profile as admin and add a second admin from the register. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: LinkedIn company page — About, services, banner, and three approved educational posts",
+        "updatedAt": 1792202400006
+      }
+    },
+    {
+      "doc_id": "i60",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400007,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Confirm the page sits inside the company Meta Business account and is linked to the Instagram account, not a personal profile. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 73,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Facebook profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Facebook listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Facebook, confirm ownership, and claim, recover or create it. Then draft every field within Facebook's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Confirm the page sits inside the company Meta Business account and is linked to the Instagram account, not a personal profile. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: Facebook business page — connect the correct Meta Business assets, complete About, services, hours and contact",
+        "updatedAt": 1792202400007
+      }
+    },
+    {
+      "doc_id": "i61",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400008,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Draft the channel About text and outlines for three videos: lab introduction, how to read a COA, how to submit a sample. The endotoxin 30-second film is a ready first upload. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 74,
+        "owner": "Kevin",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's YouTube profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing YouTube listing and give me candidate URLs and why they match; do not assume no result means no account. I will open YouTube, confirm ownership, and claim, recover or create it. Then draft every field within YouTube's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Draft the channel About text and outlines for three videos: lab introduction, how to read a COA, how to submit a sample. The endotoxin 30-second film is a ready first upload. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: YouTube channel — find, recover or create; finish branding and About; outline lab intro, COA reading and sample submission videos",
+        "updatedAt": 1792202400008
+      }
+    },
+    {
+      "doc_id": "i62",
+      "data": {
+        "completedAt": 1792168785488,
+        "createdAt": 1792202400009,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Verify who controls u/Kmd-Analytical and record recovery details in the register. Align artwork to the brand book; no promotional posting until Kevin approves a plan. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 75,
+        "owner": "Kevin",
+        "priority": "low",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Reddit profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Reddit listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Reddit, confirm ownership, and claim, recover or create it. Then draft every field within Reddit's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Verify who controls u/Kmd-Analytical and record recovery details in the register. Align artwork to the brand book; no promotional posting until Kevin approves a plan. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "done",
+        "title": "Profiles: Reddit u/Kmd-Analytical — verify control, align description, official links and the vial/banner artwork",
+        "updatedAt": 1792168785488
+      }
+    },
+    {
+      "doc_id": "i63",
+      "data": {
+        "completedAt": "",
+        "createdAt": 1792202400010,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "milestone": false,
+        "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Reserve only; the workbook holds these until publishing capacity is proven. Do not start a content program. Record handles and recovery contacts in the register. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+        "order": 76,
+        "owner": "Kevin",
+        "priority": "low",
+        "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's TikTok, X and Threads profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing TikTok, X and Threads listing and give me candidate URLs and why they match; do not assume no result means no account. I will open TikTok, X and Threads, confirm ownership, and claim, recover or create it. Then draft every field within TikTok, X and Threads's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Reserve only; the workbook holds these until publishing capacity is proven. Do not start a content program. Record handles and recovery contacts in the register. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+        "section": "Marketing, profiles & reviews",
+        "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+        "status": "not_started",
+        "title": "Profiles: reserve the handles on TikTok, X and Threads — verify any existing accounts, recover or reserve a consistent handle, complete basic identity only",
+        "updatedAt": 1792202400010
+      }
+    }
+  ]
+}

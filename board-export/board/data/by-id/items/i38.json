@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791829200038,
+  "due": "2026-10-20",
+  "group": "g_kmd",
+  "notes": "BOBBY WORKBOOK TASK 6 (Sept 30). Bobby executes under Kevin. Goal: confirm KMD's website tracking and Google advertising accounts are connected and collecting useful data. Verify the existing setup before creating anything new.\n\nSteps: (1) Account inventory: website domain, GA4 property and measurement ID, Tag Manager container ID, Search Console property, Google Ads customer ID, Business Profile listing; confirm company ownership. (2) Check website tracking with Tag Assistant and GA4 Realtime/DebugView on a real test visit; if Tag Manager is used, confirm the container is installed and tags published; no duplicate GA4 or Ads tags. (3) GA4 ↔ Ads: Ads Tools → Data Manager → connected products, or GA4 Admin → Product links; check auto-tagging; a pending request is not a link. (4) Search Console ↔ GA4 in GA4 Admin → Product links. (5) Business Profile ↔ Ads in Data Manager or location assets; do not change budgets to test. (6) Verify the lead/purchase conversion with a designated test submission; prevent double counting between a native Ads tag and a GA4 import; record diagnostics and reporting delay.\nDone when: each account and link documented, a website test visible, conversion setup tested; separate 'linked', 'collecting data' and 'conversion verified'.\n\nAI PROMPT (copy into Claude):\n\"Audit KMD's Google measurement setup using these account IDs and redacted screenshots: [insert]. Check GA4 website tracking, Tag Manager if used, Search Console linked to GA4, GA4 linked to Google Ads, and Business Profile location assets linked to Ads. Give the next click for each missing connection. Explain how to run a test visit and a lead conversion without duplicate tags, duplicate conversion counts, or ad spend. Identify what is verified and what is pending.\"\n\nReferences: https://support.google.com/google-ads/answer/7519537 · https://support.google.com/analytics/answer/10737381 · https://support.google.com/google-ads/answer/13450314",
+  "order": 40,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "Audit KMD's Google measurement setup using these account IDs and redacted screenshots: [insert]. Check GA4 website tracking, Tag Manager if used, Search Console linked to GA4, GA4 linked to Google Ads, and Business Profile location assets linked to Ads. Give the next click for each missing connection. Explain how to run a test visit and a lead conversion without duplicate tags, duplicate conversion counts, or ad spend. Identify what is verified and what is pending.",
+  "section": "Marketing, profiles & reviews",
+  "source": "Bobby KMD Action Plan workbook (Sept 30), task 6 — see Files tab",
+  "status": "not_started",
+  "title": "Workbook #6 — Verify Google measurement: GA4 tracking, Tag Manager, Search Console ↔ GA4, GA4 ↔ Google Ads, Business Profile ↔ Ads, and one test conversion",
+  "updatedAt": 1791829200038
+}

@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791829200042,
+  "due": "2026-10-17",
+  "group": "g_kmd",
+  "notes": "BOBBY WORKBOOK TASK 11 (Sept 30). Goal: one current account register so authorized staff can find access without asking Kevin.\n\nSteps: (1) Create a company-owned sheet 'KMD Account and Password Register' covering Claude, email, Drive, GoHighLevel, website and domain, Google tools, social profiles, directories, insurance portals. (2) Columns: platform, login URL, username/email, password or secure vault reference, company owner, authorized users, recovery email/phone, MFA method and responsible person, last verified date, access status, notes. (3) Restrict to the company owner and specifically authorized staff; no anyone-with-the-link access; prefer the company password manager and link entries from the sheet. (4) Confirm each account belongs to the company; test logins; record MFA and recovery ownership so access does not depend on one person. (5) Use Claude only to design columns with platform names and redacted facts; never upload passwords, MFA or recovery codes, or API keys. (6) Give Kevin and Adrian the restricted link through the approved channel; document who maintains it.\nDone when: all known accounts listed, credentials or secure references available to authorized people, logins and recovery ownership checked, missing access has a next step.\nNote: Kevin's Oct 4 proposal budgets about $20/mo for a password manager.\n\nAI PROMPT (copy into Claude):\n\"Help me structure KMD Analytical's restricted account and password register. These are the platforms we use: [platform names only]. Give me a spreadsheet column layout covering login URL, username, secure credential reference, company owner, authorized users, recovery contacts, MFA ownership, verification date, status, and notes. Give me a short checklist for finding missing accounts and confirming company control. Do not request or include passwords, tokens, MFA codes, or recovery codes. I will enter confidential details directly in restricted company storage.\"",
+  "order": 34,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "Help me structure KMD Analytical's restricted account and password register. These are the platforms we use: [platform names only]. Give me a spreadsheet column layout covering login URL, username, secure credential reference, company owner, authorized users, recovery contacts, MFA ownership, verification date, status, and notes. Give me a short checklist for finding missing accounts and confirming company control. Do not request or include passwords, tokens, MFA codes, or recovery codes. I will enter confidential details directly in restricted company storage.",
+  "section": "Systems & AI setup",
+  "source": "Bobby KMD Action Plan workbook (Sept 30), task 11 — see Files tab",
+  "status": "not_started",
+  "title": "Workbook #11 — Create the restricted 'KMD Account and Password Register' (all company logins, MFA and recovery ownership; passwords in the password manager)",
+  "updatedAt": 1791829200042
+}

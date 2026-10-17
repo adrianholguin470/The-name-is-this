@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500022,
+  "due": "2026-10-14",
+  "group": "g_wy",
+  "notes": "Kevin split the list three ways: what Claude can prepare, what only Kevin can do, and what he needs from Adrian. The PDF is attached to his Oct 4 email ('Kevin Doud Wyoming Companies - Filing Tasks 2026-10-04.pdf').",
+  "order": 1,
+  "owner": "Adrian",
+  "priority": "high",
+  "prompt": "I am Adrian Holguin. Kevin Doud sent 'Kevin Doud Wyoming Companies - Filing Tasks 2026-10-04.pdf' for VHC, VHCRE, ZC Ventures and AKZC, split into what Claude can prepare, what only Kevin can do, and Section C, what he needs from me. I will paste or upload the PDF. For each Section C item, give me a direct answer or decision in one or two sentences, flag anything I cannot decide without more information and say what information, and draft the reply email to Kevin with the answers in the same numbering he used.",
+  "section": "All four companies",
+  "source": "Kevin's email 'My Wyoming companies: Best Wyoming filing tasks' (Oct 4)",
+  "status": "not_started",
+  "title": "Answer Section C ('what I need from you') of Kevin's Best Wyoming filing task list for VHC, VHCRE, ZC Ventures and AKZC",
+  "updatedAt": 1791824500022
+}

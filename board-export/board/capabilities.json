@@ -1,0 +1,14 @@
+{
+  "_comment": "Runtime capabilities to pass as `capabilities` on the first Artifact publish of board/page.html. Everyone who can open the page can read every collection; only Editors (admin level: Adrian as owner, Kevin as Editor) can write. The page calls claude.use('db'), claude.use('user') and claude.use('assets').",
+  "db": {
+    "rules": [
+      { "path": "groups",  "read": "view", "write": "admin" },
+      { "path": "items",   "read": "view", "write": "admin" },
+      { "path": "updates", "read": "view", "write": "admin" },
+      { "path": "files",   "read": "view", "write": "admin" },
+      { "path": "meta",    "read": "view", "write": "admin" }
+    ]
+  },
+  "user": {},
+  "assets": {}
+}

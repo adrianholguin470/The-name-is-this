@@ -1,0 +1,16 @@
+{
+  "createdAt": 1791825500031,
+  "due": "2026-10-26",
+  "group": "g_vbx",
+  "milestone": true,
+  "notes": "If no response is on file by this hearing the court can enter VBX's default. The retain-counsel item tracks the work; this entry is the date itself.",
+  "order": 11,
+  "owner": "Both",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. On October 26, 2026 the court hears an OSC re entry of default against VBX Labs LLC in Whitehouse v. VBX Labs LLC (LASC 26STCV06228). Explain in plain language what happens at that hearing if no response is filed, what a lawyer can file before then to prevent default, and what documents the lawyer will need from me. Then give me a day-by-day plan from today to October 26 with the deadline for each step, and the one question I should ask Lalo (Eduardo Roa) or Steve Baghoomian today.",
+  "section": "Litigation",
+  "source": "Dana Cisneros' docket check (Oct 2)",
+  "status": "not_started",
+  "title": "Court date: Whitehouse v. VBX — OSC re entry of default",
+  "updatedAt": 1791825500031
+}

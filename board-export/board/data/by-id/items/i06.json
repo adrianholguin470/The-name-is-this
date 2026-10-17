@@ -1,0 +1,16 @@
+{
+  "completedAt": 1792168610565,
+  "createdAt": 1791824500006,
+  "due": "2026-10-15",
+  "group": "g_vbx",
+  "notes": "Already sent: debt schedule + supporting docs (Oct 4–8), case documents (Oct 7), VBX / AKZC / VHC operating agreements (Oct 8). Still open: both OA copies Kevin has are unsigned; Dana cannot find VHC on the CA Secretary of State site; Steve wants either the documents or a written statement that some do not exist.",
+  "order": 2,
+  "owner": "Both",
+  "priority": "high",
+  "prompt": "I am Kevin Doud. Dana Cisneros (buyer's counsel) sent a six-item diligence list for VBX Labs LLC: (1) operating agreement and amendments, articles, statement of information, minute book, cap table, and whether interests are certificated or Article 8 securities; (2) tax clearance or proof of current payment for federal, state, local, excise, sales and employment taxes, plus liens; (3) litigation files for Whitehouse, Apollo and Derakhshannia; (4) full disclosure of debts, contracts and liabilities; (5) proof that Rodshel Malakov claims no ownership; (6) VHC company documents. Using my Gmail, build a table showing for each item what was already sent (date, email subject), what still exists but has not been sent, and what does not exist. Then draft an email to Steve Baghoomian, copying Adrian, with the remaining attachments and a clear written statement of which documents do not exist or are not in our possession, so Dana cannot keep stalling on them.",
+  "section": "Liu deal & due diligence",
+  "source": "Dana Cisneros diligence list (Aug 21, repeated Oct 2); Steve's email Oct 5",
+  "status": "done",
+  "title": "Finish Dana's due-diligence list: tax clearance / proof of payment, proof Rodshel Malakov claims no ownership, VHC company documents, executed (signed) operating agreements",
+  "updatedAt": 1792168610565
+}

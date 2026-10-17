@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791830600046,
+  "due": "",
+  "group": "g_personal",
+  "notes": "Steps: pick a weekend date with the agent once photos are live; arrange to be out of the house with pets and valuables secured; print or display a fact sheet; confirm how the agent collects visitor feedback and presents offers; set the offer review date.",
+  "order": 13,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "I am Kevin Doud and my house will be listed for sale. Help me plan the first open house: how to choose the date and hours with my agent, a day-before and morning-of preparation checklist (cleaning, lighting, temperature, pets, valuables, documents to leave out), a one-page fact sheet template for visitors, what the agent should capture as feedback, and how an offer review deadline works in California. Draft a short message to my agent proposing the open house date and asking how offers and feedback will be reported to me the same day.",
+  "section": "Home",
+  "source": "Adrian, Oct 12 2026",
+  "status": "not_started",
+  "title": "House: hold the open house showing (set the date with the agent, prepare the house, confirm how offers and feedback come back)",
+  "updatedAt": 1791830600046
+}

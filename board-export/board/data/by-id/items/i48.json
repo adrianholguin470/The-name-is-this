@@ -1,0 +1,16 @@
+{
+  "completedAt": "2026-10-16",
+  "createdAt": 1791850000048,
+  "due": "2026-10-13",
+  "group": "g_vbx",
+  "notes": "Dana, Oct 9: 'the landlord has not been paid and is saying he will post the 3 day on Monday.' The deal has Liu paying $178,000 to the landlord directly, so the payment is tied to signing. If signing slips, VBX needs the landlord to hold off.",
+  "order": 5,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. The landlord payment tied to the Liu deal has been made. Using my Gmail, find the payment confirmation (wire receipt, landlord acknowledgment, or Dana's note) and save it to the VBX Drive folder; then draft a two-line email to the landlord, copying Steve and Adrian, confirming receipt and asking for written confirmation that the 3-day notice is withdrawn and the account is current.",
+  "section": "Liu deal & due diligence",
+  "source": "Email thread 'VBX Final documents' (Dana to Steve, Oct 9)",
+  "status": "done",
+  "title": "VBX landlord: rent unpaid and a 3-day notice threatened for Monday Oct 12; confirm whether Liu's direct payment to the landlord has gone out or get a short standstill",
+  "updatedAt": 1792198800000
+}

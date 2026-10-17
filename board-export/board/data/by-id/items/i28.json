@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500028,
+  "due": "2026-10-21",
+  "group": "g_personal",
+  "notes": "Discovery closed Oct 5. Claims against Kevin and Angelica personally: negligence, fraud, false imprisonment, willful misconduct, alter ego. BRP/S3 summary judgment motion was heard Oct 2.",
+  "order": 4,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud, a defendant with my wife Angelica in Dehbibi v. Silly Billy (negligence, fraud, false imprisonment, willful misconduct and alter ego claims). The Mandatory Settlement Conference and Final Status Conference are both October 21, 2026 and trial starts November 2. Give me a preparation checklist for the MSC: what a settlement conference statement usually contains, how to think about settlement authority and the range we can afford, what documents and witnesses to have ready, and the ten questions to ask Peter Ryan before October 21. Keep it practical and in plain language; do not give legal advice beyond preparation.",
+  "section": "Silly Billy / Dehbibi trial",
+  "source": "Peter Ryan's emails (Sept 28–29)",
+  "status": "not_started",
+  "title": "Prepare for the Mandatory Settlement Conference and Final Status Conference on Oct 21, with trial starting Nov 2",
+  "updatedAt": 1791824500028
+}

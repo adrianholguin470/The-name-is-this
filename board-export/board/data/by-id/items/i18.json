@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500018,
+  "due": "2026-10-15",
+  "group": "g_kmd",
+  "notes": "BOBBY WORKBOOK TASK 1 (Sept 30). Goal: company-owned Claude access under Kevin's administration, separate logins per user; all AI tasks run through Claude.\n\nSteps: (1) Record current plan, owner, billing email, members, seats; keep ownership with Kevin. (2) Invite the lab technician, Angelica and Adrian with individual emails (Bobby if he needs continuing access); confirm each accepts. (3) The AI assistant needs no human seat; configure integrations under the company workspace; no fictional accounts, never share Kevin's password. (4) Use Claude Team; report the real minimum-seat cost rather than inventing users. (5) Use the company workspace for shared reference files, email, GoHighLevel and profile drafting. (6) Record recurring cost and billing period before checkout; MFA on; ordinary users = member, admins limited.\nDone when: plan recorded, ownership correct, users sign in separately, seat count and cost documented.\n\nSTATUS: Kevin answered Oct 4 with a two-page proposal (KMD Team Circuit PDF, see Files tab): four lanes, Team minimum is 2 seats (not 5), workspace on the @kmdanalytical.com email, Step 1 = 2 seats (~$240–250/mo), Step 2 about Oct 27 adds Adrian and Bobby. Still to confirm: Kevin's actual Max tier, Social Planner on GoHighLevel Starter, password-manager price. Adrian to approve Step 1.\n\nAI PROMPT (copy into Claude):\n\"Help me set up KMD Analytical's company Claude Team workspace. The current plan is [plan] and current members are [names]. Kevin is the company owner. We need access for the lab technician, Angelica, Adrian, and Bobby if needed. Explain the current minimum seats, how to add users, and the next steps using official Claude documentation. Identify any paid change before I confirm it. I will not share passwords or tokens.\"\n\nReference: https://support.claude.com/en/articles/9267247-get-started-with-the-team-plan",
+  "order": 30,
+  "owner": "Adrian",
+  "priority": "medium",
+  "prompt": "Help me set up KMD Analytical's company Claude Team workspace. The current plan is [plan] and current members are [names]. Kevin is the company owner and the workspace will be created under his @kmdanalytical.com business email. We need access for the lab technician, Angelica, Adrian, and Bobby if needed. Explain the current minimum seats, how to add users, and the next steps using official Claude documentation. Identify any paid change before I confirm it. I will not share passwords or tokens.",
+  "section": "Systems & AI setup",
+  "source": "Bobby KMD Action Plan workbook (Sept 30), task 1; Kevin's reply 'KMD Claude team setup' (Oct 4)",
+  "status": "not_started",
+  "title": "Workbook #1 — Set up the company Claude workspace (Kevin owns it; separate logins). Adrian to review Kevin's Oct 4 proposal",
+  "updatedAt": 1791829200000
+}

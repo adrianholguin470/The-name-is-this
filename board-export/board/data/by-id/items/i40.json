@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791829200040,
+  "due": "2026-10-17",
+  "group": "g_kmd",
+  "notes": "BOBBY WORKBOOK TASK 8 (Sept 30). Goal: confirm the address update was accepted and appears in the correct entity's state record; establish the exact legal entity from the filing documents, not the brand name.\n\nSteps: (1) Search Kevin's business email for 'Secretary of State', 'Statement of Information', 'bizfile', 'address change', old and new addresses; find the submitted document, entity number, receipt, acceptance or rejection notice. (2) Open the official SOS site (California: https://bizfileonline.sos.ca.gov/); search by exact legal name and entity number. (3) Compare the submitted change with the public record and latest filed document: principal office, mailing, agent address separately. (4) Record filing date, document number, acceptance status, new address, date checked; save the accepted filing and a screenshot. (5) If accepted but display is old, document the mismatch and contact the filing office with the receipt; if rejected, fix the defect and resubmit; if nothing found, check pending submissions before filing again.\nDone when: accepted filing plus official record support the change, or an exact pending/rejected status and next step are reported. A paid fee is not acceptance.\n\nAI PROMPT (copy into Claude):\n\"Search the authorized KMD email and documents for the company address change filing. Identify the legal entity, state, entity number, intended address fields, new address, submission date, and acceptance evidence. Then help me compare the documents with the official Secretary of State record I provide. Return Confirmed, Pending, Rejected, or Not found, with source links and precise next actions. Do not assume that a receipt means acceptance or that all address fields changed.\"\n\nReference: https://www.sos.ca.gov/business-programs/business-entities/statements",
+  "order": 21,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "Search the authorized KMD email and documents for the company address change filing. Identify the legal entity, state, entity number, intended address fields, new address, submission date, and acceptance evidence. Then help me compare the documents with the official Secretary of State record I provide from https://bizfileonline.sos.ca.gov/. Return Confirmed, Pending, Rejected, or Not found, with source links and precise next actions. Do not assume that a receipt means acceptance or that all address fields changed.",
+  "section": "Entity & filings",
+  "source": "Bobby KMD Action Plan workbook (Sept 30), task 8 — see Files tab",
+  "status": "not_started",
+  "title": "Workbook #8 — Confirm the Secretary of State address update was accepted and shows on the correct entity's record (bizfileonline.sos.ca.gov)",
+  "updatedAt": 1791829200040
+}

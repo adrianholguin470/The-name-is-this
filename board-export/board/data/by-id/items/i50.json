@@ -1,0 +1,17 @@
+{
+  "completedAt": "",
+  "createdAt": 1791911200000,
+  "due": "2026-10-17",
+  "group": "g_kmd",
+  "milestone": true,
+  "notes": "Added Oct 13 at Adrian's request. This is the milestone that ties the Bobby workbook systems tasks together: #1 Claude workspace (Adrian reviews Kevin's Oct 4 proposal), #2 shared KMD reference area, #3 GoHighLevel to Claude (OAuth, KMD sub-account), the companion task connecting Claude to Kevin's KMD mailbox and Drive, and #11 the Account and Password Register. Mark this Done only when each of those five items is Done and Bobby has confirmed he can work from the setup without asking Kevin for access.",
+  "order": 63,
+  "owner": "Both",
+  "priority": "high",
+  "prompt": "I am Kevin Doud. Give me a one-page status of the KMD systems setup from the Sept 30 Bobby workbook: (1) company Claude workspace (owner, members, billing), (2) shared KMD reference area (brand book, logo, services, pricing, SOPs), (3) GoHighLevel connected to Claude for the KMD sub-account with one verified read and one reversible write, (4) Claude connected to my KMD mailbox and Drive folders, (5) the KMD Account and Password Register. For each, say done / in progress / not started, what is blocking it, and the single next action with who does it. Then draft a short message to Bobby and Adrian with the list so we can finalize this week.",
+  "section": "Systems & AI setup",
+  "source": "Adrian, Oct 13 ('systems finalization')",
+  "status": "not_started",
+  "title": "Systems finalization: close out the KMD systems setup — Claude workspace live, reference area built, GoHighLevel connected, records access granted, password register done",
+  "updatedAt": 1791911200000
+}

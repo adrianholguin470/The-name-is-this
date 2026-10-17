@@ -1,0 +1,16 @@
+{
+  "completedAt": "2026-10-16",
+  "createdAt": 1791824500005,
+  "due": "2026-10-13",
+  "group": "g_vbx",
+  "notes": "SIGNING DAY, Oct 12. Dana's position (1:08 PM): the agreed deal is Pledge = 100% of the company, Call Option = up to 77.24% once litigation is cleaned up (Kevin keeps 22.76%; nobody is buying it), Management Agreement = 100% until expansion is complete, 85% after. She rejects Steve's new Section 14 of the Call Option (14.2 to 14.7) as adding terms no one agreed to, conflating the Pledge with the Option, and blocking future advances or a later sale of the whole company. She gave Steve until 2 PM to reverse most of the changes. Steve's reply (12:03 PM) said the changes enforce a hard cap on Kevin's retained equity that both clients agreed to. Background pressure: the landlord has not been paid and said he would post a 3-day notice Monday; Dana wants everything in DocuSign today. Earlier framing on this item (41.8% cap, 15% before buildout) is superseded by the 77.24% structure. UPDATE Oct 16: Kevin forwarded the DocuSign link for the 'New final Vbx promissory note' (PDF attached, filed as f25). That is the first signing-set document to reach Adrian's email; the Pledge, Call Option, Management Agreement and Loan Agreement executed copies are still outstanding.",
+  "order": 1,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. The VBX Labs deal with Xiu Chang Liu was signed the week of Oct 12, and on Oct 16 I forwarded Adrian the DocuSign link for the final promissory note. Help me close out the file: (1) using my Gmail, find the fully executed set (Secured Convertible Promissory Note, Pledge Agreement, Call Option, Management Services Agreement, Loan Agreement) in the DocuSign completion emails, download each completed PDF, and save them to the VBX Drive folder with the execution date in the file name; (2) send Adrian and Steve one email with all five executed PDFs attached, so the promissory note is not the only one in their hands; (3) list every post-signing obligation and date in the documents, including Liu's payment to the landlord, the license renewal and Liu's addition to the license, the note's interest and maturity terms, any management fee start date, and any notice or reporting duties; (4) draft a one-page closing memo to Adrian and Steve with those dates. Keep it factual and quote the section numbers.",
+  "section": "Liu deal & due diligence",
+  "source": "Kevin's forward 'Fwd: VBX Final documents' (Oct 12, 1:12 PM) with Dana's and Steve's emails of Oct 9–12",
+  "status": "done",
+  "title": "VBX deal with Xiu Chang Liu: resolve Steve's Oct 12 Section 14 redline against Dana's stated deal (Pledge 100%, Call Option 77.24%, Management 100% then 85%) and get the five documents into DocuSign",
+  "updatedAt": 1792201602238
+}

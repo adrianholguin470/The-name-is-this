@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500007,
+  "due": "2026-10-13",
+  "group": "g_vbx",
+  "notes": "Prakash (Valley Income Tax) asked for the password Oct 5 and needs the 2023 figures to carry forward into the 2024 Form 1120-S. File came from the VBX Monday.com board on April 1, 2025; nobody has confirmed who prepared 2023 (not Cohen Tax). Filing is needed for the Liu deal.",
+  "order": 20,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. Our tax preparer Prakash Joshi (Valley Income Tax) needs VBX Labs LLC's 2023 return to prepare the 2024 Form 1120-S. The only 2023 file I have is '2023 Tax Return Documents (VBX LABS LLC) K-1s.pdf', password-locked, downloaded from the VBX Monday.com board on April 1, 2025. Search all three of my mailboxes (365hydrodesign, kmdgroupla, kmdanalytical) for who prepared or uploaded the 2023 return, any password hints, and any 2023 engagement with Cohen Tax or another preparer. Then draft two short emails: one to Cohen Tax (Jeff Cohen) asking whether they prepared 2023 and for the complete return, and one to whoever managed the Monday.com board asking for the password. Also explain how to request the 2023 return transcript from the IRS (Form 4506-T or online account) as a fallback, step by step.",
+  "section": "Taxes (Prakash / IRS)",
+  "source": "Thread 'VBX: findings on your seven points' and Prakash's reply (Oct 5)",
+  "status": "stuck",
+  "title": "Give Prakash the password for the locked 2023 VBX K-1 PDF, or get the full 2023 return from whoever prepared it",
+  "updatedAt": 1791824500007
+}

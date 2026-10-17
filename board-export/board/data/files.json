@@ -1,0 +1,494 @@
+{
+  "collection": "files",
+  "count": 26,
+  "exportedAt": "2026-10-17T01:50:00Z",
+  "documents": [
+    {
+      "doc_id": "f01",
+      "data": {
+        "createdAt": 1791829300001,
+        "date": "2026-09-30",
+        "from": "Adrian",
+        "group": "g_kmd",
+        "items": [
+          "15-page workbook: 11 tasks with step lists, done-when criteria and copy-ready AI prompts",
+          "Tasks: Claude workspace, reference files, GoHighLevel connection, workers comp, building insurance, Google measurement, Google reviews, SOS address, DBA, 12 public profiles, password register"
+        ],
+        "kind": "stored",
+        "link": "/_blob/74fb41ea4d3e24a6b7e63c61ada5adb0",
+        "name": "Bobby KMD Action Plan workbook (Sept 30, 2026)",
+        "note": "Stored on this dashboard as a PDF. Each task is also an item under KMD Analytical with its prompt in the notes.",
+        "to": "Bobby & Kevin (group text)"
+      }
+    },
+    {
+      "doc_id": "f02",
+      "data": {
+        "createdAt": 1791829300002,
+        "date": "2026-09-30",
+        "from": "Adrian",
+        "group": "g_personal",
+        "items": [],
+        "kind": "drive",
+        "link": "https://drive.google.com/file/d/10XrEe-Vn1ZKesOpc3eMDDF6oqn6VHaOH/view",
+        "name": "Dehbibi v Silly Billy — Case at a Glance (PDF)",
+        "note": "Saved to Drive Sept 30. Confirm it reached Kevin (likely sent by text).",
+        "to": "Kevin"
+      }
+    },
+    {
+      "doc_id": "f03",
+      "data": {
+        "createdAt": 1791829300003,
+        "date": "2026-09-29",
+        "from": "Adrian",
+        "group": "g_personal",
+        "items": [],
+        "kind": "page",
+        "link": "https://claude.ai/artifact/PKv68phsYS6Qke5EArpqaD",
+        "name": "Insurance Tender Letter & Trial Counsel Checklist (Claude page)",
+        "note": "Dated Sept 29, Silly Billy trial. Confirm it was shared with Kevin; Adrian may need to share the page link.",
+        "to": "Kevin"
+      }
+    },
+    {
+      "doc_id": "f04",
+      "data": {
+        "createdAt": 1791829300004,
+        "date": "2026-09-28",
+        "from": "Adrian",
+        "group": "g_vbx",
+        "items": [
+          "Comments: 41.8% aggregate equity cap, remove automatic 100% assignment, pledge/foreclosure/call-option routes, management fee, default provisions, guarantees, IP rights"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1875338191253499941",
+        "name": "Adrian's two-page comments on the five VBX financing drafts",
+        "note": "Thread 'VBX financing/management/option'.",
+        "to": "Steve Baghoomian, Kevin cc"
+      }
+    },
+    {
+      "doc_id": "f05",
+      "data": {
+        "createdAt": 1791829300005,
+        "date": "2026-09-29",
+        "from": "Peter Ryan",
+        "group": "g_personal",
+        "items": [
+          "Peter's terms: balance $17,298.49 + $50,000 retainer, or secured line of credit up to $117,298.49 at 10%",
+          "Deposition links: Jacob Windell (Sept 29 10 AM), Dr. Robert Morales (Sept 29 2:30 PM)",
+          "Key dates: MSC/FSC Oct 21, trial Nov 2"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1877640347485474262",
+        "name": "Flores Ryan: Trial Representation and Payment Arrangements",
+        "note": "",
+        "to": "Kevin, Adrian cc"
+      }
+    },
+    {
+      "doc_id": "f06",
+      "data": {
+        "createdAt": 1791829300006,
+        "date": "2026-09-30",
+        "from": "Adrian",
+        "group": "g_kmd",
+        "items": [
+          "Engagement_Letter_KMD_Group_LLC.docx"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1877807991385291004",
+        "name": "KMD Group LLC — Business Operations and Strategy Engagement Letter (.docx)",
+        "note": "$2,000 Zelle credited; $3,000 due now; $5,000 due Oct 22 and Nov 22.",
+        "to": "Kevin"
+      }
+    },
+    {
+      "doc_id": "f07",
+      "data": {
+        "createdAt": 1791829300007,
+        "date": "2026-10-01",
+        "from": "Steve Baghoomian",
+        "group": "g_vbx",
+        "items": [
+          "Call Option v3 (SB Redline).docx",
+          "Loan Agreement v3 (SB Redline).docx",
+          "Management_Agreement_v3 (SB Redline - Doud Share).docx",
+          "Pledge v3 (SB Redline).docx",
+          "Secured Promissory Note v3 (SB Redline).docx"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1877882157893189384",
+        "name": "Steve's v3 redlines of the Liu deal documents (DRAFT)",
+        "note": "",
+        "to": "Kevin & Adrian"
+      }
+    },
+    {
+      "doc_id": "f08",
+      "data": {
+        "createdAt": 1791829300008,
+        "date": "2026-10-04",
+        "from": "Kevin",
+        "group": "g_wy",
+        "items": [
+          "Kevin Doud Wyoming Companies - Filing Tasks 2026-10-04.pdf (VHC, VHCRE, ZC Ventures, AKZC; Section C = what Kevin needs from Adrian)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878171727356744653",
+        "name": "Wyoming companies — Best Wyoming filing tasks (PDF)",
+        "note": "",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f09",
+      "data": {
+        "createdAt": 1791829300009,
+        "date": "2026-10-04",
+        "from": "Kevin",
+        "group": "g_kmd",
+        "items": [
+          "KMD Team Circuit 2026-10-04.pdf (two pages: structure and lanes; tokens and cost)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878171706278830549",
+        "name": "KMD Claude team setup proposal — KMD Team Circuit (PDF)",
+        "note": "Answers workbook task 1.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f10",
+      "data": {
+        "createdAt": 1791829300010,
+        "date": "2026-10-04",
+        "from": "Kevin",
+        "group": "g_vbx",
+        "items": [
+          "VBX Labs - Debts Contracts Liabilities 2026-10-04.pdf (item 4)",
+          "Earlier drafts the same evening: 'FINAVBX DEBT DOCS', 'FINAL 10.4.26 VBX DEBT', 'UPDATED FINAL VBX DEBT', 'Richie final'"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878169998759431949",
+        "name": "VBX Labs — Debts, Contracts and Liabilities chart (PDF) and debt drafts",
+        "note": "Answers Dana's diligence item 4 (full disclosure of debts). See the Oct 8 supporting-documents package below.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f11",
+      "data": {
+        "createdAt": 1791829300011,
+        "date": "2026-10-05",
+        "from": "Kevin",
+        "group": "g_vbx",
+        "items": [
+          "1 - VBX 2023 Tax Return Documents K-1s (password-locked).pdf",
+          "2 - VBX 2022 Federal and California Return (Form 1065).pdf",
+          "3a/3b/3c - VBX 2021 Partnership Return (65 pages in three files)",
+          "4 - VBX Operating Agreement Jan 1 2024 (VHC 60, Malakov 40).pdf",
+          "5 - VBX Operating Agreement Jan 1 2023 (Kevin Doud 60, Malakov 40).pdf",
+          "6 - VHC IRS EIN Letter CP575.pdf"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878235584242914309",
+        "name": "VBX tax package for Prakash (8 files) and Kevin's findings on the seven points",
+        "note": "Related: 'VBX IRS NOTIFICATION' thread with Prakash (IRS notice VBX IRS 5.13.26.pdf).",
+        "to": "Adrian (forwarded to Prakash)"
+      }
+    },
+    {
+      "doc_id": "f12",
+      "data": {
+        "createdAt": 1791829300012,
+        "date": "2026-10-05",
+        "from": "Prakash Joshi ↔ Adrian",
+        "group": "g_vbx",
+        "items": [
+          "VBX IRS 5.13.26.pdf (IRS acceptance of Form 8832 and 2553 effective Jan 1, 2022)",
+          "Adrian's Oct 5 answers: 2 members, VHC 60% / Malakov 40%, election effective Jan 1, 2022"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1865190113349734720",
+        "name": "Prakash / Valley Income Tax thread — VBX IRS NOTIFICATION (2024 Form 1120-S correction)",
+        "note": "",
+        "to": "Kevin cc"
+      }
+    },
+    {
+      "doc_id": "f13",
+      "data": {
+        "createdAt": 1791829300013,
+        "date": "2026-10-05",
+        "from": "Kevin",
+        "group": "g_kmd",
+        "items": [
+          "LA County Registrar-Recorder FBN statement; identity verification and $36.75 payment outstanding"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878274950710835410",
+        "name": "VitalChek — Fictitious Business Name order 227790652 (action required)",
+        "note": "PIN is in the forwarded email; keep it off the board.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f14",
+      "data": {
+        "createdAt": 1791829300014,
+        "date": "2026-10-05",
+        "from": "Kevin",
+        "group": "g_wy",
+        "items": [
+          "VHCRE LLC - Action required to complete WY Renewal Filing (Oct 2 and Oct 5)",
+          "ZC Ventures LLC - Action required to complete WY Renewal Filing (Oct 2)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878241310874889171",
+        "name": "Best Wyoming Registered Agent — renewal notices for VHCRE LLC and ZC Ventures LLC",
+        "note": "",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f15",
+      "data": {
+        "createdAt": 1791829300015,
+        "date": "2026-10-07",
+        "from": "Kevin",
+        "group": "g_kmd",
+        "items": [
+          "20261007-184334 - Detailed Quote - KMD Group LLC.pdf ($2,542/yr, $204/mo, $676 deposit)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878417786707927403",
+        "name": "Pie Insurance — Detailed Quote, KMD Group LLC workers' comp (PDF)",
+        "note": "Adrian's reply: pay in full to save $400+.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f16",
+      "data": {
+        "createdAt": 1791829300016,
+        "date": "2026-10-07",
+        "from": "Adrian",
+        "group": "g_personal",
+        "items": [
+          "Release copy labeled 'SIGNED' (needs authentication)",
+          "January 9 rental agreement",
+          "January 10 rental agreement",
+          "Safety rules (copy with blank initial lines)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-a:sa2sa-r3981522792932222126",
+        "name": "Silly Billy / Angela Dehbibi — recovering court costs and attorney fees (analysis + rental and waiver documents)",
+        "note": "Three asks for Peter: preserve the attorney-fee argument, confirm the Feb 2024 CCP 998 offer, track recoverable costs.",
+        "to": "Kevin"
+      }
+    },
+    {
+      "doc_id": "f17",
+      "data": {
+        "createdAt": 1791829300017,
+        "date": "2026-10-07",
+        "from": "Kevin",
+        "group": "g_vbx",
+        "items": [
+          "Derakhshannia - General Release and Settlement Agreement (Revised 2026-02-02) - UNSIGNED copy.pdf",
+          "Derakhshannia - Summons and Complaint (served 2024-09-20).pdf",
+          "Whitehouse - EN Law Group records request letters (2025-02-28 and 2025-05-07).pdf",
+          "Whitehouse - EN Law Group fifth and final records request (2025-07-30, mailed to VHC).pdf",
+          "Whitehouse - Notice of Case Management Conference (2026-03-03).pdf",
+          "Whitehouse - Emails from plaintiff counsel (2025-06 to 2026-05).pdf"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878434530191306156",
+        "name": "Case documents 1 of 2 — Derakhshannia settlement and Whitehouse",
+        "note": "Executed settlement copy still to be sent separately.",
+        "to": "Adrian (forwarded to Steve)"
+      }
+    },
+    {
+      "doc_id": "f18",
+      "data": {
+        "createdAt": 1791829300018,
+        "date": "2026-10-07",
+        "from": "Kevin",
+        "group": "g_vbx",
+        "items": [
+          "Summons, complaint and exhibits filed Aug 12, 2025 (98 pages)",
+          "Signed Notice and Acknowledgment of Receipt (Josh Medina)",
+          "Further filings in the same package (32 MB)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878434735418957500",
+        "name": "Case documents 2 of 2 — Apollo Branding v. VBX Labs (LASC 25CHCV02873)",
+        "note": "Adrian also re-sent a second batch to Steve the same evening ('And these ones - again I am sending this batch to ensure they go').",
+        "to": "Adrian (forwarded to Steve)"
+      }
+    },
+    {
+      "doc_id": "f19",
+      "data": {
+        "createdAt": 1791829300019,
+        "date": "2026-10-08",
+        "from": "Kevin",
+        "group": "g_vbx",
+        "items": [
+          "Akzc oa (Kevin's email, Oct 8)",
+          "Vhc oa (Kevin's email, Oct 8)",
+          "AKZC and VHC Operating Agreements - First Five Pages (Adrian to Steve, Oct 8)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878497545394452537",
+        "name": "AKZC and VHC operating agreements",
+        "note": "For Dana's diligence item 6 (VHC company documents).",
+        "to": "Adrian (first five pages forwarded to Steve)"
+      }
+    },
+    {
+      "doc_id": "f20",
+      "data": {
+        "createdAt": 1791829300020,
+        "date": "2026-10-08",
+        "from": "Kevin",
+        "group": "g_vbx",
+        "items": [
+          "'Vbx oa signed 2026' from Kevin",
+          "'VBX OA 2026' from Adrian to Steve and Kevin"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878520083130585877",
+        "name": "VBX Operating Agreement 2026 (signed)",
+        "note": "",
+        "to": "Adrian (forwarded to Steve)"
+      }
+    },
+    {
+      "doc_id": "f21",
+      "data": {
+        "createdAt": 1791829300021,
+        "date": "2026-10-08",
+        "from": "Kevin",
+        "group": "g_vbx",
+        "items": [
+          "README - what supports what.txt",
+          "01 South Bay Credit Union · 02 Leasing Innovations · 03 EDD · 04 Franchise Tax Board · 05a-d LA County unsecured property tax (2020–2023)",
+          "06 DMV · 07 LA County Weights and Measures · 08 Protective Insurance · 09a-b GreenCoast Hydroponics · 10 Uline · 11 CIS Equipment",
+          "12 Liberty Company Insurance Brokers · 13 Charles P. Crowley · 14 Premium Equipment · 15 Cohen Tax · 16 Encore Labs · 17 Koppert",
+          "18 biBERK workers comp · 19 ATC HVAC · 20 Private Suite · 21 Parkway Wholesale · 22 MORR · 23 CWS · 24 Dewey Pest Control"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878524141635209991",
+        "name": "VBX debt schedule — supporting documents for each line (24 PDFs + README)",
+        "note": "Correction in the email: Leasing Innovations balance is $42,999.77, not $17,606.21. Nothing on file yet for EDD $30,716.62, First Insurance, Fire Prevention Bureau CUPA fee, CDTFA.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f22",
+      "data": {
+        "createdAt": 1791829300022,
+        "date": "2026-10-09",
+        "from": "Eduardo 'Lalo' Roa",
+        "group": "g_vbx",
+        "items": [
+          "Agreed 664.6 Order (2026.06.04).pdf",
+          "RE: VBX Labs, LLC - DANIEL DERAKHSHANNIA.eml (Lalo's email to Dana Cisneros)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878245032603671522",
+        "name": "Lalo (Laner Muchin) — Agreed 664.6 Order and confirmation to Dana on the Derakhshannia case",
+        "note": "Same thread holds Adrian's Oct 5 request for a Whitehouse quote, still unanswered.",
+        "to": "Adrian & Kevin"
+      }
+    },
+    {
+      "doc_id": "f23",
+      "data": {
+        "createdAt": 1791850000200,
+        "date": "2026-10-12",
+        "from": "Steve Baghoomian → Dana Cisneros; forwarded by Kevin",
+        "group": "g_vbx",
+        "items": [
+          "Call Option Agreement (SB Redline 10.12.26).docx",
+          "Loan Agreement (SB Redline 10.12.26).docx",
+          "Management Services Agreement (SB Redline 10.12.26).docx",
+          "Pledge Agreement (SB Redline 10.12.26).docx",
+          "Secured Convertible Promissory Note (SB Redline 10.12.26).docx"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1878876218134989741",
+        "name": "Liu deal — Steve's signing-day redlines (SB Redline 10.12.26) of the five documents",
+        "note": "Thread also holds Dana's Oct 12 objection to Section 14 of the Call Option, her Oct 12 version converting to 77.24%, and the Oct 9 landlord and license-renewal messages.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f24",
+      "data": {
+        "createdAt": 1792108800100,
+        "date": "2026-10-15",
+        "from": "KMD Analytical system (noreply@kmdanalytical.com) for Kevin",
+        "group": "g_kmd",
+        "items": [
+          "endotoxin-hero.jpg",
+          "endotoxin-step-1.jpg",
+          "endotoxin-step-2.png",
+          "endotoxin-step-3.jpg",
+          "endotoxin-film-loop.gif",
+          "endotoxin-film.mp4"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879126245110430269",
+        "name": "Endotoxin testing launch email — review copy (hero, 3 step images, film loop GIF, 30-second film MP4)",
+        "note": "Client announcement for bacterial endotoxin testing at $150 per vial, orders opening the week of Oct 19. Adrian approved it ('LOOKS GOOD') Oct 15 at 7:29 AM. Linked to the launch item under Marketing, profiles & reviews.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f25",
+      "data": {
+        "createdAt": 1792201602238,
+        "date": "2026-10-16",
+        "from": "Kevin Doud (365hydrodesign@gmail.com)",
+        "group": "g_vbx",
+        "items": [
+          "WebPage.pdf"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879233093210914874",
+        "name": "New final VBX promissory note (DocuSign) — WebPage.pdf",
+        "note": "Kevin forwarded the DocuSign envelope link for the final VBX promissory note (Liu deal) with a PDF print of the DocuSign page attached. No message text. Linked to the Liu deal item (i05): this is the first signing-set document to reach Adrian's email since the deal was signed.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f26",
+      "data": {
+        "createdAt": 1792201602239,
+        "date": "2026-10-16",
+        "from": "KMD Analytical system (noreply@kmdanalytical.com) for Kevin",
+        "group": "g_kmd",
+        "items": [
+          "evidence-hero.jpg",
+          "evidence-card-1.jpg",
+          "evidence-card-2.jpg",
+          "evidence-card-3.jpg",
+          "evidence-card-4.jpg",
+          "endotoxin-step-1.jpg",
+          "endotoxin-step-2.png",
+          "endotoxin-step-3.jpg"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879230808589753360",
+        "name": "KMD client email #2 — '[Review] Sterile is not the same as endotoxin-free' (review copy with hero and 7 images)",
+        "note": "Second client note in the endotoxin series: four evidence points (JAMA 2024 study, FDA/CDC 2026 glutathione cases, USP <85> fever threshold, low endotoxin recovery), the $150 per vial offer and order link. Review copy for Adrian; not yet approved (the Oct 15 launch copy was approved 'LOOKS GOOD'). No board item: Adrian removed the endotoxin launch item on Oct 16.",
+        "to": "Adrian"
+      }
+    }
+  ]
+}

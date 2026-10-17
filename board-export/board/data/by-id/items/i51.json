@@ -1,0 +1,17 @@
+{
+  "completedAt": "",
+  "createdAt": 1791912000000,
+  "due": "2026-10-15",
+  "group": "g_kmd",
+  "milestone": false,
+  "notes": "Added Oct 13 at Adrian's request. One W-2 employee: lab tech at $30/hr, about 25 hrs/week, biweekly, started Sept 25, so the first pay period has already closed and payroll must run now. Employer of record: KMD Group LLC dba KMD Analytical Group. Must be full service for California: federal and EDD tax deposits and filings (DE 9 / DE 9C), new-hire report (DE 34), W-2 at year end, paid sick leave accrual (LA City). Candidates to price: Prakash Joshi at Valley Income Tax and Payroll (already does VBX taxes, ask for a one-employee monthly rate), Patriot Full Service, SurePayroll, Square Payroll, Gusto Simple, OnPay, Roll by ADP. Typical range for one employee is roughly $25 to $60 a month; verify current pricing before choosing. Record the chosen provider, monthly cost, and first run date in this thread, then the banking item (funding account) and the onboarding packet item (withholding) can close.",
+  "order": 64,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "I am Kevin Doud, owner of KMD Group LLC dba KMD Analytical Group in Chatsworth, California. I have one hourly W-2 employee ($30/hour, about 25 hours a week, paid biweekly, started September 25, 2026) and no payroll provider yet. Compare the current monthly cost for ONE employee at: Valley Income Tax and Payroll (Prakash Joshi, info@valleyincometax.com), Patriot Full Service, SurePayroll, Square Payroll, Gusto Simple, OnPay, and Roll by ADP. For each give base fee, per-employee fee, whether it files California EDD returns and the DE 34 new-hire report, whether it handles paid sick leave accrual, and any setup fee or contract. Rank them cheapest first and recommend one. Then draft (1) a short email to Prakash asking for his one-employee monthly payroll rate and start date, and (2) the list of items I need to sign up with the top online option today: EIN, EDD employer account number, bank account for funding, employee W-4 and DE 4, I-9, pay schedule. Keep it to one page.",
+  "section": "People & payroll",
+  "source": "Adrian, Oct 13 ('payroll solution need to contact cheapest one')",
+  "status": "not_started",
+  "title": "Payroll solution: price the cheapest full-service option for one hourly employee and contact them to get set up this week (Valley Income Tax & Payroll, Patriot, SurePayroll, Square, Gusto, OnPay)",
+  "updatedAt": 1791912000000
+}

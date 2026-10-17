@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500010,
+  "due": "2026-10-17",
+  "group": "g_vbx",
+  "notes": "IRS notice of May 13, 2026 accepted the 8832 and 2553 effective Jan 1, 2022. Prakash is preparing the 2024 1120-S and an amended 2024 1065. Cohen Tax filed 2022 as a partnership (Form 1065), so 2022 and 2023 may need the same correction.",
+  "order": 23,
+  "owner": "Adrian",
+  "priority": "medium",
+  "prompt": "I am Adrian Holguin, advising VBX Labs LLC. Prakash Joshi is preparing the 2024 Form 1120-S and amended 2024 Form 1065. The IRS accepted VBX's Form 8832 and Form 2553 effective January 1, 2022, but Cohen Tax filed 2022 as a partnership (Form 1065) and no 2023 1120-S has been found. Draft an email to Prakash, copying Kevin Doud, asking him to (1) confirm whether 2022 and 2023 must also be corrected to 1120-S and what each year costs and takes; (2) confirm VHC's California foreign registration and Statement of Information status; (3) send his invoice and expected filing date for 2024. Keep it to three numbered questions and ask for answers by a specific date.",
+  "section": "Taxes (Prakash / IRS)",
+  "source": "Thread 'VBX IRS NOTIFICATION' (Oct 4–5)",
+  "status": "waiting",
+  "title": "Decide with Prakash whether 2022 and 2023 also need to be refiled as 1120-S (2022 was filed as a Form 1065 by Cohen Tax) and get his invoice and filing date",
+  "updatedAt": 1791825500000
+}

@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500001,
+  "due": "2026-10-26",
+  "group": "g_vbx",
+  "notes": "Complaint served on the registered agent March 18, 2026; no answer filed. Dana Cisneros calls this her greatest concern on the deal. Next step (Adrian): chase Lalo (Eduardo Roa, Laner Muchin) for availability, a fixed or capped fee for the initial review, filings and hearing, and the immediate deadlines. He was asked Oct 5; his Oct 9 reply only covered Derakhshannia.",
+  "order": 10,
+  "owner": "Both",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud, managing member of VBX Labs LLC. VBX was served March 18, 2026 in Whitehouse v. VBX Labs LLC (LASC 26STCV06228). No response is on file and the court set an OSC re entry of default for October 26, 2026. Using my connected Gmail, find every email about this case (search: Whitehouse, EN Law Group, Elizabeth Nguyen, 26STCV06228) and summarize the timeline with dates. Then draft a short, firm email to Eduardo 'Lalo' Roa (eroa@lanerlaw.com), copying Adrian Holguin and Steve Baghoomian, asking him to confirm by tomorrow whether he will take the case, his retainer and fee structure, and exactly what he needs from me to get a response or a motion to set aside on file before October 26. List what I should gather today (complaint, proof of service, every letter from plaintiff's counsel). Do not send anything until I approve it.",
+  "section": "Litigation",
+  "source": "Email: 'VBX: Daniel case + urgent Whitehouse representation quote' (Oct 5–9); Kevin's case documents 1 of 2 (Oct 7)",
+  "status": "working",
+  "title": "Whitehouse v. VBX Labs (LASC 26STCV06228): get counsel retained and a response on file before the OSC re entry of default on Oct 26",
+  "updatedAt": 1791825500000
+}

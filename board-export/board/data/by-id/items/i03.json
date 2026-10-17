@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500003,
+  "due": "2026-10-14",
+  "group": "g_vbx",
+  "notes": "Kevin flagged this as the item that can't wait (Oct 4). Coordinate with Steve Baghoomian; May 1 minute order referenced a settlement and a stipulation to set aside defaults. Full case file (summons, complaint, exhibits) sent Oct 7.",
+  "order": 12,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. In Apollo Branding, LLC v. VBX Labs LLC (LASC 25CHCV02873), two Requests for Entry of Default were served on my Wyoming companies VHC and AKZC. Using my Gmail and the Best Wyoming Registered Agent emails, find the request documents and the dates they were served and received, and tell me the deadline risk in plain language. Then draft an email to Steve Baghoomian (steve@baghoomianlaw.com), copying Adrian Holguin, that attaches the requests, states the service dates, reminds him of the May 1, 2026 minute order about a settlement and a stipulation to set aside the defaults, and asks what must be filed, by when, and what he needs from me. Keep it under 200 words. I will review before sending.",
+  "section": "Litigation",
+  "source": "Kevin's email 'My Wyoming companies: Best Wyoming filing tasks' (Oct 4); 'Case documents 2 of 2: Apollo' (Oct 7)",
+  "status": "working",
+  "title": "Apollo Branding v. VBX Labs (LASC 25CHCV02873): respond to the two Requests for Entry of Default served on VHC and AKZC",
+  "updatedAt": 1791824500003
+}

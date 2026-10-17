@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791850000047,
+  "due": "2026-10-20",
+  "group": "g_vbx",
+  "notes": "Steve, Oct 9 at 5:17 PM: 'Kevin - Please confirm with Dana re: renewal. Has it been submitted?' Adrian confirmed Oct 16 that the renewal has NOT been submitted. The Liu deal signed this week and the management agreement makes Liu's addition to the license a condition, so the renewal is now a post-signing obligation with the buyer watching. Due date moved to Oct 20 to get it filed this week.",
+  "order": 4,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. The VBX Labs license renewal has not been submitted yet and the Liu deal has now signed, so it is urgent. Using my Gmail, find the renewal notice and deadline from the Department of Cannabis Control and the City of Los Angeles (search: renewal, DCC, license, annual, LADCR, expiration), tell me the exact due date and what is owed, and give me the step-by-step filing instructions with the portal links, the documents I must attach, and the fee. Then draft two short emails: one to Dana Cisneros, copying Steve and Adrian, stating the renewal status and the date it will be submitted; and one to Steve asking what is needed to add Xiu Chang Liu to the license once the renewal is in.",
+  "section": "Liu deal & due diligence",
+  "source": "Email thread 'VBX Final documents' (Steve to Kevin, Oct 9)",
+  "status": "working",
+  "title": "VBX license renewal: not yet submitted as of Oct 16 (Steve asked Oct 9). Submit the renewal, confirm it to Dana, and start Liu's addition to the license",
+  "updatedAt": 1792198800000
+}

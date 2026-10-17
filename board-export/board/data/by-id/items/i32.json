@@ -1,0 +1,16 @@
+{
+  "createdAt": 1791825500032,
+  "due": "2026-10-21",
+  "group": "g_personal",
+  "milestone": true,
+  "notes": "Both hearings are the same day. Prep is tracked on the 'Prepare for the MSC' item.",
+  "order": 3,
+  "owner": "Kevin",
+  "priority": "critical",
+  "prompt": "I am Kevin Doud. The Mandatory Settlement Conference and Final Status Conference in Dehbibi v. Silly Billy are both on October 21, 2026. Draft a short email to Peter Ryan asking for the time, department and whether we attend in person or remotely, what he needs from Angelica and me beforehand, whether a settlement conference statement is due and when, and what settlement range he recommends we be prepared to discuss. Copy Adrian Holguin.",
+  "section": "Silly Billy / Dehbibi trial",
+  "source": "Peter Ryan's email (Sept 28)",
+  "status": "not_started",
+  "title": "Court date: Silly Billy Mandatory Settlement Conference and Final Status Conference",
+  "updatedAt": 1791825500032
+}

@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500029,
+  "due": "2026-10-17",
+  "group": "g_personal",
+  "notes": "Adrian's Oct 7 analysis: ordinary court costs are recoverable if VBX wins outright; attorney fees are arguable but uncertain. Attachments: 'SIGNED' release (needs authentication), Jan 9 and Jan 10 rental agreements, safety rules with blank initial lines.",
+  "order": 5,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud. Draft an email to Peter Ryan (ryan@floresryan.com), copying Adrian Holguin, about recovering costs in Dehbibi v. Silly Billy if we win. Ask him to (1) preserve the attorney-fee argument based on the rental release's 'defend and indemnify' language, which specifically mentions claims the renter herself brings, and tell us whether a formal demand or a pleaded contract claim is needed before judgment; (2) confirm whether the California CCP section 998 offer he proposed in February 2024 was actually served, and if so to keep a copy ready for an expert-fee request; (3) start an itemized list of recoverable costs with invoices. Mention that Adrian sent the release labeled SIGNED, the January 9 and January 10 rental agreements and the safety rules on October 7. Keep it under 200 words.",
+  "section": "Silly Billy / Dehbibi trial",
+  "source": "Adrian's email 'Silly Billy / Angela Dehbibi — recovering court costs and attorney fees' (Oct 7)",
+  "status": "not_started",
+  "title": "Ask Peter to (1) preserve the attorney-fee argument under the 'defend and indemnify' release language, (2) confirm whether the Feb 2024 CCP 998 offer was actually served, and (3) keep an itemized list of recoverable costs",
+  "updatedAt": 1791824500029
+}

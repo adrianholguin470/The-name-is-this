@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500025,
+  "due": "2026-10-17",
+  "group": "g_wy",
+  "notes": "Adrian asked Prakash on Oct 5 to confirm VHC's CA foreign LLC registration and any outstanding filings. VHC took over Kevin's 60% of VBX effective Jan 1, 2024.",
+  "order": 10,
+  "owner": "Both",
+  "priority": "high",
+  "prompt": "I am Kevin Doud. VHC Limited Liability Company is a Wyoming LLC that owns 60% of VBX Labs LLC and is listed as VBX's manager on the California Secretary of State record, but the buyer's counsel cannot find VHC on the California SOS site. Explain in plain steps whether VHC must register as a foreign LLC in California (Form LLC-5), file a Statement of Information, and pay the California franchise tax, and what the late consequences are. Give me the exact information the LLC-5 asks for, a filled-in draft using VHC's facts (EIN 99-0616959, 30 N Gould St Ste R, Sheridan WY 82801, sole member Kevin Doud), and a short email to Steve Baghoomian and Prakash Joshi, copying Adrian, asking which of them will file it this week.",
+  "section": "VHC",
+  "source": "Dana's diligence list; Adrian's email to Prakash (Oct 5)",
+  "status": "not_started",
+  "title": "Register or qualify VHC in California and fix its Statement of Information (VHC is listed as VBX's manager but Dana cannot find it on the CA Secretary of State site)",
+  "updatedAt": 1791824500025
+}

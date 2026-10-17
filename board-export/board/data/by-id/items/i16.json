@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500016,
+  "due": "2026-10-15",
+  "group": "g_kmd",
+  "notes": "Pay structure: $30/hour, biweekly, about 25 hours a week. The packet states gross hourly only. Employer Setup & Pay Memo is internal, do not hand to the employee.",
+  "order": 10,
+  "owner": "Kevin",
+  "priority": "high",
+  "prompt": "I am Kevin Doud, KMD Group LLC dba KMD Analytical Group. Adrian sent an Employee Welcome & Onboarding Packet and an Employer Setup & Pay Memo on September 24, 2026 for my hourly lab technician ($30/hour, biweekly, about 25 hours a week, started September 25). Help me finish three things before he signs: (1) fill in Section 3 with the workers' comp carrier (Pie Insurance), policy number and carrier address once the policy is bound; (2) confirm payroll and wage statements use 'KMD Group LLC dba KMD Analytical Group'; (3) confirm the City of Los Angeles paid sick leave rule (48 hours a year) replaces the state 40 in the packet. Then draft an email to my CPA asking them to confirm the withholding setup in the payroll system before the first run. Give me a short checklist I can tick off.",
+  "section": "People & payroll",
+  "source": "Adrian's email 'KMD Analytical — employee welcome packet + employer setup & pay memo' (Sept 24)",
+  "status": "working",
+  "title": "Finish the new-hire onboarding packet: add the workers' comp carrier and policy number in Section 3, use 'KMD Group LLC dba KMD Analytical Group' on payroll, confirm LA City 48-hour paid sick leave, CPA to confirm withholding before the first run",
+  "updatedAt": 1791824500016
+}

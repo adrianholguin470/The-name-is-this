@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500024,
+  "due": "2026-10-15",
+  "group": "g_wy",
+  "notes": "Same request as VHCRE. The Strategic Attack Plan also raised whether ZC Ventures should be signed over to the Bake Shop's new ownership (Albert).",
+  "order": 30,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud, owner of ZC Ventures LLC (Wyoming). Best Wyoming Registered Agent emailed on October 2, 2026 that they need information from me to complete the Wyoming annual renewal filing. Tell me exactly what the Wyoming annual report asks for and the fee, then give me a filled-in draft of each answer using the company facts I paste below so I can complete the 'Provide Required Information' page in one sitting. Also note, separately, that the Strategic Attack Plan raised whether ZC Ventures should be signed over to the Bake Shop's new ownership (Albert); list what I would need to decide that, but do not treat it as part of the renewal.",
+  "section": "ZC Ventures",
+  "source": "Email 'ZC Ventures LLC - Action required to complete WY Renewal Filing' (Oct 2)",
+  "status": "not_started",
+  "title": "ZC Ventures LLC: provide the information Best Wyoming Registered Agent needs to complete the Wyoming renewal filing",
+  "updatedAt": 1791824500024
+}

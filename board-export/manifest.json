@@ -1,0 +1,40 @@
+{
+  "name": "Adrian & Kevin's Action Dashboard — reproduction bundle",
+  "exportedAt": "2026-10-17T01:50:00Z",
+  "exportedBy": "adrian.holguin.470@gmail.com (via Claude Code session)",
+  "source": {
+    "board_url": "https://claude.ai/artifact/37akxGp77L8HE1miRxPVDT",
+    "board_published_version": "1792173403-cb13 (Version 14, 2026-10-16)",
+    "playbook_doc_url": "https://claude.ai/artifact/YMn8owCb2bhNnwWe4pU9v2",
+    "routine_id": "trig_01R892saBFN7z6MyeSVrgEEb"
+  },
+  "people": {
+    "owner": "Adrian Holguin <adrian.holguin.470@gmail.com>",
+    "editor": "Kevin Doud <kmdgroupla@gmail.com> (also 365hydrodesign@gmail.com, kevin.doud@kmdanalytical.com, kevin.doud@vbxlabs.com)"
+  },
+  "components": {
+    "board/page.html": "The complete single-file board page (HTML, CSS, JS). Publish it with the Artifact tool.",
+    "board/capabilities.json": "Runtime capabilities to pass on the first publish (db rules, user, assets).",
+    "board/data/groups.json": "4 group documents (g_vbx, g_kmd, g_wy, g_personal).",
+    "board/data/items.json": "60 action items (i01..i63 with gaps where items were deleted).",
+    "board/data/updates.json": "11 thread notes keyed by itemId.",
+    "board/data/files.json": "26 file-register rows (f01..f26).",
+    "board/data/meta.json": "meta/sweep: last sweep timestamp, note, run log, schedule.",
+    "board/data/by-id/": "The same documents, one JSON file per document, ready for ArtifactData set with file_path.",
+    "routine/daily-kevin-sweep.json": "The 6:45 PM Pacific daily sweep routine: cron, binding, full prompt.",
+    "playbook/playbook.html": "Source of Kevin's Board Playbook PDF (cover with how-it-works diagram + playbook).",
+    "playbook/how-it-works.svg": "The system diagram used on page one and in the Claude Doc.",
+    "playbook/how-it-works.png": "PNG render of the diagram (uploaded to the Claude Doc).",
+    "playbook/render-pdf.js": "Playwright script that renders playbook.html to the PDF with page footers.",
+    "playbook/email-long-version.html": "Earlier full-length email body (superseded by the short email).",
+    "playbook/email-short.txt": "The short 3-step email sent to Kevin.",
+    "../Kevins-Board-Playbook.pdf": "The finished PDF at the repository root."
+  },
+  "data_model": {
+    "groups": ["name", "color", "order", "createdAt"],
+    "items": ["title", "group", "section", "owner (Adrian|Kevin|Both)", "status (not_started|working|stuck|waiting|done)", "priority (critical|high|medium|low)", "due (YYYY-MM-DD or empty)", "notes", "source", "prompt", "order", "createdAt", "updatedAt", "completedAt (optional)"],
+    "updates": ["itemId", "text", "author", "by (viewer id or null)", "createdAt"],
+    "files": ["name", "date", "from", "to", "group", "kind (email|drive|page)", "link", "items[]", "note", "createdAt"],
+    "meta/sweep": ["lastSweepAt", "lastSweepNote", "runs[] {at, added, updated, filed}", "schedule"]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "completedAt": "",
+  "createdAt": 1792202400004,
+  "due": "2026-10-24",
+  "group": "g_kmd",
+  "milestone": false,
+  "notes": "Split out from Workbook #10 (Sept 30) at Adrian's request Oct 16 so each channel is its own action item. Bobby executes under Kevin: AI finds and drafts, Bobby opens, claims/creates, verifies, and reports the live URL. Improve an existing profile rather than create a duplicate. Bing Places can import from Google Business Profile once that is verified, so do Google first. Status codes: Not checked, Existing, Access needed, Draft ready, Verification pending, Complete (live URL + evidence of company control). Mark Done only with the live URL in this thread.",
+  "order": 70,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud, owner of KMD Analytical. Help me complete and optimize KMD Analytical's Bing Places profile. Use the approved brand book, the actual vial and logo artwork, the current service descriptions and verified business facts (KMD Group LLC dba KMD Analytical, 9631 Topanga Canyon Pl, Chatsworth, CA 91311, kmdanalytical.com once confirmed canonical). First search for an existing Bing Places listing and give me candidate URLs and why they match; do not assume no result means no account. I will open Bing Places, confirm ownership, and claim, recover or create it. Then draft every field within Bing Places's current limits: name, categories, description, services, website and contact links, address, hours, photos and call to action where supported. Leave missing facts as questions. Suggest image sizes for the real logo and banner. No invented accreditation, FDA registration, rankings, review counts, turnaround promises or medical claims. Bing Places can import from Google Business Profile once that is verified, so do Google first. Finish with a paste-ready field checklist, link-test checklist, verification steps, and a one-line status for the profile register: URL, handle, admin, recovery contact, status, evidence, next step (no passwords).",
+  "section": "Marketing, profiles & reviews",
+  "source": "Bobby workbook task 10 (Sept 30); Adrian, Oct 16",
+  "status": "not_started",
+  "title": "Profiles: Bing Places — search the existing listing, claim first and create only if absent, finish verification",
+  "updatedAt": 1792202400004
+}

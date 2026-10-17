@@ -1,0 +1,15 @@
+{
+  "createdAt": 1791824500020,
+  "due": "2026-10-24",
+  "group": "g_kmd",
+  "notes": "Act once a line holds three weeks in a row; triggers include lead time (5 training days per hire, 7–10 days delivery for a second 1260). Order the second instrument at 700/week.",
+  "order": 11,
+  "owner": "Kevin",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud, Laboratory Director at KMD Analytical in Chatsworth. We are at about 244 paid vials a week and the first two growth triggers are crossed: hire a second prep tech and add a second set of eyes on certificates of analysis. Draft (1) a short job post for an hourly lab prep technician (RP-HPLC sample prep, California, $ range left for me to fill), (2) a one-page SOP for a second-person review of every COA before release, and (3) a two-week onboarding plan that fits the five training days built into the trigger. Finish with the single number I should watch for the next trigger (third prep tech at 500 vials a week) and how to log it weekly.",
+  "section": "People & payroll",
+  "source": "Kevin's email 'KMD growth triggers' + Growth Triggers / Capacity & Growth Plan PDFs (Sept 27)",
+  "status": "working",
+  "title": "Act on the first two growth triggers already crossed (244 paid vials/week): second prep tech and a second set of eyes on certificates; next trigger is a third prep tech at 500",
+  "updatedAt": 1791824500020
+}
