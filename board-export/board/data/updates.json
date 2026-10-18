@@ -1,8 +1,19 @@
 {
   "collection": "updates",
-  "count": 11,
-  "exportedAt": "2026-10-17T01:50:00Z",
+  "count": 15,
+  "exportedAt": "2026-10-18T01:50:00Z",
+  "note": "Final snapshot taken immediately before the artifact was deleted on 2026-10-18.",
   "documents": [
+    {
+      "doc_id": "9k58yz1liciw2kgcx0ln",
+      "data": {
+        "author": "Adrian",
+        "by": "u_AaH_9QoRV1a7CsGj2kv3Fg",
+        "createdAt": 1792269122190,
+        "itemId": "i37",
+        "text": "get quote for whole building asap for cultivtion based off best price we can get for the cultivation side. (we need normal solid protection)"
+      }
+    },
     {
       "doc_id": "u_20261016_i05_signed",
       "data": {
@@ -94,6 +105,16 @@
       }
     },
     {
+      "doc_id": "u_20261017_i03_claims",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792266400001,
+        "itemId": "i03",
+        "text": "Oct 17: Adrian asked for the claims and counterclaims to be tracked. Added two items under this one: VBX Labs' claims against Apollo (i64) and X Brands IP LLC's claims against Apollo / Alex Liu (i65), built from the March 2026 Statement of Claims, Evidence Brief and Master Reference in Drive. Filed those three documents under Files (f27–f29)."
+      }
+    },
+    {
       "doc_id": "u_20261017_i05_note",
       "data": {
         "author": "Adrian",
@@ -101,6 +122,26 @@
         "createdAt": 1792201602240,
         "itemId": "i05",
         "text": "Oct 16: Kevin forwarded the DocuSign link for the 'New final Vbx promissory note' (PDF attached, filed under Files as f25). Status stays done. Still missing from Adrian's email: executed copies of the Pledge, Call Option, Management Agreement and Loan Agreement. Prompt refreshed to pull all five from DocuSign and send them to Adrian and Steve."
+      }
+    },
+    {
+      "doc_id": "u_20261018_i07_password",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792288100001,
+        "itemId": "i07",
+        "text": "Oct 17: Adrian sent Prakash the password for the 2023 VBX K-1 PDF (reply at 1:18 PM Pacific on the 'VBX: findings on your seven points' thread). Status moved from stuck to waiting on Prakash's confirmation."
+      }
+    },
+    {
+      "doc_id": "u_20261018_i51_prakash",
+      "data": {
+        "author": "Adrian",
+        "by": null,
+        "createdAt": 1792288100002,
+        "itemId": "i51",
+        "text": "Oct 17: Adrian emailed Prakash at Valley Income Tax & Payroll to quote payroll for KMD Group LLC dba KMD Analytical and a past-due tax review (Kevin copied, three tax PDFs attached). Status moved to waiting on Prakash's scope and fee."
       }
     },
     {

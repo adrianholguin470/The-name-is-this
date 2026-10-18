@@ -1,7 +1,8 @@
 {
   "collection": "items",
-  "count": 60,
-  "exportedAt": "2026-10-17T01:50:00Z",
+  "count": 66,
+  "exportedAt": "2026-10-18T01:50:00Z",
+  "note": "Final snapshot taken immediately before the artifact was deleted on 2026-10-18.",
   "documents": [
     {
       "doc_id": "i01",
@@ -27,7 +28,7 @@
         "createdAt": 1791824500003,
         "due": "2026-10-14",
         "group": "g_vbx",
-        "notes": "Kevin flagged this as the item that can't wait (Oct 4). Coordinate with Steve Baghoomian; May 1 minute order referenced a settlement and a stipulation to set aside defaults. Full case file (summons, complaint, exhibits) sent Oct 7.",
+        "notes": "Kevin flagged this as the item that can't wait (Oct 4). Coordinate with Steve Baghoomian; May 1 minute order referenced a settlement and a stipulation to set aside defaults. Full case file (summons, complaint, exhibits) sent Oct 7. Oct 17: the affirmative side of this case is now tracked in two separate items directly below: VBX Labs' claims against Apollo (production account, exclusivity breach, offset) and X Brands IP LLC's claims against Apollo / Alex Liu (40% member denied K-1s, financials and distributions). Case background docs are in the file register (Statement of Claims, Evidence Brief, Master Reference, March 2026).",
         "order": 12,
         "owner": "Kevin",
         "priority": "critical",
@@ -36,7 +37,7 @@
         "source": "Kevin's email 'My Wyoming companies: Best Wyoming filing tasks' (Oct 4); 'Case documents 2 of 2: Apollo' (Oct 7)",
         "status": "working",
         "title": "Apollo Branding v. VBX Labs (LASC 25CHCV02873): respond to the two Requests for Entry of Default served on VHC and AKZC",
-        "updatedAt": 1791824500003
+        "updatedAt": 1792266400000
       }
     },
     {
@@ -102,16 +103,16 @@
         "createdAt": 1791824500007,
         "due": "2026-10-13",
         "group": "g_vbx",
-        "notes": "Prakash (Valley Income Tax) asked for the password Oct 5 and needs the 2023 figures to carry forward into the 2024 Form 1120-S. File came from the VBX Monday.com board on April 1, 2025; nobody has confirmed who prepared 2023 (not Cohen Tax). Filing is needed for the Liu deal.",
+        "notes": "Prakash asked Oct 5 for the password to the locked 2023 VBX return / K-1 PDF. Oct 17, 1:18 PM Pacific: Adrian replied on the thread with the password (1234). Waiting on Prakash to confirm he can open it and to proceed with the 1120-S filings (IRS accepted the Form 2553 effective 1/1/2022, so 2022, 2023 and later must be filed as S-corp returns).",
         "order": 20,
         "owner": "Kevin",
         "priority": "critical",
-        "prompt": "I am Kevin Doud. Our tax preparer Prakash Joshi (Valley Income Tax) needs VBX Labs LLC's 2023 return to prepare the 2024 Form 1120-S. The only 2023 file I have is '2023 Tax Return Documents (VBX LABS LLC) K-1s.pdf', password-locked, downloaded from the VBX Monday.com board on April 1, 2025. Search all three of my mailboxes (365hydrodesign, kmdgroupla, kmdanalytical) for who prepared or uploaded the 2023 return, any password hints, and any 2023 engagement with Cohen Tax or another preparer. Then draft two short emails: one to Cohen Tax (Jeff Cohen) asking whether they prepared 2023 and for the complete return, and one to whoever managed the Monday.com board asking for the password. Also explain how to request the 2023 return transcript from the IRS (Form 4506-T or online account) as a fallback, step by step.",
+        "prompt": "I am Adrian Holguin. On Oct 17 I sent Prakash Joshi at Valley Income Tax (info@valleyincometax.com) the password for the locked 2023 VBX Labs return / K-1 PDF on the thread 'VBX: findings on your seven points'. Using my Gmail, check whether Prakash has replied. If he has not by Oct 21, draft a short follow-up asking him to confirm the file opens, to tell us what else he needs to prepare the 2022 and 2023 Form 1120-S returns, and to give his filing date and invoice. Copy Kevin Doud (kevin.doud@kmdanalytical.com). Under 120 words; I will review before sending.",
         "section": "Taxes (Prakash / IRS)",
         "source": "Thread 'VBX: findings on your seven points' and Prakash's reply (Oct 5)",
-        "status": "stuck",
+        "status": "waiting",
         "title": "Give Prakash the password for the locked 2023 VBX K-1 PDF, or get the full 2023 return from whoever prepared it",
-        "updatedAt": 1791824500007
+        "updatedAt": 1792288100000
       }
     },
     {
@@ -645,16 +646,17 @@
         "createdAt": 1791829200037,
         "due": "2026-10-20",
         "group": "g_kmd",
-        "notes": "BOBBY WORKBOOK TASK 5 (Sept 30). Bobby executes under Kevin. Goal: identify what is insured today, whether KMD's lab operations are covered, and what must be added or replaced. Review the building owner's coverage separately from KMD's.\n\nSteps: (1) Collect all policies: declarations, forms, endorsements, exclusions, schedules, renewals, plus the lease insurance requirements; a certificate alone is not the policy. (2) Inventory each policy: insurer, number, named insured, additional insureds, address, dates, limits, deductibles, exclusions, premium, covered operations; mark unknowns 'not confirmed'. (3) Put redacted documents into the approved AI workspace; ask for a gap table with exact policy references (employee injuries, visitor injuries, property damage, testing errors, chemical incidents). (4) Broker to confirm KMD's entity and lab operations are covered: general liability, business personal property and instruments, equipment breakdown, business interruption, professional liability for testing, chemical/pollution exclusions; discuss cyber, umbrella, customer samples in custody. (5) Compare with the lease; confirm additional-insured endorsements; do not assume the owner's building policy covers KMD. (6) Get written answers and quotes for gaps; bind through the authorized process; keep existing coverage until replacement is effective.\nDone when: inventory and gap review saved, broker has confirmed material questions in writing, changes active or tracked with an exact next step.\n\nAI PROMPT (copy into Claude):\n\"Review these redacted insurance policies and lease requirements for KMD Analytical, a California analytical testing laboratory. Build a table with risk, relevant policy, named insured, location, limit, exclusion, exact page or endorsement, uncertainty, and broker question. Check employee injury, visitor injury, property and lab instruments, equipment failure, interrupted operations, testing errors, chemical incidents, and customer samples. Distinguish landlord coverage from tenant coverage. If documents are missing, say so. Do not promise that a claim is covered; draft precise questions for the licensed broker and recommend coverage types to discuss.\"",
+        "lastUpdateAt": 1792269122543,
+        "notes": "BOBBY WORKBOOK TASK 5 (Sept 30). Bobby executes under Kevin. Goal: identify what is insured today, whether KMD's lab operations are covered, and what must be added or replaced. Review the building owner's coverage separately from KMD's.\n\nSteps: (1) Collect all policies: declarations, forms, endorsements, exclusions, schedules, renewals, plus the lease insurance requirements; a certificate alone is not the policy. (2) Inventory each policy: insurer, number, named insured, additional insureds, address, dates, limits, deductibles, exclusions, premium, covered operations; mark unknowns 'not confirmed'. (3) Put redacted documents into the approved AI workspace; ask for a gap table with exact policy references (employee injuries, visitor injuries, property damage, testing errors, chemical incidents). (4) Broker to confirm KMD's entity and lab operations are covered: general liability, business personal property and instruments, equipment breakdown, business interruption, professional liability for testing, chemical/pollution exclusions; discuss cyber, umbrella, customer samples in custody. (5) Compare with the lease; confirm additional-insured endorsements; do not assume the owner's building policy covers KMD. (6) Get written answers and quotes for gaps; bind through the authorized process; keep existing coverage until replacement is effective.\nDone when: inventory and gap review saved, broker has confirmed material questions in writing, changes active or tracked with an exact next step.\n\nOCT 17 (Adrian, thread note): get a quote for the whole building as soon as possible, priced off the cultivation side at the best rate available; normal solid protection, nothing exotic. That quote is now the first step, ahead of the full policy inventory.\n\nAI PROMPT (copy into Claude):\n\"Review these redacted insurance policies and lease requirements for KMD Analytical, a California analytical testing laboratory. Build a table with risk, relevant policy, named insured, location, limit, exclusion, exact page or endorsement, uncertainty, and broker question. Check employee injury, visitor injury, property and lab instruments, equipment failure, interrupted operations, testing errors, chemical incidents, and customer samples. Distinguish landlord coverage from tenant coverage. If documents are missing, say so. Do not promise that a claim is covered; draft precise questions for the licensed broker and recommend coverage types to discuss.\"",
         "order": 2,
-        "owner": "Kevin",
+        "owner": "Adrian",
         "priority": "high",
-        "prompt": "Review these redacted insurance policies and lease requirements for KMD Analytical, a California analytical testing laboratory. Build a table with risk, relevant policy, named insured, location, limit, exclusion, exact page or endorsement, uncertainty, and broker question. Check employee injury, visitor injury, property and lab instruments, equipment failure, interrupted operations, testing errors, chemical incidents, and customer samples. Distinguish landlord coverage from tenant coverage. If documents are missing, say so. Do not promise that a claim is covered; draft precise questions for the licensed broker and recommend coverage types to discuss.",
+        "prompt": "I am Kevin Doud. First job: get a quote for building and business insurance covering the whole building at 9631 Topanga Canyon Pl, Chatsworth, priced off the cultivation operation at the best rate we can get, with normal solid protection (property, general liability, equipment, business interruption). Using my Gmail and GoHighLevel, (1) find the current policies, the Pie Insurance workers' comp quote thread and any prior broker contacts; (2) draft one request-for-quote email I can send to two or three cannabis-experienced brokers, stating the address, square footage, the cultivation and the KMD Analytical lab operations, the lease's insurance requirements and the coverages wanted, and asking for a quote within five business days; (3) then build the policy inventory and gap table described in this item's notes. Copy Adrian Holguin on the broker emails. I will review before anything goes out.",
         "section": "Insurance",
         "source": "Bobby KMD Action Plan workbook (Sept 30), task 5 — see Files tab",
         "status": "not_started",
         "title": "Workbook #5 — Review building and business insurance: inventory every policy, run a gap table, get broker confirmation in writing",
-        "updatedAt": 1791829200037
+        "updatedAt": 1792288100000
       }
     },
     {
@@ -887,16 +889,16 @@
         "due": "2026-10-15",
         "group": "g_kmd",
         "milestone": false,
-        "notes": "Added Oct 13 at Adrian's request. One W-2 employee: lab tech at $30/hr, about 25 hrs/week, biweekly, started Sept 25, so the first pay period has already closed and payroll must run now. Employer of record: KMD Group LLC dba KMD Analytical Group. Must be full service for California: federal and EDD tax deposits and filings (DE 9 / DE 9C), new-hire report (DE 34), W-2 at year end, paid sick leave accrual (LA City). Candidates to price: Prakash Joshi at Valley Income Tax and Payroll (already does VBX taxes, ask for a one-employee monthly rate), Patriot Full Service, SurePayroll, Square Payroll, Gusto Simple, OnPay, Roll by ADP. Typical range for one employee is roughly $25 to $60 a month; verify current pricing before choosing. Record the chosen provider, monthly cost, and first run date in this thread, then the banking item (funding account) and the onboarding packet item (withholding) can close.",
+        "notes": "Oct 17, 3:44 PM Pacific: Adrian emailed Prakash Joshi at Valley Income Tax & Payroll asking him to take on payroll for KMD Group LLC dba KMD Analytical (1–4 employees) and to run a past-due tax and filing review (LA City business tax, LA County unsecured property tax, FTB 568s and LLC tax, EDD, IRS classification), with the KMD filing history 2019–2025 to verify. Attached the 2021 Form 568, the 2022 questionnaire and the Doud loss-carryover schedule. Kevin copied on both addresses. Asked for scope, fees, records needed and earliest payroll onboarding date. Still worth pricing Patriot / SurePayroll / Gusto in parallel in case Prakash's quote is high or slow.",
         "order": 64,
         "owner": "Kevin",
         "priority": "high",
-        "prompt": "I am Kevin Doud, owner of KMD Group LLC dba KMD Analytical Group in Chatsworth, California. I have one hourly W-2 employee ($30/hour, about 25 hours a week, paid biweekly, started September 25, 2026) and no payroll provider yet. Compare the current monthly cost for ONE employee at: Valley Income Tax and Payroll (Prakash Joshi, info@valleyincometax.com), Patriot Full Service, SurePayroll, Square Payroll, Gusto Simple, OnPay, and Roll by ADP. For each give base fee, per-employee fee, whether it files California EDD returns and the DE 34 new-hire report, whether it handles paid sick leave accrual, and any setup fee or contract. Rank them cheapest first and recommend one. Then draft (1) a short email to Prakash asking for his one-employee monthly payroll rate and start date, and (2) the list of items I need to sign up with the top online option today: EIN, EDD employer account number, bank account for funding, employee W-4 and DE 4, I-9, pay schedule. Keep it to one page.",
+        "prompt": "I am Kevin Doud. On Oct 17 Adrian asked Prakash Joshi at Valley Income Tax & Payroll (info@valleyincometax.com) to quote payroll for KMD Group LLC dba KMD Analytical and a past-due tax review. Using my Gmail, (1) check whether Prakash has answered; if not by Oct 21, draft a short follow-up asking for his fee, what he needs from us (EIN letter, EDD account number, employee W-4s and I-9s, pay schedule, bank account for tax deposits) and the earliest first payroll date; (2) in parallel, pull the current monthly price for one hourly employee from Patriot, SurePayroll and Gusto and put the three next to Prakash's number in a five-line comparison; (3) send me the comparison and the draft so I can pick one this week. Copy Adrian Holguin on the follow-up.",
         "section": "People & payroll",
         "source": "Adrian, Oct 13 ('payroll solution need to contact cheapest one')",
-        "status": "not_started",
+        "status": "waiting",
         "title": "Payroll solution: price the cheapest full-service option for one hourly employee and contact them to get set up this week (Valley Income Tax & Payroll, Patriot, SurePayroll, Square, Gusto, OnPay)",
-        "updatedAt": 1791912000000
+        "updatedAt": 1792288100000
       }
     },
     {
@@ -1117,6 +1119,114 @@
         "status": "not_started",
         "title": "Profiles: reserve the handles on TikTok, X and Threads — verify any existing accounts, recover or reserve a consistent handle, complete basic identity only",
         "updatedAt": 1792202400010
+      }
+    },
+    {
+      "doc_id": "i64",
+      "data": {
+        "createdAt": 1792266400000,
+        "due": "",
+        "group": "g_vbx",
+        "notes": "VBX LABS → APOLLO (affirmative claims / counterclaims, separate from X Brands' equity claims below). Sources: Kevin's Statement of Claims (Mar 2026), the Evidence Brief (Mar 1, 2026) and the Master Reference (Mar 2026) in Drive. (1) ACCOUNT RECEIVABLE: Steve Baghoomian told Jayan Hong on Oct 10, 2024 that the Supherb account is negative at least $50,000 excluding interest, and that VBX's first claim would be for an accounting. (2) BREACH OF THE PRODUCTION DEAL: the White Label Agreement (Sep 2019), the License & Service Agreement (Nov 19, 2019) and the Consulting Services Agreement (Jan 2021) gave VBX the exclusive right / right of first refusal to manufacture and distribute Supherb products. Apollo moved production to outside manufacturers while under contract: the Feb 25, 2023 cease-and-desist to CannaVision Laboratories documents it, and Supherb was soliciting other Type 7 facilities for extraction in June 2024. (3) PERFORMANCE RECORD rebutting Apollo's claim: 3+ years of deliveries, METRC transfer records, VBX's Jan 18, 2023 internal Supherb summary (first dusted diamond blunts, Big Grape top seller), 2022 Emerald Cup Best Solventless for VBX-made rosin carts. (4) OFFSET: Apollo's Nov 6, 2024 'accounting' claims $1,014,355.42 owed by VBX and is one-sided; it must be netted against the receivable, the IP license value and unpaid consulting compensation. (5) BAD FAITH: Oct 7, 2024 Baghoomian memo quoting Apollo's side that 'everyone could walk away' if the financials were reconciled; Apollo filed suit instead. Open points for counsel (Gennady Lebedev): confirm whether the production-side claims are subject to the Sept 11, 2024 arbitration notice, and quantify the receivable from VBX invoices and METRC data.",
+        "order": 12.4,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, managing member of VBX Labs LLC, a defendant in Apollo Branding, LLC v. VBX Labs LLC (LASC 25CHCV02873). Help me build VBX's own claims against Apollo so counsel can plead them as a cross-complaint or offset. (1) From my Gmail (kmdgroupla@gmail.com, kevin.doud@vbxlabs.com) pull the Oct 10, 2024 Baghoomian–Hong thread 'Apollo Branding Renewed Demand Letters for Mediation and Arbitration' and the Nov 6, 2024 Apollo accounting; summarize Apollo's $1,014,355.42 figure line by line. (2) Build the VBX side of the ledger: every Supherb invoice, payment and credit from 2019 to 2024 from VBX's QuickBooks exports and Karen Tovar's reports, with the unpaid balance (Steve said at least $50,000). (3) Collect the proof that Apollo used outside manufacturers while VBX held the exclusive / first-refusal right: the Feb 25, 2023 CannaVision cease-and-desist, the June 26, 2024 Supherb mass email to Type 7 facilities, and any METRC or distribution records showing Supherb product not made by VBX. (4) Draft a two-page memo to Gennady Lebedev (gennady@lmhlawyers.com), copying Adrian Holguin, listing each VBX claim (accounting, breach of the exclusive manufacturing agreements, unpaid account, offset) with the document and date behind it, and ask him whether these claims belong in the lawsuit or in the arbitration Apollo noticed on Sept 11, 2024. Quote section numbers and keep everything factual. I will review before anything is sent.",
+        "section": "Litigation",
+        "source": "Google Drive: Kevin_Doud_Claims_Against_Alex_Liu_COUNSEL_ONLY.docx, Apollo_Evidence_Brief_Case_25CHCV02873.docx, Apollo_v_VBX_Master_Reference.docx (all March 2026); CannaVision cease-and-desist (Feb 25, 2023)",
+        "status": "not_started",
+        "title": "Apollo case — VBX Labs' claims against Apollo Branding: unpaid production account (at least $50,000), breach of the exclusive manufacturing / right-of-first-refusal deal, and an offset against Apollo's $1,014,355.42 claim",
+        "updatedAt": 1792266400000
+      }
+    },
+    {
+      "doc_id": "i65",
+      "data": {
+        "createdAt": 1792266400000,
+        "due": "",
+        "group": "g_vbx",
+        "notes": "X BRANDS IP LLC → APOLLO / ALEX (CHUAN) LIU (equity-holder claims, separate from VBX's production claims above). Sources: Kevin's Statement of Claims (Mar 2026), Evidence Brief (Mar 1, 2026), Master Reference (Mar 2026), Adrian's Jan 19, 2023 OA analysis. BASIS: Apollo Branding LLC Operating Agreement DocuSigned June 25 / completed July 12, 2021 makes X Brands IP LLC a 40% member (Chuan Liu 60%); CA SOS LLC-2 amendment filed Feb 16, 2021; IPL X Brands IP LLC signed (May 2022). THE SIX CLAIMS: (1) breach of OA — no Schedule K-1 for any year 2021 to present; written demand Oct 28, 2023 ('K-1 Taxes' email to alex@besupherb.com) never answered; (2) breach of OA — no financial statements despite requests all of 2022–2023 (OA s.9.02 reports; Corp. Code s.17704.10 inspection right); (3) breach of fiduciary duty — majority-member squeeze-out of the 40% minority; (4) unjust enrichment — Supherb brand built on VBX manufacturing and Kevin's licensed IP without compensating the equity; (5) accounting of Apollo from 2019 to present; (6) declaratory relief confirming the 40% interest. KEY EVIDENCE: Alex's Apr 26, 2021 email to Daniel Kim ('Once we become partners, I'm married to VBX'), his Apr 2021 redline, Adrian's May 2, 2021 note that the OA is with X Brands only. PROCEDURE: Apollo served a Mediation Demand on X Brands on July 19 / Sept 11, 2024 under OA s.11.02 (mediation then arbitration), so these claims may have to be brought in that forum rather than the lawsuit. PREREQUISITE: Gennady Lebedev flagged Jan 28, 2026 that X Brands IP LLC has been suspended since 4/1/2025; a suspended LLC cannot sue or defend in California, so reinstatement (FTB and SOS) comes first. Damages anchor: Steve's Oct 10, 2024 'at least $50,000' plus the value of 40% of Apollo / Supherb.",
+        "order": 12.6,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, and my company X Brands IP LLC holds 40% of Apollo Branding LLC under the operating agreement DocuSigned July 12, 2021. Help me get X Brands' claims against Apollo and Alex Liu ready for counsel. (1) Reinstatement first: using my Gmail and the Best Wyoming / California SOS and FTB emails, find why X Brands IP LLC was suspended on 4/1/2025, list every return, Statement of Information and fee needed to revive it, and draft the to-do list with amounts. (2) From kmdgroupla@gmail.com pull the DocuSign completion of July 12, 2021 (Apollo Branding Operating Agreement and IPL Supherb), the Oct 28, 2023 'K-1 Taxes' demand to alex@besupherb.com, the Jan 18–19, 2023 'Questions regarding equity ownership' thread with Adrian, and Apollo's July 19 / Sept 11, 2024 Mediation Demand; save them to the Apollo folder in Drive. (3) Draft a two-page memo to Gennady Lebedev (gennady@lmhlawyers.com), copying Adrian Holguin, laying out the six X Brands claims (K-1s, financial records, fiduciary duty, unjust enrichment, accounting, declaratory relief) with the exhibit and date behind each, and ask him (a) whether they must go to mediation and arbitration under OA section 11.02 or can be cross-claims in 25CHCV02873, and (b) what he needs to subpoena Apollo's tax returns and bank records. Quote section numbers, keep it factual, and I will review before sending.",
+        "section": "Litigation",
+        "source": "Google Drive: Kevin_Doud_Claims_Against_Alex_Liu_COUNSEL_ONLY.docx, Apollo_Evidence_Brief_Case_25CHCV02873.docx, Apollo_v_VBX_Master_Reference.docx (March 2026); Apollo's Mediation Demand (X Brands) 07.19.2024.pdf; Analysis of Apollo Branding OA (Jan 19, 2023)",
+        "status": "not_started",
+        "title": "Apollo case — X Brands IP LLC's claims against Apollo Branding / Alex Liu: 40% member denied K-1s, financials and distributions since 2021 (breach of operating agreement, fiduciary duty, accounting, unjust enrichment, declaratory relief); reinstate X Brands first",
+        "updatedAt": 1792266400000
+      }
+    },
+    {
+      "doc_id": "i66",
+      "data": {
+        "createdAt": 1792288100000,
+        "due": "2026-10-24",
+        "group": "g_vbx",
+        "notes": "Kevin's Oct 17 email 'VBX vendors: accounts and what was paid 2025-26' lists every vendor and account number for 9631 Topanga Canyon Pl and what was paid in 2025–2026. Headlines: LADWP electric disconnect notice 4/30/25 for $278,438.92; Huang paid $100,000 directly to LADWP in 2026 (inside the $418,000 loan principal); current LADWP balance unknown without the portal. LADWP water showed a $727.23 credit 5/8/25. Spectrum $199.96 open since Feb 2025, no mail after May 2025. Sparkletts nothing since April 2025. Cannabis Waste Solutions $1,000–$1,750 past due, no 2025–2026 payments. Perez Disposal on a weekly card plan: open balance 10/15/26 $1,177.45 plus $350. Linde accounts 57427369 and 54839936 (the $179k Linde figure is in i12). Weedmaps unpaid, listing unpublished 4/22/25. LA DCR renewal fees invoice issued 1/20/26, due 2/28/26; Dana still asking for proof of payment 10/13/26 (see i47). Under the management agreement signed the week of Oct 12, Huang's side pays the landlord and the bills for the next 18 months. Samantha's company login and password list could not be found; the portal logins are coming in a separate email from Kevin. Bakeshop's LADWP account 427 912 9106 is not VBX.",
+        "order": 32,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud. Using my Oct 17 email to Adrian 'VBX vendors: accounts and what was paid 2025-26' and the portal logins I am sending separately, (1) log the current balance for each VBX vendor: LADWP electric 991 525 2966 and water 436 393 3094 (ladwp.com/myaccount), Spectrum 8448200017650598 (spectrumbusiness.net), Perez Disposal, Cannabis Waste Solutions, Sparkletts, Linde 57427369 and 54839936, and Weedmaps 026230; for the ones without a portal, draft a one-line balance request email to each; (2) build a table with vendor, account, balance, last payment, who pays going forward (VBX or Huang's side under the management agreement) and the document that proves it; (3) add the rows to the VBX debt schedule that goes to Dana Cisneros and flag anything that changes the totals in the Oct 4 schedule; (4) draft a short note to Adrian with the table attached. Keep it factual and cite the email or statement behind each number.",
+        "section": "Debts & creditors",
+        "source": "Kevin's email 'VBX vendors: accounts and what was paid 2025-26' (Oct 17, 4:44 PM Pacific)",
+        "status": "not_started",
+        "title": "VBX utility and vendor accounts: pull live balances (LADWP electric and water, Spectrum, Perez Disposal, Cannabis Waste Solutions, Sparkletts, Linde, Weedmaps), fold them into the debt schedule for Dana, and confirm Huang's side now pays them under the management agreement",
+        "updatedAt": 1792288100000
+      }
+    },
+    {
+      "doc_id": "i67",
+      "data": {
+        "createdAt": 1792288100000,
+        "due": "2026-10-24",
+        "group": "g_kmd",
+        "notes": "Oct 17: Kevin's KMD system sent the PDF 'What Kevin Keeps Touching' (2026-10-17), an inventory of every recurring place the KMD system still needs his hands, with 90-day counts from the database, email logs, Vercel and git and a weekly time cost per item. Top three: (1) Kevin is the release button, about 38 code pushes a week by hand with no automatic deploy pipeline, roughly four hours a week; (2) the certificate screen is slow because of how it fetches data and the database runs out of connections when two iPads and the background jobs hit it, close to three hours of waiting a week at 300+ certificates; (3) certificates are being re-issued after clients already have them (60 last week) and each re-issue silently replaces the official copy so the client's version stops verifying on the website; needs a proper revision path. Last section: the five fixes with the best payoff per effort, each with a no-downtime rollout. Kevin asked for a 30–45 minute walkthrough with Adrian.",
+        "order": 7,
+        "owner": "Both",
+        "priority": "medium",
+        "prompt": "I am Kevin Doud. Using my Gmail, open the PDF 'What-Kevin-Keeps-Touching-2026-10-17' I sent Adrian and (1) turn the five recommended fixes into a one-page plan with, for each: the problem, the weekly hours it costs, the fix, the no-downtime rollout steps, the risk, and the order to do them in; (2) draft a calendar invite to Adrian for a 45-minute working session this week with that page as the agenda; (3) for fix number one (the deploy pipeline) write the first concrete step I can do tonight. Keep the plain-English boxes for Adrian and the technical blocks for me.",
+        "section": "Systems & AI setup",
+        "source": "Email 'What Kevin Keeps Touching — where the system keeps pulling me in (PDF)' from noreply@kmdanalytical.com for Kevin (Oct 17, 4:38 PM Pacific); PDF filed as f31",
+        "status": "not_started",
+        "title": "Review Kevin's 'What Kevin Keeps Touching' report and hold the 30–45 minute session to pick the five fixes (auto-deploy pipeline, certificate screen database connections, certificate re-issue revision path)",
+        "updatedAt": 1792288100000
+      }
+    },
+    {
+      "doc_id": "i68",
+      "data": {
+        "createdAt": 1792288100000,
+        "due": "2026-10-24",
+        "group": "g_vbx",
+        "notes": "Oct 17: Kevin sent two reports pulled live from the VBX Labs Metrc account (CCL20-0003265). TRANSFERS: 8 outgoing manifests in 2025–2026 (The Bake Shop LA x5 Jan–Feb 2025, IGP Distribution 12/18/25, SoCal Labs 5/6/26, Community Creative Network 10/1/26), 3 incoming (Farmacopia May 2025, one voided; TG DHS 12 packages in transit since 10/12/26), none rejected, no outgoing transfers between 2/25/25 and 12/18/25. ACTIVITY: 2025 37 harvest batches, 11,505 plants, 13,489 lb wet, 861 lb packaged dry; 2026 to date 22 batches, 14,455 plants, 15,399 lb wet, 1,198 lb packaged dry; about 1,400 immature plants and 3,677 in veg or flower; two users (Kevin admin, Robert Fleming plants manager). FLAGS Kevin raised: (1) five October 2025 harvests (3,548 plants, 3,675 lb wet) closed 11/06/2025 with nothing packaged, all weight to moisture loss; (2) April 2025 harvests not packaged until 9/30/25 and December 2025 harvests not until 2/16/26; (3) every bulk flower item shows lab-test status NotSubmitted; (4) only 1,262 lb left the license in two years against 2,059 lb packaged and 28,888 lb wet. Full activity report: https://claude.ai/artifact/RMixYGge86uNLvF8nJwwi7. Ties to the license renewal and Liu's addition to the license (i47).",
+        "order": 6,
+        "owner": "Both",
+        "priority": "high",
+        "prompt": "I am Kevin Doud, managing member of VBX Labs LLC (Metrc licence CCL20-0003265). Using my Oct 17 Metrc transfer and activity reports to Adrian, (1) for each of the four flags write what a DCC or Metrc compliance reviewer would ask, what the honest explanation is, and what record or correction (harvest notes, waste entries, packaging) can still be made in Metrc; (2) pull the Plants Destroyed report for 2025 and 2026 and add per-year waste totals; (3) list what must be clean or disclosed before Liu is added to the licence and before the renewal is filed; (4) draft a short cover note to Adrian and Steve Baghoomian with the two PDFs and the report link, saying what we recommend disclosing to Dana Cisneros and when. Factual, no speculation; I will review before sending.",
+        "section": "Liu deal & due diligence",
+        "source": "Kevin's emails 'VBX Labs Metrc transfers, 2025 and 2026' (Oct 17, 2:48 PM Pacific, PDFs attached) and 'VBX Labs Metrc activity report, 2025 and 2026' (Oct 17, 3:17 PM Pacific)",
+        "status": "not_started",
+        "title": "VBX Metrc record before the license changes hands: review Kevin's 2025–2026 activity and transfer reports, resolve the four flags (Oct 2025 harvests closed unpackaged, months-late packaging, every bulk item 'NotSubmitted' for lab testing, low output versus harvest) and decide what to disclose to Dana and Liu",
+        "updatedAt": 1792288100000
+      }
+    },
+    {
+      "doc_id": "i69",
+      "data": {
+        "createdAt": 1792288100000,
+        "due": "2026-10-22",
+        "group": "g_kmd",
+        "notes": "Oct 17, 12:00 AM Pacific: Kevin sent the lobby TV loop v1 as a 720p preview (4:43, loops seamlessly, quiet ambient bed) via iCloud link, available until Nov 15, 2026. The 1080p master (499 MB) is on Kevin's Mac at ~/kmd-lobby-loop/final/KMD_Lobby_Loop_v1.mp4 and is the file that goes on the USB for the front-entrance TV. Segments: open, what we test, the instrument, the panel (25 compounds), blends and bacteriostatic water, endotoxin testing $150, the certificate, how it works, turnaround 5–7 days and pricing, who we serve, close. Kevin asked for any changes before v2.",
+        "order": 61,
+        "owner": "Adrian",
+        "priority": "low",
+        "prompt": "I am Adrian Holguin. Open the iCloud preview link in Kevin's Oct 17 email 'KMD lobby TV loop v1 — preview' and watch the 4:43 loop. Draft a reply to Kevin (kmdgroupla@gmail.com and kevin.doud@kmdanalytical.com) with change notes by segment: anything wrong or out of date in the pricing, turnaround, the 25-compound panel, the endotoxin $150 line and the who-we-serve segment; brand and legibility notes for a lobby screen viewed from ten feet; and a clear 'approved for the USB' or 'hold for v2'. Under 200 words; I will review before sending.",
+        "section": "Marketing, profiles & reviews",
+        "source": "Kevin's email 'KMD lobby TV loop v1 — preview' (Oct 17, 12:00 AM Pacific, iCloud attachment)",
+        "status": "not_started",
+        "title": "Review the KMD lobby TV loop v1 (4:43 preview) and send Kevin change notes before v2",
+        "updatedAt": 1792288100000
       }
     }
   ]

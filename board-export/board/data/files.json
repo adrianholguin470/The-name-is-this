@@ -1,7 +1,8 @@
 {
   "collection": "files",
-  "count": 26,
-  "exportedAt": "2026-10-17T01:50:00Z",
+  "count": 37,
+  "exportedAt": "2026-10-18T01:50:00Z",
+  "note": "Final snapshot taken immediately before the artifact was deleted on 2026-10-18.",
   "documents": [
     {
       "doc_id": "f01",
@@ -488,6 +489,194 @@
         "name": "KMD client email #2 — '[Review] Sterile is not the same as endotoxin-free' (review copy with hero and 7 images)",
         "note": "Second client note in the endotoxin series: four evidence points (JAMA 2024 study, FDA/CDC 2026 glutathione cases, USP <85> fever threshold, low endotoxin recovery), the $150 per vial offer and order link. Review copy for Adrian; not yet approved (the Oct 15 launch copy was approved 'LOOKS GOOD'). No board item: Adrian removed the endotoxin launch item on Oct 16.",
         "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f27",
+      "data": {
+        "createdAt": 1792266400002,
+        "date": "2026-03-01",
+        "from": "Kevin Doud (kmdgroupla@gmail.com) Drive share",
+        "group": "g_vbx",
+        "items": [
+          "Kevin_Doud_Claims_Against_Alex_Liu_COUNSEL_ONLY.docx"
+        ],
+        "kind": "drive",
+        "link": "https://drive.google.com/file/d/1-zqIwmLi0_YC_CnVodIlGDF2TLSZi-99/view?usp=drivesdk",
+        "name": "Kevin Doud / VBX Labs — Statement of Claims & Defensive Position against Alex Liu / Apollo Branding (COUNSEL ONLY)",
+        "note": "Attorney-client privileged. Six X Brands / Kevin claims (K-1s, financial records, fiduciary duty, unjust enrichment, accounting, declaratory relief), timeline 2019–2026, evidence list, strategic notes for counsel. Basis for items i64 and i65.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f28",
+      "data": {
+        "createdAt": 1792266400003,
+        "date": "2026-03-01",
+        "from": "Kevin Doud (kmdgroupla@gmail.com) Drive share",
+        "group": "g_vbx",
+        "items": [
+          "Apollo_Evidence_Brief_Case_25CHCV02873.docx"
+        ],
+        "kind": "drive",
+        "link": "https://drive.google.com/file/d/1ph3CiyLpyemFEhXZYO2oKkYtnMTbL6Ml/view?usp=drivesdk",
+        "name": "Apollo Branding v. X Brands IP LLC et al. — Evidence Brief (Case 25CHCV02873)",
+        "note": "Attorney-client privileged. Chronological email evidence from three mailboxes with message IDs, master evidence index, key contacts, legal arguments (valid 40% equity, no misrepresentation, VBX performed, Apollo's $1M claim unsupported, outside manufacturers used), and attachments counsel must retrieve.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f29",
+      "data": {
+        "createdAt": 1792266400004,
+        "date": "2026-03-01",
+        "from": "Kevin Doud (kmdgroupla@gmail.com) Drive share",
+        "group": "g_vbx",
+        "items": [
+          "Apollo_v_VBX_Master_Reference.docx"
+        ],
+        "kind": "drive",
+        "link": "https://drive.google.com/file/d/1s1yKAfZ2T6fqD3GdEn2ov4M0dnSFmhCq/view?usp=drivesdk",
+        "name": "Apollo Branding v. VBX Labs — Master Case Reference File",
+        "note": "Attorney-client privileged. Case snapshot (Gennady Lebedev as defense counsel, $20,000 evergreen retainer), entity status (X Brands IP LLC suspended 4/1/2025), full relationship timeline, parties and contacts, executed-agreement and litigation-document inventory with Gmail IDs, immediate action items.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f30",
+      "data": {
+        "createdAt": 1792288100003,
+        "date": "2026-10-17",
+        "from": "Kevin Doud (kevin.doud@kmdanalytical.com)",
+        "group": "g_vbx",
+        "items": [],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879342517210728677",
+        "name": "VBX vendors: accounts and what was paid 2025-26 (vendor list, account numbers, payments, balances)",
+        "note": "Text-only email. LADWP electric and water, Spectrum, Sparkletts, Cannabis Waste Solutions, Perez Disposal, Security Consulting Group, Linde, Weedmaps; 2025–2026 payments and open balances; LA DCR renewal fee status. Portal logins to follow in a separate email. Basis for item i66.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f31",
+      "data": {
+        "createdAt": 1792288100004,
+        "date": "2026-10-17",
+        "from": "KMD Analytical system (noreply@kmdanalytical.com) for Kevin",
+        "group": "g_kmd",
+        "items": [
+          "What-Kevin-Keeps-Touching-2026-10-17.pdf"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879342094850312290",
+        "name": "What Kevin Keeps Touching — 2026-10-17 (PDF report on recurring manual work in the KMD system)",
+        "note": "Inventory of every recurring place the KMD system needs Kevin's hands, with 90-day counts and weekly time cost; five recommended fixes with no-downtime rollouts. Kevin asked for a 30–45 minute walkthrough. Basis for item i67.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f32",
+      "data": {
+        "createdAt": 1792288100005,
+        "date": "2026-10-17",
+        "from": "Kevin Doud (kevin.doud@kmdanalytical.com)",
+        "group": "g_vbx",
+        "items": [
+          "2025-2026 transfer list (PDF)",
+          "Metrc outgoing export (PDF)",
+          "Metrc incoming export (PDF)",
+          "Metrc completed-incoming export (PDF)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879335184604074208",
+        "name": "VBX Labs Metrc transfers 2025–2026 (one-page list plus Metrc outgoing, incoming and completed-incoming exports)",
+        "note": "Licence CCL20-0003265. 8 outgoing manifests, 3 incoming, none rejected. Attachment names as described in the email; exact file names not listed. Basis for item i68.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f33",
+      "data": {
+        "createdAt": 1792288100006,
+        "date": "2026-10-17",
+        "from": "Kevin Doud (kevin.doud@kmdanalytical.com)",
+        "group": "g_vbx",
+        "items": [],
+        "kind": "page",
+        "link": "https://claude.ai/artifact/RMixYGge86uNLvF8nJwwi7",
+        "name": "VBX Labs Metrc activity report, 2025 and 2026 (harvests, tags, plants, packages, waste, users, four flags)",
+        "note": "Full report with every table at the artifact link; headline numbers in the email (Gmail thread-f:1879337002943490741). Basis for item i68.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f34",
+      "data": {
+        "createdAt": 1792288100007,
+        "date": "2026-10-17",
+        "from": "Kevin Doud (kmdgroupla@gmail.com)",
+        "group": "g_kmd",
+        "items": [
+          "KMD_Square_Payments_from_site_ledger_2026-10-17.csv"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879335075817287672",
+        "name": "KMD Analytical invoices — Square payments from the site ledger (CSV, 2026-10-17)",
+        "note": "No message text. CSV of KMD Analytical Square payments pulled from the site ledger; likely for the payroll / tax review and the engagement accounting. Not yet reviewed.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f35",
+      "data": {
+        "createdAt": 1792288100008,
+        "date": "2026-10-17",
+        "from": "Kevin Doud (kmdgroupla@gmail.com)",
+        "group": "g_kmd",
+        "items": [
+          "KMD_Lobby_Loop_v1_preview720.mp4 (23.1 MB, iCloud)"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879279310328689143",
+        "name": "KMD lobby TV loop v1 — 720p preview (iCloud link, available until Nov 15, 2026)",
+        "note": "4:43 seamless loop for the front-entrance TV; 1080p master (499 MB) on Kevin's Mac. Basis for item i69.",
+        "to": "Adrian"
+      }
+    },
+    {
+      "doc_id": "f36",
+      "data": {
+        "createdAt": 1792288100009,
+        "date": "2026-10-17",
+        "from": "Adrian",
+        "group": "g_kmd",
+        "items": [
+          "Doud loss carryovers to 2021.pdf",
+          "2021 568 KMD Group (1).pdf",
+          "2022 Questionnaire K&A Doud (1).pdf"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879329991938809860",
+        "name": "KMD Group LLC / KMD Analytical: payroll and tax review request to Prakash (with 2021 Form 568, 2022 questionnaire, loss carryovers)",
+        "note": "Asks Prakash to quote payroll for 1–4 employees and to review past-due local, state and federal taxes and filings 2019–2025. Linked to item i51.",
+        "to": "Prakash Joshi, Valley Income Tax & Payroll (cc Kevin at kmdgroupla@gmail.com and 365hydrodesign@gmail.com)"
+      }
+    },
+    {
+      "doc_id": "f37",
+      "data": {
+        "createdAt": 1792288100010,
+        "date": "2026-10-17",
+        "from": "Adrian",
+        "group": "g_kmd",
+        "items": [
+          "action-dashboard-data-2026-10-16.zip"
+        ],
+        "kind": "email",
+        "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879327894513967455",
+        "name": "Board data export sent to Kevin (groups, items, updates, files as JSON, zipped)",
+        "note": "Subject 'JSON'. The four board collections exported as JSON so Kevin's system can load them. Snapshot taken before the Apollo claims items (i64, i65) were added.",
+        "to": "Kevin Doud (kmdgroupla@gmail.com)"
       }
     }
   ]

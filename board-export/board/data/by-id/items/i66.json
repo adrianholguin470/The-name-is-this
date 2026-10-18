@@ -1,0 +1,15 @@
+{
+  "createdAt": 1792288100000,
+  "due": "2026-10-24",
+  "group": "g_vbx",
+  "notes": "Kevin's Oct 17 email 'VBX vendors: accounts and what was paid 2025-26' lists every vendor and account number for 9631 Topanga Canyon Pl and what was paid in 2025–2026. Headlines: LADWP electric disconnect notice 4/30/25 for $278,438.92; Huang paid $100,000 directly to LADWP in 2026 (inside the $418,000 loan principal); current LADWP balance unknown without the portal. LADWP water showed a $727.23 credit 5/8/25. Spectrum $199.96 open since Feb 2025, no mail after May 2025. Sparkletts nothing since April 2025. Cannabis Waste Solutions $1,000–$1,750 past due, no 2025–2026 payments. Perez Disposal on a weekly card plan: open balance 10/15/26 $1,177.45 plus $350. Linde accounts 57427369 and 54839936 (the $179k Linde figure is in i12). Weedmaps unpaid, listing unpublished 4/22/25. LA DCR renewal fees invoice issued 1/20/26, due 2/28/26; Dana still asking for proof of payment 10/13/26 (see i47). Under the management agreement signed the week of Oct 12, Huang's side pays the landlord and the bills for the next 18 months. Samantha's company login and password list could not be found; the portal logins are coming in a separate email from Kevin. Bakeshop's LADWP account 427 912 9106 is not VBX.",
+  "order": 32,
+  "owner": "Both",
+  "priority": "high",
+  "prompt": "I am Kevin Doud. Using my Oct 17 email to Adrian 'VBX vendors: accounts and what was paid 2025-26' and the portal logins I am sending separately, (1) log the current balance for each VBX vendor: LADWP electric 991 525 2966 and water 436 393 3094 (ladwp.com/myaccount), Spectrum 8448200017650598 (spectrumbusiness.net), Perez Disposal, Cannabis Waste Solutions, Sparkletts, Linde 57427369 and 54839936, and Weedmaps 026230; for the ones without a portal, draft a one-line balance request email to each; (2) build a table with vendor, account, balance, last payment, who pays going forward (VBX or Huang's side under the management agreement) and the document that proves it; (3) add the rows to the VBX debt schedule that goes to Dana Cisneros and flag anything that changes the totals in the Oct 4 schedule; (4) draft a short note to Adrian with the table attached. Keep it factual and cite the email or statement behind each number.",
+  "section": "Debts & creditors",
+  "source": "Kevin's email 'VBX vendors: accounts and what was paid 2025-26' (Oct 17, 4:44 PM Pacific)",
+  "status": "not_started",
+  "title": "VBX utility and vendor accounts: pull live balances (LADWP electric and water, Spectrum, Perez Disposal, Cannabis Waste Solutions, Sparkletts, Linde, Weedmaps), fold them into the debt schedule for Dana, and confirm Huang's side now pays them under the management agreement",
+  "updatedAt": 1792288100000
+}

@@ -1,0 +1,15 @@
+{
+  "createdAt": 1792288100000,
+  "due": "2026-10-22",
+  "group": "g_kmd",
+  "notes": "Oct 17, 12:00 AM Pacific: Kevin sent the lobby TV loop v1 as a 720p preview (4:43, loops seamlessly, quiet ambient bed) via iCloud link, available until Nov 15, 2026. The 1080p master (499 MB) is on Kevin's Mac at ~/kmd-lobby-loop/final/KMD_Lobby_Loop_v1.mp4 and is the file that goes on the USB for the front-entrance TV. Segments: open, what we test, the instrument, the panel (25 compounds), blends and bacteriostatic water, endotoxin testing $150, the certificate, how it works, turnaround 5–7 days and pricing, who we serve, close. Kevin asked for any changes before v2.",
+  "order": 61,
+  "owner": "Adrian",
+  "priority": "low",
+  "prompt": "I am Adrian Holguin. Open the iCloud preview link in Kevin's Oct 17 email 'KMD lobby TV loop v1 — preview' and watch the 4:43 loop. Draft a reply to Kevin (kmdgroupla@gmail.com and kevin.doud@kmdanalytical.com) with change notes by segment: anything wrong or out of date in the pricing, turnaround, the 25-compound panel, the endotoxin $150 line and the who-we-serve segment; brand and legibility notes for a lobby screen viewed from ten feet; and a clear 'approved for the USB' or 'hold for v2'. Under 200 words; I will review before sending.",
+  "section": "Marketing, profiles & reviews",
+  "source": "Kevin's email 'KMD lobby TV loop v1 — preview' (Oct 17, 12:00 AM Pacific, iCloud attachment)",
+  "status": "not_started",
+  "title": "Review the KMD lobby TV loop v1 (4:43 preview) and send Kevin change notes before v2",
+  "updatedAt": 1792288100000
+}

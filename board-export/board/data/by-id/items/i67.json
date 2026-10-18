@@ -1,0 +1,15 @@
+{
+  "createdAt": 1792288100000,
+  "due": "2026-10-24",
+  "group": "g_kmd",
+  "notes": "Oct 17: Kevin's KMD system sent the PDF 'What Kevin Keeps Touching' (2026-10-17), an inventory of every recurring place the KMD system still needs his hands, with 90-day counts from the database, email logs, Vercel and git and a weekly time cost per item. Top three: (1) Kevin is the release button, about 38 code pushes a week by hand with no automatic deploy pipeline, roughly four hours a week; (2) the certificate screen is slow because of how it fetches data and the database runs out of connections when two iPads and the background jobs hit it, close to three hours of waiting a week at 300+ certificates; (3) certificates are being re-issued after clients already have them (60 last week) and each re-issue silently replaces the official copy so the client's version stops verifying on the website; needs a proper revision path. Last section: the five fixes with the best payoff per effort, each with a no-downtime rollout. Kevin asked for a 30–45 minute walkthrough with Adrian.",
+  "order": 7,
+  "owner": "Both",
+  "priority": "medium",
+  "prompt": "I am Kevin Doud. Using my Gmail, open the PDF 'What-Kevin-Keeps-Touching-2026-10-17' I sent Adrian and (1) turn the five recommended fixes into a one-page plan with, for each: the problem, the weekly hours it costs, the fix, the no-downtime rollout steps, the risk, and the order to do them in; (2) draft a calendar invite to Adrian for a 45-minute working session this week with that page as the agenda; (3) for fix number one (the deploy pipeline) write the first concrete step I can do tonight. Keep the plain-English boxes for Adrian and the technical blocks for me.",
+  "section": "Systems & AI setup",
+  "source": "Email 'What Kevin Keeps Touching — where the system keeps pulling me in (PDF)' from noreply@kmdanalytical.com for Kevin (Oct 17, 4:38 PM Pacific); PDF filed as f31",
+  "status": "not_started",
+  "title": "Review Kevin's 'What Kevin Keeps Touching' report and hold the 30–45 minute session to pick the five fixes (auto-deploy pipeline, certificate screen database connections, certificate re-issue revision path)",
+  "updatedAt": 1792288100000
+}

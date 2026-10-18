@@ -2,7 +2,7 @@
   "createdAt": 1791824500003,
   "due": "2026-10-14",
   "group": "g_vbx",
-  "notes": "Kevin flagged this as the item that can't wait (Oct 4). Coordinate with Steve Baghoomian; May 1 minute order referenced a settlement and a stipulation to set aside defaults. Full case file (summons, complaint, exhibits) sent Oct 7.",
+  "notes": "Kevin flagged this as the item that can't wait (Oct 4). Coordinate with Steve Baghoomian; May 1 minute order referenced a settlement and a stipulation to set aside defaults. Full case file (summons, complaint, exhibits) sent Oct 7. Oct 17: the affirmative side of this case is now tracked in two separate items directly below: VBX Labs' claims against Apollo (production account, exclusivity breach, offset) and X Brands IP LLC's claims against Apollo / Alex Liu (40% member denied K-1s, financials and distributions). Case background docs are in the file register (Statement of Claims, Evidence Brief, Master Reference, March 2026).",
   "order": 12,
   "owner": "Kevin",
   "priority": "critical",
@@ -11,5 +11,5 @@
   "source": "Kevin's email 'My Wyoming companies: Best Wyoming filing tasks' (Oct 4); 'Case documents 2 of 2: Apollo' (Oct 7)",
   "status": "working",
   "title": "Apollo Branding v. VBX Labs (LASC 25CHCV02873): respond to the two Requests for Entry of Default served on VHC and AKZC",
-  "updatedAt": 1791824500003
+  "updatedAt": 1792266400000
 }

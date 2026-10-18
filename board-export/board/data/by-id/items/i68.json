@@ -1,0 +1,15 @@
+{
+  "createdAt": 1792288100000,
+  "due": "2026-10-24",
+  "group": "g_vbx",
+  "notes": "Oct 17: Kevin sent two reports pulled live from the VBX Labs Metrc account (CCL20-0003265). TRANSFERS: 8 outgoing manifests in 2025–2026 (The Bake Shop LA x5 Jan–Feb 2025, IGP Distribution 12/18/25, SoCal Labs 5/6/26, Community Creative Network 10/1/26), 3 incoming (Farmacopia May 2025, one voided; TG DHS 12 packages in transit since 10/12/26), none rejected, no outgoing transfers between 2/25/25 and 12/18/25. ACTIVITY: 2025 37 harvest batches, 11,505 plants, 13,489 lb wet, 861 lb packaged dry; 2026 to date 22 batches, 14,455 plants, 15,399 lb wet, 1,198 lb packaged dry; about 1,400 immature plants and 3,677 in veg or flower; two users (Kevin admin, Robert Fleming plants manager). FLAGS Kevin raised: (1) five October 2025 harvests (3,548 plants, 3,675 lb wet) closed 11/06/2025 with nothing packaged, all weight to moisture loss; (2) April 2025 harvests not packaged until 9/30/25 and December 2025 harvests not until 2/16/26; (3) every bulk flower item shows lab-test status NotSubmitted; (4) only 1,262 lb left the license in two years against 2,059 lb packaged and 28,888 lb wet. Full activity report: https://claude.ai/artifact/RMixYGge86uNLvF8nJwwi7. Ties to the license renewal and Liu's addition to the license (i47).",
+  "order": 6,
+  "owner": "Both",
+  "priority": "high",
+  "prompt": "I am Kevin Doud, managing member of VBX Labs LLC (Metrc licence CCL20-0003265). Using my Oct 17 Metrc transfer and activity reports to Adrian, (1) for each of the four flags write what a DCC or Metrc compliance reviewer would ask, what the honest explanation is, and what record or correction (harvest notes, waste entries, packaging) can still be made in Metrc; (2) pull the Plants Destroyed report for 2025 and 2026 and add per-year waste totals; (3) list what must be clean or disclosed before Liu is added to the licence and before the renewal is filed; (4) draft a short cover note to Adrian and Steve Baghoomian with the two PDFs and the report link, saying what we recommend disclosing to Dana Cisneros and when. Factual, no speculation; I will review before sending.",
+  "section": "Liu deal & due diligence",
+  "source": "Kevin's emails 'VBX Labs Metrc transfers, 2025 and 2026' (Oct 17, 2:48 PM Pacific, PDFs attached) and 'VBX Labs Metrc activity report, 2025 and 2026' (Oct 17, 3:17 PM Pacific)",
+  "status": "not_started",
+  "title": "VBX Metrc record before the license changes hands: review Kevin's 2025–2026 activity and transfer reports, resolve the four flags (Oct 2025 harvests closed unpackaged, months-late packaging, every bulk item 'NotSubmitted' for lab testing, low output versus harvest) and decide what to disclose to Dana and Liu",
+  "updatedAt": 1792288100000
+}

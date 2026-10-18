@@ -1,13 +1,14 @@
 {
   "collection": "meta",
   "count": 1,
-  "exportedAt": "2026-10-17T01:50:00Z",
+  "exportedAt": "2026-10-18T01:50:00Z",
+  "note": "Final snapshot taken immediately before the artifact was deleted on 2026-10-18.",
   "documents": [
     {
       "doc_id": "sweep",
       "data": {
-        "lastSweepAt": "2026-10-17T01:46:42Z",
-        "lastSweepNote": "Oct 16 sweep: two new emails from Kevin's side. Filed the final VBX promissory note DocuSign forward (f25, noted on the Liu deal item i05) and the second endotoxin client email review copy (f26, awaiting Adrian's approval; no item per Adrian's Oct 16 removal). No board edits from Kevin.",
+        "lastSweepAt": "2026-10-18T01:48:00Z",
+        "lastSweepNote": "Oct 17 sweep: busy day. Added VBX vendor balances (i66), Kevin's 'What Kevin Keeps Touching' review (i67), the VBX Metrc pre-transfer review (i68) and the lobby TV loop review (i69); moved the Prakash K-1 password item to waiting and the payroll item to waiting on Prakash's quote; folded Adrian's Oct 17 insurance thread note into i37. Filed 8 rows (f30–f37). One board edit via the page: Adrian's note on i37.",
         "runs": [
           {
             "added": 2,
@@ -38,6 +39,12 @@
             "at": "2026-10-17T01:46:42Z",
             "filed": 2,
             "updated": 1
+          },
+          {
+            "added": 4,
+            "at": "2026-10-18T01:48:00Z",
+            "filed": 8,
+            "updated": 3
           }
         ],
         "schedule": "Daily 6:45 PM Pacific"

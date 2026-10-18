@@ -2,14 +2,14 @@
   "createdAt": 1791824500007,
   "due": "2026-10-13",
   "group": "g_vbx",
-  "notes": "Prakash (Valley Income Tax) asked for the password Oct 5 and needs the 2023 figures to carry forward into the 2024 Form 1120-S. File came from the VBX Monday.com board on April 1, 2025; nobody has confirmed who prepared 2023 (not Cohen Tax). Filing is needed for the Liu deal.",
+  "notes": "Prakash asked Oct 5 for the password to the locked 2023 VBX return / K-1 PDF. Oct 17, 1:18 PM Pacific: Adrian replied on the thread with the password (1234). Waiting on Prakash to confirm he can open it and to proceed with the 1120-S filings (IRS accepted the Form 2553 effective 1/1/2022, so 2022, 2023 and later must be filed as S-corp returns).",
   "order": 20,
   "owner": "Kevin",
   "priority": "critical",
-  "prompt": "I am Kevin Doud. Our tax preparer Prakash Joshi (Valley Income Tax) needs VBX Labs LLC's 2023 return to prepare the 2024 Form 1120-S. The only 2023 file I have is '2023 Tax Return Documents (VBX LABS LLC) K-1s.pdf', password-locked, downloaded from the VBX Monday.com board on April 1, 2025. Search all three of my mailboxes (365hydrodesign, kmdgroupla, kmdanalytical) for who prepared or uploaded the 2023 return, any password hints, and any 2023 engagement with Cohen Tax or another preparer. Then draft two short emails: one to Cohen Tax (Jeff Cohen) asking whether they prepared 2023 and for the complete return, and one to whoever managed the Monday.com board asking for the password. Also explain how to request the 2023 return transcript from the IRS (Form 4506-T or online account) as a fallback, step by step.",
+  "prompt": "I am Adrian Holguin. On Oct 17 I sent Prakash Joshi at Valley Income Tax (info@valleyincometax.com) the password for the locked 2023 VBX Labs return / K-1 PDF on the thread 'VBX: findings on your seven points'. Using my Gmail, check whether Prakash has replied. If he has not by Oct 21, draft a short follow-up asking him to confirm the file opens, to tell us what else he needs to prepare the 2022 and 2023 Form 1120-S returns, and to give his filing date and invoice. Copy Kevin Doud (kevin.doud@kmdanalytical.com). Under 120 words; I will review before sending.",
   "section": "Taxes (Prakash / IRS)",
   "source": "Thread 'VBX: findings on your seven points' and Prakash's reply (Oct 5)",
-  "status": "stuck",
+  "status": "waiting",
   "title": "Give Prakash the password for the locked 2023 VBX K-1 PDF, or get the full 2023 return from whoever prepared it",
-  "updatedAt": 1791824500007
+  "updatedAt": 1792288100000
 }

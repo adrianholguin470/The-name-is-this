@@ -1,7 +1,8 @@
 {
   "collection": "groups",
   "count": 4,
-  "exportedAt": "2026-10-17T01:50:00Z",
+  "exportedAt": "2026-10-18T01:50:00Z",
+  "note": "Final snapshot taken immediately before the artifact was deleted on 2026-10-18.",
   "documents": [
     {
       "doc_id": "g_kmd",

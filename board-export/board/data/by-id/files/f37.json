@@ -1,0 +1,14 @@
+{
+  "createdAt": 1792288100010,
+  "date": "2026-10-17",
+  "from": "Adrian",
+  "group": "g_kmd",
+  "items": [
+    "action-dashboard-data-2026-10-16.zip"
+  ],
+  "kind": "email",
+  "link": "https://mail.google.com/mail/?authuser=adrian.holguin.470@gmail.com#all/thread-f:1879327894513967455",
+  "name": "Board data export sent to Kevin (groups, items, updates, files as JSON, zipped)",
+  "note": "Subject 'JSON'. The four board collections exported as JSON so Kevin's system can load them. Snapshot taken before the Apollo claims items (i64, i65) were added.",
+  "to": "Kevin Doud (kmdgroupla@gmail.com)"
+}
