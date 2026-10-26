@@ -1,0 +1,56 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ProfessionalService"],
+  "@id": "https://holguincompany.com/#organization",
+  "name": "Holguin & Company",
+  "alternateName": "Holguin and Company",
+  "url": "https://holguincompany.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://holguincompany.com/REPLACE-logo.png"
+  },
+  "image": "https://holguincompany.com/REPLACE-og-image.jpg",
+  "description": "Holguin & Company is a Beverly Hills advisory firm that helps business owners and leadership teams translate strategy into disciplined execution: operating cadence, performance diagnostics, and 90-day roadmaps.",
+  "slogan": "Strategy to disciplined execution.",
+  "foundingDate": "2026",
+  "founder": { "@id": "https://holguincompany.com/about-adrian-holguin#person" },
+  "email": "mail@holguincompany.com",
+  "telephone": "+1-424-402-5670",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9903 Santa Monica Blvd, STE 199",
+    "addressLocality": "Beverly Hills",
+    "addressRegion": "CA",
+    "postalCode": "90212",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Los Angeles" },
+    { "@type": "State", "name": "California" },
+    { "@type": "Country", "name": "United States" }
+  ],
+  "knowsAbout": [
+    "Strategy execution",
+    "Operating cadence",
+    "Business performance diagnostics",
+    "Leadership team alignment",
+    "Owner-led company growth",
+    "Regulated industry operations"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/REPLACE-holguin-company-slug/",
+    "https://www.instagram.com/holguincompany/",
+    "https://www.youtube.com/@holguincompany",
+    "https://www.pinterest.com/holguincompany/",
+    "https://www.facebook.com/REPLACE-holguin-company-page/",
+    "https://www.tiktok.com/@holguincompany"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "telephone": "+1-424-402-5670",
+    "email": "mail@holguincompany.com",
+    "areaServed": "US",
+    "availableLanguage": ["English", "Spanish"]
+  }
+}
