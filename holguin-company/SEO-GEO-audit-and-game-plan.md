@@ -1,10 +1,10 @@
-# Holguin & Company — SEO + GEO audit and 90-day game plan
+# Holguin & Company — SEO + GEO audit and game plan
 
-Prepared 2026-10-26 for Adrian Holguin, Founder & Managing Principal, Holguin & Company (Beverly Hills, CA).
+**Revision 2 · 2026-10-27.** Supersedes the 2026-10-26 draft. Revision 1 audited the HighLevel funnel and treated it as the live site. It is not. The live site is a single static page deployed to GoDaddy from the artifact "Holguin & Company — Business Strategy & Execution, Beverly Hills" (version of 2026-10-15), and it already carries a title, meta, canonical, Open Graph, and a JSON-LD graph. Everything below is rebuilt from that source, the Brand Book (Second Edition, September 2026), the Profile Pack (13 September 2026), the HighLevel records, and search-index checks.
 
-Scope: holguincompany.com, the HighLevel sub-account that hosts it, the owner's existing author footprint, and the entity picture that Google and AI answer engines (ChatGPT, Perplexity, Gemini, Claude, Google AI Overviews) currently hold.
+**Still unverified, because this session's network policy blocks holguincompany.com:** that the deployed page matches the 15 October artifact, HTTP→HTTPS and www→apex redirects, `/robots.txt`, `/sitemap.xml`, the `og-image.png` and `favicon.svg` paths resolving, page weight, and Core Web Vitals. Section 6 is the two-minute check for those. To let a future session fetch the site directly, add `holguincompany.com` under Allowed domains in the environment's Network access settings.
 
-Method note: this session's network policy blocks holguincompany.com, so the on-page audit of the live HTML (title, meta, H1, speed, schema) could not be run. Everything below comes from the HighLevel record of the site, search-index checks, and third-party listings. Section 7 is the on-page checklist to run the moment the host is reachable.
+Prepared for Adrian A. Holguin, Principal.
 
 ---
 
@@ -12,223 +12,102 @@ Method note: this session's network policy blocks holguincompany.com, so the on-
 
 | Area | Status | Severity |
 |---|---|---|
-| Site indexed by Google / Bing | **No pages indexed.** Exact-domain search returns nothing. | Critical |
-| Custom domain attached to the HighLevel site | **Not attached** (`domainId` empty on the funnel, `domain` empty on the sub-account). Whether holguincompany.com resolves to this site is unverified. | Critical |
-| Site depth | **One page** ("Home", created 2026-09-13). No About, Services, Insights, or Contact pages. | Critical |
-| Blog / Insights | None (HighLevel blog list is empty). | High |
-| Structured data (Organization, Person, WebSite) | None known; nothing in the record. | High |
-| Entity confusion in search and AI engines | **Severe.** "Adrian Holguin" + "Holguin Company" resolves to a different Adrian Holguin in Southampton, NY (holguin-companies.com, luxury estate management). | Critical for GEO |
-| Google Business Profile for Holguin & Company | None. Address (9903 Santa Monica Blvd, STE 199) is a mailbox-style suite, which Google's policy makes ineligible unless staffed. | Medium (needs a decision, not a listing) |
-| Social profiles | Facebook page, Instagram @holguincompany, LinkedIn company page, LinkedIn personal, Pinterest @holguincompany, YouTube @holguincompany, TikTok (unbranded handle `user4755468219169`). None are linked from the business profile; none are indexed yet. | Medium |
-| Owner authority assets | Strong but unlinked: Forbes quote (2020), SWAGGER Magazine profile (2020), Cannabis Today podcast (2021), Mariposa Technology (2022), Missouri Independent author page and op-ed (Oct 2026), Marijuana Moment op-ed, CannaShark site bio, verified CannaShark Google Business Profile. | Opportunity |
-
-The short version: Holguin & Company does not yet exist as an entity on the web. There is nothing for Google or an AI model to retrieve, and the name is already occupied in their memory by someone else. The plan therefore puts entity establishment and disambiguation ahead of classic keyword work.
-
----
-
-## 2. What exists today (inventory)
-
-### 2.1 Holguin & Company (from the HighLevel sub-account `hLql8kZCEo7GMT34NQdL`)
-
-- Name: Holguin & Company
-- Website field: https://holguincompany.com
-- Address: 9903 Santa Monica Blvd, STE 199, Beverly Hills, CA 90212
-- Phone: +1 424-402-5670
-- Email: mail@holguincompany.com
-- Created: 2026-09-13
-- Site: one HighLevel "website" funnel named "Holguin & Company", one step "Home" at `/home`, `autoGenerateSchema: true`, no favicon URL, no head/body tracking code, no custom domain.
-- Blogs: none.
-- Business-profile social fields: all empty. `googlePlacesId`: empty.
-- Connected social accounts (HighLevel Social Planner): Facebook page "Holguin & Company", Instagram `holguincompany`, LinkedIn page "Holguin & Company" (org 146545905), LinkedIn profile "Adrian Holguin", Pinterest `holguincompany`, YouTube `@holguincompany`, TikTok business `user4755468219169`.
-
-### 2.2 CannaShark Consulting (sub-account `ei9azGLkgzf0iZFkQrJo`)
-
-- Same address and owner. Website cannasharkconsulting.com.
-- Verified Google Business Profile connected (location `18275021280132883975`).
-- Connected: Facebook, Instagram `cannasharkconsulting`, LinkedIn profile "Adrian Holguin J.D., M.B.A.", LinkedIn page "CannaShark Cannabis Consulting", TikTok `adrianholguin93`, YouTube `@adrianholguin3936`.
-- Indexed pages include: /about-us/, /cannabis-consulting-firm/, /licensing-regulatory-compliance/, /cannabis-licensing-consultant/, /cannabis-operations-consultant/, /expert-witness-services/, /proven-results-trusted-by-the-industry/. Third-party listings: Yelp, Alignable, MapQuest, ZoomInfo, LinkedIn company page, Issuu deck, YouTube welcome video.
-
-### 2.3 Owner's existing third-party references (the "tether" candidates)
-
-These are real, already published, and attributable to you. They are the raw material for the Person entity.
-
-| Source | What it establishes | Link |
-|---|---|---|
-| LinkedIn profile | "Founder & Managing Principal"; Beverly Hills; strategy-to-execution positioning | https://www.linkedin.com/in/adrianholguin/ |
-| CannaShark About page | Founder bio, J.D., M.B.A., strategy/finance/market entry/facility development | https://cannasharkconsulting.com/about-us/ |
-| Forbes, 2020-10-03 (Paul Armstrong) | Quoted expert on AI in regulated cultivation | https://www.forbes.com/sites/paularmstrongtech/2020/10/03/big-issues-face-the-cannabis-industry-but-ai-is-here-to-help/ |
-| SWAGGER Magazine, Nov 2020 | Founder profile | https://www.swaggermagazine.com/style/kings-of-swagger/california-cannabis-entrepreneur-adrian-holguin/ |
-| Cannabis Today podcast, ep. 79 (2021) | Long-form interview | https://canna-today.com/2021/10/ep-79-w-adrian-holguin-from-cannashark-consulting/ |
-| Mariposa Technology, Apr 2022 | Quoted as CEO | https://mariposatechnology.com/artificial-intelligence-in-hemp-growing-systems/ |
-| Missouri Independent author page + Oct 2, 2026 commentary | Byline as "Adrian A. Holguin"; most recent authority signal | https://missouriindependent.com/author/adrianholguin/ |
-| Marijuana Moment op-ed | Byline, contracts / microbusiness advice | https://www.marijuanamoment.net/advice-for-missouri-marijuana-microbusinesses-on-how-not-to-get-scammed-when-signing-contracts-op-ed/ |
-| CannaShark LinkedIn company page | Organization entity | https://www.linkedin.com/company/cannashark-cannabis-consulting |
-
-Do **not** tether these (they are other people with your name):
-
-- Brainz Magazine "Adrian Holguin, Business & Life Coach" (food-industry entrepreneur, Ecuador).
-- LinkedIn `adrian-holguin-148023234` "Founder & CEO at Holguin Companies" (Southampton, NY).
-- Any Houzz, Angi, Nextdoor, or Facebook listing for "Holguin Companies" or "Holguin Estate Management".
-- intro.co/AdrianHolguin unless you confirm it is yours.
+| Indexing | **Zero pages indexed** in Google or Bing (exact-domain search returns nothing). Site went up mid-September; no evidence of Search Console or Bing Webmaster verification. | Critical |
+| Entity confusion | "Adrian Holguin" + "Holguin Company" resolves to a different Adrian Holguin ("Holguin Companies", Southampton NY) in every search run. Nothing on the web yet says "Adrian A. Holguin, J.D., M.B.A., Beverly Hills, Holguin & Company" in one place. | Critical for GEO |
+| On-page SEO (live page) | **Good.** Title, meta, canonical, robots meta, OG and Twitter cards, SVG favicon, one H1, clean H2 outline, NAP in footer, `tel:` and `mailto:` links. Meta description runs ~190 characters (truncates at ~155). | Low |
+| Structured data (live page) | **Present:** ProfessionalService `#firm`, Person `#principal`, Service with AggregateOffer ($5,000–$24,000), FAQPage (6 Q&A), WebSite. **Missing:** `sameAs` on both firm and person, `image`/`logo` on the firm (required for LocalBusiness rich results), credentials and `image` on the Person, VideoObject for the film. | High |
+| Site structure | One URL. Everything is an anchor on `/`. No dedicated URL for the Principal (the entity page) or the product. For a brand that wants to be quoted by AI engines, the one fact per URL pattern matters. | High |
+| Analytics / verification | No GA4, GTM, or Search Console tag in the page source. | High |
+| Google Business Profile | Not created. The Profile Pack already reserves the Santa Clarita address for verification only and never publishes it: that is the correct service-area setup. | Medium |
+| Social profiles | LinkedIn `/company/holguincompany`, YouTube `@holguincompany`, Facebook page dressed; Instagram claimed; X `@holguinandcompany`, Pinterest, TikTok staged. TikTok is connected to HighLevel under the raw handle `user4755468219169`. The HighLevel business profile has every social field empty. | Medium |
+| HighLevel funnel "Holguin & Company" | One-page draft created 13 Sept, no domain attached. **Do not attach the domain to it**; the GoDaddy page is the site. Leave the funnel unpublished or delete it so two versions never compete. | Note |
+| Owner authority | Forbes (2020), SWAGGER (2020), TEDxCondado talk, Cannabis Today podcast (2021), Mariposa (2022), Missouri Independent byline (Oct 2026), Marijuana Moment op-ed. Real, but all except LinkedIn and TEDx are cannabis-framed, and the Brand Book forbids any CannaShark or cannabis reference on Holguin & Company surfaces. | Decision (section 3) |
 
 ---
 
-## 3. The entity problem (why GEO comes first)
+## 2. What is actually live (from the deploy source)
 
-Searches run during this sweep:
-
-- `"Holguin Company" holguincompany.com` → no result from your domain; returns Holguin & Holguin Inc, Holguin Consulting Inc, Holguin Group LLC, and others.
-- `Adrian Holguin "Holguin Company"` → top result is the Southampton "Holguin Companies" LinkedIn profile.
-- `"Holguin & Company" Beverly Hills` → your LinkedIn profile, plus a California filing for "Holguin & Company, LLC" (June 21, 2025, CEO listed as Michael Anthony Holguin, Sacramento address).
-- `"holguincompany.com"` → nothing.
-- Category queries (strategy execution consultant Los Angeles, fractional COO Beverly Hills) → no Holguin of any kind.
-
-What this means for AI answer engines: when someone asks "Who is Adrian Holguin?" or "What is Holguin & Company?", the retrievable evidence points to the Hamptons estate-management firm. Your evidence (Forbes, Missouri Independent, LinkedIn) exists but is not connected to the name "Holguin & Company" anywhere on the web.
-
-Three distinct name collisions to manage:
-
-1. **Holguin Companies (Southampton, NY).** Same first and last name, same company name minus the ampersand, active site with reviews. This is the one AI models currently "know".
-2. **Holguin & Company, LLC (California SOS, June 2025, Michael Anthony Holguin).** If this is your entity under a different registered manager, fine. If it is not, your legal/brand name collides inside the California registry. Verify at bizfileonline.sos.ca.gov (document B20250175407 per the directory listing).
-3. **Adrian Holguin, Business & Life Coach (Brainz).** Different person, same name, same "coach/strategy" vocabulary.
-
-Disambiguation strategy: make the *person* entity unambiguous (middle initial, credentials, city, two founded organizations, consistent headshot) and let the organization inherit from it. Every page, profile, and byline should use the same string: **Adrian A. Holguin, J.D., M.B.A., Founder & Managing Principal, Holguin & Company (Beverly Hills, CA)**, with "founder of CannaShark Consulting" as the second identifying fact.
+- **Page:** `https://holguincompany.com/`, title "Holguin & Company — Business Strategy & Execution, Beverly Hills", H1 "Strategy, executed."
+- **Sections (all anchors):** hero with the three-step spine (01 Evaluate · 02 Diagnose · 03 Execute), the ninety-second film (self-hosted `holguin-company-vsl.mp4`), three testimonies (the founder's line; Kevin Doud; Bobby D. Pugh Sr., both "Client of the Principal"), The Diagnostic with the seven lenses and "what you leave with", The Principal (bio + facts panel: Founded 2026, Beverly Hills), six FAQs, the close with a LeadConnector booking iframe and a `mailto:` button, footer with the canonical NAP block.
+- **JSON-LD graph:** ProfessionalService (`#firm`, address, phone, email, priceRange, knowsAbout, areaServed North America / Latin America / Europe), Person (`#principal`, name "Adrian A. Holguin", jobTitle "Founder & Managing Principal", no sameAs, no image, no credentials), Service (`#diagnostic`, AggregateOffer 5000–24000 USD), FAQPage (the same six questions), WebSite.
+- **Brand constraints that govern every recommendation here** (Brand Book §VI): never "advisory"; never any CannaShark or cannabis reference; never a claim of industry breadth; the offer is always 01 The Business Evaluation Call · 02 The Diagnostic & 90-Day Roadmap · 03 Execute & Grow; the price line reads exactly "The Diagnostic scales with your company — $5,000 to $24,000+ — applied in full when we move to execution"; the founder's line appears once per surface; legal line "Adrian A. Holguin d/b/a Holguin & Company" until the LLC exists; domains holguincompany.com (primary) and holguinco.com (redirect).
+- **HighLevel:** sub-account `hLql8kZCEo7GMT34NQdL`, phone +1 424-402-5670, email mail@holguincompany.com, 39 social posts published since 30 Sept across LinkedIn page, Instagram and Facebook (the "Ten Decisions" series and the "constraint" posts), all in brand voice, all pointing at holguincompany.com. Zero blog posts. No knowledge base.
 
 ---
 
-## 4. The "tether" decision (your instruction, with the caveat)
+## 3. The entity problem and the tether decision
 
-You asked to tether reference articles to the owner where it helps, and to skip it where it would hurt. Here is the line:
+The disambiguation problem is unchanged from Revision 1: three other people share the name in search and AI memory (the Southampton estate-management founder; a California "Holguin & Company, LLC" filed June 2025 under Michael Anthony Holguin; the Ecuador business coach on Brainz Magazine). Until the web carries a page that says who *this* Adrian A. Holguin is, AI engines will keep answering with the Hamptons firm.
 
-**Tether the person, not the cannabis brand.**
+Revision 1 proposed tethering the Forbes, SWAGGER, podcast, and Missouri Independent pieces to the Person entity on holguincompany.com. **That conflicts with the Brand Book**, which keeps the firm 100% free of CannaShark and cannabis references, including in materials. Your instruction was to tether where it helps and not where it hurts. The resolution:
 
-- Put a Person schema on holguincompany.com with `sameAs` links to the LinkedIn profile, the Missouri Independent author page, the Forbes article, the SWAGGER profile, the podcast episode, and the CannaShark About page. These are facts about *you* and they carry the authority signals (major outlet, byline, credentials).
-- Put `founder` → that same Person `@id` on both the Holguin & Company Organization schema and the CannaShark Organization schema. One person, two firms. This is accurate and it is exactly how knowledge graphs resolve ambiguity.
-- Do **not** make Holguin & Company's own description, headline, or service pages about cannabis. The homepage positioning stays "strategy to disciplined execution for owners and leadership teams". Cannabis appears once, in the bio, as regulated-industry operating experience (licensing 100+ facilities is a CannaShark claim; cite it there, not on H&C service pages).
-- Do **not** link the Brainz contributor page, the Southampton profile, or any listing you cannot confirm is yours. A wrong `sameAs` is worse than none: it teaches the graph the confusion you are trying to undo.
+**On holguincompany.com (strict):** the Person `#principal` gets `sameAs` → the LinkedIn profile, the LinkedIn company page, the YouTube channel, and the TEDxCondado talk (not cannabis-framed). Add `honorificSuffix: "J.D., M.B.A."`, `alumniOf` (University of San Francisco School of Law; University of San Francisco School of Management), and `image` → the founder portrait. Nothing else. The credentials and two alma maters alone separate you from every other Adrian Holguin in the graph.
 
-If you want a harder wall between the two brands, drop the CannaShark About page and the two cannabis-outlet op-eds from `sameAs` and keep LinkedIn, Forbes, and SWAGGER. The entity still resolves; it just resolves more slowly.
+**Off-site (the bridge):** LinkedIn is the one place both firms legitimately sit on one profile, and it is the page AI engines already return for your name. Keep the LinkedIn profile headline on Holguin & Company, keep CannaShark in Experience, and let the knowledge graph connect the two there. The Missouri Independent, Marijuana Moment, Forbes, and SWAGGER pages stay in CannaShark's entity (its site already links them). Do not add them to Holguin & Company's schema or copy.
 
----
-
-## 5. 90-day game plan
-
-### Phase 0 — Lock the foundation (this week)
-
-1. **Attach the domain.** In HighLevel: Sites → Domains → connect `holguincompany.com` and `www.holguincompany.com`, set one as primary (recommend non-www), confirm SSL, and set the "Holguin & Company" website as the default funnel for the domain. Then confirm in a browser that `https://holguincompany.com/` returns the Home page and `www` 301-redirects.
-2. **Verify ownership in Google Search Console and Bing Webmaster Tools.** Bing matters because ChatGPT search reads Bing's index. Submit `/sitemap.xml` (HighLevel generates one for connected website domains; confirm it loads) and request indexing of every page.
-3. **Fix the sub-account business profile.** Fill the empty social URL fields (Facebook, Instagram, LinkedIn, YouTube, Pinterest, TikTok) so HighLevel's auto-generated schema carries them. Rename the TikTok handle from `user4755468219169` to `holguincompany`.
-4. **Resolve the California name collision.** Check the June 2025 "Holguin & Company, LLC" filing. If it is not yours, decide whether to register your own entity or DBA now, before the brand accumulates equity.
-5. **Decide Google Business Profile.** Do not create one at the Santa Monica Blvd suite. Google's guidelines exclude virtual offices unless staffed during business hours, and a suspension there could spill onto the CannaShark profile at the same address. Options: (a) skip GBP for H&C and let LinkedIn + Bing Places + the CannaShark GBP carry local signals, or (b) if you have a real staffed or home office, create a service-area profile with the address hidden. Pick (a) unless (b) is true.
-6. **Add analytics.** Put GA4 (and the Search Console link) in the funnel's head tracking code so the baseline starts now.
-
-### Phase 1 — Make the site an entity home (weeks 1–3)
-
-Expand from one page to a minimum viable site. Each page gets a unique title (≤60 chars), meta description (≤155), one H1, and a canonical.
-
-| URL | Title | Job |
-|---|---|---|
-| `/` | Holguin & Company — Strategy to Execution for Owner-Led Companies | Thesis, who it is for, proof, one CTA |
-| `/about-adrian-holguin` | Adrian A. Holguin, J.D., M.B.A. — Founder, Holguin & Company | **The person entity page.** Full bio, credentials, headshot, press list with links, both firms named |
-| `/services/strategy-execution` | Strategy Execution Consulting | Answer-first: what it is, who, how, outcomes, FAQ |
-| `/services/operating-cadence` (or your real second service) | Operating Cadence and Leadership Team Rhythm | Same pattern |
-| `/services/business-performance-diagnostic` | Business Performance Diagnostic and 90-Day Roadmap | Same pattern (this service already exists on CannaShark; make the general-business version live here) |
-| `/approach` | How Holguin & Company Works | The method, named steps, what a first 90 days looks like |
-| `/insights` | Insights | Blog index |
-| `/contact` | Contact Holguin & Company | Address, phone, email as text, form |
-
-Add to every page:
-
-- JSON-LD from `schema/organization.jsonld`, `schema/person-adrian-holguin.jsonld`, `schema/website.jsonld` (edit the placeholders, then paste into the HighLevel site-level head code). Add `BreadcrumbList` on inner pages and `FAQPage` on service pages.
-- Open Graph and Twitter card tags with a real image.
-- A footer with the full NAP string exactly as it appears in the HighLevel profile.
-
-Add at the root:
-
-- `llms.txt` (template in this folder) so AI crawlers get a clean summary and canonical links.
-- `robots.txt` that allows Googlebot, Bingbot, GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, and Google-Extended. If HighLevel does not let you edit robots.txt, confirm it is not blocking these by default.
-
-Cross-link the two brands:
-
-- CannaShark About page: add one sentence and a link, "Adrian is also the founder of Holguin & Company, a strategy-execution advisory for owner-led companies."
-- Holguin & Company About page: link back to cannasharkconsulting.com/about-us/.
-- LinkedIn profile: add Holguin & Company as a current Experience entry with the website; set it as the headline company. LinkedIn company page: add website, tagline, and location.
-- Every social bio (IG, YouTube, Pinterest, TikTok, Facebook): link to holguincompany.com and use the same one-line description.
-
-### Phase 2 — Authority and citations (weeks 2–8)
-
-AI engines cite third-party sources far more than owned pages. The goal is a dozen independent pages that say "Adrian A. Holguin, founder of Holguin & Company" within 60 days.
-
-1. **Update bylines you control.** Ask Missouri Independent to update the author bio to include Holguin & Company. Do the same with Marijuana Moment and the Cannabis Today show notes. These are the fastest wins because the pages already rank.
-2. **Directory and profile layer** (consistent NAP, same description, link to site): Crunchbase (person + organization), Clutch, Alignable (you already have a CannaShark listing), Bing Places, Apple Business Connect, LinkedIn company page, Beverly Hills Chamber of Commerce, LA Business Journal "Book of Lists" where applicable. Skip Yelp for H&C unless you want reviews there.
-3. **Bylines in general-business outlets**, one per month, each signed "Adrian A. Holguin, founder of Holguin & Company": Entrepreneur, Fast Company Executive Board, Inc., Forbes Councils (paid), LA Business Journal op-ed. Topics should be the Holguin & Company thesis (execution discipline, operating cadence, owner-led growth), not cannabis.
-4. **Podcasts**, one per month, with show notes that spell the name and link the site. Prior appearance on Cannabis Today is the proof-of-guest.
-5. **Reviews and recommendations.** Request LinkedIn recommendations that name Holguin & Company. Ask three current or past clients for Clutch reviews. Keep Google reviews flowing on the CannaShark profile; it is the only verified Google entity you have.
-6. **Wikidata (optional, 30 minutes).** Create an item for Adrian A. Holguin citing Forbes, SWAGGER, and Missouri Independent, with "founder of" Holguin & Company and CannaShark Consulting. Wikidata is read directly by several knowledge graphs. Do not attempt Wikipedia; the sourcing is not there yet.
-
-### Phase 3 — Content engine (weeks 3–12, then ongoing)
-
-Two Insights posts per month, written answer-first for the questions AI engines are asked. Each post: a one-paragraph direct answer at the top, a named author with Person schema, at least two cited statistics, one quoted expert (can be you), a dated "last updated" line, and an FAQ block. Then republish each as a LinkedIn article (LinkedIn articles are among the most-cited sources in AI answers) and a short YouTube explainer.
-
-Starter topics mapped to intent:
-
-| Query cluster | Post |
-|---|---|
-| "what is strategy execution consulting" | What a strategy-execution consultant actually does (and when you need one) |
-| "fractional COO vs consultant" | Fractional COO or execution advisor: how owner-led companies should choose |
-| "operating cadence small business" | The 90-day operating cadence: a template for leadership teams |
-| "business performance diagnostic" | How to run a business performance diagnostic in 30 days |
-| "why strategies fail to execute" | Why strategy fails in owner-led companies (with the numbers) |
-| "regulated industry operations" | What regulated industries teach every operator about discipline (your bridge piece from CannaShark) |
-
-Keyword volumes were not pulled in this sweep (no keyword tool reachable from this session). Validate with Google Keyword Planner or Ahrefs before committing, and prefer long-tail phrases where a new domain can rank.
-
-### Phase 4 — Measure (monthly)
-
-- Google Search Console: indexed pages, impressions for brand and service queries.
-- Bing Webmaster: same.
-- AI visibility log: once a month, ask ChatGPT, Perplexity, Gemini, Claude, and Google (AI Overview) these prompts and record the answer and the sources cited:
-  1. "Who is Adrian Holguin?"
-  2. "What is Holguin & Company in Beverly Hills?"
-  3. "Adrian Holguin J.D. M.B.A. consultant"
-  4. "Strategy execution consultant Los Angeles"
-  5. "Who founded CannaShark Consulting?"
-- Success at 60 days: prompts 1–3 return you, not the Southampton firm, and cite at least one page on holguincompany.com. Success at 90 days: prompt 4 mentions Holguin & Company at least once in one engine.
+**Never tether:** the Brainz contributor page, the Southampton profile, any "Holguin Companies" or "Holguin Estate Management" listing, intro.co unless confirmed.
 
 ---
 
-## 6. Quick wins I can execute on request
+## 4. Game plan (90 days)
 
-These are HighLevel writes and were not done without your go-ahead:
+### Phase 0 — This week, in GoDaddy and Google
 
-- Fill the six social URL fields on the Holguin & Company sub-account business profile.
-- Add the JSON-LD and llms.txt to the site head / root once the domain is attached.
-- Draft the eight pages above as copy you can paste into the HighLevel builder.
-- Draft the updated Missouri Independent / Marijuana Moment author bio and the CannaShark cross-link sentence.
+1. **GoDaddy, DNS and hosting.** Confirm `holguincompany.com` and `www` both serve the page over HTTPS with one 301 from `www` to apex and from `http` to `https`. Confirm `holguinco.com` 301s to the apex (Brand Book §VIII). In File Manager, upload the three files from this folder: `robots.txt`, `sitemap.xml`, `llms.txt`.
+2. **Search Console + Bing Webmaster.** Verify by DNS TXT record in GoDaddy (no page edit needed). Submit `https://holguincompany.com/sitemap.xml`. Request indexing of `/`. Bing feeds ChatGPT search.
+3. **Analytics.** Add GA4 to the page head in the deploy source (`schema/head-additions.html` has the snippet slot) and redeploy.
+4. **Google Business Profile.** Create as a service-area business, verify with the Santa Clarita address, hide the address, set the service area to Greater Los Angeles, category "Business management consultant", website holguincompany.com, phone 424-402-5670. Never publish the Santa Clarita address and never use the Santa Monica Blvd suite for verification (Google's rule on virtual offices). Then Bing Places and Apple Business Connect with the canonical NAP block from the Profile Pack.
+5. **HighLevel.** Fill the social fields on the sub-account (values in `social-fields.md`); rename TikTok to `holguincompany`. Leave the HighLevel funnel unpublished.
+6. **Name check.** Verify the June 2025 "Holguin & Company, LLC" filing at bizfileonline.sos.ca.gov. If it is not yours, file the LLC or a DBA now; the d/b/a line in the Brand Book assumes the name is free.
+
+### Phase 1 — Weeks 1–3: schema patch and two new URLs
+
+The page stays as designed. Three changes to the deploy source, then redeploy:
+
+1. **Schema patch** (`schema/jsonld-patch.md`): `sameAs`, `logo`, `image` on `#firm`; `sameAs`, `honorificSuffix`, `alumniOf`, `image`, `email` on `#principal`; a `VideoObject` for the film; shorten the meta description to ≤155 characters.
+2. **`/principal`** — the entity page. Draft in `pages/principal.md`. Same bio as the homepage plus credentials, education, the TEDx talk, the two client testimonies, and the disambiguation line. `ProfilePage` + `BreadcrumbList`. This is the URL every profile and byline will point to.
+3. **`/the-diagnostic`** — the product page. Draft in `pages/the-diagnostic.md`. The seven lenses with a paragraph each, what you leave with, the price line, the FAQ. `Service` + `FAQPage` + `BreadcrumbList`. This is the URL that answers "what is a business performance diagnostic".
+
+Optional, only if the content program in Phase 3 starts: `/insights` as a HighLevel blog on a subdomain or a static index on GoDaddy.
+
+### Phase 2 — Weeks 2–8: citations that name the firm
+
+The CannaShark PR routine is already pitching governance, lower-middle-market M&A, lean operations, and franchising podcasts (per the 15–25 October study passes) and tracking "Entity Named Correctly" and "AI-Citation Potential". Those shows are Holguin & Company's audience, not CannaShark's.
+
+1. **Split the lane.** Add a column to the PR tracker: Brand = CannaShark | Holguin & Company. Any pitch to a non-cannabis outlet goes out as Adrian A. Holguin, Principal, Holguin & Company, with the `/principal` URL in the bio. Cannabis outlets stay CannaShark.
+2. **Directories with the canonical block:** LinkedIn company page (done), Crunchbase person + organization, Clutch, Bing Places, Apple Business Connect, Beverly Hills Chamber. Reuse the Profile Pack long description verbatim.
+3. **One byline a month** in a general-business outlet, on the firm's own vocabulary (the constraint, the seven lenses, the 90-day roadmap). Signed "Adrian A. Holguin, Principal, Holguin & Company".
+4. **Reviews.** LinkedIn recommendations that name Holguin & Company; Google reviews on the new profile once it is live; ask Kevin Doud and Bobby D. Pugh Sr. for a Google review if they are willing (their quotes are already public on the site).
+5. **Wikidata item** for Adrian A. Holguin citing TEDx, Forbes, and Missouri Independent as references, with "founder of" both firms. Optional, half an hour, read by several knowledge graphs. Not Wikipedia.
+
+### Phase 3 — Weeks 3–12: content, in the voice already running
+
+The social cadence (39 posts since 30 Sept) is the content engine; it just has no home URL. Two options:
+
+- **Minimal:** keep posting; add the `/principal` link to every bio; nothing else.
+- **Recommended:** two Insights pieces a month, each a longer version of a post that performed (the "If revenue doubled next quarter, what breaks first?" post is the model), answer-first, with the Person as author in schema, republished as a LinkedIn article. Topics map to the seven lenses, one lens per piece.
+
+### Phase 4 — Monthly measurement
+
+Search Console and Bing Webmaster for indexed pages and brand impressions, plus the five-prompt AI log (ChatGPT, Perplexity, Gemini, Claude, Google AI Overviews): "Who is Adrian Holguin?", "What is Holguin & Company in Beverly Hills?", "Adrian A. Holguin J.D. M.B.A.", "business performance diagnostic consultant Los Angeles", "Who founded Holguin & Company?". Target at 60 days: prompts 1, 2, 3 and 5 return you and cite holguincompany.com.
 
 ---
 
-## 7. On-page checklist to run once the site is reachable
+## 5. What I could do from here, on request
 
-Run these against `https://holguincompany.com/` and each inner page:
+- Produce the patched JSON-LD graph as a drop-in replacement for the `<script type="application/ld+json">` block (the patch is written; the merged block is a five-minute step).
+- Produce `/principal` and `/the-diagnostic` as full HTML pages built from the site's own CSS, ready for File Manager.
+- Republish the deploy-source artifact with the patch applied, if you want the artifact to stay canonical.
 
-- [ ] Returns 200; `www` redirects to non-www with a single 301; HTTP redirects to HTTPS.
-- [ ] `<title>` unique per page, ≤60 characters, brand last.
-- [ ] Meta description unique, ≤155 characters, includes the page's primary phrase.
-- [ ] Exactly one `<h1>`; H2s outline the page.
-- [ ] Canonical tag present and self-referencing.
-- [ ] JSON-LD validates at validator.schema.org and Google Rich Results Test.
-- [ ] Every image has descriptive alt text; hero image under 200 KB; modern format.
-- [ ] Core Web Vitals in PageSpeed Insights: LCP under 2.5 s on mobile, CLS under 0.1.
-- [ ] No render-blocking third-party scripts from HighLevel widgets you do not use (chat widget is off; keep it off until needed).
-- [ ] Favicon present (currently empty in the funnel record).
-- [ ] `/sitemap.xml` and `/robots.txt` load and are correct.
-- [ ] Phone, email, and address appear as text (not images) and match the HighLevel profile exactly.
-- [ ] Internal links: every page reachable within two clicks of Home; About page linked from the header or footer on every page.
+HighLevel writes (social fields) still need the `locations.write` scope on the connector.
 
 ---
 
-## 8. Sources consulted
+## 6. Two-minute live check (run in a browser, since this session cannot)
 
-- HighLevel API: sub-accounts `hLql8kZCEo7GMT34NQdL` (Holguin & Company) and `ei9azGLkgzf0iZFkQrJo` (CannaShark Consulting Group), funnels, blogs, Social Planner accounts.
-- Google guidance on virtual offices and service-area businesses: https://support.google.com/business/answer/3038177
-- Third-party listings and press: see tables in sections 2.3 and 3.
+1. `https://holguincompany.com/` loads over HTTPS; `http://` and `www.` each redirect once to it.
+2. `https://holguincompany.com/robots.txt`, `/sitemap.xml`, `/llms.txt` load after upload.
+3. `https://holguincompany.com/og-image.png` and `/favicon.svg` load.
+4. View source: the JSON-LD block is present (search for `#principal`).
+5. PageSpeed Insights, mobile: LCP under 2.5 s. If not, the self-hosted film is the first suspect; keep `preload="metadata"` and confirm the file is under ~15 MB.
+6. Google: `site:holguincompany.com` returns the page within a week of submitting the sitemap.

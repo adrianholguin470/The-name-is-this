@@ -1,13 +1,9 @@
-# Page drafts for holguincompany.com
+# Page drafts for holguincompany.com — Revision 2
 
-Eight pages, paste-ready for the HighLevel site builder. Each file carries:
+The homepage stays as designed. Two new URLs, written to the Brand Book (Second Edition): no "advisory", no CannaShark or cannabis reference, no industry-breadth claim, the three steps by their fixed names, the price line verbatim, the founder's line once per surface. Build them from the homepage's own CSS so they read as the same house.
 
-- **URL** (path in HighLevel), **Title tag**, **Meta description**, **OG title / description**
-- **H1** and the body in heading order
-- **Schema** to add on that page (beyond the three site-level blocks in `../schema/`)
-- **Internal links** the page must carry
-- `[CONFIRM: …]` markers where a fact needs your sign-off before publishing. Do not publish a page with a marker still in it.
+- `principal.md` → `/principal` (the entity page)
+- `the-diagnostic.md` → `/the-diagnostic` (the product page)
+- `homepage-amendments.md` → small edits to `/`
 
-Voice: plain, direct, second person to the owner. No claims of client counts or results that are not already public. Where CannaShark's public claims are used, they are attributed to CannaShark.
-
-Order to build: 02 About first (it is the entity page everything links to), then 01 Home, then the three service pages, then 06 Approach, 08 Contact, 07 Insights.
+`[CONFIRM]` marks a fact that needs your sign-off.
