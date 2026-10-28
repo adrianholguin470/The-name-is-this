@@ -22,9 +22,8 @@
 <meta name="twitter:description" content="A private strategy and execution firm. One diagnostic, seven lenses, a prioritized 90-day roadmap.">
 <meta name="twitter:image" content="https://holguincompany.com/og-image.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Archivo:wght@400;500;600&display=swap">
+<link rel="preload" href="/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -216,6 +215,13 @@
 }
 </script>
 <style>
+  /* Self-hosted fonts (latin + latin-ext subsets of the Google Fonts files). */
+  @font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/archivo-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  @font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-italic-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500 600;font-display:swap;src:url(/fonts/cormorant-garamond-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500 600;font-display:swap;src:url(/fonts/cormorant-garamond-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
   :root {
     --ink: #0E141C; --ink-deep: #090E14; --ink-lift: #121A24;
     --steel: #2C3C50; --bone: #F2EFE8; --champagne: #C8A968; --bronze: #9C7C46;
@@ -436,7 +442,7 @@
   <div class="inner rv">
     <div class="eyebrow"><span class="rule"></span><span class="t">The Firm, In Ninety Seconds</span></div>
     <div class="film-frame">
-      <video id="vslPlayer" src="holguin-company-vsl.mp4" preload="metadata" playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #090E14;"></video>
+      <video id="vslPlayer" src="holguin-company-vsl.mp4" preload="none" playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #090E14;"></video>
       <div id="filmOverlay" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; cursor: pointer; background: radial-gradient(60% 90% at 50% 50%, rgba(44,60,80,0.45) 0%, rgba(9,14,20,0.2) 70%), linear-gradient(180deg, rgba(16,22,30,0.94) 0%, rgba(11,16,23,0.94) 100%);" role="button" aria-label="Play the film" tabindex="0">
         <div class="play">
           <svg width="26" height="30" viewBox="0 0 26 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 2 L24 15 L2 28 Z" fill="none" stroke="#C8A968" stroke-width="1.4" stroke-linejoin="round"></path></svg>
@@ -647,8 +653,38 @@
       <svg width="16" height="10" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true"><path d="M1 5h13M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2"></path></svg>
     </a>
     <div class="embed rv" style="padding: 0; display: block; position: relative; height: 720px; min-height: 0; overflow: visible; border: none;">
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/HOpKM77T0LcFJYW8VJJv" style="width: 100%; min-height: 720px; border: none; display: block; background: transparent;" scrolling="no" id="HOpKM77T0LcFJYW8VJJv_booking" title="Book the Business Evaluation Call"></iframe>
-      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+      <iframe data-src="https://api.leadconnectorhq.com/widget/booking/HOpKM77T0LcFJYW8VJJv" style="width: 100%; min-height: 720px; border: none; display: block; background: transparent;" scrolling="no" id="HOpKM77T0LcFJYW8VJJv_booking" title="Book the Business Evaluation Call"></iframe>
+      <script>
+        // Load the booking widget (iframe + HighLevel embed script) only when the
+        // booking section is near the viewport, or when a "Book" link is followed.
+        (function () {
+          var frame = document.getElementById('HOpKM77T0LcFJYW8VJJv_booking');
+          var loaded = false;
+          function load() {
+            if (loaded) return;
+            loaded = true;
+            frame.src = frame.getAttribute('data-src');
+            var s = document.createElement('script');
+            s.src = 'https://link.msgsndr.com/js/form_embed.js';
+            s.async = true;
+            document.body.appendChild(s);
+          }
+          if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+              for (var i = 0; i < entries.length; i++) {
+                if (entries[i].isIntersecting) { io.disconnect(); load(); break; }
+              }
+            }, { rootMargin: '800px 0px' });
+            io.observe(frame);
+          } else {
+            load();
+          }
+          var links = document.querySelectorAll('a[href="#book"]');
+          for (var j = 0; j < links.length; j++) links[j].addEventListener('click', load);
+          if (location.hash === '#book') load();
+          window.addEventListener('hashchange', function () { if (location.hash === '#book') load(); });
+        })();
+      </script>
       <script>
         // GHL's embed script positions the iframe absolutely, which collapses its
         // container; keep the container's height matched to the widget as it resizes.
