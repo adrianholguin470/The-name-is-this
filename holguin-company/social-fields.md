@@ -1,6 +1,6 @@
 # Social fields for the Holguin & Company sub-account (HighLevel)
 
-Settings → Business Profile → Social. Handles per the Profile Pack (13 Sept 2026) and the accounts connected in Social Planner.
+Saved 28 Oct 2026. The sub-account's Business Profile page no longer has a Social section; the fields live in the agency view: Sub-Accounts → Holguin & Company → Basic Details → Social Links. Handles per the Profile Pack (13 Sept 2026) and the accounts connected in Social Planner.
 
 | Field | Value |
 |---|---|
@@ -14,6 +14,6 @@ Settings → Business Profile → Social. Handles per the Profile Pack (13 Sept 
 | Google Places ID | fill after the service-area Google Business Profile is verified |
 | Blog RSS | leave empty until Insights exists |
 
-Also: rename the TikTok business account from `user4755468219169` to `holguincompany`, then reconnect it in Social Planner.
+Still open: rename the TikTok business account from `user4755468219169` to `holguincompany` (in the TikTok app, Profile → Edit profile → Username), then reconnect it in Social Planner → Settings → Social accounts. As of 28 Oct 2026 the tab still shows `user4755468219169`, Connected.
 
-This session's HighLevel connector has read scope on sub-account settings but not `locations.write`, so these were not written from here.
+The HighLevel connector has read scope on sub-account settings but not `locations.write`; the values were entered in the browser and read back through the connector to confirm.
