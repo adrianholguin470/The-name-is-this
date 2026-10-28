@@ -3,6 +3,9 @@ name: Verify holguincompany.com deployment
 # canonicals on the new pages, DNS, holguinco.com registration, PageSpeed Insights.
 on:
   workflow_dispatch:
+  push:
+    branches: [claude/quirky-maxwell-f49la6]
+    paths: ['.github/workflows/verify-holguincompany.yml']
 
 jobs:
   verify:
