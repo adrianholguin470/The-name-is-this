@@ -6,8 +6,8 @@ Not to be confused with "Holguin Companies" (Southampton, New York; estate manag
 
 ## The firm
 - [Home](https://holguincompany.com/): the offer, the seven lenses, the FAQ, the booking call
-- [The Principal](https://holguincompany.com/principal): Adrian A. Holguin, credentials, press
-- [The Diagnostic & 90-Day Roadmap](https://holguincompany.com/the-diagnostic): what it covers, what you leave with, the price line
+- [The Principal](https://holguincompany.com/principal/): Adrian A. Holguin, credentials, press
+- [The Diagnostic & 90-Day Roadmap](https://holguincompany.com/the-diagnostic/): what it covers, what you leave with, the price line
 
 ## The offer, in order
 1. The Business Evaluation Call — 30 minutes, no charge
