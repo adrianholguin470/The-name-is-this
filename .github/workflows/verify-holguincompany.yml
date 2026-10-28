@@ -1,0 +1,100 @@
+name: Verify holguincompany.com deployment
+# Manual-only check of the live site: status codes, redirects, GA4 tag, JSON-LD,
+# canonicals on the new pages, DNS, holguinco.com registration, PageSpeed Insights.
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: URL status and redirects
+        run: |
+          for u in https://holguincompany.com/ https://www.holguincompany.com/ http://holguincompany.com/ http://www.holguincompany.com/ \
+                   https://holguincompany.com/principal https://holguincompany.com/principal/ https://holguincompany.com/the-diagnostic https://holguincompany.com/the-diagnostic/ \
+                   https://holguincompany.com/robots.txt https://holguincompany.com/sitemap.xml https://holguincompany.com/llms.txt \
+                   https://holguincompany.com/og-image.png https://holguincompany.com/favicon.svg https://holguincompany.com/adrian-holguin-portrait.jpg https://holguincompany.com/holguin-company-vsl.mp4 \
+                   https://holguinco.com/ http://holguinco.com/ https://www.holguinco.com/; do
+            printf '%-62s ' "$u"; curl -sS -o /dev/null -m 25 -I -w 'code=%{http_code} redirect=%{redirect_url} type=%{content_type}\n' "$u" 2>&1 | tail -1
+          done
+      - name: Redirect chains (follow)
+        run: |
+          for u in http://holguincompany.com/ http://www.holguincompany.com/ https://www.holguincompany.com/ https://holguincompany.com/principal https://holguincompany.com/the-diagnostic https://holguinco.com/ http://holguinco.com/; do
+            echo "== $u"; curl -sSL -m 30 -o /dev/null -w 'hops=%{num_redirects} final=%{url_effective} code=%{http_code}\n' "$u" 2>&1 | tail -1
+          done
+      - name: Homepage source checks
+        run: |
+          curl -sS -m 30 https://holguincompany.com/ -o home.html || true
+          echo "bytes: $(wc -c < home.html)"
+          grep -o '<title>[^<]*</title>' home.html || echo "no <title>"
+          echo "G-REPLACE leftovers: $(grep -c 'G-REPLACE' home.html || true)"
+          echo "GA4: $(grep -o 'gtag/js?id=G-[A-Z0-9]*' home.html | head -1)"
+          echo "GA4 config: $(grep -o "gtag('config','G-[A-Z0-9]*')" home.html | head -1)"
+          grep -o '"@id": *"[^"]*#principal"' home.html | head -1 || echo "no #principal"
+          grep -o '"honorificSuffix": *"[^"]*"' home.html || echo "no honorificSuffix"
+          grep -o '"@type": *"VideoObject"' home.html || echo "no VideoObject"
+          grep -o '<link rel="canonical" href="[^"]*"' home.html || true
+          grep -o '<meta property="og:url" content="[^"]*"' home.html || true
+          grep -o 'adrian-holguin-portrait.jpg' home.html | head -1 || true
+      - name: New pages
+        run: |
+          for p in principal the-diagnostic; do
+            echo "== /$p"; curl -sSL -m 30 -w '\nfinal=%{url_effective} code=%{http_code}\n' "https://holguincompany.com/$p" -o "$p.html" || true
+            grep -o '<title>[^<]*</title>' "$p.html" || echo "no <title>"
+            grep -o '<link rel="canonical" href="[^"]*"' "$p.html" || echo "no canonical"
+            grep -o '<meta property="og:url" content="[^"]*"' "$p.html" || echo "no og:url"
+            grep -o 'adrian-holguin-portrait.jpg' "$p.html" | head -1 || true
+          done
+      - name: robots, sitemap, llms
+        run: |
+          echo "== robots.txt"; curl -sS -m 20 https://holguincompany.com/robots.txt | head -40
+          echo "== sitemap.xml"; curl -sS -m 20 https://holguincompany.com/sitemap.xml
+          echo; echo "== llms.txt (head)"; curl -sS -m 20 https://holguincompany.com/llms.txt | head -15
+      - name: Portrait dimensions
+        run: |
+          curl -sS -m 30 -o portrait.jpg https://holguincompany.com/adrian-holguin-portrait.jpg || true
+          ls -la portrait.jpg; file portrait.jpg
+      - name: DNS
+        run: |
+          for q in "holguincompany.com TXT" "holguincompany.com A" "holguincompany.com NS" "www.holguincompany.com CNAME" "www.holguincompany.com A" "holguinco.com A" "holguinco.com NS" "holguinco.com SOA"; do
+            set -- $q; echo "-- $1 $2"; dig +short "$1" "$2" | sed 's/^/   /'
+          done
+      - name: holguinco.com registration (RDAP)
+        run: |
+          curl -sS -m 20 -w '\nhttp=%{http_code}\n' https://rdap.verisign.com/com/v1/domain/holguinco.com > rdap.txt || true
+          python3 - <<'PY'
+          import json
+          raw=open("rdap.txt").read(); body,_,code=raw.rpartition("\nhttp=")
+          print("http",code.strip())
+          try:
+              d=json.loads(body)
+              print("status",d.get("status"))
+              print("nameservers",[n.get("ldhName") for n in d.get("nameservers",[])])
+              print("events",[(e["eventAction"],e["eventDate"]) for e in d.get("events",[])])
+              for e in d.get("entities",[]):
+                  if "registrar" in e.get("roles",[]):
+                      print("registrar",[x[3] for x in e.get("vcardArray",[None,[]])[1] if x[0]=="fn"])
+          except Exception:
+              print("body", body[:300])
+          PY
+      - name: PageSpeed Insights (mobile)
+        run: |
+          for i in 1 2 3; do
+            curl -sS -m 150 "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fholguincompany.com%2F&strategy=mobile" -o psi.json -w 'http=%{http_code}\n' || true
+            grep -q lighthouseResult psi.json && break; sleep 20
+          done
+          python3 - <<'PY'
+          import json
+          d=json.load(open("psi.json")); lr=d.get("lighthouseResult")
+          if not lr:
+              print(json.dumps(d)[:500]); raise SystemExit
+          a=lr["audits"]; print("finalUrl", lr.get("finalDisplayedUrl") or lr.get("finalUrl"))
+          print("performance score", lr["categories"]["performance"]["score"])
+          for k in ["largest-contentful-paint","cumulative-layout-shift","first-contentful-paint","total-blocking-time","speed-index","server-response-time"]:
+              if k in a: print(k, a[k].get("displayValue"))
+          for k,v in d.get("loadingExperience",{}).get("metrics",{}).items(): print("CrUX",k,v.get("percentile"),v.get("category"))
+          for it in a.get("redirects",{}).get("details",{}).get("items",[]): print("redirect hop", it.get("url"))
+          el=a.get("largest-contentful-paint-element",{}).get("details",{}).get("items",[])
+          print("LCP element", json.dumps(el)[:600])
+          PY
