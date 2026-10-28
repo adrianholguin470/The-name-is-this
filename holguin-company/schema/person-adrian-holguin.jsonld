@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://holguincompany.com/about-adrian-holguin#person",
+  "name": "Adrian A. Holguin",
+  "givenName": "Adrian",
+  "familyName": "Holguin",
+  "additionalName": "A.",
+  "honorificSuffix": "J.D., M.B.A.",
+  "jobTitle": "Founder & Managing Principal",
+  "url": "https://holguincompany.com/about-adrian-holguin",
+  "image": "https://holguincompany.com/REPLACE-adrian-holguin-headshot.jpg",
+  "description": "Adrian A. Holguin, J.D., M.B.A., is the founder and managing principal of Holguin & Company, a Beverly Hills advisory firm that helps business owners and leadership teams turn strategy into disciplined execution. He is also the founder of CannaShark Consulting, where he has advised operators in a heavily regulated industry on licensing, operations, and facility development.",
+  "worksFor": { "@id": "https://holguincompany.com/#organization" },
+  "affiliation": [
+    { "@id": "https://holguincompany.com/#organization" },
+    {
+      "@type": "Organization",
+      "@id": "https://cannasharkconsulting.com/#organization",
+      "name": "CannaShark Consulting",
+      "url": "https://cannasharkconsulting.com/"
+    }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of San Francisco School of Law" },
+    { "@type": "CollegeOrUniversity", "name": "REPLACE-MBA-school" }
+  ],
+  "homeLocation": {
+    "@type": "Place",
+    "address": { "@type": "PostalAddress", "addressLocality": "Beverly Hills", "addressRegion": "CA", "addressCountry": "US" }
+  },
+  "knowsAbout": [
+    "Strategy execution",
+    "Operating cadence",
+    "Business performance diagnostics",
+    "Regulatory compliance",
+    "Facility development",
+    "Market entry strategy"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/adrianholguin/",
+    "https://missouriindependent.com/author/adrianholguin/",
+    "https://cannasharkconsulting.com/about-us/",
+    "https://www.forbes.com/sites/paularmstrongtech/2020/10/03/big-issues-face-the-cannabis-industry-but-ai-is-here-to-help/",
+    "https://www.swaggermagazine.com/style/kings-of-swagger/california-cannabis-entrepreneur-adrian-holguin/",
+    "https://canna-today.com/2021/10/ep-79-w-adrian-holguin-from-cannashark-consulting/",
+    "https://www.marijuanamoment.net/advice-for-missouri-marijuana-microbusinesses-on-how-not-to-get-scammed-when-signing-contracts-op-ed/"
+  ],
+  "subjectOf": [
+    {
+      "@type": "Article",
+      "headline": "California Cannabis Entrepreneur Adrian Holguin",
+      "publisher": { "@type": "Organization", "name": "SWAGGER Magazine" },
+      "url": "https://www.swaggermagazine.com/style/kings-of-swagger/california-cannabis-entrepreneur-adrian-holguin/"
+    },
+    {
+      "@type": "PodcastEpisode",
+      "name": "Ep. #79 w/ Adrian Holguin from Cannashark Consulting",
+      "url": "https://canna-today.com/2021/10/ep-79-w-adrian-holguin-from-cannashark-consulting/"
+    }
+  ]
+}

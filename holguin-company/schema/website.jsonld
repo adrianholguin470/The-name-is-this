@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://holguincompany.com/#website",
+  "url": "https://holguincompany.com/",
+  "name": "Holguin & Company",
+  "publisher": { "@id": "https://holguincompany.com/#organization" },
+  "inLanguage": "en-US"
+}
