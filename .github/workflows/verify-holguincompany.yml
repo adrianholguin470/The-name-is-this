@@ -96,6 +96,19 @@ jobs:
           print("LCP element", json.dumps(el)[:700])
           cls=a.get("layout-shifts",{}).get("details",{}).get("items",[])
           print("layout shifts", json.dumps(cls)[:700])
+          for t in el:
+              if t.get("type")=="table" and any(h.get("key")=="phase" for h in t.get("headings",[])):
+                  for it in t["items"]: print("LCP phase", it.get("phase"), round(it.get("timing",0)), "ms", it.get("percent"))
+          for k in ["render-blocking-resources","font-display","uses-text-compression","unminified-css","unused-css-rules","lcp-lazy-loaded","prioritize-lcp-image","critical-request-chains","network-rtt","bootup-time","third-party-summary"]:
+              if k in a:
+                  items=a[k].get("details",{}).get("items",[])
+                  print("AUDIT",k,"score",a[k].get("score"),a[k].get("displayValue",""))
+                  for it in items[:8]:
+                      print("   ", json.dumps({x:it.get(x) for x in ("url","wastedMs","totalBytes","transferSize","wastedBytes","entity","blockingTime","mainThreadTime") if x in it})[:300])
+          nr=a.get("network-requests",{}).get("details",{}).get("items",[])
+          print("first 25 requests (url, start ms, end ms, bytes, type):")
+          for it in nr[:25]:
+              print("   ", round(it.get("networkRequestTime",0)), round(it.get("networkEndTime",0)), it.get("transferSize"), it.get("resourceType"), it.get("url","")[:110])
           PY
       - name: PageSpeed Insights (mobile)
         run: |
