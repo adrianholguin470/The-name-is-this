@@ -81,6 +81,22 @@ jobs:
           except Exception:
               print("body", body[:300])
           PY
+      - name: Lighthouse (mobile emulation, lab)
+        run: |
+          npx -y lighthouse@12 https://holguincompany.com/ --only-categories=performance --form-factor=mobile --screenEmulation.mobile \
+            --throttling-method=simulate --chrome-flags="--headless=new --no-sandbox" --output=json --output-path=lh.json --quiet || true
+          python3 - <<'PY'
+          import json
+          lr=json.load(open("lh.json")); a=lr["audits"]
+          print("finalUrl", lr.get("finalDisplayedUrl"))
+          print("performance score", lr["categories"]["performance"]["score"])
+          for k in ["largest-contentful-paint","cumulative-layout-shift","first-contentful-paint","total-blocking-time","speed-index","server-response-time","redirects"]:
+              if k in a: print(k, a[k].get("displayValue"), "score", a[k].get("score"))
+          el=a.get("largest-contentful-paint-element",{}).get("details",{}).get("items",[])
+          print("LCP element", json.dumps(el)[:700])
+          cls=a.get("layout-shifts",{}).get("details",{}).get("items",[])
+          print("layout shifts", json.dumps(cls)[:700])
+          PY
       - name: PageSpeed Insights (mobile)
         run: |
           for i in 1 2 3; do
