@@ -12,6 +12,8 @@ llms.txt
 adrian-holguin-portrait.jpg  (add: the founder portrait, 1000×1250, from HighLevel media "Holguin-Adrian-Founder-Portrait.jpg")
 ```
 
+Also upload the IndexNow key file `6313b6e049fb4be43a5f506838e848e8.txt` (in this folder) to the web root, then run the ping in ../DAY-ZERO-RUNBOOK.md.
+
 Unchanged and already on the server: `favicon.svg`, `og-image.png`, `holguin-company-vsl.mp4`.
 
 Before uploading `index.html`, replace `G-REPLACE` with the GA4 Measurement ID and remove the `<!-- ... -->` markers around the GA4 block (two places).

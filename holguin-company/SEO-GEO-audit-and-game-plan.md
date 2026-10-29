@@ -49,7 +49,7 @@ Revision 1 proposed tethering the Forbes, SWAGGER, podcast, and Missouri Indepen
 
 ---
 
-## 4. Game plan (90 days)
+## 4. Game plan (compressed: see `DAY-ZERO-RUNBOOK.md` for the one-sitting version)
 
 ### Phase 0 — This week, in GoDaddy and Google
 
@@ -77,8 +77,9 @@ The CannaShark PR routine is already pitching governance, lower-middle-market M&
 1. **Split the lane.** Add a column to the PR tracker: Brand = CannaShark | Holguin & Company. Any pitch to a non-cannabis outlet goes out as Adrian A. Holguin, Principal, Holguin & Company, with the `/principal` URL in the bio. Cannabis outlets stay CannaShark.
 2. **Directories with the canonical block:** LinkedIn company page (done), Crunchbase person + organization, Clutch, Bing Places, Apple Business Connect, Beverly Hills Chamber. Reuse the Profile Pack long description verbatim.
 3. **One byline a month** in a general-business outlet, on the firm's own vocabulary (the constraint, the seven lenses, the 90-day roadmap). Signed "Adrian A. Holguin, Principal, Holguin & Company".
-4. **Reviews.** LinkedIn recommendations that name Holguin & Company; Google reviews on the new profile once it is live; ask Kevin Doud and Bobby D. Pugh Sr. for a Google review if they are willing (their quotes are already public on the site).
-5. **Wikidata item** for Adrian A. Holguin citing TEDx, Forbes, and Missouri Independent as references, with "founder of" both firms. Optional, half an hour, read by several knowledge graphs. Not Wikipedia.
+4. **Wikidata, day one.** Two items (the person and the firm) from `WIKIDATA-ITEMS.md`, with Forbes, SWAGGER, TEDx and Missouri Independent as references. Read directly by Google's Knowledge Graph, Bing, Perplexity and others. Not Wikipedia.
+
+Reviews are deliberately not part of this plan.
 
 ### Phase 3 — Weeks 3–12: content, in the voice already running
 
