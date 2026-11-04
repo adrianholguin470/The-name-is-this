@@ -49,6 +49,12 @@ can compute eating windows and fasts.
   other day from 2026-11-04), wholier-night-minerals (nightly). A Routine named "Katie magnesium reminder"
   fires into the original build session at 8:37 pm Pacific, checks that day's `supps` and emails
   katie.holguin.813@gmail.com (cc Adrian) only if the magnesium is not ticked.
+- **Home toggle (joint).** A third profile `h` (root `home`, light neutral looks: market | stone | slate;
+  backgrounds photos | market | aurora, where "photos" draws the household's own fridge and receipt scan
+  photos behind the card). Its tabs are Kitchen, Grocery (shopping list from items marked low/out, receipt
+  grade trend), Recipes (cook for Adrian, Katie or both; "Log a serving" writes a `meals` doc to each chosen
+  person's root) and a household Coach (coach chat/memory under `data/users/me/home/coach`). The camera
+  button on Home asks fridge-or-receipt; the mic button takes spoken inventory changes.
 - **Kitchen (shared).** Joint household inventory under `data/users/me/kitchen/...` (one for both profiles):
   `items` {name, qty, category: produce|protein|dairy|grains|pantry|snacks|drinks|frozen|condiments|other,
   grade: good|ok|avoid, note, status: in|low|out, lastSeen, addedAt, source: fridge|receipt|manual, by},

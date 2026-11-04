@@ -37,7 +37,36 @@
   --hero-a:#113A33; --hero-b:#0A1C1A; --hero-rgb:10,28,26;
 }
 /* Profile B looks. Orchid: deep plum, hot pink, lavender. Rosé: warm mauve, dusty rose, apricot. Sage: eucalyptus with blush and mint. */
-:root{--dot-b:#FF5FA8}
+:root{--dot-b:#FF5FA8;--dot-h:#3F7F5C;--nav-bg:rgba(20,27,34,.92)}
+/* Profile H (Home, joint): light, neutral, farm-market. Market: paper white with market green and squash. Stone: warm grey with olive and brick. Slate: cool grey with teal and orange. */
+:root[data-profile="h"]{
+  color-scheme:light;
+  --bg:#F6F4EF; --bg-glow:rgba(63,127,92,.14); --surface:#FFFFFF; --surface-2:#F0EDE6; --surface-3:#E3DFD5; --line:#E4E0D6; --line-2:#CFC9BC;
+  --fg:#1E231F; --muted:#5E665F; --faint:#9AA39B;
+  --accent:#3F7F5C; --accent-ink:#FFFFFF; --accent-soft:rgba(63,127,92,.14); --accent-rgb:63,127,92; --accent-glow:0 0 0 6px rgba(63,127,92,.16),0 10px 30px rgba(63,127,92,.35);
+  --accent-2:#E0893A; --accent-2-rgb:224,137,58; --accent-2-soft:rgba(224,137,58,.16);
+  --hero-a:#FFFFFF; --hero-b:#EEF3EC; --hero-rgb:244,247,243; --nav-bg:rgba(255,255,255,.94);
+  --good:#2E8B57; --warn:#A8780A; --crit:#C0392B; --good-soft:rgba(46,139,87,.14); --warn-soft:rgba(168,120,10,.14); --crit-soft:rgba(192,57,43,.12);
+}
+:root[data-theme-h="stone"]{--dot-h:#6B7F3A}
+:root[data-theme-h="slate"]{--dot-h:#1F7A8C}
+:root[data-profile="h"][data-theme-h="stone"]{
+  --bg:#EFEDE8; --bg-glow:rgba(107,127,58,.14); --surface:#F9F8F5; --surface-2:#E8E5DE; --surface-3:#DBD7CD; --line:#DAD6CC; --line-2:#C4BFB2;
+  --fg:#23251F; --muted:#636659; --faint:#9C9D92;
+  --accent:#6B7F3A; --accent-ink:#FFFFFF; --accent-soft:rgba(107,127,58,.14); --accent-rgb:107,127,58; --accent-glow:0 0 0 6px rgba(107,127,58,.16),0 10px 30px rgba(107,127,58,.35);
+  --accent-2:#B5542E; --accent-2-rgb:181,84,46; --accent-2-soft:rgba(181,84,46,.14);
+  --hero-a:#FBFAF7; --hero-b:#ECEAE2; --hero-rgb:244,242,236; --nav-bg:rgba(249,248,245,.94);
+}
+:root[data-profile="h"][data-theme-h="slate"]{
+  --bg:#F2F4F6; --bg-glow:rgba(31,122,140,.14); --surface:#FFFFFF; --surface-2:#E9EDF1; --surface-3:#DCE2E8; --line:#DDE3E9; --line-2:#C3CCD5;
+  --fg:#1C2329; --muted:#5B6873; --faint:#95A1AB;
+  --accent:#1F7A8C; --accent-ink:#FFFFFF; --accent-soft:rgba(31,122,140,.14); --accent-rgb:31,122,140; --accent-glow:0 0 0 6px rgba(31,122,140,.16),0 10px 30px rgba(31,122,140,.35);
+  --accent-2:#E07A2E; --accent-2-rgb:224,122,46; --accent-2-soft:rgba(224,122,46,.14);
+  --hero-a:#FFFFFF; --hero-b:#E9EEF2; --hero-rgb:242,245,247; --nav-bg:rgba(255,255,255,.94);
+}
+:root[data-profile="h"] .card.hero{box-shadow:0 1px 2px rgba(30,35,31,.05),0 8px 24px rgba(30,35,31,.06)}
+:root[data-profile="h"] .toast{background:#1E231F;color:#fff}
+:root[data-profile="h"] .tooltip{background:#1E231F;color:#fff}
 :root[data-theme-b="rose"]{--dot-b:#F28C9B}
 :root[data-theme-b="sage"]{--dot-b:#F4A6C1}
 :root[data-profile="b"][data-theme-b="rose"]{
@@ -93,6 +122,23 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background
 .ptoggle button i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
 .ptoggle button[data-p="a"] i{background:var(--dot-a);box-shadow:0 0 6px var(--dot-a)}
 .ptoggle button[data-p="b"] i{background:var(--dot-b);box-shadow:0 0 6px var(--dot-b)}
+.ptoggle button[data-p="h"] i{background:var(--dot-h);box-shadow:0 0 6px var(--dot-h)}
+.ptoggle button{padding:4px 8px;max-width:84px;font-size:11px;gap:5px}
+.ptoggle{padding:2px;gap:1px}
+.ptoggle button i{width:7px;height:7px}
+@media (max-width:420px){.brand h1{font-size:18px}.ptoggle button{padding:4px 7px}}
+.cookfor{display:inline-flex;gap:4px;background:var(--surface-2);border-radius:999px;padding:3px}
+.cookfor button{border:none;background:transparent;border-radius:999px;padding:5px 11px;font-size:12px;font-weight:600;color:var(--muted)}
+.cookfor button.on{background:var(--accent);color:var(--accent-ink)}
+.shop{display:flex;flex-direction:column;gap:6px}
+.shop label{display:flex;align-items:center;gap:10px;background:var(--surface-2);border-radius:10px;padding:9px 11px;font-size:14px}
+.shop label input{width:19px;height:19px;accent-color:var(--accent);flex:none}
+.shop label small{color:var(--muted);margin-left:auto;font-size:11.5px}
+.collage{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.collage img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;background:var(--surface-3)}
+.bigpick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bigpick button{background:var(--surface-2);border:1px solid var(--line-2);border-radius:16px;padding:18px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:600;color:var(--fg)}
+.bigpick button svg{width:30px;height:30px;color:var(--accent)}
 .ptoggle button.on{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 14px var(--accent-soft)}
 .ptoggle button.on i{background:var(--accent-ink);box-shadow:none}
 .sync{display:flex;align-items:center;flex:none}
@@ -104,9 +150,10 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background
 main{flex:1;padding-block:8px 110px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));max-width:720px;width:100%;margin:0 auto}
 .view{display:flex;flex-direction:column;gap:14px}
 
-nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(20,27,34,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--nav-bg);backdrop-filter:blur(14px);border-top:1px solid var(--line);
   padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px));
-  display:grid;grid-template-columns:1fr 1fr 1fr 78px 1fr 1fr;align-items:end}
+  display:grid;grid-template-columns:1fr 78px 1fr;align-items:end}
+.tabgrp{display:flex;align-items:end}.tabgrp a{flex:1}
 nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 2px 9px;text-decoration:none;color:var(--muted);font-size:10.5px;font-weight:500;min-width:0}
 nav.tabs a svg{width:21px;height:21px}
 nav.tabs a.active{color:var(--accent)}
@@ -146,12 +193,12 @@ nav.tabs .snapwrap{display:flex;justify-content:center;align-items:flex-end;padd
 .pinfo b{font-family:var(--display);font-weight:700}
 
 /* day score + streak */
-.scorerow{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}
+.scorerow{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .score .k{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
 .score .v{display:flex;align-items:baseline;gap:8px}
 .score .v b{font-family:var(--display);font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .score .v .grade{font-family:var(--display);font-weight:700;font-size:14px;color:var(--fg)}
-.score .bar{margin-top:7px;height:6px;background:rgba(255,255,255,.08)}
+.score .bar{margin-top:7px;height:6px;background:var(--surface-3)}
 .score .bar>i{background:linear-gradient(90deg,var(--accent),var(--accent-2))}
 .streak{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--accent-2-soft);border-radius:14px;padding:10px 14px;min-width:84px;color:var(--accent-2)}
 .streak svg{width:22px;height:22px}
@@ -482,6 +529,7 @@ table.t tr:last-child td{border-bottom:none}
     <div class="ptoggle" id="ptoggle" role="group" aria-label="Whose log">
       <button type="button" data-p="a" id="pA"><i></i><span>Adrian</span></button>
       <button type="button" data-p="b" id="pB"><i></i><span>Katie</span></button>
+      <button type="button" data-p="h" id="pH"><i></i><span>Home</span></button>
     </div>
     <div class="row" style="gap:8px;flex-wrap:nowrap">
       <span class="sync" id="sync" title="connecting"><span class="dot"></span></span>
@@ -495,18 +543,18 @@ table.t tr:last-child td{border-bottom:none}
     <section class="view" id="view-today"></section>
     <section class="view" id="view-trends" hidden></section>
     <section class="view" id="view-kitchen" hidden></section>
+    <section class="view" id="view-home" hidden></section>
+    <section class="view" id="view-grocery" hidden></section>
+    <section class="view" id="view-recipes" hidden></section>
     <section class="view" id="view-labs" hidden></section>
     <section class="view" id="view-coach" hidden></section>
   </main>
 
   <nav class="tabs" id="tabs">
-    <a href="#today" data-v="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Today</a>
-    <a href="#trends" data-v="trends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Trends</a>
-    <a href="#kitchen" data-v="kitchen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 10h14M9 6v2M9 13v3"/></svg>Kitchen</a>
+    <div class="tabgrp" id="tabsL"></div>
     <div class="snapwrap"><button class="snap" id="snapBtn" aria-label="Photograph a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button>
       <button class="talk" id="talkBtn" aria-label="Tell Claude what you ate" title="Speak or type a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button></div>
-    <a href="#labs" data-v="labs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg>Labs</a>
-    <a href="#coach" data-v="coach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M12 8.5l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z" fill="currentColor" stroke="none"/></svg>Coach</a>
+    <div class="tabgrp" id="tabsR"></div>
   </nav>
   <input type="file" id="camInput" accept="image/*" capture="environment" hidden>
   <input type="file" id="picInput" accept="image/*" hidden>
@@ -553,7 +601,21 @@ const STD_BLURB={a:{standard:'Mainstream guideline numbers for a man your age.',
 // Two people share this app, usually from one Claude account on two phones. Each phone remembers whose it is
 // (a picker on first open, the toggle up top after that). Adrian's log lives at data/users/<id>/root, hers at
 // data/users/<id>/root-b. Her profile runs in postpartum mode: different targets, prompts and a daily movement pick.
-const PROFILES={a:{root:'root',name:'Adrian',mode:'heart',blurb:'Cholesterol, blood sugar, eating windows. Bloodwork loaded.'},b:{root:'root-b',name:'Katie',mode:'postpartum',blurb:'Postpartum recovery, breastfeeding fuel, and a daily movement pick.'}};
+const PROFILES={a:{root:'root',name:'Adrian',mode:'heart',blurb:'Cholesterol, blood sugar, eating windows. Bloodwork loaded.'},b:{root:'root-b',name:'Katie',mode:'postpartum',blurb:'Postpartum recovery, breastfeeding fuel, and a daily movement pick.'},h:{root:'home',name:'Home',mode:'home',blurb:'The shared kitchen: fridge, receipts, shopping list and recipes for the whole house.'}};
+const ICONS={today:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  trends:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>',
+  labs:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg>',
+  coach:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M12 8.5l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z" fill="currentColor" stroke="none"/></svg>',
+  home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 10h14M9 6v2M9 13v3"/></svg>',
+  grocery:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/></svg>',
+  recipes:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20v-7a6 6 0 0 1 12 0v7M12 7V4M9 5l1 2M15 5l-1 2"/></svg>'};
+const TABS={person:[['today','Today'],['trends','Trends'],['labs','Labs'],['coach','Coach']],home:[['home','Kitchen'],['grocery','Grocery'],['recipes','Recipes'],['coach','Coach']]};
+function isHome(){return (PROFILES[S.profile]||PROFILES.a).mode==='home'}
+function tabsFor(){return isHome()?TABS.home:TABS.person}
+function renderTabs(){const t=tabsFor();const mk=([v,l])=>h`<a href="#${v}" data-v="${v}" class="${S.view===v?'active':''}">${ICONS[v]}${l}</a>`;
+  document.getElementById('tabsL').innerHTML=t.slice(0,2).map(mk).join('');document.getElementById('tabsR').innerHTML=t.slice(2).map(mk).join('');
+  const sb=document.getElementById('snapBtn');sb.title=isHome()?'Scan the fridge or a receipt':'Photograph a meal';sb.setAttribute('aria-label',sb.title);
+  const tb=document.getElementById('talkBtn');tb.title=isHome()?'Tell the kitchen what changed':'Speak or type a meal';}
 const CATS = {breath:'Breath & pelvic floor',core:'Deep core (DR-safe)',yoga:'Gentle yoga',stretch:'Nursing-posture stretch',walk:'Walk & low impact'};
 // Movement library for the postpartum profile. Every item links to a video to watch (opens in a new tab),
 // plus a search link in case a video is ever taken down. minWeek gates core and yoga until the usual
@@ -594,7 +656,7 @@ const HEART_MOVES = [
   {id:'mob',    title:'10-minute mobility', meta:'Hips, thoracic spine, calves. Good on a day you ate late or slept short.'},
   {id:'post',   title:'10-minute walk after the biggest meal', meta:'Flattens the glucose spike from that meal more than any supplement.'},
 ];
-function lsPrefix(){return S.profile==='b'?'macropolo:b:':'macropolo:'}
+function lsPrefix(){return S.profile==='b'?'macropolo:b:':S.profile==='h'?'macropolo:h:':'macropolo:'}
 
 // ---------- state ----------
 const S = {
@@ -627,7 +689,7 @@ function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2
 function slug(s){return String(s||'meal').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'meal'}
 function h(strings,...vals){return strings.reduce((a,s,i)=>a+s+(i<vals.length?vals[i]:''),'')}
 function profName(id){return (id===S.profile&&S.settings&&S.settings.name)||(S.names&&S.names[id])||PROFILES[id].name}
-function profiles(){return Object.keys(PROFILES).map(id=>Object.assign({},PROFILES[id],{id,name:profName(id)}))}
+function profiles(){return Object.keys(PROFILES).filter(id=>PROFILES[id].mode!=='home').map(id=>Object.assign({},PROFILES[id],{id,name:profName(id)}))}
 function me(){const p=PROFILES[S.profile]||PROFILES.a;return Object.assign({},p,{id:S.profile,name:profName(S.profile)})}
 function isPP(){return (PROFILES[S.profile]||PROFILES.a).mode==='postpartum'}
 function dispName(p){return p.name||PROFILES[p.id].name}
@@ -721,25 +783,29 @@ const kstore={
   async set(coll,id,data){if(S.db){await S.kroot.collection(coll).doc(id).set(data);return}const arr=kls(coll).filter(d=>d.id!==id);arr.push(Object.assign({id},data));klsSet(coll,arr);klsEmit(coll)},
   async del(coll,id){if(S.db){await S.kroot.collection(coll).doc(id).delete();return}klsSet(coll,kls(coll).filter(d=>d.id!==id));klsEmit(coll)}
 };
+const KVIEWS=['kitchen','home','grocery','recipes','coach'];
 function subscribeKitchen(){
   if(S.kunsubs.length)return;
-  S.kunsubs.push(kstore.subscribe('items',rows=>{S.kitems=rows;if(S.view==='kitchen')render()},()=>{}));
-  S.kunsubs.push(kstore.subscribe('scans',rows=>{S.kscans=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));if(S.view==='kitchen')render()},()=>{}));
-  S.kunsubs.push(kstore.subscribe('recipes',rows=>{S.krecipes=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));if(S.view==='kitchen')render()},()=>{}));
-  S.kunsubs.push(kstore.subscribe('house',rows=>{S.khouse=rows.find(r=>r.id==='rules')||null;if(S.view==='kitchen')render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('items',rows=>{S.kitems=rows;if(KVIEWS.includes(S.view))render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('scans',rows=>{S.kscans=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));art.state.photos=null;if(KVIEWS.includes(S.view))render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('recipes',rows=>{S.krecipes=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));if(KVIEWS.includes(S.view))render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('house',rows=>{S.khouse=rows.find(r=>r.id==='rules')||null;if(KVIEWS.includes(S.view))render()},()=>{}));
 }
 async function useCap(name){try{return (window.claude&&window.claude.use)?await window.claude.use(name):null}catch(e){return null}}
 
 // Looks (palette) and backgrounds (ambient art) are per profile. Each phone caches its last pick so the right
 // colors paint before the settings doc arrives; the settings doc wins once it loads.
-const THEMES={a:{jungle:'Jungle',mint:'Mint',navy:'Navy'},b:{orchid:'Orchid',rose:'Rosé',sage:'Sage'}};
-const BGS={a:{constellation:'Constellation',aurora:'Aurora',sparkle:'Sparkle'},b:{petals:'Petals',sparkle:'Sparkle',aurora:'Aurora'}};
-const DEFAULT_THEME={a:'jungle',b:'orchid'},DEFAULT_BG={a:'constellation',b:'petals'};
+const THEMES={a:{jungle:'Jungle',mint:'Mint',navy:'Navy'},b:{orchid:'Orchid',rose:'Rosé',sage:'Sage'},h:{market:'Market',stone:'Stone',slate:'Slate'}};
+const BGS={a:{constellation:'Constellation',aurora:'Aurora',sparkle:'Sparkle'},b:{petals:'Petals',sparkle:'Sparkle',aurora:'Aurora'},h:{photos:'Our photos',market:'Market',aurora:'Aurora'}};
+const DEFAULT_THEME={a:'jungle',b:'orchid',h:'market'},DEFAULT_BG={a:'constellation',b:'petals',h:'photos'};
 const SWATCH={jungle:'linear-gradient(135deg,#153B22 40%,#9BFF3F)',mint:'linear-gradient(135deg,#113A33 35%,#2EE6A6 75%,#3D8BFF)',navy:'linear-gradient(135deg,#142341 40%,#3D8BFF 80%,#FF7A1A)',
-  orchid:'linear-gradient(135deg,#3A1C54 35%,#FF5FA8 75%,#B48CFF)',rose:'linear-gradient(135deg,#4A2630 35%,#F28C9B 75%,#F6B26B)',sage:'linear-gradient(135deg,#24402F 35%,#F4A6C1 72%,#9FD3B3)'};
+  orchid:'linear-gradient(135deg,#3A1C54 35%,#FF5FA8 75%,#B48CFF)',rose:'linear-gradient(135deg,#4A2630 35%,#F28C9B 75%,#F6B26B)',sage:'linear-gradient(135deg,#24402F 35%,#F4A6C1 72%,#9FD3B3)',
+  market:'linear-gradient(135deg,#FFFFFF 35%,#3F7F5C 75%,#E0893A)',stone:'linear-gradient(135deg,#F9F8F5 35%,#6B7F3A 75%,#B5542E)',slate:'linear-gradient(135deg,#FFFFFF 35%,#1F7A8C 75%,#E07A2E)'};
 const BGSWATCH={petals:'radial-gradient(circle at 30% 40%,rgba(255,255,255,.55) 0 4px,transparent 5px),radial-gradient(circle at 70% 60%,rgba(255,255,255,.4) 0 7px,transparent 8px),radial-gradient(circle at 55% 25%,rgba(255,255,255,.3) 0 3px,transparent 4px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
   sparkle:'radial-gradient(circle at 20% 30%,#fff 0 1px,transparent 2px),radial-gradient(circle at 60% 70%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 80% 25%,#fff 0 1px,transparent 2px),radial-gradient(circle at 40% 55%,#fff 0 1px,transparent 2px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
   aurora:'linear-gradient(180deg,var(--hero-b) 30%,rgba(var(--accent-rgb),.45) 60%,rgba(var(--accent-2-rgb),.4) 80%,var(--hero-b))',
+  market:'radial-gradient(ellipse 9px 4px at 30% 40%,rgba(var(--accent-rgb),.7) 0 100%,transparent 101%),radial-gradient(ellipse 9px 4px at 65% 65%,rgba(var(--accent-rgb),.5) 0 100%,transparent 101%),radial-gradient(circle at 55% 30%,rgba(var(--accent-2-rgb),.8) 0 3px,transparent 4px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
+  photos:'linear-gradient(135deg,rgba(var(--accent-rgb),.35),rgba(var(--accent-2-rgb),.35)),repeating-linear-gradient(90deg,var(--surface-3) 0 10px,var(--surface-2) 10px 20px)',
   constellation:'radial-gradient(circle at 25% 35%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 65% 60%,#fff 0 1.5px,transparent 2.5px),linear-gradient(25deg,transparent 48%,rgba(255,255,255,.35) 49% 51%,transparent 52%),linear-gradient(135deg,var(--hero-a),var(--hero-b))'};
 function applyTheme(t,p){p=p||S.profile;t=THEMES[p][t]?t:DEFAULT_THEME[p];if(p===S.profile)S.theme=t;document.documentElement.setAttribute('data-theme-'+p,t);try{localStorage.setItem('macropolo:theme:'+p,t)}catch(e){}}
 function applyBg(b,p){p=p||S.profile;b=BGS[p][b]?b:DEFAULT_BG[p];if(p===S.profile)S.bg=b;try{localStorage.setItem('macropolo:bg:'+p,b)}catch(e){}art.state={}}
@@ -751,7 +817,7 @@ async function setLook(field,val){
   openSettings();
 }
 async function boot(){
-  try{const p=localStorage.getItem('macropolo:profile');if(p==='b')S.profile='b'}catch(e){}
+  try{const p=localStorage.getItem('macropolo:profile');if(PROFILES[p])S.profile=p}catch(e){}
   loadLookFor('a');loadLookFor('b');loadLookFor(S.profile);
   applyProfile();route();render();
   const [db,user,sample,assets]=await Promise.all([useCap('db'),useCap('user'),useCap('sample'),useCap('assets')]);
@@ -766,17 +832,18 @@ async function boot(){
 function setRoot(){S.root=(S.db&&S.uid)?S.db.doc('data/users/'+S.uid+'/'+PROFILES[S.profile].root):null}
 function applyProfile(){
   document.documentElement.setAttribute('data-profile',S.profile);
-  document.getElementById('pA').classList.toggle('on',S.profile==='a');document.getElementById('pB').classList.toggle('on',S.profile==='b');
+  for(const p of ['a','b','h'])document.getElementById('p'+p.toUpperCase()).classList.toggle('on',S.profile===p);
   profileNames();
 }
 function profileNames(){
   const nm=S.settings&&S.settings.name;
   document.querySelector('#pA span').textContent=S.profile==='a'&&nm?nm:(S.names&&S.names.a)||PROFILES.a.name;
   document.querySelector('#pB span').textContent=S.profile==='b'&&nm?nm:(S.names&&S.names.b)||PROFILES.b.name;
+  document.querySelector('#pH span').textContent=PROFILES.h.name;
   S.names=S.names||{};if(nm)S.names[S.profile]=nm;
   // avatars: the current profile's from settings, the other's from what this device last saw
   const av=avatarUrl();try{if(S.loaded.settings)localStorage.setItem('macropolo:avatar:'+S.profile,av||'')}catch(e){}
-  for(const p of ['a','b']){let u=p===S.profile?av:'';if(p!==S.profile){try{u=localStorage.getItem('macropolo:avatar:'+p)||''}catch(e){}}
+  for(const p of ['a','b','h']){let u=p===S.profile?av:'';if(p!==S.profile){try{u=localStorage.getItem('macropolo:avatar:'+p)||''}catch(e){}}
     const i=document.querySelector('#p'+p.toUpperCase()+' i');if(u&&u.length<200000){i.className='av';i.style.backgroundImage='url("'+u.replace(/"/g,'')+'")'}else{i.className='';i.style.backgroundImage=''}}
 }
 
@@ -787,6 +854,8 @@ function artSeed(style,W,H){const list=[];
   if(style==='petals'){for(let i=0;i<30;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:i%3===0?14+Math.random()*26:5+Math.random()*9,vx:(Math.random()-.5)*.14,vy:-(.06+Math.random()*.16),a:.10+Math.random()*.25,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.004,k:i%4,ph:Math.random()*6.28})}
   else if(style==='sparkle'){for(let i=0;i<70;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.9,a:.2+Math.random()*.7,k:i%5,ph:Math.random()*6.28,sp:.6+Math.random()*1.4});list.shoot=null}
   else if(style==='aurora'){for(let i=0;i<3;i++)list.push({base:H*(.55+i*.14),amp:10+i*6,k:.012-i*.002,sp:.004+i*.002,ph:i*2.1,alpha:.16-i*.03,c:i%2})}
+  else if(style==='market'){for(let i=0;i<26;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:i%3===0?4+Math.random()*4:9+Math.random()*9,vx:.05+Math.random()*.12,vy:(Math.random()-.5)*.05,a:.10+Math.random()*.2,rot:Math.random()*6.28,vr:(Math.random()-.5)*.006,k:i%3,ph:Math.random()*6.28})}
+  else if(style==='photos'){list.imgs=[];list.t0=Date.now();const ids=S.kscans.filter(sc=>sc.photoId).slice(0,6).map(sc=>sc.photoId);for(const id of ids){const im=new Image();im.src='/_blob/'+encodeURIComponent(id);list.imgs.push(im)}for(let i=0;i<26;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:i%3===0?4+Math.random()*4:9+Math.random()*9,vx:.05+Math.random()*.12,vy:(Math.random()-.5)*.05,a:.08+Math.random()*.14,rot:Math.random()*6.28,vr:(Math.random()-.5)*.006,k:i%3,ph:Math.random()*6.28})}
   else{for(let i=0;i<54;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.2,vx:(Math.random()-.5)*.1,vy:(Math.random()-.5)*.1,a:.25+Math.random()*.5,k:i%4,ph:Math.random()*6.28})}
   return {W,H,list,t:0,style}}
 function drawArt(){
@@ -811,6 +880,15 @@ function drawArt(){
           if(q.r>2){ctx.strokeStyle='rgba('+col+','+(q.a*tw*.5).toFixed(3)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(q.x-q.r*3,q.y);ctx.lineTo(q.x+q.r*3,q.y);ctx.moveTo(q.x,q.y-q.r*3);ctx.lineTo(q.x,q.y+q.r*3);ctx.stroke()}}
         if(!still){if(!s.list.shoot&&Math.random()<.004)s.list.shoot={x:Math.random()*W*.7,y:Math.random()*H*.4,life:0};
           const sh=s.list.shoot;if(sh){sh.life++;sh.x+=5;sh.y+=2.2;const a=Math.max(0,1-sh.life/28);const g=ctx.createLinearGradient(sh.x-60,sh.y-26,sh.x,sh.y);g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(255,255,255,'+(a*.9)+')');ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(sh.x-60,sh.y-26);ctx.lineTo(sh.x,sh.y);ctx.stroke();if(sh.life>28||sh.x>W+60)s.list.shoot=null}}
+      }else if(style==='market'||style==='photos'){
+        if(style==='photos'&&s.list.imgs&&s.list.imgs.length){const ims=s.list.imgs.filter(im=>im.complete&&im.naturalWidth);if(ims.length){const n=ims.length;const cw=W/n;ctx.save();ctx.globalAlpha=.22;const drift=still?0:((Date.now()-s.list.t0)/120)%cw;
+          for(let i=-1;i<=n;i++){const im=ims[((i%n)+n)%n];const x=i*cw-drift;const sc=Math.max(cw/im.naturalWidth,H/im.naturalHeight);const dw=im.naturalWidth*sc,dh=im.naturalHeight*sc;ctx.drawImage(im,x+(cw-dw)/2,(H-dh)/2,dw,dh)}ctx.restore();
+          const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,'rgba('+(getComputedStyle(document.documentElement).getPropertyValue('--hero-rgb').trim()||'244,247,243')+',.15)');g.addColorStop(1,'rgba('+(getComputedStyle(document.documentElement).getPropertyValue('--hero-rgb').trim()||'244,247,243')+',.85)');ctx.fillStyle=g;ctx.fillRect(0,0,W,H)}}
+        for(const q of s.list){ctx.save();ctx.translate(q.x,q.y);ctx.rotate(q.rot);
+          if(q.k===0){ctx.fillStyle='rgba('+c2+','+q.a+')';ctx.beginPath();ctx.arc(0,0,q.r,0,6.283);ctx.fill()}
+          else{ctx.fillStyle='rgba('+c1+','+q.a+')';ctx.beginPath();ctx.ellipse(0,0,q.r,q.r*.42,0,0,6.283);ctx.fill();ctx.strokeStyle='rgba('+c1+','+(q.a*1.4)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(-q.r*.8,0);ctx.lineTo(q.r*.8,0);ctx.stroke()}
+          ctx.restore();
+          if(!still){q.x+=q.vx;q.y+=q.vy+Math.sin(s.t/70+q.ph)*.08;q.rot+=q.vr;if(q.x>W+30){q.x=-30;q.y=Math.random()*H}if(q.y<-30)q.y=H+20;if(q.y>H+30)q.y=-20}}
       }else if(style==='aurora'){
         for(const rb of s.list){const col=rb.c?c2:c1;const g=ctx.createLinearGradient(0,rb.base-rb.amp-20,0,H);g.addColorStop(0,'rgba('+col+',0)');g.addColorStop(.35,'rgba('+col+','+rb.alpha+')');g.addColorStop(1,'rgba('+col+',0)');
           ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(0,H);const tt=still?0:s.t;
@@ -833,9 +911,9 @@ function switchProfile(p){
   S.profile=p;try{localStorage.setItem('macropolo:profile',p)}catch(e){}
   S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];
   S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.days=[];S.coach={chat:null,memory:null};coach.busy=false;S.supps=[];S.shuffle=0;S.libOpen=false;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
-  loadLookFor(p);applyProfile();setRoot();setSync();render();subscribeAll();
+  loadLookFor(p);applyProfile();setRoot();setSync();route();render();subscribeAll();
   document.getElementById('pickRoot').innerHTML='';if(snapOpen())renderSnap();
-  toast(profName(p)+(p==='b'?'\'s log. Pink mode on.':'\'s log. Game on.'));
+  toast(p==='h'?'The kitchen. Shared by everyone.':profName(p)+(p==='b'?'\'s log. Pink mode on.':'\'s log. Game on.'));
 }
 
 // ---------- picker: whose phone is this? (first open, and from the camera sheet) ----------
@@ -894,8 +972,8 @@ function celebrate(){
 }
 
 // ---------- routing ----------
-const VIEWS=['today','trends','kitchen','labs','coach'];
-function route(){const v=(location.hash||'#today').slice(1);S.view=VIEWS.includes(v)?v:'today'}
+const VIEWS=['today','trends','kitchen','labs','coach','home','grocery','recipes'];
+function route(){const v=(location.hash||'').slice(1);const ok=tabsFor().map(t=>t[0]);S.view=ok.includes(v)?v:ok[0]}
 window.addEventListener('hashchange',()=>{route();render();window.scrollTo(0,0)});
 
 // ---------- rendering ----------
@@ -903,9 +981,9 @@ function chartW(){const m=document.querySelector('main');return Math.max(300,Mat
 let resizeT=null;window.addEventListener('resize',()=>{clearTimeout(resizeT);resizeT=setTimeout(render,150)});
 function render(){
   for(const v of VIEWS){document.getElementById('view-'+v).hidden=(v!==S.view)}
-  document.querySelectorAll('#tabs a').forEach(a=>a.classList.toggle('active',a.dataset.v===S.view));
+  renderTabs();
   const el=document.getElementById('view-'+S.view);
-  el.innerHTML={today:renderToday,trends:renderTrends,kitchen:renderKitchen,labs:renderLabs,coach:renderCoach}[S.view]();
+  el.innerHTML={today:renderToday,trends:renderTrends,kitchen:renderKitchen,labs:renderLabs,coach:renderCoach,home:renderHome,grocery:renderGrocery,recipes:renderRecipes}[S.view]();
   wire(el);
 }
 function wire(el){
@@ -914,6 +992,7 @@ function wire(el){
   el.querySelectorAll('.chartwrap').forEach(wireChart);
   el.querySelectorAll('[data-countup]').forEach(countUp);
   const af=el.querySelector('#askForm');if(af)af.addEventListener('submit',ev=>{ev.preventDefault();const i=document.getElementById('askInput');const q=i.value;i.value='';askCoach(q)});
+  const sf=el.querySelector('#shopForm');if(sf)sf.addEventListener('submit',async ev=>{ev.preventDefault();const i=document.getElementById('shopInput');const v=i.value.trim();if(!v)return;i.value='';const now=new Date().toISOString();try{await kstore.set('items','k-'+uid(),{name:v,qty:'',category:'other',grade:'ok',status:'out',lastSeen:now,addedAt:now,source:'manual',by:S.profile,updatedAt:now});toast('Added to the list')}catch(e){toast('Could not add')}if(S.mode==='local')render()});
   const ff=el.querySelector('#factForm');if(ff)ff.addEventListener('submit',async ev=>{ev.preventDefault();const i=document.getElementById('factInput');const v=i.value.trim();if(!v)return;i.value='';await rememberFacts([v]);toast('Coach will remember that')});
   if(S.view==='coach')scrollChat();
 }
@@ -1244,28 +1323,64 @@ function houseRules(){
   return 'Adrian: ApoB 170 and LDL 224, so saturated fat and dietary cholesterol are the enemies; fiber, fish, beans, oats, olive oil, nuts and lean protein are the heroes. Keep added sugar low.\nKatie: postpartum and breastfeeding; needs enough calories, protein, iron, calcium, omega-3 and fiber. Never restrictive.\nKids: whole foods, limited added sugar, plenty of fruit and vegetables.\nHousehold: fewer ultra-processed snacks, less cheese and butter, more produce.';
 }
 function daysSince(iso){if(!iso)return null;return Math.floor((Date.now()-new Date(iso).getTime())/864e5)}
-function renderKitchen(){
-  const items=S.kitems.filter(it=>S.showOut?true:it.status!=='out');
-  const groups={};for(const it of items){const c=KCATS[it.category]?it.category:'other';(groups[c]=groups[c]||[]).push(it)}
-  const canAsk=!!(S.sample&&S.canImages);const outCount=S.kitems.filter(it=>it.status==='out').length;
-  const head=h`<div class="card hero"><div class="row between"><div><h2 style="margin:0">Kitchen<span class="sub">shared by both of you</span></h2><div class="tiny muted" style="margin-top:2px">${S.kitems.length?S.kitems.filter(i=>i.status!=='out').length+' items on hand':'Nothing scanned yet'}${S.kscans.length?' · last scan '+esc(fmtShort(S.kscans[0].date))+' ('+esc(S.kscans[0].kind)+')':''}</div></div></div>
+function receiptGradeClass(g){return /^[AB]/.test(g||'')?'normal':/^C/.test(g||'')?'borderline':'high'}
+function kHead(){
+  const canAsk=!!(S.sample&&S.canImages);const onHand=S.kitems.filter(i=>i.status!=='out').length;const need=S.kitems.filter(i=>i.status==='low'||i.status==='out').length;
+  const lastR=S.kscans.find(sc=>sc.kind==='receipt');const photos=S.kscans.filter(sc=>sc.photoId).slice(0,6);
+  return h`<div class="card hero ${coverUrl()?'has-cover':''}">
+    ${coverUrl()?h`<img class="hero-cover" src="${esc(coverUrl())}" alt=""><div class="hero-shade"></div>`:''}<div class="hero-art"><canvas id="heroArt"></canvas></div>
+    <div class="row between"><div><div class="eyebrow">Our kitchen</div><h2 style="margin:4px 0 0;font-size:22px;letter-spacing:-.02em">${esc((S.settings&&S.settings.name&&S.settings.name!=='Home')?S.settings.name:'The Holguin kitchen')}</h2></div></div>
+    <div class="stats3" style="margin-top:12px">
+      <div class="stat"><div class="k">On hand</div><div class="v">${onHand}<small>items</small></div></div>
+      <div class="stat"><div class="k">Last receipt</div><div class="v" style="color:${lastR?(receiptGradeClass(lastR.grade)==='normal'?'var(--good)':receiptGradeClass(lastR.grade)==='borderline'?'var(--warn)':'var(--crit)'):'var(--fg)'}">${lastR&&lastR.grade?esc(lastR.grade):'–'}<small>${lastR?esc(fmtShort(lastR.date)):'none yet'}</small></div></div>
+      <div class="stat"><div class="k">To buy</div><div class="v">${need}<small>low or out</small></div></div>
+    </div>
+    ${photos.length?h`<div class="collage">${photos.map(sc=>h`<img src="/_blob/${esc(sc.photoId)}" alt="">`).join('')}</div>`:''}
     <div class="row" style="margin-top:12px;gap:8px">
-      <button class="btn sm" data-act="kscan" data-kind="fridge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 10h14M9 6v2M9 13v3"/></svg>Scan fridge or pantry</button>
-      <button class="btn sm ghost" data-act="kscan" data-kind="receipt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>Scan receipt</button>
+      <button class="btn sm" data-act="kscan" data-kind="fridge">${ICONS.home}Scan fridge or pantry</button>
+      <button class="btn sm ghost" data-act="kscan" data-kind="receipt">${ICONS.grocery}Scan receipt</button>
       <button class="btn sm ghost" data-act="kadd">Add by hand</button></div>
     ${!canAsk?h`<div class="notice warn" style="margin-top:10px">Scanning needs Claude in this view. You can still add items by hand.</div>`:''}
   </div>`;
-  const recipes=h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">What can we make?<span class="sub">from what is on hand, for ${esc(dispName(me()))}'s targets</span></h2><button class="btn sm" data-act="krecipes" ${kit.busy||!S.sample?'disabled':''}>${kit.busy&&kit.task==='recipes'?'Thinking…':'Suggest 3'}</button></div>
+}
+function cookForBar(){const who=S.cookFor||'both';const names={a:profName('a'),b:profName('b'),both:'Both'};return h`<div class="row" style="gap:8px;margin-bottom:8px"><span class="tiny muted">Cooking for</span><div class="cookfor">${['a','b','both'].map(k=>h`<button type="button" class="${who===k?'on':''}" data-act="cookfor" data-who="${k}">${esc(names[k])}</button>`).join('')}</div></div>`}
+function kRecipes(){
+  const forWho=isHome()?(S.cookFor||'both'):S.profile;const label=forWho==='both'?'both of you':profName(forWho)+'\'s targets';
+  return h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">What can we make?<span class="sub">from what is on hand, for ${esc(label)}</span></h2><button class="btn sm" data-act="krecipes" ${kit.busy||!S.sample?'disabled':''}>${kit.busy&&kit.task==='recipes'?'Thinking…':'Suggest 3'}</button></div>
+    ${isHome()?cookForBar():''}
     ${kit.busy&&kit.task==='recipes'?h`<div class="stream"><span class="pulse"></span>${esc(kit.text||'Looking at the kitchen…')}</div>`:''}
-    ${kit.recipes.length?h`<div class="recipes">${kit.recipes.map((r,i)=>recipeCard(r,i,false)).join('')}</div>`:(!kit.busy?h`<p class="small muted" style="margin:0">${S.kitems.length?'Tap Suggest 3. It uses the inventory, both of your goals and what is left of today\'s budget.':'Scan the fridge first, then ask.'}</p>`:'')}
-    ${S.krecipes.length?h`<div class="eyebrow" style="margin:14px 0 6px">Saved recipes</div><div class="recipes">${S.krecipes.slice(0,8).map((r,i)=>recipeCard(r,i,true)).join('')}</div>`:''}
+    ${kit.recipes.length?h`<div class="recipes">${kit.recipes.map((r,i)=>recipeCard(r,i,false)).join('')}</div>`:(!kit.busy?h`<p class="small muted" style="margin:0">${S.kitems.length?'Tap Suggest 3. It uses the inventory, the house rules and what is left of today\'s budget.':'Scan the fridge first, then ask.'}</p>`:'')}
+    ${S.krecipes.length?h`<div class="eyebrow" style="margin:14px 0 6px">Saved recipes</div><div class="recipes">${S.krecipes.slice(0,12).map((r,i)=>recipeCard(r,i,true)).join('')}</div>`:''}
   </div>`;
-  const inv=h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">On hand<span class="sub">tap an item to mark low or out</span></h2>${outCount?h`<button class="linkbtn" data-act="kshowout">${S.showOut?'hide used up':'show '+outCount+' used up'}</button>`:''}</div>
+}
+function kInv(){
+  const items=S.kitems.filter(it=>S.showOut?true:it.status!=='out');const groups={};for(const it of items){const c=KCATS[it.category]?it.category:'other';(groups[c]=groups[c]||[]).push(it)}
+  const outCount=S.kitems.filter(it=>it.status==='out').length;
+  return h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">On hand<span class="sub">tap an item to mark low or out</span></h2>${outCount?h`<button class="linkbtn" data-act="kshowout">${S.showOut?'hide used up':'show '+outCount+' used up'}</button>`:''}</div>
     ${items.length?Object.keys(KCATS).filter(c=>groups[c]).map(c=>h`<div class="kgroup"><div class="eyebrow">${KCATS[c]}</div><div class="kitems">${groups[c].map(kItem).join('')}</div></div>`).join(''):h`<p class="small muted" style="margin:0">Empty. Scan the fridge, a pantry shelf, or a receipt, and everything lands here with a good / ok / avoid tag against your house rules.</p>`}
-    <p class="tiny muted" style="margin:10px 0 0">Things get eaten without telling anyone, so treat this as a best guess. Items not seen in a scan for 10 days go dim. Logging a meal that uses an item does not remove it; tap it when it is gone.</p></div>`;
-  const scans=S.kscans.length?h`<div class="card"><h2>Scans<span class="sub">receipts graded A to F against the house rules</span></h2><div class="scans">${S.kscans.slice(0,6).map(sc=>h`<div class="scan">${sc.photoId?h`<img src="/_blob/${esc(sc.photoId)}" alt="">`:''}<div class="b"><div class="row between"><b>${esc(sc.kind==='receipt'?'Receipt':'Fridge')} · ${esc(fmtShort(sc.date))}</b>${sc.grade?h`<span class="chip ${/^[AB]/.test(sc.grade)?'normal':/^C/.test(sc.grade)?'borderline':'high'}">${esc(sc.grade)}</span>`:''}</div><div class="md small">${md(sc.summary||'')}</div>${Array.isArray(sc.swaps)&&sc.swaps.length?h`<ul class="nudges" style="margin-top:6px">${sc.swaps.map(x=>h`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div></div>`).join('')}</div></div>`:'';
-  const rules=h`<div class="card"><h2>House rules<span class="sub">what scans and recipes are graded against</span></h2><textarea class="talkbox" id="houseText" style="min-height:120px;font-size:14px">${esc(houseRules())}</textarea><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn sm ghost" data-act="ksaverules">Save rules</button></div></div>`;
-  return head+recipes+inv+scans+rules;
+    <p class="tiny muted" style="margin:10px 0 0">Things get eaten without telling anyone, so treat this as a best guess. Items not seen in a scan for 10 days go dim. Tap an item when it is low or gone; it joins the shopping list.</p></div>`;
+}
+function kScans(limit){
+  if(!S.kscans.length)return '';
+  return h`<div class="card"><h2>Scans<span class="sub">receipts graded A to F against the house rules</span></h2><div class="scans">${S.kscans.slice(0,limit||6).map(sc=>h`<div class="scan">${sc.photoId?h`<img src="/_blob/${esc(sc.photoId)}" alt="">`:''}<div class="b"><div class="row between"><b>${esc(sc.kind==='receipt'?'Receipt':'Fridge')} · ${esc(fmtShort(sc.date))}${sc.total?' · $'+esc(String(sc.total)):''}</b>${sc.grade?h`<span class="chip ${receiptGradeClass(sc.grade)}">${esc(sc.grade)}</span>`:''}</div><div class="md small">${md(sc.summary||'')}</div>${Array.isArray(sc.swaps)&&sc.swaps.length?h`<ul class="nudges" style="margin-top:6px">${sc.swaps.map(x=>h`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div></div>`).join('')}</div></div>`;
+}
+function kRules(){return h`<div class="card"><h2>House rules<span class="sub">what scans and recipes are graded against</span></h2><textarea class="talkbox" id="houseText" style="min-height:120px;font-size:14px">${esc(houseRules())}</textarea><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn sm ghost" data-act="ksaverules">Save rules</button></div></div>`}
+function renderKitchen(){return kHead()+kRecipes()+kInv()+kScans(6)+kRules()}
+function renderHome(){return kHead()+kInv()+kScans(3)+kRules()}
+function renderRecipes(){return kRecipes()}
+function renderGrocery(){
+  const need=S.kitems.filter(it=>it.status==='low'||it.status==='out');
+  const receipts=S.kscans.filter(sc=>sc.kind==='receipt');
+  const gradeNum=g=>({A:5,B:4,C:3,D:2,F:1})[(g||'').charAt(0)]||0;
+  const list=h`<div class="card hero"><h2>Shopping list<span class="sub">everything marked low or out</span></h2>
+    ${need.length?h`<div class="shop">${need.map(it=>h`<label><input type="checkbox" data-act="kbought" data-id="${esc(it.id)}"><span>${esc(it.name)}${it.qty?' <span class="muted">'+esc(it.qty)+'</span>':''}</span><small>${it.status==='out'?'out':'low'}</small></label>`).join('')}</div><p class="tiny muted" style="margin:8px 0 0">Tick an item when it is back in the house.</p>`:h`<p class="small muted" style="margin:0">Nothing on the list. Tap items on the Kitchen tab when they run low.</p>`}
+    <form class="askbar" id="shopForm" style="margin-top:10px"><input id="shopInput" placeholder="Add something to buy…" autocomplete="off"><button class="btn sm" type="submit">Add</button></form>
+  </div>`;
+  const chart=receipts.length>=2?(()=>{const rows=receipts.slice(0,10).reverse();const W=chartW(),H=120,padL=28,padR=8,padT=10,padB=24;const slot=(W-padL-padR)/rows.length;const bw=Math.max(8,Math.min(34,slot-8));const y=v=>padT+(H-padT-padB)*(1-v/5);
+    return h`<div class="chartwrap"><svg class="chart" viewBox="0 0 ${W} ${H}" aria-label="Receipt grades over time">${['A','C','F'].map(g=>h`<line class="grid" x1="${padL}" x2="${W-padR}" y1="${y(gradeNum(g)).toFixed(1)}" y2="${y(gradeNum(g)).toFixed(1)}"/><text x="${padL-6}" y="${(y(gradeNum(g))+4).toFixed(1)}" text-anchor="end">${g}</text>`).join('')}
+      ${rows.map((sc,i)=>{const v=gradeNum(sc.grade);const x=padL+slot*i+(slot-bw)/2;const col=receiptGradeClass(sc.grade)==='normal'?'var(--good)':receiptGradeClass(sc.grade)==='borderline'?'var(--warn)':'var(--crit)';return h`<g data-tip="${esc(fmtShort(sc.date))}: ${esc(sc.grade||'?')}"><rect x="${x.toFixed(1)}" y="${y(v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(y(0)-y(v)).toFixed(1)}" rx="4" fill="${col}"/><text x="${(x+bw/2).toFixed(1)}" y="${H-6}" text-anchor="middle">${esc(fmtShort(sc.date))}</text></g>`}).join('')}</svg></div>`})():'';
+  const trips=h`<div class="card"><h2>Grocery trips<span class="sub">${receipts.length?receipts.length+' receipts scanned':'scan a receipt after each shop'}</span></h2>${chart||h`<p class="small muted" style="margin:0">After two receipts a grade trend shows here.</p>`}</div>`;
+  return list+trips+kScans(10);
 }
 function kItem(it){
   const ds=daysSince(it.lastSeen||it.addedAt);const stale=ds!=null&&ds>10;
@@ -1336,18 +1451,29 @@ async function saveKScan(){
 async function suggestRecipes(){
   if(!S.sample||kit.busy)return;const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name+(i.qty?' ('+i.qty+')':'')+(i.status==='low'?' [low]':''));
   if(!onHand.length){toast('Scan the fridge first');return}
-  const t=dayTotals(todayStr());const tg=targets();const left=NUTR.map(n=>n.l+' '+Math.max(0,Math.round(tg[n.k]-t[n.k]))+n.u).join(', ');
-  const prompt='You are the household cook inside Macro Polo. House rules: '+houseRules().replace(/\n/g,' ')+' On hand: '+onHand.join('; ')+'. Cooking for '+dispName(me())+' right now ('+personIntro().replace('You are the nutrition logger inside Macro Polo. ','').replace('You are the nutrition logger inside Macro Polo, ','')+'). Left in their budget today: '+left+'. '+
+  const who=isHome()?(S.cookFor||'both'):S.profile;
+  const forText=who==='both'?'Cooking for both Adrian and Katie: '+introFor('a')+' '+introFor('b'):'Cooking for '+profName(who)+': '+introFor(who)+(who===S.profile?(()=>{const t=dayTotals(todayStr());const tg=targets();return ' Left in their budget today: '+NUTR.map(n=>n.l+' '+Math.max(0,Math.round(tg[n.k]-t[n.k]))+n.u).join(', ')+'.'})():'');
+  const prompt='You are the household cook inside Macro Polo. House rules: '+houseRules().replace(/\n/g,' ')+' On hand: '+onHand.join('; ')+'. '+forText+' '+
     'Suggest 3 meals that use mostly what is on hand (a pantry staple like oil, salt, spices or an egg may be assumed), each quick enough for a weeknight with four kids, and each pointed at this person\'s goals. Reply with only JSON: {"recipes": [{"name": "", "minutes": 0, "serves": 0, "why": "one line tying it to the goals", "uses": ["items on hand"], "missing": ["things to buy, if any"], "ingredients": ["with amounts"], "steps": ["short steps"], "per_serving": {"cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}}]}. Numbers only in per_serving.';
   kit.busy=true;kit.task='recipes';kit.text='';render();
   try{const r=await S.sample.json(prompt,{modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
     kit.recipes=Array.isArray(r&&r.recipes)?r.recipes.slice(0,3):[];kit.busy=false;render();
   }catch(e){kit.busy=false;render();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':'Could not suggest ('+code+').')}
 }
+function introFor(p){
+  if(p==='b'){const q=pp();return profName('b')+' is a woman in her early thirties, '+weeksPP()+' weeks postpartum after her fourth baby'+(q.breastfeeding?', breastfeeding':'')+'; she needs enough calories, protein, iron, calcium, omega-3 and fiber, never restriction.'}
+  return profName('a')+' has ApoB 170 and LDL 224: low saturated fat and dietary cholesterol, high fiber, calm blood sugar.';
+}
+async function setFor(p,coll,id,data){
+  if(S.db&&S.uid){await S.db.doc('data/users/'+S.uid+'/'+PROFILES[p].root).collection(coll).doc(id).set(data);return}
+  const key=(p==='b'?'macropolo:b:':p==='h'?'macropolo:h:':'macropolo:')+coll;let arr=[];try{arr=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}arr=arr.filter(d=>d.id!==id);arr.push(Object.assign({id},data));try{localStorage.setItem(key,JSON.stringify(arr))}catch(e){}if(p===S.profile)lsEmit(coll);
+}
 async function logRecipe(r){
   const ps=r.per_serving||{};const item=Object.assign({name:r.name+' (1 serving)',qty:'1 serving'},Object.fromEntries(NUTR.map(n=>[n.k,num(ps[n.k])])));
-  const doc={date:todayStr(),time:nowTime(),name:r.name,source:'recipe',createdAt:new Date().toISOString(),items:[item],analysis:String(r.why||''),notes:'From the Kitchen tab'};
-  await store.set('meals',todayStr()+'-'+slug(r.name)+'-'+uid().slice(-4),doc);celebrate();toast('Logged '+r.name+scoreTail());
+  const doc={date:todayStr(),time:nowTime(),name:r.name,source:'recipe',createdAt:new Date().toISOString(),items:[item],analysis:String(r.why||''),notes:'From the Kitchen'};
+  const who=isHome()?(S.cookFor||'both'):S.profile;const targetsP=who==='both'?['a','b']:[who];
+  for(const p of targetsP)await setFor(p,'meals',todayStr()+'-'+slug(r.name)+'-'+uid().slice(-4),Object.assign({},doc));
+  celebrate();toast('Logged '+r.name+' for '+(who==='both'?'both of you':profName(who))+(who===S.profile?scoreTail():''));
 }
 function openKAdd(){
   const root=document.getElementById('sheetRoot');
@@ -1402,9 +1528,9 @@ const KIND_LABEL={daily:'Daily recap',weekly:'Weekly review',labs:'Bloodwork',me
 function coachTurns(){const c=S.coach&&S.coach.chat;return Array.isArray(c&&c.turns)?c.turns:[]}
 function coachFacts(){const m=S.coach&&S.coach.memory;return Array.isArray(m&&m.facts)?m.facts:[]}
 function renderCoach(){
-  const turns=coachTurns();const facts=coachFacts();const who=dispName(me());
+  const turns=coachTurns();const facts=coachFacts();const who=isHome()?'the house':dispName(me());
   const canAsk=!!S.sample;
-  const chat=h`<div class="card hero coachcard"><h2>Ask Coach<span class="sub">anything about food, ${isPP()?'recovery, milk supply':'cholesterol, blood sugar'}, what to eat next</span></h2>
+  const chat=h`<div class="card hero coachcard"><h2>${isHome()?'Ask the house coach':'Ask Coach'}<span class="sub">${isHome()?'meal plans, what to buy, what to do with what is in the fridge':'anything about food, '+(isPP()?'recovery, milk supply':'cholesterol, blood sugar')+', what to eat next'}</span></h2>
     <div class="chat" id="chatLog">${turns.length?turns.slice(-12).map(t=>h`<div class="msg ${t.role==='user'?'me':'coach'}"><div class="md">${t.role==='user'?esc(t.content):md(t.content)}</div></div>`).join(''):h`<div class="msg coach"><div class="md"><p>Hi ${esc(who)}. I know your targets, your log and ${isPP()?'where you are postpartum':'your bloodwork'}. Ask me things like:</p><ul><li>What should dinner be with what I have left today?</li><li>${isPP()?'Is this enough to keep my supply up?':'Which of today\'s meals hurt my ApoB most?'}</li><li>${isPP()?'What are good iron-rich snacks for night feeds?':'How long should my overnight fast be?'}</li></ul></div></div>`}
       ${coach.busy?h`<div class="msg coach"><div class="stream" id="coachStream" style="margin:0"><span class="pulse"></span>${esc(coach.text||'Thinking…')}</div></div>`:''}</div>
     ${canAsk?h`<form class="askbar" id="askForm"><input id="askInput" placeholder="Ask anything…" autocomplete="off" ${coach.busy?'disabled':''}><button class="btn" type="submit" ${coach.busy?'disabled':''}>Ask</button></form>
@@ -1432,6 +1558,9 @@ function todaySummary(){
 }
 function coachContext(){
   const facts=coachFacts();const lab=S.labs[0];
+  if(isHome()){const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');const need=S.kitems.filter(i=>i.status!=='in').map(i=>i.name).join(', ');
+    return personIntro()+' Kitchen on hand: '+(onHand||'nothing scanned yet')+'. Shopping list: '+(need||'empty')+'.'+(facts.length?' Things you have learned about the household: '+facts.map(f=>f.text).join('; ')+'.':'')+
+    ' Answer as the family cook and planner: meal plans, what to buy, how to use what is there, kid-friendly swaps that still fit both adults, under 180 words unless asked, plain text with - bullets and **bold** allowed. Reply with only JSON: {"answer": "your reply", "remember": ["at most 2 short durable facts about the household learned from THIS message, else empty"]}.'}
   return personIntro().replace('the nutrition logger','the nutrition coach')+' Standard in use: '+STD_LABEL[standard()]+'. '+profileContext()+' '+weekSummary()+' '+todaySummary()+
     (lab?' Latest labs dated '+lab.date+(lab.summary?': '+lab.summary.replace(/\*\*/g,''):'')+'.':' No labs loaded yet.')+
     (facts.length?' Things you have learned about '+dispName(me())+': '+facts.map(f=>f.text).join('; ')+'.':'')+
@@ -1492,6 +1621,8 @@ async function onAction(ev){
   if(act==='kcycle'){const it=S.kitems.find(k=>k.id===b.dataset.id);if(!it)return;const next={in:'low',low:'out',out:'in'}[it.status||'in'];const doc=Object.assign({},it,{status:next,updatedAt:new Date().toISOString()});delete doc.id;if(next==='in')doc.lastSeen=new Date().toISOString();
     try{await kstore.set('items',it.id,doc)}catch(err){toast('Could not save')}if(S.mode==='local')render();return}
   if(act==='krecipes'){suggestRecipes();return}
+  if(act==='cookfor'){S.cookFor=b.dataset.who;render();return}
+  if(act==='kbought'){const it=S.kitems.find(k=>k.id===b.dataset.id);if(!it)return;const doc=Object.assign({},it,{status:'in',lastSeen:new Date().toISOString(),updatedAt:new Date().toISOString()});delete doc.id;try{await kstore.set('items',it.id,doc);toast(it.name+' back in the house')}catch(err){toast('Could not save')}if(S.mode==='local')render();return}
   if(act==='ksave'){const r=kit.recipes[+b.dataset.i];if(!r)return;try{await kstore.set('recipes','r-'+uid(),Object.assign({},r,{createdAt:new Date().toISOString(),by:S.profile}));toast('Recipe saved')}catch(err){toast('Could not save')}return}
   if(act==='kdelrecipe'){try{await kstore.del('recipes',b.dataset.id)}catch(err){}return}
   if(act==='klog'){const r=b.dataset.saved==='1'?S.krecipes[+b.dataset.i]:kit.recipes[+b.dataset.i];if(!r)return;try{await logRecipe(r)}catch(err){toast('Could not log ('+(err&&err.code||'error')+')')}return}
@@ -1520,7 +1651,22 @@ async function onAddSubmit(ev){
 
 // ---------- camera: photo → Claude → log ----------
 const cam=document.getElementById('camInput');
-document.getElementById('snapBtn').addEventListener('click',()=>{cam.accept=S.canImages?S.imageTypes:'image/*';cam.value='';cam.click()});
+document.getElementById('snapBtn').addEventListener('click',()=>{if(isHome()){openKChooser();return}cam.accept=S.canImages?S.imageTypes:'image/*';cam.value='';cam.click()});
+function openKChooser(){const root=document.getElementById('sheetRoot');
+  root.innerHTML=h`<div class="sheet-bg" id="kcBg"><div class="sheet" role="dialog" aria-label="What are you scanning?"><div class="grab"></div><h2>What are you scanning?</h2>
+    <div class="bigpick"><button type="button" data-kind="fridge">${ICONS.home}Fridge or pantry</button><button type="button" data-kind="receipt">${ICONS.grocery}Receipt</button></div></div></div>`;
+  document.getElementById('kcBg').addEventListener('click',e=>{if(e.target.id==='kcBg')root.innerHTML=''});
+  root.querySelectorAll('[data-kind]').forEach(b=>b.addEventListener('click',()=>{root.innerHTML='';kitchenScan(b.dataset.kind)}));}
+async function talkKitchen(text){
+  if(!S.sample){toast('Claude is not available in this view');return}
+  const onHand=S.kitems.map(i=>i.name+' ['+(i.status||'in')+']').slice(0,120).join('; ');
+  const prompt='You keep the household kitchen inventory inside Macro Polo. Current items with status: '+(onHand||'none')+'. Someone says: "'+text.replace(/"/g,'\'')+'". Turn that into inventory changes. Reply with only JSON: {"add": [{"name": "", "qty": "", "category": "produce|protein|dairy|grains|pantry|snacks|drinks|frozen|condiments|other"}], "low": ["existing item names"], "out": ["existing item names"], "back": ["existing item names now restocked"], "note": "one short confirmation sentence"}. Match existing names exactly when they refer to the same thing.';
+  const r=await S.sample.json(prompt,{modelTier:'quick',cache:false});const now=new Date().toISOString();let n=0;
+  const find=nm=>S.kitems.find(i=>i.name.toLowerCase()===String(nm).toLowerCase());
+  for(const it of (r.add||[])){if(!it||!it.name)continue;const ex=find(it.name);await kstore.set('items',ex?ex.id:'k-'+uid(),Object.assign({},ex||{},{name:String(it.name),qty:String(it.qty||(ex&&ex.qty)||''),category:KCATS[it.category]?it.category:(ex&&ex.category)||'other',grade:(ex&&ex.grade)||'ok',status:'in',lastSeen:now,addedAt:(ex&&ex.addedAt)||now,source:'voice',by:S.profile,updatedAt:now,id:undefined}));n++}
+  for(const [list,status] of [[r.low||[],'low'],[r.out||[],'out'],[r.back||[],'in']]){for(const nm of list){const ex=find(nm);if(!ex)continue;const doc=Object.assign({},ex,{status,updatedAt:now});if(status==='in')doc.lastSeen=now;delete doc.id;await kstore.set('items',ex.id,doc);n++}}
+  toast(r.note?String(r.note):n+' changes made');if(S.mode==='local')render();
+}
 cam.addEventListener('change',()=>{const f=cam.files&&cam.files[0];if(f)openSnap(f)});
 
 async function downscale(file,maxPx){
@@ -1539,7 +1685,7 @@ async function openSnap(file){
 }
 // Talk: describe the meal in words. The keyboard's dictation key works everywhere; the page's own
 // microphone button appears only where the browser offers speech recognition and allows it.
-document.getElementById('talkBtn').addEventListener('click',()=>{snap.mode='talk';snap.blob=null;snap.url='';snap.result=null;snap.turns=[];snap.busy=false;renderSnap();const t=document.getElementById('snapNote');if(t)t.focus()});
+document.getElementById('talkBtn').addEventListener('click',()=>{if(isHome()){openKTalk();return}snap.mode='talk';snap.blob=null;snap.url='';snap.result=null;snap.turns=[];snap.busy=false;renderSnap();const t=document.getElementById('snapNote');if(t)t.focus()});
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition||null;
 function toggleMic(){
   const btn=document.getElementById('micBtn');const box=document.getElementById('snapNote');if(!SR||!btn||!box)return;
@@ -1552,6 +1698,14 @@ function toggleMic(){
   try{rec.start();snap.rec=rec;btn.classList.add('live')}catch(e){snap.rec=null}
 }
 function snapOpen(){return !!document.getElementById('snapBg')}
+function openKTalk(){const root=document.getElementById('sheetRoot');
+  root.innerHTML=h`<div class="sheet-bg" id="ktBg"><div class="sheet" role="dialog" aria-label="Tell the kitchen"><div class="grab"></div><h2>Tell the kitchen what changed</h2>
+    <textarea class="talkbox" id="ktText" placeholder="We're out of eggs. Bought 2 lb of chicken thighs and a bag of spinach. Milk is low."></textarea>
+    <p class="tiny muted" style="margin:8px 0 0">Use the mic key on your keyboard to say it.</p>
+    <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="ktCancel">Cancel</button><button class="btn" id="ktGo">Update kitchen</button></div></div></div>`;
+  document.getElementById('ktBg').addEventListener('click',e=>{if(e.target.id==='ktBg')root.innerHTML=''});document.getElementById('ktCancel').addEventListener('click',()=>root.innerHTML='');
+  document.getElementById('ktGo').addEventListener('click',async()=>{const t=document.getElementById('ktText').value.trim();if(!t){toast('Say what changed first');return}const b=document.getElementById('ktGo');b.disabled=true;b.textContent='Working…';try{await talkKitchen(t);root.innerHTML=''}catch(e){b.disabled=false;b.textContent='Update kitchen';toast('Could not update ('+(e&&e.code||'error')+')')}});
+  document.getElementById('ktText').focus();}
 function closeSnap(){if(snap.ctl)snap.ctl.abort();if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null}if(snap.url)URL.revokeObjectURL(snap.url);snap.blob=null;snap.url='';snap.result=null;document.getElementById('sheetRoot').innerHTML=''}
 function renderSnap(streamText){
   const root=document.getElementById('sheetRoot');const r=snap.result;const talk=snap.mode==='talk';const canAsk=!!(S.sample&&(talk||S.canImages));
@@ -1600,6 +1754,7 @@ function snapResult(r){
 }
 function personIntro(){
   const p=me();
+  if(isHome())return 'You are the household coach inside Macro Polo for Adrian and Katie and their four kids. '+introFor('a')+' '+introFor('b')+' House rules: '+houseRules().replace(/\n/g,' ');
   if(isPP()){const q=pp();return 'You are the nutrition logger inside Macro Polo. This log belongs to '+dispName(p)+', a woman in her early thirties who is '+weeksPP()+' weeks postpartum after her fourth baby'+(q.breastfeeding?' and is breastfeeding':'')+'. Her priorities are enough total calories (never push restriction), protein, iron, calcium, fiber, omega-3 and hydration, with steady blood sugar. Cholesterol is not a concern for her.'}
   return 'You are the nutrition logger inside Macro Polo, Adrian\'s food tracker. His priorities are lowering LDL and ApoB (saturated fat, dietary cholesterol, fiber) and calm blood sugar.';
 }
@@ -1731,6 +1886,17 @@ async function saveEdit(){
 document.getElementById('settingsBtn').addEventListener('click',openSettings);
 function openSettings(){
   const tg=targets();const root=document.getElementById('sheetRoot');const q=pp();
+  if(isHome()){root.innerHTML=h`<div class="sheet-bg" id="sheetBg"><div class="sheet" role="dialog" aria-label="Kitchen settings"><div class="grab"></div><h2>Kitchen settings</h2>
+    <form id="hForm"><div class="field"><span>Kitchen name</span><input id="h_name" value="${esc((S.settings&&S.settings.name&&S.settings.name!=='Home')?S.settings.name:'The Holguin kitchen')}" maxlength="30"></div><div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sm" type="submit">Save</button></div></form>
+    <div class="looks"><div class="eyebrow">Look</div><div class="swatches">${Object.keys(THEMES.h).map(t=>h`<button type="button" class="swatch ${S.theme===t?'on':''}" data-theme="${t}"><i style="background:${SWATCH[t]}"></i>${THEMES.h[t]}</button>`).join('')}</div></div>
+    <div class="looks"><div class="eyebrow">Background feel</div><div class="swatches bgs">${Object.keys(BGS.h).map(b=>h`<button type="button" class="swatch ${S.bg===b?'on':''}" data-bg="${b}"><i style="background:${BGSWATCH[b]}"></i>${BGS.h[b]}</button>`).join('')}</div><p class="tiny muted" style="margin:6px 0 0">"Our photos" uses your own fridge and receipt scans behind the card.</p></div>
+    <div class="photos"><div class="eyebrow">Cover photo</div><div class="prow"><div class="pthumb" style="${coverUrl()?'background-image:url(\''+esc(coverUrl())+'\')':''}"></div><div class="pinfo"><b>Cover photo</b><span class="tiny muted">Farm, market, your kitchen, the family at the table.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="cover">${coverUrl()?'Change':'Choose'}</button>${coverUrl()?'<button type="button" class="linkbtn danger" data-rmpic="cover">Remove</button>':''}</div></div></div></div>
+  </div></div>`;
+    document.getElementById('sheetBg').addEventListener('click',e=>{if(e.target.id==='sheetBg')root.innerHTML=''});
+    root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setLook('theme',b.dataset.theme)));root.querySelectorAll('[data-bg]').forEach(b=>b.addEventListener('click',()=>setLook('bg',b.dataset.bg)));
+    root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{pic.kind=b.dataset.pick;const inp=document.getElementById('picInput');inp.value='';inp.click()}));root.querySelectorAll('[data-rmpic]').forEach(b=>b.addEventListener('click',()=>savePhoto(b.dataset.rmpic,null)));
+    document.getElementById('hForm').addEventListener('submit',async e=>{e.preventDefault();const doc=Object.assign({},S.settings||{},{name:document.getElementById('h_name').value.trim()||'The Holguin kitchen',updatedAt:new Date().toISOString()});delete doc.id;try{await store.set('settings','profile',doc);S.settings=Object.assign({id:'profile'},doc);root.innerHTML='';toast('Saved');render()}catch(err){toast('Could not save')}});
+    return}
   root.innerHTML=h`<div class="sheet-bg" id="sheetBg"><div class="sheet" role="dialog" aria-label="Settings"><div class="grab"></div>
     <h2>${esc(profName(S.profile))}'s settings</h2>
     <form id="tgForm">
