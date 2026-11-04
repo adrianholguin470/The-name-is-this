@@ -814,7 +814,7 @@ function subscribeKitchen(){
   S.kunsubs.push(kstore.subscribe('items',rows=>{S.kitems=rows;if(KVIEWS.includes(S.view))render()},()=>{}));
   S.kunsubs.push(kstore.subscribe('scans',rows=>{S.kscans=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));art.state.photos=null;if(KVIEWS.includes(S.view))render()},()=>{}));
   S.kunsubs.push(kstore.subscribe('recipes',rows=>{S.krecipes=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));if(KVIEWS.includes(S.view))render()},()=>{}));
-  S.kunsubs.push(kstore.subscribe('house',rows=>{S.khouse=rows.find(r=>r.id==='rules')||null;if(KVIEWS.includes(S.view))render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('house',rows=>{S.khouse=rows.find(r=>r.id==='rules')||null;S.ktastes=rows.find(r=>r.id==='tastes')||null;if(KVIEWS.includes(S.view))render()},()=>{}));
 }
 async function useCap(name){try{return (window.claude&&window.claude.use)?await window.claude.use(name):null}catch(e){return null}}
 
@@ -1344,6 +1344,7 @@ function wireChart(wrap){
 // --- Kitchen: shared inventory from fridge and receipt scans, recipes from what is on hand ---
 const KCATS={produce:'Produce',protein:'Meat, fish, eggs',dairy:'Dairy',grains:'Grains & bread',pantry:'Pantry & canned',snacks:'Snacks & sweets',drinks:'Drinks',frozen:'Frozen',condiments:'Condiments & oils',other:'Other'};
 const KGRADE={good:'good',ok:'ok',avoid:'avoid'};
+function tastes(){return (S.ktastes&&S.ktastes.text)||''}
 function houseRules(){
   if(S.khouse&&S.khouse.text)return S.khouse.text;
   return 'Adrian: ApoB 170 and LDL 224, so saturated fat and dietary cholesterol are the enemies; fiber, fish, beans, oats, olive oil, nuts and lean protein are the heroes. Keep added sugar low.\nKatie: postpartum and breastfeeding; needs enough calories, protein, iron, calcium, omega-3 and fiber. Never restrictive.\nKids: whole foods, limited added sugar, plenty of fruit and vegetables.\nHousehold: fewer ultra-processed snacks, less cheese and butter, more produce.';
@@ -1375,6 +1376,7 @@ function kRecipes(){
   const forWho=isHome()?(S.cookFor||'both'):S.profile;const label=forWho==='both'?'both of you':profName(forWho)+'\'s targets';
   return h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">What can we make?<span class="sub">from what is on hand, for ${esc(label)}</span></h2><button class="btn sm" data-act="krecipes" ${kit.busy||!S.sample?'disabled':''}>${kit.busy&&kit.task==='recipes'?'Thinking…':'Suggest 3'}</button></div>
     ${isHome()?cookForBar():''}
+    <input id="kMood" class="talkbox" style="min-height:0;padding:9px 11px;font-size:14px;margin-bottom:8px" placeholder="Tonight we feel like… (optional: quick, comfort food, something light, use up the chicken)" value="${esc(kit.mood||'')}">
     ${kit.busy&&kit.task==='recipes'?h`<div class="stream"><span class="pulse"></span>${esc(kit.text||'Looking at the kitchen…')}</div>`:''}
     ${kit.recipes.length?h`<div class="recipes">${kit.recipes.map((r,i)=>recipeCard(r,i,false)).join('')}</div>`:(!kit.busy?h`<p class="small muted" style="margin:0">${S.kitems.length?'Tap Suggest 3. It uses the inventory, the house rules and what is left of today\'s budget.':'Scan the fridge first, then ask.'}</p>`:'')}
     ${S.krecipes.length?h`<div class="eyebrow" style="margin:14px 0 6px">Saved recipes</div><div class="recipes">${S.krecipes.slice(0,12).map((r,i)=>recipeCard(r,i,true)).join('')}</div>`:''}
@@ -1391,7 +1393,8 @@ function kScans(limit){
   if(!S.kscans.length)return '';
   return h`<div class="card"><h2>Scans<span class="sub">receipts graded A to F against the house rules</span></h2><div class="scans">${S.kscans.slice(0,limit||6).map(sc=>h`<div class="scan">${sc.photoId?h`<img src="/_blob/${esc(sc.photoId)}" alt="">`:''}<div class="b"><div class="row between"><b>${esc(sc.kind==='receipt'?'Receipt':'Fridge')} · ${esc(fmtShort(sc.date))}${sc.total?' · $'+esc(String(sc.total)):''}</b>${sc.grade?h`<span class="chip ${receiptGradeClass(sc.grade)}">${esc(sc.grade)}</span>`:''}</div><div class="md small">${md(sc.summary||'')}</div>${Array.isArray(sc.swaps)&&sc.swaps.length?h`<ul class="nudges" style="margin-top:6px">${sc.swaps.map(x=>h`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div></div>`).join('')}</div></div>`;
 }
-function kRules(){return h`<div class="card"><h2>House rules<span class="sub">what scans and recipes are graded against</span></h2><textarea class="talkbox" id="houseText" style="min-height:120px;font-size:14px">${esc(houseRules())}</textarea><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn sm ghost" data-act="ksaverules">Save rules</button></div></div>`}
+function kRules(){return h`<div class="card"><h2>House rules<span class="sub">what scans and recipes are graded against</span></h2><textarea class="talkbox" id="houseText" style="min-height:120px;font-size:14px">${esc(houseRules())}</textarea><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn sm ghost" data-act="ksaverules">Save rules</button></div>
+  <h2 style="margin-top:14px">What we like<span class="sub">favorites, dislikes, allergies, the kids' no-go list</span></h2><textarea class="talkbox" id="tasteText" style="min-height:90px;font-size:14px" placeholder="Adrian loves tacos and anything with salsa, hates mushrooms. Katie likes salmon, Thai flavors, not spicy right now. Kids: pasta, quesadillas, no fish.">${esc(tastes())}</textarea><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn sm ghost" data-act="ksavetastes">Save</button></div></div>`}
 function renderKitchen(){return kHead()+kRecipes()+kInv()+kScans(6)+kRules()}
 function renderHome(){return kHead()+kInv()+kScans(3)+kRules()}
 function renderRecipes(){return kRecipes()}
@@ -1419,6 +1422,7 @@ function recipeCard(r,i,saved){
     <div class="tiny muted">${esc(r.why||'')}</div>
     <div class="tiny" style="display:flex;gap:8px;flex-wrap:wrap;color:var(--muted)">${ps.cal!=null?h`<span><b style="color:var(--fg)">${r0(num(ps.cal))}</b> kcal</span>`:''}${ps.protein!=null?h`<span>P <b style="color:var(--fg)">${r0(num(ps.protein))}g</b></span>`:''}${ps.fiber!=null?h`<span>Fiber <b style="color:var(--fg)">${r0(num(ps.fiber))}g</b></span>`:''}${ps.satfat!=null?h`<span>Sat <b style="color:var(--fg)">${r1(num(ps.satfat))}g</b></span>`:''}${ps.sodium!=null?h`<span>Na <b style="color:var(--fg)">${r0(num(ps.sodium))}</b></span>`:''}</div>
     ${missing.length?h`<div class="tiny" style="color:var(--warn)">Missing: ${esc(missing.join(', '))}</div>`:''}
+    ${r.plating?h`<div class="tiny muted">Plating: ${esc(r.plating)}</div>`:''}
     <details><summary>Ingredients and steps</summary><ul class="items" style="margin-top:6px">${(r.ingredients||[]).map(x=>h`<li><span>${esc(x)}</span></li>`).join('')}</ul><ol class="steps" style="margin-top:8px;font-size:13px">${(r.steps||[]).map(x=>h`<li>${esc(x)}</li>`).join('')}</ol></details>
     <div class="row" style="justify-content:flex-end;gap:8px"><button class="btn sm ghost" data-act="klog" data-i="${i}" data-saved="${saved?1:0}">Log a serving</button>${saved?h`<button class="linkbtn danger" data-act="kdelrecipe" data-id="${esc(r.id)}">remove</button>`:h`<button class="btn sm" data-act="ksave" data-i="${i}">Save</button>`}</div>
   </div>`;
@@ -1480,15 +1484,46 @@ async function saveKScan(){
   try{await saveKitchenResult(kit.kind,r,picked,kit.blob,todayStr());closeKScan();celebrate();toast(picked.length+' items added to the kitchen');render()}
   catch(e){btn.disabled=false;btn.textContent='Add to kitchen';toast('Could not save ('+(e&&e.code||'error')+')')}
 }
+// Read another profile's data once (meals, labs, settings, coach memory) for the cook, without switching the live subscriptions.
+async function collFor(p,coll){
+  if(S.db&&S.uid){const snap=await S.db.doc('data/users/'+S.uid+'/'+PROFILES[p].root).collection(coll).limit(1000).get();return snap.docs.map(d=>Object.assign({id:d.id},d.data()))}
+  const key=(p==='b'?'macropolo:b:':p==='h'?'macropolo:h:':'macropolo:')+coll;try{return JSON.parse(localStorage.getItem(key)||'[]')}catch(e){return []}
+}
+function computeTargets(p,settings){const sp=S.profile,ss=S.settings;S.profile=p;S.settings=settings;try{return targets()}finally{S.profile=sp;S.settings=ss}}
+async function personSnapshot(p){
+  const [meals,labs,settingsRows,coachRows]=await Promise.all([collFor(p,'meals'),collFor(p,'labs'),collFor(p,'settings'),collFor(p,'coach')]);
+  const settings=settingsRows.find(r=>r.id==='profile')||null;const tg=computeTargets(p,settings);const name=(settings&&settings.name)||PROFILES[p].name;
+  const today=todayStr();const tot=d=>{const t={};for(const n of NUTR)t[n.k]=0;for(const e of meals.filter(m=>m.date===d)){const et=entryTotals(e);for(const n of NUTR)t[n.k]+=et[n.k]}return t};
+  const tt=tot(today);const todayList=meals.filter(m=>m.date===today).sort((a,b)=>String(a.time||'').localeCompare(String(b.time||''))).map(m=>(m.time?fmtTime(m.time)+' ':'')+m.name+' ('+Math.round(entryTotals(m).cal)+' kcal)');
+  const left=NUTR.map(n=>n.l+' '+Math.max(0,Math.round(tg[n.k]-tt[n.k]))+n.u+(n.kind==='ceiling'&&tt[n.k]>tg[n.k]*0.8?' (near or over ceiling)':'')).join(', ');
+  const days=[];for(let i=1;i<=7;i++)days.push(shiftDate(today,-i));const logged=days.filter(d=>meals.some(m=>m.date===d));
+  let week='no meals logged in the previous 7 days';
+  if(logged.length){const avg={};for(const n of NUTR)avg[n.k]=logged.reduce((a,d)=>a+tot(d)[n.k],0)/logged.length;
+    const gaps=NUTR.filter(n=>n.kind==='floor'&&avg[n.k]<tg[n.k]*0.85).map(n=>n.l+' short ('+Math.round(avg[n.k])+' vs '+tg[n.k]+n.u+')').concat(NUTR.filter(n=>n.kind==='ceiling'&&avg[n.k]>tg[n.k]).map(n=>n.l+' over ('+Math.round(avg[n.k])+' vs '+tg[n.k]+n.u+')'));
+    const recent=meals.filter(m=>days.includes(m.date)).map(m=>m.name).filter(Boolean);
+    week='previous 7 days ('+logged.length+' logged): averages '+NUTR.map(n=>n.l+' '+Math.round(avg[n.k])+n.u).join(', ')+'. '+(gaps.length?'Gaps to fix: '+gaps.join('; ')+'. ':'On target across the board. ')+'Recent meals: '+recent.slice(-14).join(', ')}
+  const freq={};for(const m of meals){if(!m.name)continue;const k=m.name.toLowerCase().replace(/\s*\(.*?\)\s*/g,'').trim();freq[k]=(freq[k]||0)+1}
+  const faves=Object.entries(freq).filter(([k,v])=>v>=2).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([k,v])=>k+' x'+v);
+  const lab=labs.sort((a,b)=>String(b.date).localeCompare(String(a.date)))[0];
+  const flags=lab?(lab.markers||[]).filter(m=>['high','low','borderline'].includes(labFlag(m))).map(m=>m.name+' '+m.value+(m.unit||'')+' ('+labFlag(m)+')'):[];
+  const mem=coachRows.find(r=>r.id==='memory');const facts=Array.isArray(mem&&mem.facts)?mem.facts.map(f=>f.text):[];
+  return name+': '+introFor(p)+' Standard: '+STD_LABEL[(settings&&settings.standard)==='standard'?'standard':'prime']+'. Daily targets: '+NUTR.map(n=>n.l+' '+tg[n.k]+n.u).join(', ')+'. Today so far: '+(todayList.length?todayList.join('; '):'nothing logged')+'. Left today: '+left+'. Previous week: '+week+'.'+(faves.length?' Dishes they log often (take as likes): '+faves.join(', ')+'.':'')+(flags.length?' Latest labs ('+lab.date+'): '+flags.join('; ')+'.':'')+(facts.length?' Things Coach knows about them: '+facts.join('; ')+'.':'');
+}
 async function suggestRecipes(){
   if(!S.sample||kit.busy)return;const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name+(i.qty?' ('+i.qty+')':'')+(i.status==='low'?' [low]':''));
   if(!onHand.length){toast('Scan the fridge first');return}
-  const who=isHome()?(S.cookFor||'both'):S.profile;
-  const forText=who==='both'?'Cooking for both Adrian and Katie: '+introFor('a')+' '+introFor('b'):'Cooking for '+profName(who)+': '+introFor(who)+(who===S.profile?(()=>{const t=dayTotals(todayStr());const tg=targets();return ' Left in their budget today: '+NUTR.map(n=>n.l+' '+Math.max(0,Math.round(tg[n.k]-t[n.k]))+n.u).join(', ')+'.'})():'');
-  const prompt='You are the household cook inside Macro Polo. House rules: '+houseRules().replace(/\n/g,' ')+' On hand: '+onHand.join('; ')+'. '+forText+' '+
-    'Suggest 3 meals that use mostly what is on hand (a pantry staple like oil, salt, spices or an egg may be assumed), each quick enough for a weeknight with four kids, and each pointed at this person\'s goals. Reply with only JSON: {"recipes": [{"name": "", "minutes": 0, "serves": 0, "why": "one line tying it to the goals", "uses": ["items on hand"], "missing": ["things to buy, if any"], "ingredients": ["with amounts"], "steps": ["short steps"], "per_serving": {"cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}}]}. Numbers only in per_serving.';
-  kit.busy=true;kit.task='recipes';kit.text='';render();
-  try{const r=await S.sample.json(prompt,{modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
+  kit.mood=(document.getElementById('kMood')||{}).value||'';
+  const who=isHome()?(S.cookFor||'both'):S.profile;const people=who==='both'?['a','b']:[who];
+  kit.busy=true;kit.task='recipes';kit.text='Reading '+people.map(p=>profName(p)).join(' and ')+'\'s week…';render();
+  try{
+    const snaps=await Promise.all(people.map(personSnapshot));
+    const saved=S.krecipes.map(r=>r.name).slice(0,12);const lowOut=S.kitems.filter(i=>i.status!=='in').map(i=>i.name);
+    const prompt='You are the household cook inside Macro Polo, planning the next meal. House rules: '+houseRules().replace(/\n/g,' ')+(tastes()?' What the family likes and dislikes: '+tastes().replace(/\n/g,' '):'')+
+      ' Who you are cooking for, with their data: '+snaps.join(' || ')+(people.length>1?' Pick meals that serve both at once; where their needs differ, say how to plate it differently for each (e.g. extra beans and no cheese for Adrian, a bigger portion plus a glass of milk for Katie).':'')+
+      ' On hand: '+onHand.join('; ')+'.'+(lowOut.length?' Running low or out: '+lowOut.join(', ')+'.':'')+(saved.length?' Already saved recipes (avoid repeating unless it fits perfectly): '+saved.join('; ')+'.':'')+(kit.mood?' Tonight they say: "'+kit.mood.replace(/"/g,'\'')+'".':'')+
+      ' Choose 3 meals that: (1) fill what is still left in today\'s budget and fix this week\'s gaps rather than piling onto what was already eaten (if cholesterol or saturated fat are near the ceiling today, go egg-free and lean; if protein is short, lead with it; if fiber is short, add beans, greens or whole grains); (2) push each person toward their Prime targets and labs; (3) use mostly what is on hand (oil, salt, spices or an egg may be assumed); (4) match their tastes and avoid dislikes; (5) are realistic on a weeknight with four kids. Vary cuisine across the three. '+
+      'Reply with only JSON: {"recipes": [{"name": "", "minutes": 0, "serves": 0, "why": "one or two lines: which gap it fills and why it suits them tonight", "uses": ["items on hand"], "missing": ["things to buy, if any"], "ingredients": ["with amounts"], "steps": ["short steps"], "per_serving": {"cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}, "plating": "how to adjust per person, if cooking for both"}]}. Numbers only in per_serving.';
+    const r=await S.sample.json(prompt,{modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
     kit.recipes=Array.isArray(r&&r.recipes)?r.recipes.slice(0,3):[];kit.busy=false;render();
   }catch(e){kit.busy=false;render();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':'Could not suggest ('+code+').')}
 }
@@ -1659,6 +1694,7 @@ async function onAction(ev){
   if(act==='ksave'){const r=kit.recipes[+b.dataset.i];if(!r)return;try{await kstore.set('recipes','r-'+uid(),Object.assign({},r,{createdAt:new Date().toISOString(),by:S.profile}));toast('Recipe saved')}catch(err){toast('Could not save')}return}
   if(act==='kdelrecipe'){try{await kstore.del('recipes',b.dataset.id)}catch(err){}return}
   if(act==='klog'){const r=b.dataset.saved==='1'?S.krecipes[+b.dataset.i]:kit.recipes[+b.dataset.i];if(!r)return;try{await logRecipe(r)}catch(err){toast('Could not log ('+(err&&err.code||'error')+')')}return}
+  if(act==='ksavetastes'){const t=(document.getElementById('tasteText')||{}).value||'';try{await kstore.set('house','tastes',{text:t.trim(),updatedAt:new Date().toISOString(),by:S.profile});toast('Saved')}catch(err){toast('Could not save')}return}
   if(act==='ksaverules'){const t=(document.getElementById('houseText')||{}).value||'';try{await kstore.set('house','rules',{text:t.trim(),updatedAt:new Date().toISOString(),by:S.profile});toast('House rules saved')}catch(err){toast('Could not save')}return}
   if(act==='supp'){const id=b.dataset.id;const d=dayDoc(S.date);const supps=Array.isArray(d.supps)?d.supps.slice():[];const i=supps.indexOf(id);if(i>=0)supps.splice(i,1);else supps.push(id);
     const doc={water:num(d.water),moves:Array.isArray(d.moves)?d.moves:[],supps,updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);

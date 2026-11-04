@@ -61,6 +61,11 @@ can compute eating windows and fasts.
   returns corrections, and saved: meals to the chosen person's root (field `batch: true`), scans to the kitchen.
   When Adrian sends several photos in chat, do the same: sort them, log each to the right day and person, and
   run a second look on receipts and crowded plates before writing.
+- **Recipe suggestions** build a per-person snapshot before asking Claude: today's meals and what is left of
+  each target, the previous 7 days' averages and gaps against their standard, dishes they log often (taken as
+  likes), latest lab flags, and Coach memory facts; plus the house rules, a `house/tastes` doc {text} with
+  likes and dislikes, what is on hand or running out, saved recipes (to avoid repeats) and an optional mood
+  line. When suggesting meals in chat, use the same inputs.
 - **Kitchen (shared).** Joint household inventory under `data/users/me/kitchen/...` (one for both profiles):
   `items` {name, qty, category: produce|protein|dairy|grains|pantry|snacks|drinks|frozen|condiments|other,
   grade: good|ok|avoid, note, status: in|low|out, lastSeen, addedAt, source: fridge|receipt|manual, by},
