@@ -16,15 +16,20 @@ can compute eating windows and fasts.
   `capabilities: {db: {}, user: {}, sample: {images: true}, assets: {upload: "interact"}}`.
 - Data is written with the `ArtifactData` tool against that URL. Never hardcode data
   into the page.
-- **Every person has a private log.** The app is shared with Adrian's wife; each signed-in
-  viewer reads and writes only `data/users/<their id>/root/...`, invisible to everyone else,
-  the owner included. From Adrian's chat, address his data with the `me` segment:
-  collections `data/users/me/root/meals`, `data/users/me/root/labs`,
-  `data/users/me/root/insights`, and the settings doc at collection
-  `data/users/me/root/settings`, doc id `profile`. The top-level `meals`, `labs`,
-  `insights`, `settings` collections are no longer used (they were migrated on 2026-11-04).
-  His wife's data cannot be reached from his chat; she uses the in-app camera, or her own
-  Claude account.
+- **Two profiles, each a private log.** A toggle in the header switches between profile A
+  (Adrian: navy, electric blue, orange) and profile B (his wife: plum, pink, lavender).
+  The toggle changes both the look and the data space. Each signed-in viewer reads and
+  writes only their own subtree: profile A at `data/users/<their id>/root/...`, profile B at
+  `data/users/<their id>/root-b/...`, invisible to everyone else, the owner included.
+  From Adrian's chat, address his data with the `me` segment: collections
+  `data/users/me/root/meals`, `data/users/me/root/labs`, `data/users/me/root/insights`,
+  and the settings doc at collection `data/users/me/root/settings`, doc id `profile`.
+  If his wife uses the app under Adrian's own account (profile B on his phone), her data is
+  reachable from his chat at `data/users/me/root-b/...`; if she signs in with her own
+  account it is not. The top-level `meals`, `labs`, `insights`, `settings` collections are
+  no longer used (migrated on 2026-11-04).
+- `settings/profile` also carries `name`, shown on the toggle. The app computes a day score
+  (0 to 100 from targets) and a logging streak; both are derived, never stored.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at
   it from chat: Artifact `read` with that `url` and `path: <photoId>`.
 
