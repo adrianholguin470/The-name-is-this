@@ -28,7 +28,7 @@ can compute eating windows and fasts.
   reachable from his chat at `data/users/me/root-b/...`; if she signs in with her own
   account it is not. The top-level `meals`, `labs`, `insights`, `settings` collections are
   no longer used (migrated on 2026-11-04).
-- `settings/profile` also carries `name`, shown on the toggle. The app computes a day score
+- `settings/profile` also carries `name` (shown on the toggle), `coverId` (asset behind the Today card) and `avatarId` (asset on the toggle button); the app uploads these itself from the gear sheet. The app computes a day score
   (0 to 100 from targets) and a logging streak; both are derived, never stored.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at
   it from chat: Artifact `read` with that `url` and `path: <photoId>`.
