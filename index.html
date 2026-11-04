@@ -11,22 +11,44 @@
   --bg:#070C16; --bg-glow:rgba(61,139,255,.18); --surface:#0F1829; --surface-2:#162238; --surface-3:#1E2E4A; --line:#1F2E48; --line-2:#2D4264;
   --fg:#EEF3FA; --muted:#93A6C4; --faint:#5C7094;
   --accent:#3D8BFF; --accent-ink:#03101F; --accent-soft:rgba(61,139,255,.18); --accent-rgb:61,139,255; --accent-glow:0 0 0 6px rgba(61,139,255,.2),0 10px 34px rgba(61,139,255,.45);
-  --accent-2:#FF7A1A; --accent-2-soft:rgba(255,122,26,.18);
-  --hero-a:#142341; --hero-b:#0B1324; --hero-rgb:11,19,36;
+  --accent-2:#FF7A1A; --accent-2-rgb:255,122,26; --accent-2-soft:rgba(255,122,26,.18);
+  --hero-a:#142341; --hero-b:#0B1324; --hero-rgb:11,19,36; --dot-a:#3D8BFF;
   --good:#5FD39A; --warn:#F2B84B; --crit:#F0706A;
   --good-soft:rgba(95,211,154,.16); --warn-soft:rgba(242,184,75,.16); --crit-soft:rgba(240,112,106,.16);
   --protein:#3987e5; --carbs:#d95926; --fat:#9085e9; --fiber:#c98500;
   --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Instrument Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,monospace;
   --radius:18px;
 }
+/* Profile A looks. Jungle: deep greens, highlighter lime, amber. Mint: sea green with electric blue. */
+:root[data-theme="jungle"]{--dot-a:#9BFF3F}
+:root[data-theme="mint"]{--dot-a:#2EE6A6}
+:root[data-profile="a"][data-theme="jungle"]{
+  --bg:#05100A; --bg-glow:rgba(155,255,63,.14); --surface:#0C1A12; --surface-2:#122419; --surface-3:#1A3123; --line:#1C3025; --line-2:#2B4737;
+  --fg:#EEF7EF; --muted:#9BB8A3; --faint:#5F7E68;
+  --accent:#9BFF3F; --accent-ink:#06180A; --accent-soft:rgba(155,255,63,.16); --accent-rgb:155,255,63; --accent-glow:0 0 0 6px rgba(155,255,63,.18),0 10px 34px rgba(155,255,63,.42);
+  --accent-2:#FFC53D; --accent-2-rgb:255,197,61; --accent-2-soft:rgba(255,197,61,.18);
+  --hero-a:#153B22; --hero-b:#0A1A10; --hero-rgb:10,26,16;
+}
+:root[data-profile="a"][data-theme="mint"]{
+  --bg:#05100F; --bg-glow:rgba(46,230,166,.16); --surface:#0C1B1A; --surface-2:#122624; --surface-3:#19332F; --line:#1C302D; --line-2:#2B4843;
+  --fg:#EDF7F4; --muted:#95B6AD; --faint:#5B7C74;
+  --accent:#2EE6A6; --accent-ink:#04170F; --accent-soft:rgba(46,230,166,.16); --accent-rgb:46,230,166; --accent-glow:0 0 0 6px rgba(46,230,166,.18),0 10px 34px rgba(46,230,166,.42);
+  --accent-2:#3D8BFF; --accent-2-rgb:61,139,255; --accent-2-soft:rgba(61,139,255,.18);
+  --hero-a:#113A33; --hero-b:#0A1C1A; --hero-rgb:10,28,26;
+}
 /* Profile B (hers): deep plum, hot pink, lavender. */
 :root[data-profile="b"]{
   --bg:#150B21; --bg-glow:rgba(255,95,168,.22); --surface:#1F1232; --surface-2:#2A1A42; --surface-3:#372552; --line:#3A2755; --line-2:#4D386E;
   --fg:#FBF1FA; --muted:#C9B0DA; --faint:#8E74A8;
   --accent:#FF5FA8; --accent-ink:#2B0818; --accent-soft:rgba(255,95,168,.2); --accent-rgb:255,95,168; --accent-glow:0 0 0 6px rgba(255,95,168,.22),0 10px 34px rgba(255,95,168,.5);
-  --accent-2:#B48CFF; --accent-2-soft:rgba(180,140,255,.2);
+  --accent-2:#B48CFF; --accent-2-rgb:180,140,255; --accent-2-soft:rgba(180,140,255,.2);
   --hero-a:#3A1C54; --hero-b:#1E1033; --hero-rgb:30,16,51;
 }
+.looks{display:flex;flex-direction:column;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.swatch{background:var(--surface-2);border:2px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted)}
+.swatch i{width:100%;height:34px;border-radius:8px;display:block}
+.swatch.on{border-color:var(--accent);color:var(--fg)}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{height:100%}
@@ -51,7 +73,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background
 .ptoggle button{border:none;background:transparent;color:var(--muted);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:700;font-family:var(--display);display:flex;align-items:center;gap:6px;transition:background .25s ease,color .25s ease;max-width:96px}
 .ptoggle button span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ptoggle button i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
-.ptoggle button[data-p="a"] i{background:#3D8BFF;box-shadow:0 0 6px #3D8BFF}
+.ptoggle button[data-p="a"] i{background:var(--dot-a);box-shadow:0 0 6px var(--dot-a)}
 .ptoggle button[data-p="b"] i{background:#FF5FA8;box-shadow:0 0 6px #FF5FA8}
 .ptoggle button.on{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 14px var(--accent-soft)}
 .ptoggle button.on i{background:var(--accent-ink);box-shadow:none}
@@ -374,7 +396,7 @@ function lsPrefix(){return S.profile==='b'?'macropolo:b:':'macropolo:'}
 
 // ---------- state ----------
 const S = {
-  view:'today', date: todayStr(), range:7, profile:'a', unsubs:[],
+  view:'today', date: todayStr(), range:7, profile:'a', theme:'jungle', unsubs:[],
   settings:null, meals:[], labs:[], insights:[],
   loaded:{meals:false,labs:false,insights:false,settings:false},
   mode:'local', db:null, root:null, uid:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
@@ -468,8 +490,17 @@ const store={
 };
 async function useCap(name){try{return (window.claude&&window.claude.use)?await window.claude.use(name):null}catch(e){return null}}
 
+const THEMES={jungle:'Jungle',mint:'Mint',navy:'Navy'};
+function applyTheme(t){t=THEMES[t]?t:'jungle';S.theme=t;document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('macropolo:theme',t)}catch(e){}}
+async function setTheme(t){
+  applyTheme(t);render();
+  const doc=Object.assign({},S.settings||{},{theme:t,updatedAt:new Date().toISOString()});delete doc.id;if(!doc.name)doc.name=PROFILES.a.name;
+  try{await store.set('settings','profile',doc);S.settings=Object.assign({id:'profile'},doc)}catch(e){}
+  openSettings();
+}
 async function boot(){
   try{const p=localStorage.getItem('macropolo:profile');if(p==='b')S.profile='b'}catch(e){}
+  let th='jungle';try{th=localStorage.getItem('macropolo:theme')||'jungle'}catch(e){}applyTheme(th);
   applyProfile();route();render();
   const [db,user,sample,assets]=await Promise.all([useCap('db'),useCap('user'),useCap('sample'),useCap('assets')]);
   if(db){S.db=db;S.mode='db';let uid=null;try{uid=user?await user.id():null}catch(e){}
@@ -518,8 +549,10 @@ function drawArt(){
           if(!still){q.x+=q.vx+Math.sin(s.t/60+q.ph)*.12;q.y+=q.vy;q.rot+=q.vr;if(q.y<-40){q.y=H+30;q.x=Math.random()*W}if(q.x<-40)q.x=W+30;if(q.x>W+40)q.x=-30}}
       }else{
         const L=s.list;ctx.lineWidth=1;
-        for(let i=0;i<L.length;i++){const a=L[i];for(let j=i+1;j<L.length;j++){const b=L[j];const dx=a.x-b.x,dy=a.y-b.y;const d=dx*dx+dy*dy;if(d<5600){ctx.strokeStyle='rgba(61,139,255,'+(0.16*(1-d/5600)).toFixed(3)+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}}
-        for(const q of L){const tw=still?1:(0.7+0.3*Math.sin(s.t/40+q.ph));const col=q.k===0?'255,122,26':'61,139,255';
+        if(!art.cols||s.t%30===1){const cs=getComputedStyle(document.documentElement);art.cols=[cs.getPropertyValue('--accent-rgb').trim()||'61,139,255',cs.getPropertyValue('--accent-2-rgb').trim()||'255,122,26']}
+        const c1=art.cols[0],c2=art.cols[1];
+        for(let i=0;i<L.length;i++){const a=L[i];for(let j=i+1;j<L.length;j++){const b=L[j];const dx=a.x-b.x,dy=a.y-b.y;const d=dx*dx+dy*dy;if(d<5600){ctx.strokeStyle='rgba('+c1+','+(0.16*(1-d/5600)).toFixed(3)+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}}
+        for(const q of L){const tw=still?1:(0.7+0.3*Math.sin(s.t/40+q.ph));const col=q.k===0?c2:c1;
           ctx.fillStyle='rgba('+col+','+(q.a*tw).toFixed(3)+')';ctx.beginPath();ctx.arc(q.x,q.y,q.r,0,6.283);ctx.fill();
           if(!still){q.x+=q.vx;q.y+=q.vy;if(q.x<0)q.x=W;if(q.x>W)q.x=0;if(q.y<0)q.y=H;if(q.y>H)q.y=0}}
       }
@@ -543,7 +576,7 @@ function subscribeAll(){
   S.unsubs.push(store.subscribe('meals',rows=>{S.meals=rows;S.loaded.meals=true;clearTimeout(timer);render()},e=>{S.loaded.meals=true;toast('Could not load meals: '+(e&&e.code||'error'))}));
   S.unsubs.push(store.subscribe('labs',rows=>{S.labs=rows.sort((a,b)=>String(b.date).localeCompare(String(a.date)));S.loaded.labs=true;render()},()=>{S.loaded.labs=true}));
   S.unsubs.push(store.subscribe('insights',rows=>{S.insights=rows.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.createdAt||'').localeCompare(String(a.createdAt||'')));S.loaded.insights=true;render()},()=>{S.loaded.insights=true}));
-  S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;profileNames();render()},()=>{S.loaded.settings=true}));
+  S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;if(S.profile==='a'&&S.settings&&S.settings.theme&&S.settings.theme!==S.theme)applyTheme(S.settings.theme);profileNames();render()},()=>{S.loaded.settings=true}));
 }
 
 // ---------- day score, streak, celebration ----------
@@ -1053,6 +1086,11 @@ function openSettings(){
     <p class="small muted" style="margin:0 0 12px">Protein and fiber are floors to reach. Calories, carbs and fat are budgets. Sugar, saturated fat, cholesterol and sodium are ceilings. Claude tunes these from bloodwork.</p>
     <div class="targets">${NUTR.map(n=>h`<label>${n.l} (${n.u})<input type="number" step="any" min="0" name="${n.k}" id="tg_${n.k}" value="${tg[n.k]}"></label>`).join('')}</div>
     <div class="row between" style="margin-top:14px"><span class="tiny muted">${S.mode==='db'?(S.root?'Saved to this private log.':'Saved to the shared store.'):'Saved in this browser only.'}</span><span class="row"><button type="button" class="btn ghost sm" id="tgCancel">Cancel</button><button class="btn sm" type="submit">Save</button></span></div></form>
+    ${S.profile==='a'?h`<div class="looks"><div class="eyebrow">Look</div><div class="swatches">
+      <button type="button" class="swatch ${S.theme==='jungle'?'on':''}" data-theme="jungle"><i style="background:linear-gradient(135deg,#153B22 40%,#9BFF3F)"></i>Jungle</button>
+      <button type="button" class="swatch ${S.theme==='mint'?'on':''}" data-theme="mint"><i style="background:linear-gradient(135deg,#113A33 35%,#2EE6A6 75%,#3D8BFF)"></i>Mint</button>
+      <button type="button" class="swatch ${S.theme==='navy'?'on':''}" data-theme="navy"><i style="background:linear-gradient(135deg,#142341 40%,#3D8BFF 80%,#FF7A1A)"></i>Navy</button>
+    </div></div>`:''}
     <div class="photos"><div class="eyebrow">Photos</div>
       <div class="prow"><div class="pthumb" style="${coverUrl()?'background-image:url(\''+esc(coverUrl())+'\')':''}"></div><div class="pinfo"><b>Cover photo</b><span class="tiny muted">Sits behind the Today card. The kids, the family, a trip.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="cover">${coverUrl()?'Change':'Choose'}</button>${coverUrl()?'<button type="button" class="linkbtn danger" data-rmpic="cover">Remove</button>':''}</div></div></div>
       <div class="prow"><div class="pthumb round" style="${avatarUrl()?'background-image:url(\''+esc(avatarUrl())+'\')':''}"></div><div class="pinfo"><b>Toggle photo</b><span class="tiny muted">A face for your button at the top.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="avatar">${avatarUrl()?'Change':'Choose'}</button>${avatarUrl()?'<button type="button" class="linkbtn danger" data-rmpic="avatar">Remove</button>':''}</div></div></div>
@@ -1061,6 +1099,7 @@ function openSettings(){
   </div></div>`;
   document.getElementById('sheetBg').addEventListener('click',e=>{if(e.target.id==='sheetBg')root.innerHTML=''});
   document.getElementById('tgCancel').addEventListener('click',()=>root.innerHTML='');
+  root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.theme)));
   root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{pic.kind=b.dataset.pick;const inp=document.getElementById('picInput');inp.value='';inp.click()}));
   root.querySelectorAll('[data-rmpic]').forEach(b=>b.addEventListener('click',()=>savePhoto(b.dataset.rmpic,null)));
   document.getElementById('tgForm').addEventListener('submit',async e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const t={};for(const n of NUTR)t[n.k]=num(fd.get(n.k));
