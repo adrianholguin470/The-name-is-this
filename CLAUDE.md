@@ -36,6 +36,13 @@ can compute eating windows and fasts.
 - Looks and backgrounds are per profile, picked from the gear sheet and saved on `settings/profile` as
   `theme` and `bg`. Adrian: themes jungle | mint | navy, backgrounds constellation | aurora | sparkle.
   Katie: themes orchid | rose | sage, backgrounds petals | sparkle | aurora.
+- **Standards.** `settings/profile.standard` is `standard` or `prime` (default prime). Base targets come from
+  `STANDARDS` in index.html per profile; Katie's sets are for a woman in her early thirties, breastfeeding-aware,
+  never copied from Adrian's. An explicit `targets` object overrides the set; drop it to let the standard apply.
+- **Coach chat.** The Coach tab has an in-app chat (collection `coach`, docs `chat` {turns:[{role,content,t}]}
+  and `memory` {facts:[{text,t}]}). The page answers with Claude in-page using targets, labs, the last 7 days
+  and the memory facts, and saves up to 2 new facts per exchange. From chat, read `coach/memory` to learn what
+  each person has said, and add facts there when Adrian tells you something durable.
 - `settings/profile` also carries `name` (shown on the toggle), `coverId` (asset behind the Today card) and `avatarId` (asset on the toggle button); the app uploads these itself from the gear sheet. The app computes a day score
   (0 to 100 from targets) and a logging streak; both are derived, never stored.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at
