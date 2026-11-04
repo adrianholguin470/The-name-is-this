@@ -1,5 +1,14 @@
 <title>Macro Polo</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Macro Polo">
+<meta name="application-name" content="Macro Polo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#05100A">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: phone-first, one column, deliberately dark. Day navigation up top, big calorie figure and eating-window
@@ -20,23 +29,66 @@
   --radius:18px;
 }
 /* Profile A looks. Jungle: deep greens, highlighter lime, amber. Mint: sea green with electric blue. */
-:root[data-theme="jungle"]{--dot-a:#9BFF3F}
-:root[data-theme="mint"]{--dot-a:#2EE6A6}
-:root[data-profile="a"][data-theme="jungle"]{
+:root[data-theme-a="jungle"]{--dot-a:#9BFF3F}
+:root[data-theme-a="mint"]{--dot-a:#2EE6A6}
+:root[data-profile="a"][data-theme-a="jungle"]{
   --bg:#05100A; --bg-glow:rgba(155,255,63,.14); --surface:#0C1A12; --surface-2:#122419; --surface-3:#1A3123; --line:#1C3025; --line-2:#2B4737;
   --fg:#EEF7EF; --muted:#9BB8A3; --faint:#5F7E68;
   --accent:#9BFF3F; --accent-ink:#06180A; --accent-soft:rgba(155,255,63,.16); --accent-rgb:155,255,63; --accent-glow:0 0 0 6px rgba(155,255,63,.18),0 10px 34px rgba(155,255,63,.42);
   --accent-2:#FFC53D; --accent-2-rgb:255,197,61; --accent-2-soft:rgba(255,197,61,.18);
   --hero-a:#153B22; --hero-b:#0A1A10; --hero-rgb:10,26,16;
 }
-:root[data-profile="a"][data-theme="mint"]{
+:root[data-profile="a"][data-theme-a="mint"]{
   --bg:#05100F; --bg-glow:rgba(46,230,166,.16); --surface:#0C1B1A; --surface-2:#122624; --surface-3:#19332F; --line:#1C302D; --line-2:#2B4843;
   --fg:#EDF7F4; --muted:#95B6AD; --faint:#5B7C74;
   --accent:#2EE6A6; --accent-ink:#04170F; --accent-soft:rgba(46,230,166,.16); --accent-rgb:46,230,166; --accent-glow:0 0 0 6px rgba(46,230,166,.18),0 10px 34px rgba(46,230,166,.42);
   --accent-2:#3D8BFF; --accent-2-rgb:61,139,255; --accent-2-soft:rgba(61,139,255,.18);
   --hero-a:#113A33; --hero-b:#0A1C1A; --hero-rgb:10,28,26;
 }
-/* Profile B (hers): deep plum, hot pink, lavender. */
+/* Profile B looks. Orchid: deep plum, hot pink, lavender. Rosé: warm mauve, dusty rose, apricot. Sage: eucalyptus with blush and mint. */
+:root{--dot-b:#FF5FA8;--dot-h:#E8A24A;--nav-bg:rgba(20,27,34,.92)}
+/* Profile H (Home, the shared kitchen): dark like the other two, warm like a kitchen at night.
+   Night market: charcoal green, copper and fresh herb. Ember: warm espresso, terracotta and saffron. Slate: cool graphite, teal and orange. */
+:root[data-profile="h"]{
+  color-scheme:dark;
+  --bg:#0B110E; --bg-glow:rgba(232,162,74,.16); --surface:#131B17; --surface-2:#1A2520; --surface-3:#233029; --line:#223027; --line-2:#334538;
+  --fg:#F3F1EA; --muted:#A5B3A8; --faint:#66766B;
+  --accent:#E8A24A; --accent-ink:#1A0F03; --accent-soft:rgba(232,162,74,.18); --accent-rgb:232,162,74; --accent-glow:0 0 0 6px rgba(232,162,74,.18),0 10px 34px rgba(232,162,74,.42);
+  --accent-2:#6FD39B; --accent-2-rgb:111,211,155; --accent-2-soft:rgba(111,211,155,.18);
+  --hero-a:#1D2E25; --hero-b:#0F1713; --hero-rgb:15,23,19; --nav-bg:rgba(19,27,23,.92);
+}
+:root[data-theme-h="stone"]{--dot-h:#F07A4A}
+:root[data-theme-h="slate"]{--dot-h:#2BC4C4}
+:root[data-profile="h"][data-theme-h="stone"]{
+  --bg:#120D0B; --bg-glow:rgba(240,122,74,.16); --surface:#1B1512; --surface-2:#251D19; --surface-3:#302621; --line:#2E241F; --line-2:#43362F;
+  --fg:#F6EFE8; --muted:#B5A79B; --faint:#766A5F;
+  --accent:#F07A4A; --accent-ink:#1F0C05; --accent-soft:rgba(240,122,74,.18); --accent-rgb:240,122,74; --accent-glow:0 0 0 6px rgba(240,122,74,.18),0 10px 34px rgba(240,122,74,.42);
+  --accent-2:#F2C14E; --accent-2-rgb:242,193,78; --accent-2-soft:rgba(242,193,78,.18);
+  --hero-a:#3A241A; --hero-b:#17100C; --hero-rgb:23,16,12; --nav-bg:rgba(27,21,18,.92);
+}
+:root[data-profile="h"][data-theme-h="slate"]{
+  --bg:#0B1115; --bg-glow:rgba(43,196,196,.16); --surface:#111A1F; --surface-2:#182329; --surface-3:#203036; --line:#1F2E35; --line-2:#2F434C;
+  --fg:#EDF4F6; --muted:#9BB0B8; --faint:#5E7580;
+  --accent:#2BC4C4; --accent-ink:#04191A; --accent-soft:rgba(43,196,196,.18); --accent-rgb:43,196,196; --accent-glow:0 0 0 6px rgba(43,196,196,.18),0 10px 34px rgba(43,196,196,.42);
+  --accent-2:#FF8A3D; --accent-2-rgb:255,138,61; --accent-2-soft:rgba(255,138,61,.18);
+  --hero-a:#173039; --hero-b:#0D171C; --hero-rgb:13,23,28; --nav-bg:rgba(17,26,31,.92);
+}
+:root[data-theme-b="rose"]{--dot-b:#F28C9B}
+:root[data-theme-b="sage"]{--dot-b:#F4A6C1}
+:root[data-profile="b"][data-theme-b="rose"]{
+  --bg:#1A0F13; --bg-glow:rgba(242,140,155,.22); --surface:#241519; --surface-2:#2F1D22; --surface-3:#3C272D; --line:#3D2930; --line-2:#523842;
+  --fg:#FBF2F0; --muted:#D3B3B6; --faint:#957479;
+  --accent:#F28C9B; --accent-ink:#2E0F15; --accent-soft:rgba(242,140,155,.2); --accent-rgb:242,140,155; --accent-glow:0 0 0 6px rgba(242,140,155,.22),0 10px 34px rgba(242,140,155,.5);
+  --accent-2:#F6B26B; --accent-2-rgb:246,178,107; --accent-2-soft:rgba(246,178,107,.2);
+  --hero-a:#4A2630; --hero-b:#22121A; --hero-rgb:34,18,26;
+}
+:root[data-profile="b"][data-theme-b="sage"]{
+  --bg:#0F1613; --bg-glow:rgba(244,166,193,.18); --surface:#17211C; --surface-2:#1F2C25; --surface-3:#28382F; --line:#28362E; --line-2:#3A4C41;
+  --fg:#F3F7F3; --muted:#B3C4B8; --faint:#728579;
+  --accent:#F4A6C1; --accent-ink:#2A0E1A; --accent-soft:rgba(244,166,193,.2); --accent-rgb:244,166,193; --accent-glow:0 0 0 6px rgba(244,166,193,.22),0 10px 34px rgba(244,166,193,.5);
+  --accent-2:#9FD3B3; --accent-2-rgb:159,211,179; --accent-2-soft:rgba(159,211,179,.2);
+  --hero-a:#24402F; --hero-b:#13201A; --hero-rgb:19,32,26;
+}
 :root[data-profile="b"]{
   --bg:#150B21; --bg-glow:rgba(255,95,168,.22); --surface:#1F1232; --surface-2:#2A1A42; --surface-3:#372552; --line:#3A2755; --line-2:#4D386E;
   --fg:#FBF1FA; --muted:#C9B0DA; --faint:#8E74A8;
@@ -46,6 +98,7 @@
 }
 .looks{display:flex;flex-direction:column;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.swatches.bgs .swatch i{background-size:cover}
 .swatch{background:var(--surface-2);border:2px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted)}
 .swatch i{width:100%;height:34px;border-radius:8px;display:block}
 .swatch.on{border-color:var(--accent);color:var(--fg)}
@@ -68,13 +121,41 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background
   display:flex;align-items:center;justify-content:space-between;gap:10px}
 .brand{display:flex;align-items:baseline;gap:8px;min-width:0}
 .brand h1{font-family:var(--display);font-weight:800;font-size:21px;margin:0;letter-spacing:-.02em;white-space:nowrap}
+.brand .mark{width:28px;height:28px;flex:none;border-radius:50%;filter:drop-shadow(0 0 6px rgba(var(--accent-rgb),.45))}
+.brand{align-items:center}
+@media (max-width:360px){.brand .mark{display:none}}
 .brand h1 span{color:var(--accent)}
 .ptoggle{display:inline-flex;background:var(--surface-2);border:1px solid var(--line-2);border-radius:999px;padding:3px;gap:2px;flex:none}
 .ptoggle button{border:none;background:transparent;color:var(--muted);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:700;font-family:var(--display);display:flex;align-items:center;gap:6px;transition:background .25s ease,color .25s ease;max-width:96px}
 .ptoggle button span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ptoggle button i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
 .ptoggle button[data-p="a"] i{background:var(--dot-a);box-shadow:0 0 6px var(--dot-a)}
-.ptoggle button[data-p="b"] i{background:#FF5FA8;box-shadow:0 0 6px #FF5FA8}
+.ptoggle button[data-p="b"] i{background:var(--dot-b);box-shadow:0 0 6px var(--dot-b)}
+.ptoggle button[data-p="h"] i{background:var(--dot-h);box-shadow:0 0 6px var(--dot-h)}
+.ptoggle button{padding:4px 8px;max-width:84px;font-size:11px;gap:5px}
+.ptoggle{padding:2px;gap:1px}
+.ptoggle button i{width:7px;height:7px}
+@media (max-width:420px){.brand h1{font-size:18px}.ptoggle button{padding:4px 7px}}
+.cookfor{display:inline-flex;gap:4px;background:var(--surface-2);border-radius:999px;padding:3px}
+.cookfor button{border:none;background:transparent;border-radius:999px;padding:5px 11px;font-size:12px;font-weight:600;color:var(--muted)}
+.cookfor button.on{background:var(--accent);color:var(--accent-ink)}
+.shop{display:flex;flex-direction:column;gap:6px}
+.shop label{display:flex;align-items:center;gap:10px;background:var(--surface-2);border-radius:10px;padding:9px 11px;font-size:14px}
+.shop label input{width:19px;height:19px;accent-color:var(--accent);flex:none}
+.shop label small{color:var(--muted);margin-left:auto;font-size:11.5px}
+.collage{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.collage img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;background:var(--surface-3)}
+.bigpick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bigpick button{background:var(--surface-2);border:1px solid var(--line-2);border-radius:16px;padding:18px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:600;color:var(--fg)}
+.bigpick button svg{width:30px;height:30px;color:var(--accent)}
+.khead h2{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:-.03em;margin:4px 0 0;line-height:1.05;background:linear-gradient(90deg,var(--fg),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.khead .eyebrow{color:var(--accent-2)}
+.khead .stats3{margin-top:14px}
+.khead .stat{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.06)}
+.khead .stat .v{font-size:22px}
+.khead .collage{margin-top:14px}
+.khead .collage img{border:1px solid rgba(255,255,255,.08)}
+.khead .btn.ghost{border-color:rgba(255,255,255,.18);background:rgba(0,0,0,.18)}
 .ptoggle button.on{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 14px var(--accent-soft)}
 .ptoggle button.on i{background:var(--accent-ink);box-shadow:none}
 .sync{display:flex;align-items:center;flex:none}
@@ -86,13 +167,22 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background
 main{flex:1;padding-block:8px 110px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));max-width:720px;width:100%;margin:0 auto}
 .view{display:flex;flex-direction:column;gap:14px}
 
-nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(20,27,34,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--nav-bg);backdrop-filter:blur(14px);border-top:1px solid var(--line);
   padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px));
-  display:grid;grid-template-columns:repeat(5,1fr);align-items:end}
-nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 9px;text-decoration:none;color:var(--muted);font-size:11px;font-weight:500}
-nav.tabs a svg{width:22px;height:22px}
+  display:grid;grid-template-columns:1fr 78px 1fr;align-items:end}
+.tabgrp{display:flex;align-items:end}.tabgrp a{flex:1}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 2px 9px;text-decoration:none;color:var(--muted);font-size:10.5px;font-weight:500;min-width:0}
+nav.tabs a svg{width:21px;height:21px}
 nav.tabs a.active{color:var(--accent)}
-nav.tabs .snapwrap{display:flex;justify-content:center;align-items:flex-end;padding-bottom:6px}
+nav.tabs .snapwrap{display:flex;justify-content:center;align-items:flex-end;padding-bottom:6px;position:relative}
+.talk{position:absolute;right:-6px;bottom:10px;width:38px;height:38px;border-radius:50%;background:var(--surface-2);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .15s ease}
+.talk:active{transform:scale(.92)}
+.talk svg{width:18px;height:18px}
+.talkbox{width:100%;min-height:96px;resize:vertical;background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:11px 12px;font-size:16px;line-height:1.4;color:var(--fg)}
+.microw{display:flex;align-items:center;gap:10px;margin-top:8px}
+.mic{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--accent);background:var(--surface-2);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.mic.live{background:var(--accent);color:var(--accent-ink);animation:breathe 1.4s ease-in-out infinite}
+.mic svg{width:20px;height:20px}
 .snap{width:64px;height:64px;border-radius:50%;background:linear-gradient(145deg,var(--accent),var(--accent-2));color:var(--accent-ink);border:none;margin-top:-28px;box-shadow:var(--accent-glow);display:flex;align-items:center;justify-content:center;transition:transform .15s ease;animation:breathe 2.6s ease-in-out infinite}
 .snap:active{transform:scale(.92)}
 @keyframes breathe{0%,100%{box-shadow:var(--accent-glow)}50%{box-shadow:0 0 0 10px rgba(var(--accent-rgb),.12),0 14px 40px rgba(var(--accent-rgb),.55)}}
@@ -120,12 +210,12 @@ nav.tabs .snapwrap{display:flex;justify-content:center;align-items:flex-end;padd
 .pinfo b{font-family:var(--display);font-weight:700}
 
 /* day score + streak */
-.scorerow{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}
+.scorerow{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .score .k{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
 .score .v{display:flex;align-items:baseline;gap:8px}
 .score .v b{font-family:var(--display);font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .score .v .grade{font-family:var(--display);font-weight:700;font-size:14px;color:var(--fg)}
-.score .bar{margin-top:7px;height:6px;background:rgba(255,255,255,.08)}
+.score .bar{margin-top:7px;height:6px;background:var(--surface-3)}
 .score .bar>i{background:linear-gradient(90deg,var(--accent),var(--accent-2))}
 .streak{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--accent-2-soft);border-radius:14px;padding:10px 14px;min-width:84px;color:var(--accent-2)}
 .streak svg{width:22px;height:22px}
@@ -338,21 +428,84 @@ table.t tr:last-child td{border-bottom:none}
 .etotals b{color:var(--fg)}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 
+/* bulk upload */
+.bitems{display:flex;flex-direction:column;gap:10px}
+.bitem{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:start;background:var(--surface-2);border-radius:12px;padding:10px;border:1px solid transparent}
+.bitem img{width:64px;height:64px;object-fit:cover;border-radius:9px;background:var(--surface-3)}
+.bitem .bb{display:flex;flex-direction:column;gap:6px;min-width:0}
+.bitem select,.bitem input{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:6px 8px;font-size:13px;color:var(--fg);min-width:0;width:100%}
+.bitem .row select,.bitem .row input{flex:1}
+.bitem.done,.bitem.checked{border-color:var(--good)}
+.bitem.saved{opacity:.6}
+.bitem.error{border-color:var(--crit)}
+.bitem .tools.x{background:var(--surface-3);border:none;border-radius:8px;width:30px;height:30px;color:var(--crit);font-weight:700}
+
+/* kitchen */
+.kgroup{margin-top:10px}
+.kitems{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kitem{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:6px 11px 6px 8px;font-size:13px;color:var(--fg);max-width:100%}
+.kitem i{width:8px;height:8px;border-radius:50%;flex:none;background:var(--muted)}
+.kitem.g-good i{background:var(--good)}.kitem.g-ok i{background:var(--warn)}.kitem.g-avoid i{background:var(--crit)}
+.kitem .q{color:var(--muted);font-size:12px}
+.kitem .st{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--warn)}
+.kitem.out{opacity:.45;text-decoration:line-through}.kitem.out .st{color:var(--crit)}
+.kitem.stale{opacity:.6;border-style:dashed}
+.kpick{display:flex;flex-direction:column;gap:6px}
+.kp{display:flex;align-items:center;gap:10px;background:var(--surface-2);border-radius:10px;padding:8px 10px;font-size:13px}
+.kp input{width:18px;height:18px;accent-color:var(--accent);flex:none}
+.kp i{width:8px;height:8px;border-radius:50%;flex:none;background:var(--muted)}
+.kp.g-good i{background:var(--good)}.kp.g-ok i{background:var(--warn)}.kp.g-avoid i{background:var(--crit)}
+.kp span{display:flex;flex-direction:column;min-width:0}.kp small{color:var(--muted);font-size:11.5px}
+.recipes{display:flex;flex-direction:column;gap:8px}
+.recipe{background:var(--surface-2);border-radius:14px;padding:11px 12px;display:flex;flex-direction:column;gap:6px}
+.recipe details summary{cursor:pointer;font-size:12px;color:var(--accent);font-weight:500;list-style:none}
+.recipe details summary::-webkit-details-marker{display:none}
+.scans{display:flex;flex-direction:column;gap:10px}
+.scan{display:grid;grid-template-columns:auto 1fr;gap:10px}
+.scan img{width:56px;height:72px;object-fit:cover;border-radius:8px;background:var(--surface-3)}
+.scan .b{min-width:0;display:flex;flex-direction:column;gap:4px}
+
+/* supplements */
+.supps{display:flex;flex-direction:column;gap:8px}
+.supp{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;background:var(--surface-2);border-radius:12px;padding:9px 10px;border:1px solid transparent}
+.supp img,.supp i{width:44px;height:44px;border-radius:9px;object-fit:cover;background:var(--surface-3);display:block}
+.supp .b{display:flex;flex-direction:column;gap:2px;min-width:0}
+.supp .b b{font-weight:600;line-height:1.25}
+.supp.off{opacity:.6}
+.supp.on{border-color:var(--good)}
+.tick{width:36px;height:36px;border-radius:50%;border:2px solid var(--line-2);background:transparent;color:var(--accent-ink);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none}
+.supp.on .tick{background:var(--good);border-color:var(--good)}
+.srow select{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:6px 8px;font-size:13px;width:100%;min-width:0;color:var(--fg);text-transform:none;letter-spacing:0}
+.srow input[type=text],.srow input[type=date]{font-family:var(--body)}
+
+/* coach chat */
+.coachcard h2{margin-bottom:8px}
+.chat{display:flex;flex-direction:column;gap:8px;max-height:46vh;overflow:auto;padding:2px 0}
+.msg{max-width:88%;border-radius:14px;padding:9px 12px;font-size:14px;line-height:1.45}
+.msg.me{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:4px}
+.msg.me .md p{color:inherit}
+.msg.coach{align-self:flex-start;background:var(--surface-2);border-bottom-left-radius:4px}
+.askbar{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:10px}
+.askbar input{background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:11px 12px;font-size:16px;color:var(--fg);width:100%;min-width:0}
+.facts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.facts li{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;background:var(--surface-2);border-radius:10px;padding:8px 10px}
+.facts li .linkbtn{flex:none;padding:0}
+
 /* who: profile chip in the header, picker sheet */
 .who{background:var(--surface);border:1px solid var(--line);border-radius:999px;height:38px;padding:0 12px 0 8px;display:inline-flex;align-items:center;gap:7px;color:var(--fg);font-weight:600;font-size:13px;max-width:150px}
 .who .av{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:12px;color:var(--accent-ink);background:var(--accent);flex:none}
-.who.pp .av{background:#FF5FA8}
+.who.pp .av{background:var(--dot-b)}
 .who span.n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pickgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
 @media (max-width:380px){.pickgrid{grid-template-columns:1fr}}
 .pick{background:var(--surface-2);border:1px solid var(--line-2);border-radius:16px;padding:16px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;min-width:0}
 .pick.on{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .pick .av{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:17px;color:#03101F;background:#3D8BFF}
-.pick.pp .av{background:#FF5FA8;color:#2B0818}
+.pick.pp .av{background:var(--dot-b);color:#2B0818}
 .pick b{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:-.01em}
 .pick .d{font-size:12px;color:var(--muted);line-height:1.35}
 .pick.on::after{content:"on this phone";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
-.pick.pp.on::after{color:#FF5FA8}
+.pick.pp.on::after{color:var(--dot-b)}
 
 /* suggestions card */
 .card.sugg{border-color:var(--line-2)}
@@ -401,10 +554,11 @@ table.t tr:last-child td{border-bottom:none}
 
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Macro<span>Polo</span></h1></div>
+    <div class="brand"><img class="mark" id="brandMark" src="mark-96.png" alt="" width="28" height="28"><h1>Macro<span>Polo</span></h1></div>
     <div class="ptoggle" id="ptoggle" role="group" aria-label="Whose log">
       <button type="button" data-p="a" id="pA"><i></i><span>Adrian</span></button>
       <button type="button" data-p="b" id="pB"><i></i><span>Katie</span></button>
+      <button type="button" data-p="h" id="pH"><i></i><span>Home</span></button>
     </div>
     <div class="row" style="gap:8px;flex-wrap:nowrap">
       <span class="sync" id="sync" title="connecting"><span class="dot"></span></span>
@@ -417,19 +571,24 @@ table.t tr:last-child td{border-bottom:none}
   <main>
     <section class="view" id="view-today"></section>
     <section class="view" id="view-trends" hidden></section>
+    <section class="view" id="view-kitchen" hidden></section>
+    <section class="view" id="view-home" hidden></section>
+    <section class="view" id="view-grocery" hidden></section>
+    <section class="view" id="view-recipes" hidden></section>
     <section class="view" id="view-labs" hidden></section>
     <section class="view" id="view-coach" hidden></section>
   </main>
 
   <nav class="tabs" id="tabs">
-    <a href="#today" data-v="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Today</a>
-    <a href="#trends" data-v="trends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Trends</a>
-    <div class="snapwrap"><button class="snap" id="snapBtn" aria-label="Photograph a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button></div>
-    <a href="#labs" data-v="labs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg>Labs</a>
-    <a href="#coach" data-v="coach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>Coach</a>
+    <div class="tabgrp" id="tabsL"></div>
+    <div class="snapwrap"><button class="snap" id="snapBtn" aria-label="Photograph a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button>
+      <button class="talk" id="talkBtn" aria-label="Tell Claude what you ate" title="Speak or type a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button></div>
+    <div class="tabgrp" id="tabsR"></div>
   </nav>
   <input type="file" id="camInput" accept="image/*" capture="environment" hidden>
   <input type="file" id="picInput" accept="image/*" hidden>
+  <input type="file" id="kitInput" accept="image/*" hidden>
+  <input type="file" id="batchInput" accept="image/*" multiple hidden>
 </div>
 
 <div id="sheetRoot"></div>
@@ -456,10 +615,37 @@ const DEFAULT_TARGETS = {cal:2000,protein:150,carbs:200,fat:65,fiber:30,sugar:36
 // added sugar kept low. Cholesterol and sodium stay at general limits; they are not her focus.
 const PP_TARGETS_BF   = {cal:2300,protein:95,carbs:260,fat:75,fiber:28,sugar:25,satfat:20,chol:300,sodium:2300};
 const PP_TARGETS_NOBF = {cal:1900,protein:85,carbs:210,fat:65,fiber:28,sugar:25,satfat:20,chol:300,sodium:2300};
+// Two standards per person. Standard = mainstream guideline numbers for that person (sex, early 30s or 40s,
+// postpartum status). Prime = the tighter set a longevity clinic would hand them: more protein and fiber,
+// less added sugar, saturated fat and sodium. Katie's sets are for a woman in her early thirties, not Adrian's.
+const STANDARDS={
+  a:{standard:{cal:2000,protein:120,carbs:225,fat:70,fiber:30,sugar:36,satfat:20,chol:300,sodium:2300},
+     prime:   {cal:2000,protein:150,carbs:200,fat:65,fiber:38,sugar:30,satfat:13,chol:200,sodium:2300}},
+  b:{standard:{bf:PP_TARGETS_BF,nobf:PP_TARGETS_NOBF},
+     prime:   {bf:  {cal:2300,protein:115,carbs:240,fat:80,fiber:32,sugar:20,satfat:16,chol:300,sodium:2000},
+               nobf:{cal:1900,protein:105,carbs:190,fat:68,fiber:30,sugar:20,satfat:14,chol:250,sodium:2000}}}
+};
+const STD_LABEL={standard:'Standard',prime:'Prime'};
+const STD_BLURB={a:{standard:'Mainstream guideline numbers for a man your age.',prime:'What a longevity clinic hands a man with your bloodwork: more protein and fiber, saturated fat and cholesterol cut hard.'},
+  b:{standard:'Mainstream guideline numbers for a woman in her early thirties, adjusted for breastfeeding.',prime:'The tighter version: more protein and fiber, less added sugar, saturated fat and sodium. Calories stay the same; recovery and milk come first.'}};
 // Two people share this app, usually from one Claude account on two phones. Each phone remembers whose it is
 // (a picker on first open, the toggle up top after that). Adrian's log lives at data/users/<id>/root, hers at
 // data/users/<id>/root-b. Her profile runs in postpartum mode: different targets, prompts and a daily movement pick.
-const PROFILES={a:{root:'root',name:'Adrian',mode:'heart',blurb:'Cholesterol, blood sugar, eating windows. Bloodwork loaded.'},b:{root:'root-b',name:'Katie',mode:'postpartum',blurb:'Postpartum recovery, breastfeeding fuel, and a daily movement pick.'}};
+const PROFILES={a:{root:'root',name:'Adrian',mode:'heart',blurb:'Cholesterol, blood sugar, eating windows. Bloodwork loaded.'},b:{root:'root-b',name:'Katie',mode:'postpartum',blurb:'Postpartum recovery, breastfeeding fuel, and a daily movement pick.'},h:{root:'home',name:'Home',mode:'home',blurb:'The shared kitchen: fridge, receipts, shopping list and recipes for the whole house.'}};
+const ICONS={today:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  trends:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>',
+  labs:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg>',
+  coach:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M12 8.5l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z" fill="currentColor" stroke="none"/></svg>',
+  home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 10h14M9 6v2M9 13v3"/></svg>',
+  grocery:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/></svg>',
+  recipes:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20v-7a6 6 0 0 1 12 0v7M12 7V4M9 5l1 2M15 5l-1 2"/></svg>'};
+const TABS={person:[['today','Today'],['trends','Trends'],['labs','Labs'],['coach','Coach']],home:[['home','Kitchen'],['grocery','Grocery'],['recipes','Recipes'],['coach','Coach']]};
+function isHome(){return (PROFILES[S.profile]||PROFILES.a).mode==='home'}
+function tabsFor(){return isHome()?TABS.home:TABS.person}
+function renderTabs(){const t=tabsFor();const mk=([v,l])=>h`<a href="#${v}" data-v="${v}" class="${S.view===v?'active':''}">${ICONS[v]}${l}</a>`;
+  document.getElementById('tabsL').innerHTML=t.slice(0,2).map(mk).join('');document.getElementById('tabsR').innerHTML=t.slice(2).map(mk).join('');
+  const sb=document.getElementById('snapBtn');sb.title=isHome()?'Scan the fridge or a receipt':'Photograph a meal';sb.setAttribute('aria-label',sb.title);
+  const tb=document.getElementById('talkBtn');tb.title=isHome()?'Tell the kitchen what changed':'Speak or type a meal';}
 const CATS = {breath:'Breath & pelvic floor',core:'Deep core (DR-safe)',yoga:'Gentle yoga',stretch:'Nursing-posture stretch',walk:'Walk & low impact'};
 // Movement library for the postpartum profile. Every item links to a video to watch (opens in a new tab),
 // plus a search link in case a video is ever taken down. minWeek gates core and yoga until the usual
@@ -500,16 +686,17 @@ const HEART_MOVES = [
   {id:'mob',    title:'10-minute mobility', meta:'Hips, thoracic spine, calves. Good on a day you ate late or slept short.'},
   {id:'post',   title:'10-minute walk after the biggest meal', meta:'Flattens the glucose spike from that meal more than any supplement.'},
 ];
-function lsPrefix(){return S.profile==='b'?'macropolo:b:':'macropolo:'}
+function lsPrefix(){return S.profile==='b'?'macropolo:b:':S.profile==='h'?'macropolo:h:':'macropolo:'}
 
 // ---------- state ----------
 const S = {
-  view:'today', date: todayStr(), range:7, profile:'a', theme:'jungle', unsubs:[],
+  view:'today', date: todayStr(), range:7, profile:'a', theme:'jungle', bg:'constellation', unsubs:[],
   settings:null, meals:[], labs:[], insights:[],
   loaded:{meals:false,labs:false,insights:false,settings:false},
   mode:'local', db:null, root:null, uid:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
   labIndex:0, addOpen:false, confirmId:null,
-  days:[], shuffle:0, libOpen:false,
+  days:[], shuffle:0, libOpen:false, coach:{chat:null,memory:null}, supps:[],
+  kroot:null, kitems:[], kscans:[], krecipes:[], khouse:null, kunsubs:[], showOut:false,
 };
 
 // ---------- helpers ----------
@@ -532,17 +719,19 @@ function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2
 function slug(s){return String(s||'meal').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'meal'}
 function h(strings,...vals){return strings.reduce((a,s,i)=>a+s+(i<vals.length?vals[i]:''),'')}
 function profName(id){return (id===S.profile&&S.settings&&S.settings.name)||(S.names&&S.names[id])||PROFILES[id].name}
-function profiles(){return Object.keys(PROFILES).map(id=>Object.assign({},PROFILES[id],{id,name:profName(id)}))}
+function profiles(){return Object.keys(PROFILES).filter(id=>PROFILES[id].mode!=='home').map(id=>Object.assign({},PROFILES[id],{id,name:profName(id)}))}
 function me(){const p=PROFILES[S.profile]||PROFILES.a;return Object.assign({},p,{id:S.profile,name:profName(S.profile)})}
 function isPP(){return (PROFILES[S.profile]||PROFILES.a).mode==='postpartum'}
 function dispName(p){return p.name||PROFILES[p.id].name}
 function initials(p){const n=dispName(p);return n.trim().slice(0,1).toUpperCase()||'?'}
 function pp(){return Object.assign({born:'2026-09-04',breastfeeding:true,cleared:true,delivery:'vaginal'},(S.settings&&S.settings.postpartum)||{})}
 function weeksPP(){const b=pp().born||'2026-09-04';const [y,m,d]=b.split('-').map(Number);const days=Math.floor((Date.now()-new Date(y,m-1,d).getTime())/864e5);return Math.max(0,Math.floor(days/7))}
-function baseTargets(){return isPP()?(pp().breastfeeding?PP_TARGETS_BF:PP_TARGETS_NOBF):DEFAULT_TARGETS}
+function standard(){const v=S.settings&&S.settings.standard;return v==='standard'?'standard':'prime'}
+function stdSet(std,bf){const set=STANDARDS[S.profile]||STANDARDS.a;const x=set[std]||set.prime;return isPP()?(bf?x.bf:x.nobf):x}
+function baseTargets(){return stdSet(standard(),pp().breastfeeding)}
 function targets(){return Object.assign({},baseTargets(),(S.settings&&S.settings.targets)||{})}
 function waterGoal(){return isPP()?(pp().breastfeeding?12:9):8}
-function dayDoc(date){return S.days.find(d=>d.id===date)||{id:date,water:0,moves:[]}}
+function dayDoc(date){return S.days.find(d=>d.id===date)||{id:date,water:0,moves:[],supps:[]}}
 function hashStr(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
 function ytUrl(id){return 'https://www.youtube.com/watch?v='+encodeURIComponent(id)}
 function ytSearch(q){return 'https://www.youtube.com/results?search_query='+encodeURIComponent(q)}
@@ -611,71 +800,133 @@ const store={
     lsSet(coll,lsGet(coll).filter(d=>d.id!==id));lsEmit(coll);
   }
 };
+// Kitchen is joint: one inventory for the household, under data/users/<id>/kitchen, shared by both profiles.
+function kls(coll){try{return JSON.parse(localStorage.getItem('macropolo:k:'+coll)||'[]')}catch(e){return []}}
+function klsSet(coll,arr){try{localStorage.setItem('macropolo:k:'+coll,JSON.stringify(arr))}catch(e){}}
+const klisteners={};
+function klsEmit(coll){(klisteners[coll]||[]).forEach(fn=>fn(kls(coll)))}
+const kstore={
+  subscribe(coll,cb,onErr){
+    if(S.db){return S.kroot.collection(coll).limit(1000).onSnapshot(snap=>cb(snap.docs.map(d=>Object.assign({id:d.id},d.data()))),err=>{onErr&&onErr(err)})}
+    (klisteners[coll]=klisteners[coll]||[]).push(cb);cb(kls(coll));return ()=>{klisteners[coll]=(klisteners[coll]||[]).filter(f=>f!==cb)};
+  },
+  async set(coll,id,data){if(S.db){await S.kroot.collection(coll).doc(id).set(data);return}const arr=kls(coll).filter(d=>d.id!==id);arr.push(Object.assign({id},data));klsSet(coll,arr);klsEmit(coll)},
+  async del(coll,id){if(S.db){await S.kroot.collection(coll).doc(id).delete();return}klsSet(coll,kls(coll).filter(d=>d.id!==id));klsEmit(coll)}
+};
+const KVIEWS=['kitchen','home','grocery','recipes','coach'];
+function subscribeKitchen(){
+  if(S.kunsubs.length)return;
+  S.kunsubs.push(kstore.subscribe('items',rows=>{S.kitems=rows;if(KVIEWS.includes(S.view))render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('scans',rows=>{S.kscans=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));art.state.photos=null;if(KVIEWS.includes(S.view))render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('recipes',rows=>{S.krecipes=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));if(KVIEWS.includes(S.view))render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('house',rows=>{S.khouse=rows.find(r=>r.id==='rules')||null;if(KVIEWS.includes(S.view))render()},()=>{}));
+}
 async function useCap(name){try{return (window.claude&&window.claude.use)?await window.claude.use(name):null}catch(e){return null}}
 
-const THEMES={jungle:'Jungle',mint:'Mint',navy:'Navy'};
-function applyTheme(t){t=THEMES[t]?t:'jungle';S.theme=t;document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('macropolo:theme',t)}catch(e){}}
-async function setTheme(t){
-  applyTheme(t);render();
-  const doc=Object.assign({},S.settings||{},{theme:t,updatedAt:new Date().toISOString()});delete doc.id;if(!doc.name)doc.name=PROFILES.a.name;
+// Looks (palette) and backgrounds (ambient art) are per profile. Each phone caches its last pick so the right
+// colors paint before the settings doc arrives; the settings doc wins once it loads.
+const THEMES={a:{jungle:'Jungle',mint:'Mint',navy:'Navy'},b:{orchid:'Orchid',rose:'Rosé',sage:'Sage'},h:{market:'Night market',stone:'Ember',slate:'Slate'}};
+const BGS={a:{constellation:'Constellation',aurora:'Aurora',sparkle:'Sparkle'},b:{petals:'Petals',sparkle:'Sparkle',aurora:'Aurora'},h:{photos:'Our photos',market:'Herbs',aurora:'Aurora'}};
+const DEFAULT_THEME={a:'jungle',b:'orchid',h:'market'},DEFAULT_BG={a:'constellation',b:'petals',h:'photos'};
+const SWATCH={jungle:'linear-gradient(135deg,#153B22 40%,#9BFF3F)',mint:'linear-gradient(135deg,#113A33 35%,#2EE6A6 75%,#3D8BFF)',navy:'linear-gradient(135deg,#142341 40%,#3D8BFF 80%,#FF7A1A)',
+  orchid:'linear-gradient(135deg,#3A1C54 35%,#FF5FA8 75%,#B48CFF)',rose:'linear-gradient(135deg,#4A2630 35%,#F28C9B 75%,#F6B26B)',sage:'linear-gradient(135deg,#24402F 35%,#F4A6C1 72%,#9FD3B3)',
+  market:'linear-gradient(135deg,#1D2E25 35%,#E8A24A 75%,#6FD39B)',stone:'linear-gradient(135deg,#3A241A 35%,#F07A4A 75%,#F2C14E)',slate:'linear-gradient(135deg,#173039 35%,#2BC4C4 75%,#FF8A3D)'};
+const BGSWATCH={petals:'radial-gradient(circle at 30% 40%,rgba(255,255,255,.55) 0 4px,transparent 5px),radial-gradient(circle at 70% 60%,rgba(255,255,255,.4) 0 7px,transparent 8px),radial-gradient(circle at 55% 25%,rgba(255,255,255,.3) 0 3px,transparent 4px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
+  sparkle:'radial-gradient(circle at 20% 30%,#fff 0 1px,transparent 2px),radial-gradient(circle at 60% 70%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 80% 25%,#fff 0 1px,transparent 2px),radial-gradient(circle at 40% 55%,#fff 0 1px,transparent 2px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
+  aurora:'linear-gradient(180deg,var(--hero-b) 30%,rgba(var(--accent-rgb),.45) 60%,rgba(var(--accent-2-rgb),.4) 80%,var(--hero-b))',
+  market:'radial-gradient(ellipse 9px 4px at 30% 40%,rgba(var(--accent-rgb),.7) 0 100%,transparent 101%),radial-gradient(ellipse 9px 4px at 65% 65%,rgba(var(--accent-rgb),.5) 0 100%,transparent 101%),radial-gradient(circle at 55% 30%,rgba(var(--accent-2-rgb),.8) 0 3px,transparent 4px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
+  photos:'linear-gradient(135deg,rgba(var(--accent-rgb),.35),rgba(var(--accent-2-rgb),.35)),repeating-linear-gradient(90deg,var(--surface-3) 0 10px,var(--surface-2) 10px 20px)',
+  constellation:'radial-gradient(circle at 25% 35%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 65% 60%,#fff 0 1.5px,transparent 2.5px),linear-gradient(25deg,transparent 48%,rgba(255,255,255,.35) 49% 51%,transparent 52%),linear-gradient(135deg,var(--hero-a),var(--hero-b))'};
+function applyTheme(t,p){p=p||S.profile;t=THEMES[p][t]?t:DEFAULT_THEME[p];if(p===S.profile)S.theme=t;document.documentElement.setAttribute('data-theme-'+p,t);try{localStorage.setItem('macropolo:theme:'+p,t)}catch(e){}}
+function applyBg(b,p){p=p||S.profile;b=BGS[p][b]?b:DEFAULT_BG[p];if(p===S.profile)S.bg=b;try{localStorage.setItem('macropolo:bg:'+p,b)}catch(e){}art.state={}}
+function loadLookFor(p){let t=null,b=null;try{t=localStorage.getItem('macropolo:theme:'+p);b=localStorage.getItem('macropolo:bg:'+p)}catch(e){}applyTheme(t,p);applyBg(b,p)}
+async function setLook(field,val){
+  if(field==='theme')applyTheme(val);else applyBg(val);render();
+  const doc=Object.assign({},S.settings||{},{[field]:val,updatedAt:new Date().toISOString()});delete doc.id;if(!doc.name)doc.name=PROFILES[S.profile].name;
   try{await store.set('settings','profile',doc);S.settings=Object.assign({id:'profile'},doc)}catch(e){}
   openSettings();
 }
 async function boot(){
-  try{const p=localStorage.getItem('macropolo:profile');if(p==='b')S.profile='b'}catch(e){}
-  let th='jungle';try{th=localStorage.getItem('macropolo:theme')||'jungle'}catch(e){}applyTheme(th);
+  try{const p=localStorage.getItem('macropolo:profile');if(PROFILES[p])S.profile=p}catch(e){}
+  loadLookFor('a');loadLookFor('b');loadLookFor(S.profile);
   applyProfile();route();render();
   const [db,user,sample,assets]=await Promise.all([useCap('db'),useCap('user'),useCap('sample'),useCap('assets')]);
   if(db){S.db=db;S.mode='db';let uid=null;try{uid=user?await user.id():null}catch(e){}
     if(uid){S.uid=uid}}
   S.sample=sample;S.assets=assets;
   if(sample){try{const lim=await sample.limits();if(lim&&lim.images){S.canImages=true;S.imageTypes=lim.images.mediaTypes.join(',')||'image/*'}}catch(e){}}
-  setRoot();setSync();subscribeAll();
+  setRoot();S.kroot=(S.db&&S.uid)?S.db.doc('data/users/'+S.uid+'/kitchen'):null;setSync();subscribeAll();subscribeKitchen();
   let seen=null;try{seen=localStorage.getItem('macropolo:profile')}catch(e){}
   if(!seen)openPicker(true);
 }
 function setRoot(){S.root=(S.db&&S.uid)?S.db.doc('data/users/'+S.uid+'/'+PROFILES[S.profile].root):null}
 function applyProfile(){
   document.documentElement.setAttribute('data-profile',S.profile);
-  document.getElementById('pA').classList.toggle('on',S.profile==='a');document.getElementById('pB').classList.toggle('on',S.profile==='b');
+  const mk=document.getElementById('brandMark');if(mk)mk.src=S.profile==='b'?'mark-katie-96.png':S.profile==='h'?'mark-home-96.png':'mark-96.png';
+  for(const p of ['a','b','h'])document.getElementById('p'+p.toUpperCase()).classList.toggle('on',S.profile===p);
   profileNames();
 }
 function profileNames(){
   const nm=S.settings&&S.settings.name;
   document.querySelector('#pA span').textContent=S.profile==='a'&&nm?nm:(S.names&&S.names.a)||PROFILES.a.name;
   document.querySelector('#pB span').textContent=S.profile==='b'&&nm?nm:(S.names&&S.names.b)||PROFILES.b.name;
+  document.querySelector('#pH span').textContent=PROFILES.h.name;
   S.names=S.names||{};if(nm)S.names[S.profile]=nm;
   // avatars: the current profile's from settings, the other's from what this device last saw
   const av=avatarUrl();try{if(S.loaded.settings)localStorage.setItem('macropolo:avatar:'+S.profile,av||'')}catch(e){}
-  for(const p of ['a','b']){let u=p===S.profile?av:'';if(p!==S.profile){try{u=localStorage.getItem('macropolo:avatar:'+p)||''}catch(e){}}
+  for(const p of ['a','b','h']){let u=p===S.profile?av:'';if(p!==S.profile){try{u=localStorage.getItem('macropolo:avatar:'+p)||''}catch(e){}}
     const i=document.querySelector('#p'+p.toUpperCase()+' i');if(u&&u.length<200000){i.className='av';i.style.backgroundImage='url("'+u.replace(/"/g,'')+'")'}else{i.className='';i.style.backgroundImage=''}}
 }
 
 // ---------- ambient art behind the Today card ----------
 const art={state:{}};
-function artSeed(p,W,H){const n=p==='b'?30:54;const list=[];
-  for(let i=0;i<n;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:p==='b'?(i%3===0?14+Math.random()*26:5+Math.random()*9):1+Math.random()*2.2,
-    vx:(Math.random()-.5)*(p==='b'?.14:.1),vy:p==='b'?-(.06+Math.random()*.16):(Math.random()-.5)*.1,a:p==='b'?.10+Math.random()*.25:.25+Math.random()*.5,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.004,k:i%4,ph:Math.random()*6.28});
-  return {W,H,list,t:0}}
+function artCols(){const cs=getComputedStyle(document.documentElement);return [cs.getPropertyValue('--accent-rgb').trim()||'61,139,255',cs.getPropertyValue('--accent-2-rgb').trim()||'255,122,26']}
+function artSeed(style,W,H){const list=[];
+  if(style==='petals'){for(let i=0;i<30;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:i%3===0?14+Math.random()*26:5+Math.random()*9,vx:(Math.random()-.5)*.14,vy:-(.06+Math.random()*.16),a:.10+Math.random()*.25,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.004,k:i%4,ph:Math.random()*6.28})}
+  else if(style==='sparkle'){for(let i=0;i<70;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.9,a:.2+Math.random()*.7,k:i%5,ph:Math.random()*6.28,sp:.6+Math.random()*1.4});list.shoot=null}
+  else if(style==='aurora'){for(let i=0;i<3;i++)list.push({base:H*(.55+i*.14),amp:10+i*6,k:.012-i*.002,sp:.004+i*.002,ph:i*2.1,alpha:.16-i*.03,c:i%2})}
+  else if(style==='market'){for(let i=0;i<26;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:i%3===0?4+Math.random()*4:9+Math.random()*9,vx:.05+Math.random()*.12,vy:(Math.random()-.5)*.05,a:.10+Math.random()*.2,rot:Math.random()*6.28,vr:(Math.random()-.5)*.006,k:i%3,ph:Math.random()*6.28})}
+  else if(style==='photos'){list.imgs=[];list.t0=Date.now();const ids=S.kscans.filter(sc=>sc.photoId).slice(0,6).map(sc=>sc.photoId);for(const id of ids){const im=new Image();im.src='/_blob/'+encodeURIComponent(id);list.imgs.push(im)}for(let i=0;i<26;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:i%3===0?4+Math.random()*4:9+Math.random()*9,vx:.05+Math.random()*.12,vy:(Math.random()-.5)*.05,a:.08+Math.random()*.14,rot:Math.random()*6.28,vr:(Math.random()-.5)*.006,k:i%3,ph:Math.random()*6.28})}
+  else{for(let i=0;i<54;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.2,vx:(Math.random()-.5)*.1,vy:(Math.random()-.5)*.1,a:.25+Math.random()*.5,k:i%4,ph:Math.random()*6.28})}
+  return {W,H,list,t:0,style}}
 function drawArt(){
   const c=document.getElementById('heroArt');
   if(c&&!document.hidden){
     const dpr=Math.min(2,window.devicePixelRatio||1);const W=c.clientWidth,H=c.clientHeight;
     if(W&&H){if(c.width!==Math.round(W*dpr)||c.height!==Math.round(H*dpr)){c.width=Math.round(W*dpr);c.height=Math.round(H*dpr)}
       const ctx=c.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
-      const p=S.profile;let s=art.state[p];if(!s||Math.abs(s.W-W)>2||Math.abs(s.H-H)>2)s=art.state[p]=artSeed(p,W,H);
+      const style=S.bg;let s=art.state[style];if(!s||Math.abs(s.W-W)>2||Math.abs(s.H-H)>2)s=art.state[style]=artSeed(style,W,H);
       const still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;s.t++;
-      if(p==='b'){
+      if(!art.cols||s.t%30===1)art.cols=artCols();const c1=art.cols[0],c2=art.cols[1];
+      if(style==='petals'){
         for(const q of s.list){ctx.save();ctx.translate(q.x,q.y);ctx.rotate(q.rot);
-          const col=q.k===0?'255,95,168':q.k===1?'180,140,255':q.k===2?'255,170,210':'255,255,255';
+          const col=q.k===0?c1:q.k===1?c2:q.k===2?c1:'255,255,255';
           if(q.r>12){const g=ctx.createRadialGradient(0,0,0,0,0,q.r);g.addColorStop(0,'rgba('+col+','+(q.a*.9)+')');g.addColorStop(1,'rgba('+col+',0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(0,0,q.r,0,6.283);ctx.fill()}
           else{ctx.fillStyle='rgba('+col+','+q.a+')';ctx.beginPath();ctx.ellipse(0,0,q.r,q.r*.55,0,0,6.283);ctx.fill()}
           ctx.restore();
           if(!still){q.x+=q.vx+Math.sin(s.t/60+q.ph)*.12;q.y+=q.vy;q.rot+=q.vr;if(q.y<-40){q.y=H+30;q.x=Math.random()*W}if(q.x<-40)q.x=W+30;if(q.x>W+40)q.x=-30}}
+      }else if(style==='sparkle'){
+        for(const q of s.list){const tw=still?1:(.45+.55*Math.abs(Math.sin(s.t/40*q.sp+q.ph)));const col=q.k===0?c2:q.k===1?'255,255,255':c1;
+          ctx.fillStyle='rgba('+col+','+(q.a*tw).toFixed(3)+')';ctx.beginPath();ctx.arc(q.x,q.y,q.r*(0.8+0.4*tw),0,6.283);ctx.fill();
+          if(q.r>2){ctx.strokeStyle='rgba('+col+','+(q.a*tw*.5).toFixed(3)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(q.x-q.r*3,q.y);ctx.lineTo(q.x+q.r*3,q.y);ctx.moveTo(q.x,q.y-q.r*3);ctx.lineTo(q.x,q.y+q.r*3);ctx.stroke()}}
+        if(!still){if(!s.list.shoot&&Math.random()<.004)s.list.shoot={x:Math.random()*W*.7,y:Math.random()*H*.4,life:0};
+          const sh=s.list.shoot;if(sh){sh.life++;sh.x+=5;sh.y+=2.2;const a=Math.max(0,1-sh.life/28);const g=ctx.createLinearGradient(sh.x-60,sh.y-26,sh.x,sh.y);g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(255,255,255,'+(a*.9)+')');ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(sh.x-60,sh.y-26);ctx.lineTo(sh.x,sh.y);ctx.stroke();if(sh.life>28||sh.x>W+60)s.list.shoot=null}}
+      }else if(style==='market'||style==='photos'){
+        if(style==='photos'&&s.list.imgs&&s.list.imgs.length){const ims=s.list.imgs.filter(im=>im.complete&&im.naturalWidth);if(ims.length){const n=ims.length;const cw=W/n;ctx.save();ctx.globalAlpha=.22;const drift=still?0:((Date.now()-s.list.t0)/120)%cw;
+          for(let i=-1;i<=n;i++){const im=ims[((i%n)+n)%n];const x=i*cw-drift;const sc=Math.max(cw/im.naturalWidth,H/im.naturalHeight);const dw=im.naturalWidth*sc,dh=im.naturalHeight*sc;ctx.drawImage(im,x+(cw-dw)/2,(H-dh)/2,dw,dh)}ctx.restore();
+          const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,'rgba('+(getComputedStyle(document.documentElement).getPropertyValue('--hero-rgb').trim()||'244,247,243')+',.15)');g.addColorStop(1,'rgba('+(getComputedStyle(document.documentElement).getPropertyValue('--hero-rgb').trim()||'244,247,243')+',.85)');ctx.fillStyle=g;ctx.fillRect(0,0,W,H)}}
+        for(const q of s.list){ctx.save();ctx.translate(q.x,q.y);ctx.rotate(q.rot);
+          if(q.k===0){ctx.fillStyle='rgba('+c2+','+q.a+')';ctx.beginPath();ctx.arc(0,0,q.r,0,6.283);ctx.fill()}
+          else{ctx.fillStyle='rgba('+c1+','+q.a+')';ctx.beginPath();ctx.ellipse(0,0,q.r,q.r*.42,0,0,6.283);ctx.fill();ctx.strokeStyle='rgba('+c1+','+(q.a*1.4)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(-q.r*.8,0);ctx.lineTo(q.r*.8,0);ctx.stroke()}
+          ctx.restore();
+          if(!still){q.x+=q.vx;q.y+=q.vy+Math.sin(s.t/70+q.ph)*.08;q.rot+=q.vr;if(q.x>W+30){q.x=-30;q.y=Math.random()*H}if(q.y<-30)q.y=H+20;if(q.y>H+30)q.y=-20}}
+      }else if(style==='aurora'){
+        for(const rb of s.list){const col=rb.c?c2:c1;const g=ctx.createLinearGradient(0,rb.base-rb.amp-20,0,H);g.addColorStop(0,'rgba('+col+',0)');g.addColorStop(.35,'rgba('+col+','+rb.alpha+')');g.addColorStop(1,'rgba('+col+',0)');
+          ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(0,H);const tt=still?0:s.t;
+          for(let x=0;x<=W;x+=8){const y=rb.base+Math.sin(x*rb.k+tt*rb.sp+rb.ph)*rb.amp+Math.sin(x*rb.k*2.3+tt*rb.sp*1.6)*rb.amp*.4;ctx.lineTo(x,y)}
+          ctx.lineTo(W,H);ctx.closePath();ctx.fill()}
       }else{
         const L=s.list;ctx.lineWidth=1;
-        if(!art.cols||s.t%30===1){const cs=getComputedStyle(document.documentElement);art.cols=[cs.getPropertyValue('--accent-rgb').trim()||'61,139,255',cs.getPropertyValue('--accent-2-rgb').trim()||'255,122,26']}
-        const c1=art.cols[0],c2=art.cols[1];
         for(let i=0;i<L.length;i++){const a=L[i];for(let j=i+1;j<L.length;j++){const b=L[j];const dx=a.x-b.x,dy=a.y-b.y;const d=dx*dx+dy*dy;if(d<5600){ctx.strokeStyle='rgba('+c1+','+(0.16*(1-d/5600)).toFixed(3)+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}}
         for(const q of L){const tw=still?1:(0.7+0.3*Math.sin(s.t/40+q.ph));const col=q.k===0?c2:c1;
           ctx.fillStyle='rgba('+col+','+(q.a*tw).toFixed(3)+')';ctx.beginPath();ctx.arc(q.x,q.y,q.r,0,6.283);ctx.fill();
@@ -690,10 +941,10 @@ document.getElementById('ptoggle').addEventListener('click',e=>{const b=e.target
 function switchProfile(p){
   S.profile=p;try{localStorage.setItem('macropolo:profile',p)}catch(e){}
   S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];
-  S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.days=[];S.shuffle=0;S.libOpen=false;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
-  applyProfile();setRoot();setSync();render();subscribeAll();
-  document.getElementById('pickRoot').innerHTML='';if(snap.blob)renderSnap();
-  toast(profName(p)+(p==='b'?'\'s log. Pink mode on.':'\'s log. Game on.'));
+  S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.days=[];S.coach={chat:null,memory:null};coach.busy=false;S.supps=[];S.shuffle=0;S.libOpen=false;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
+  loadLookFor(p);applyProfile();setRoot();setSync();route();render();subscribeAll();
+  document.getElementById('pickRoot').innerHTML='';if(snapOpen())renderSnap();
+  toast(p==='h'?'The kitchen. Shared by everyone.':profName(p)+(p==='b'?'\'s log. Pink mode on.':'\'s log. Game on.'));
 }
 
 // ---------- picker: whose phone is this? (first open, and from the camera sheet) ----------
@@ -705,7 +956,7 @@ function openPicker(first){
     <div class="pickgrid">${ps.map(p=>h`<button class="pick ${p.mode==='postpartum'?'pp':''} ${!first&&S.profile===p.id?'on':''}" data-pick="${p.id}"><span class="av">${esc(initials(p))}</span><b>${esc(dispName(p))}</b><span class="d">${esc(p.blurb)}</span></button>`).join('')}</div>
     ${first?'':h`<div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="pickCancel">Cancel</button></div>`}
   </div></div>`;
-  root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.pick;if(id===S.profile){try{localStorage.setItem('macropolo:profile',id)}catch(e){}root.innerHTML='';toast('This phone logs for '+profName(id));if(snap.blob)renderSnap()}else switchProfile(id)}));
+  root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.pick;if(id===S.profile){try{localStorage.setItem('macropolo:profile',id)}catch(e){}root.innerHTML='';toast('This phone logs for '+profName(id));if(snapOpen())renderSnap()}else switchProfile(id)}));
   if(!first){document.getElementById('pickBg').addEventListener('click',e=>{if(e.target.id==='pickBg')root.innerHTML=''});document.getElementById('pickCancel').addEventListener('click',()=>root.innerHTML='')}
 }
 function setSync(){const el=document.getElementById('sync');
@@ -715,8 +966,10 @@ function subscribeAll(){
   S.unsubs.push(store.subscribe('meals',rows=>{S.meals=rows;S.loaded.meals=true;clearTimeout(timer);render()},e=>{S.loaded.meals=true;toast('Could not load meals: '+(e&&e.code||'error'))}));
   S.unsubs.push(store.subscribe('labs',rows=>{S.labs=rows.sort((a,b)=>String(b.date).localeCompare(String(a.date)));S.loaded.labs=true;render()},()=>{S.loaded.labs=true}));
   S.unsubs.push(store.subscribe('insights',rows=>{S.insights=rows.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.createdAt||'').localeCompare(String(a.createdAt||'')));S.loaded.insights=true;render()},()=>{S.loaded.insights=true}));
-  S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;if(S.profile==='a'&&S.settings&&S.settings.theme&&S.settings.theme!==S.theme)applyTheme(S.settings.theme);profileNames();render()},()=>{S.loaded.settings=true}));
+  S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;if(S.settings&&S.settings.theme&&THEMES[S.profile][S.settings.theme]&&S.settings.theme!==S.theme)applyTheme(S.settings.theme);if(S.settings&&S.settings.bg&&BGS[S.profile][S.settings.bg]&&S.settings.bg!==S.bg)applyBg(S.settings.bg);profileNames();render()},()=>{S.loaded.settings=true}));
   S.unsubs.push(store.subscribe('days',rows=>{S.days=rows;render()},()=>{}));
+  S.unsubs.push(store.subscribe('supplements',rows=>{S.supps=rows.sort((a,b)=>String(a.order||a.name).localeCompare(String(b.order||b.name)));render()},()=>{}));
+  S.unsubs.push(store.subscribe('coach',rows=>{S.coach={chat:rows.find(r=>r.id==='chat')||null,memory:rows.find(r=>r.id==='memory')||null};if(S.view==='coach')render()},()=>{}));
 }
 
 // ---------- day score, streak, celebration ----------
@@ -750,8 +1003,8 @@ function celebrate(){
 }
 
 // ---------- routing ----------
-const VIEWS=['today','trends','labs','coach'];
-function route(){const v=(location.hash||'#today').slice(1);S.view=VIEWS.includes(v)?v:'today'}
+const VIEWS=['today','trends','kitchen','labs','coach','home','grocery','recipes'];
+function route(){const v=(location.hash||'').slice(1);const ok=tabsFor().map(t=>t[0]);S.view=ok.includes(v)?v:ok[0]}
 window.addEventListener('hashchange',()=>{route();render();window.scrollTo(0,0)});
 
 // ---------- rendering ----------
@@ -759,9 +1012,9 @@ function chartW(){const m=document.querySelector('main');return Math.max(300,Mat
 let resizeT=null;window.addEventListener('resize',()=>{clearTimeout(resizeT);resizeT=setTimeout(render,150)});
 function render(){
   for(const v of VIEWS){document.getElementById('view-'+v).hidden=(v!==S.view)}
-  document.querySelectorAll('#tabs a').forEach(a=>a.classList.toggle('active',a.dataset.v===S.view));
+  renderTabs();
   const el=document.getElementById('view-'+S.view);
-  el.innerHTML={today:renderToday,trends:renderTrends,labs:renderLabs,coach:renderCoach}[S.view]();
+  el.innerHTML={today:renderToday,trends:renderTrends,kitchen:renderKitchen,labs:renderLabs,coach:renderCoach,home:renderHome,grocery:renderGrocery,recipes:renderRecipes}[S.view]();
   wire(el);
 }
 function wire(el){
@@ -769,6 +1022,10 @@ function wire(el){
   const f=el.querySelector('form.add');if(f)f.addEventListener('submit',onAddSubmit);
   el.querySelectorAll('.chartwrap').forEach(wireChart);
   el.querySelectorAll('[data-countup]').forEach(countUp);
+  const af=el.querySelector('#askForm');if(af)af.addEventListener('submit',ev=>{ev.preventDefault();const i=document.getElementById('askInput');const q=i.value;i.value='';askCoach(q)});
+  const sf=el.querySelector('#shopForm');if(sf)sf.addEventListener('submit',async ev=>{ev.preventDefault();const i=document.getElementById('shopInput');const v=i.value.trim();if(!v)return;i.value='';const now=new Date().toISOString();try{await kstore.set('items','k-'+uid(),{name:v,qty:'',category:'other',grade:'ok',status:'out',lastSeen:now,addedAt:now,source:'manual',by:S.profile,updatedAt:now});toast('Added to the list')}catch(e){toast('Could not add')}if(S.mode==='local')render()});
+  const ff=el.querySelector('#factForm');if(ff)ff.addEventListener('submit',async ev=>{ev.preventDefault();const i=document.getElementById('factInput');const v=i.value.trim();if(!v)return;i.value='';await rememberFacts([v]);toast('Coach will remember that')});
+  if(S.view==='coach')scrollChat();
 }
 setInterval(()=>{const el=document.getElementById('fastNow');if(el&&S.view==='today'){const f=fastingNow();el.textContent=f==null?'–':fmtDur(f)}},30000);
 
@@ -776,10 +1033,11 @@ function howItWorks(){
   return h`<div class="card"><h2>How Macro Polo works</h2>
   <ol class="steps">
     <li><b>Two logs, one app.</b> Each phone remembers whose it is (tap the name up top to switch). Nothing from one log shows in the other.</li>
-    <li><b>Tap the camera</b> and shoot your plate, the menu, a label or a receipt. Add a word if it helps ("double meat", "no cheese").</li>
+    <li><b>Tap the camera</b> and shoot your plate, the menu, a label or a receipt. Add a word if it helps ("double meat", "no cheese"). No photo? Tap the little mic next to the camera and just say what you ate.</li>
     <li><b>Claude reads it right here</b> and logs calories, macros, cholesterol, sodium and a blood-sugar spike estimate, stamped with the time you ate. Got a detail wrong? Tap Edit on the entry and tell it what changed.</li>
     <li><b>Times build your windows</b>: first bite to last bite, overnight fast, and how long you have been fasting right now.</li>
-    <li><b>Bloodwork screenshots</b> go to Claude in chat and land in Labs. Coach ties your meals back to them.</li>
+    <li><b>Bloodwork screenshots</b> go to Claude in chat and land in Labs.</li>
+    <li><b>Coach</b> (bottom right) answers any food question with your own numbers, and remembers what it learns about you.</li>
   </ol></div>`;
 }
 
@@ -814,7 +1072,7 @@ function renderToday(){
       <div class="macros">${macroRows}</div>
     </div>
     <div class="scorerow">
-      <div class="score"><div class="k">Day score</div><div class="v"><b id="scoreNum" data-countup data-v="${sc?sc.score:0}">${sc?sc.score:0}</b><span class="grade">${sc?sc.grade:(isToday?'Log something to start':'No entries')}</span></div><div class="bar"><i style="width:${sc?sc.score:0}%"></i></div></div>
+      <div class="score"><div class="k">Day score · ${STD_LABEL[standard()]}</div><div class="v"><b id="scoreNum" data-countup data-v="${sc?sc.score:0}">${sc?sc.score:0}</b><span class="grade">${sc?sc.grade:(isToday?'Log something to start':'No entries')}</span></div><div class="bar"><i style="width:${sc?sc.score:0}%"></i></div></div>
       <div class="streak ${st>=3?'hot':''}"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 2c.6 3.2-1.2 5-2.6 6.4C9.3 10 8 11.3 8 13.5a4 4 0 0 0 8 0c0-1-.4-1.9-1-2.6-.1 1.3-.7 2.1-1.5 2.6.3-2.3-.5-3.8-1.6-4.9 1.2-1.3 3-2.6 1.6-6.6zM12 22a7 7 0 0 1-7-7c0-2.4 1-4.3 2.4-5.9C6.9 11.5 6 13.3 6 15a6 6 0 0 0 12 0c0-1.6-.6-3-1.6-4.2.4 1.5.1 3.1-.9 4.2A5 5 0 0 1 12 22z"/></svg><b>${st}</b><small>day streak</small></div>
     </div>
     ${timeline(entries,win,isToday)}
@@ -825,11 +1083,12 @@ function renderToday(){
                :h`<div class="win"><div class="k">Meals</div><div class="v">${entries.length}<small>logged</small></div></div>`}
     </div>
   </div>
+  ${suppCard(date,isToday)}
   <div class="card"><h2>Heart &amp; blood-sugar ceilings<span class="sub">daily limits</span></h2><div class="limits">${limits}</div></div>
   <div class="card"><h2>Blood-sugar impact<span class="sub">estimated glycemic load per meal</span></h2>
     ${entries.length?h`<div class="row between" style="margin-bottom:8px"><span class="chip ${dayImpact}">${IMPACT_LABEL[dayImpact]} day</span><span class="small muted">Load today <b class="num" style="color:var(--fg)">${glSum}</b> · ${glSum<80?'under 80 is a calm day':'over 80 is a rough day for insulin'}</span></div>${spikeChart(spikes)}`:h`<p class="small muted" style="margin:0">Nothing logged for this day yet.</p>`}
   </div>
-  <div class="card"><div class="row between" style="margin-bottom:10px"><h2 style="margin:0">Log<span class="sub">${entries.length?entries.length+' entries':''}</span></h2><button class="btn ghost sm" data-act="toggleAdd">${S.addOpen?'Close':'Add by hand'}</button></div>
+  <div class="card"><div class="row between" style="margin-bottom:10px"><h2 style="margin:0">Log<span class="sub">${entries.length?entries.length+' entries':''}</span></h2><span class="row" style="gap:6px"><button class="btn ghost sm" data-act="batch">Upload photos</button><button class="btn ghost sm" data-act="toggleAdd">${S.addOpen?'Close':'Add by hand'}</button></span></div>
     ${S.addOpen?addForm():''}
     ${entries.length?entryList(entries):h`<div class="empty"><b>Nothing logged ${isToday?'yet today':'this day'}</b><p>Tap the camera below and shoot what you are eating.</p></div>`}
   </div>
@@ -897,6 +1156,53 @@ function library(done){
   const q=pp();const wk=weeksPP();
   return Object.keys(CATS).map(cat=>{const items=MOVES.filter(m=>m.cat===cat);if(!items.length)return'';
     return h`<div class="libgroup"><h3 class="c-${cat}">${esc(CATS[cat])}</h3><div class="moves">${items.map(m=>{const locked=wk<m.minWeek||(!q.cleared&&!['breath','stretch','walk'].includes(cat));return locked?h`<div class="move" style="opacity:.5"><div class="t">${esc(m.title)}</div><div class="meta">${m.mins} min · ${wk<m.minWeek?'from week '+m.minWeek:'after provider clearance'}</div></div>`:moveCard(m,done.includes(m.id))}).join('')}</div></div>`}).join('');
+}
+
+// --- Supplements: what each person takes, due today or not, ticked off per day ---
+const SCHED={daily:'Every day',alt:'Every other day',asneeded:'As needed'};const WHEN={morning:'Morning',midday:'Midday',night:'Night'};
+function dayNum(d){const [y,m,dd]=d.split('-').map(Number);return Math.round(new Date(y,m-1,dd).getTime()/864e5)}
+function suppDue(sp,date){if(sp.schedule==='alt'){const a=dayNum(sp.start||date);return ((dayNum(date)-a)%2+2)%2===0}return sp.schedule!=='asneeded'}
+function suppUrl(sp){return sp.photoId?'/_blob/'+encodeURIComponent(sp.photoId):''}
+function suppCard(date,isToday){
+  const dd=dayDoc(date);const taken=Array.isArray(dd.supps)?dd.supps:[];
+  if(!S.supps.length)return h`<div class="card"><div class="row between"><h2 style="margin:0">Supplements<span class="sub">vitamins and minerals</span></h2><button class="btn ghost sm" data-act="supps">Add</button></div><p class="small muted" style="margin:8px 0 0">Nothing listed yet. Add what ${esc(dispName(me()))} takes and tick it off each day.</p></div>`;
+  const due=S.supps.filter(sp=>suppDue(sp,date));const done=due.filter(sp=>taken.includes(sp.id)).length;
+  return h`<div class="card"><div class="row between" style="margin-bottom:10px"><h2 style="margin:0">Supplements<span class="sub">${done} of ${due.length} due ${isToday?'today':'that day'} taken</span></h2><button class="btn ghost sm" data-act="supps">Manage</button></div>
+    <div class="supps">${S.supps.map(sp=>{const isDue=suppDue(sp,date);const on=taken.includes(sp.id);const url=suppUrl(sp);
+      return h`<div class="supp ${on?'on':''} ${isDue?'':'off'}">${url?h`<img src="${esc(url)}" alt="">`:h`<i></i>`}
+        <div class="b"><b>${esc(sp.name)}</b><span class="tiny muted">${esc(sp.dose||'')}${sp.dose?' · ':''}${SCHED[sp.schedule]||'Every day'}${sp.time?' · '+WHEN[sp.time]:''}${sp.reminder?' · <span style="color:var(--accent)">email reminder</span>':''}</span>${sp.note?h`<span class="tiny muted">${esc(sp.note)}</span>`:''}${!isDue&&sp.schedule==='alt'?h`<span class="tiny muted">Not due ${isToday?'today':'this day'}; next ${esc(fmtShort(shiftDate(date,1)))}.</span>`:''}</div>
+        <button type="button" class="tick" data-act="supp" data-id="${esc(sp.id)}" aria-label="${on?'Taken':'Mark taken'}">${on?'✓':''}</button></div>`}).join('')}</div></div>`;
+}
+function openSupps(){
+  const root=document.getElementById('sheetRoot');const list=S.supps.length?S.supps.map(sp=>Object.assign({},sp)):[];
+  const rowHtml=(sp,i)=>h`<div class="eitem srow" data-i="${i}">
+      <div class="top"><input data-f="name" value="${esc(sp.name||'')}" placeholder="Name (brand and product)"><div class="tools"><button type="button" class="x" data-remove="1" title="Remove">✕</button></div></div>
+      <div class="egrid" style="grid-template-columns:1fr 1fr 1fr">
+        <label>Dose<input data-f="dose" type="text" value="${esc(sp.dose||'')}" placeholder="2 gummies"></label>
+        <label>How often<select data-f="schedule">${Object.keys(SCHED).map(k=>h`<option value="${k}" ${(sp.schedule||'daily')===k?'selected':''}>${SCHED[k]}</option>`).join('')}</select></label>
+        <label>When<select data-f="time">${Object.keys(WHEN).map(k=>h`<option value="${k}" ${(sp.time||'morning')===k?'selected':''}>${WHEN[k]}</option>`).join('')}</select></label>
+        <label>Start (for every other day)<input data-f="start" type="date" value="${esc(sp.start||todayStr())}"></label>
+        <label style="grid-column:span 2">Note<input data-f="note" type="text" value="${esc(sp.note||'')}" placeholder="why, or what the doctor said"></label>
+      </div></div>`;
+  root.innerHTML=h`<div class="sheet-bg" id="spBg"><div class="sheet" role="dialog" aria-label="Supplements"><div class="grab"></div>
+    <h2>${esc(dispName(me()))}'s supplements</h2>
+    <p class="small muted" style="margin:0 0 10px">Each one shows on Today with a tick box. Every-other-day items count from their start date. Coach sees this list too.</p>
+    <div class="eitems" id="spList" style="margin-top:0">${list.map(rowHtml).join('')}</div>
+    <div class="row" style="margin-top:10px"><button class="btn ghost sm" id="spAdd">+ Add one</button></div>
+    <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="spCancel">Cancel</button><button class="btn" id="spSave">Save</button></div>
+  </div></div>`;
+  const read=()=>{root.querySelectorAll('.srow').forEach((row,i)=>{const sp=list[i];if(!sp)return;for(const f of ['name','dose','schedule','time','start','note'])sp[f]=row.querySelector('[data-f='+f+']').value})};
+  const rerender=()=>{read();document.getElementById('spList').innerHTML=list.map(rowHtml).join('');wireRows()};
+  const wireRows=()=>{root.querySelectorAll('.srow [data-remove]').forEach(b=>b.addEventListener('click',()=>{read();list.splice(+b.closest('.srow').dataset.i,1);rerender()}))};
+  wireRows();
+  document.getElementById('spBg').addEventListener('click',e=>{if(e.target.id==='spBg')root.innerHTML=''});
+  document.getElementById('spCancel').addEventListener('click',()=>root.innerHTML='');
+  document.getElementById('spAdd').addEventListener('click',()=>{read();list.push({id:'sp-'+uid(),name:'',dose:'',schedule:'daily',time:'morning',start:todayStr()});rerender();const rows=root.querySelectorAll('.srow');const last=rows[rows.length-1];last&&last.querySelector('[data-f=name]').focus()});
+  document.getElementById('spSave').addEventListener('click',async()=>{read();const btn=document.getElementById('spSave');btn.disabled=true;
+    try{const keep=list.filter(sp=>sp.name.trim());const gone=S.supps.filter(sp=>!keep.some(k=>k.id===sp.id));
+      for(const sp of keep){const id=sp.id||('sp-'+uid());const doc=Object.assign({},sp,{name:sp.name.trim(),order:String(keep.indexOf(sp)).padStart(2,'0'),updatedAt:new Date().toISOString()});delete doc.id;await store.set('supplements',id,doc)}
+      for(const sp of gone)await store.del('supplements',sp.id);
+      root.innerHTML='';toast('Supplements saved');render()}catch(e){btn.disabled=false;toast('Could not save ('+(e&&e.code||'error')+')')}});
 }
 
 function timeline(entries,win,isToday){
@@ -1040,6 +1346,183 @@ function wireChart(wrap){
   wrap.addEventListener('pointerout',ev=>{if(tip&&!(ev.relatedTarget&&ev.relatedTarget.closest&&ev.relatedTarget.closest('[data-tip]')))tip.hidden=true});
 }
 
+// --- Kitchen: shared inventory from fridge and receipt scans, recipes from what is on hand ---
+const KCATS={produce:'Produce',protein:'Meat, fish, eggs',dairy:'Dairy',grains:'Grains & bread',pantry:'Pantry & canned',snacks:'Snacks & sweets',drinks:'Drinks',frozen:'Frozen',condiments:'Condiments & oils',other:'Other'};
+const KGRADE={good:'good',ok:'ok',avoid:'avoid'};
+function houseRules(){
+  if(S.khouse&&S.khouse.text)return S.khouse.text;
+  return 'Adrian: ApoB 170 and LDL 224, so saturated fat and dietary cholesterol are the enemies; fiber, fish, beans, oats, olive oil, nuts and lean protein are the heroes. Keep added sugar low.\nKatie: postpartum and breastfeeding; needs enough calories, protein, iron, calcium, omega-3 and fiber. Never restrictive.\nKids: whole foods, limited added sugar, plenty of fruit and vegetables.\nHousehold: fewer ultra-processed snacks, less cheese and butter, more produce.';
+}
+function daysSince(iso){if(!iso)return null;return Math.floor((Date.now()-new Date(iso).getTime())/864e5)}
+function receiptGradeClass(g){return /^[AB]/.test(g||'')?'normal':/^C/.test(g||'')?'borderline':'high'}
+function kHead(){
+  const canAsk=!!(S.sample&&S.canImages);const onHand=S.kitems.filter(i=>i.status!=='out').length;const need=S.kitems.filter(i=>i.status==='low'||i.status==='out').length;
+  const lastR=S.kscans.find(sc=>sc.kind==='receipt');const photos=S.kscans.filter(sc=>sc.photoId).slice(0,6);
+  return h`<div class="card hero khead ${coverUrl()?'has-cover':''}">
+    ${coverUrl()?h`<img class="hero-cover" src="${esc(coverUrl())}" alt=""><div class="hero-shade"></div>`:''}<div class="hero-art"><canvas id="heroArt"></canvas></div>
+    <div class="row between"><div><div class="eyebrow">Our kitchen · ${esc(fmtDate(todayStr(),{weekday:'long'}))}</div><h2>${esc((S.settings&&S.settings.name&&S.settings.name!=='Home')?S.settings.name:'The Holguin kitchen')}</h2></div></div>
+    <div class="stats3" style="margin-top:12px">
+      <div class="stat"><div class="k">On hand</div><div class="v">${onHand}<small>items</small></div></div>
+      <div class="stat"><div class="k">Last receipt</div><div class="v" style="color:${lastR?(receiptGradeClass(lastR.grade)==='normal'?'var(--good)':receiptGradeClass(lastR.grade)==='borderline'?'var(--warn)':'var(--crit)'):'var(--fg)'}">${lastR&&lastR.grade?esc(lastR.grade):'–'}<small>${lastR?esc(fmtShort(lastR.date)):'none yet'}</small></div></div>
+      <div class="stat"><div class="k">To buy</div><div class="v">${need}<small>low or out</small></div></div>
+    </div>
+    ${photos.length?h`<div class="collage">${photos.map(sc=>h`<img src="/_blob/${esc(sc.photoId)}" alt="">`).join('')}</div>`:''}
+    <div class="row" style="margin-top:12px;gap:8px">
+      <button class="btn sm" data-act="kscan" data-kind="fridge">${ICONS.home}Scan fridge or pantry</button>
+      <button class="btn sm ghost" data-act="kscan" data-kind="receipt">${ICONS.grocery}Scan receipt</button>
+      <button class="btn sm ghost" data-act="batch">Upload several</button>
+      <button class="btn sm ghost" data-act="kadd">Add by hand</button></div>
+    ${!canAsk?h`<div class="notice warn" style="margin-top:10px">Scanning needs Claude in this view. You can still add items by hand.</div>`:''}
+  </div>`;
+}
+function cookForBar(){const who=S.cookFor||'both';const names={a:profName('a'),b:profName('b'),both:'Both'};return h`<div class="row" style="gap:8px;margin-bottom:8px"><span class="tiny muted">Cooking for</span><div class="cookfor">${['a','b','both'].map(k=>h`<button type="button" class="${who===k?'on':''}" data-act="cookfor" data-who="${k}">${esc(names[k])}</button>`).join('')}</div></div>`}
+function kRecipes(){
+  const forWho=isHome()?(S.cookFor||'both'):S.profile;const label=forWho==='both'?'both of you':profName(forWho)+'\'s targets';
+  return h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">What can we make?<span class="sub">from what is on hand, for ${esc(label)}</span></h2><button class="btn sm" data-act="krecipes" ${kit.busy||!S.sample?'disabled':''}>${kit.busy&&kit.task==='recipes'?'Thinking…':'Suggest 3'}</button></div>
+    ${isHome()?cookForBar():''}
+    ${kit.busy&&kit.task==='recipes'?h`<div class="stream"><span class="pulse"></span>${esc(kit.text||'Looking at the kitchen…')}</div>`:''}
+    ${kit.recipes.length?h`<div class="recipes">${kit.recipes.map((r,i)=>recipeCard(r,i,false)).join('')}</div>`:(!kit.busy?h`<p class="small muted" style="margin:0">${S.kitems.length?'Tap Suggest 3. It uses the inventory, the house rules and what is left of today\'s budget.':'Scan the fridge first, then ask.'}</p>`:'')}
+    ${S.krecipes.length?h`<div class="eyebrow" style="margin:14px 0 6px">Saved recipes</div><div class="recipes">${S.krecipes.slice(0,12).map((r,i)=>recipeCard(r,i,true)).join('')}</div>`:''}
+  </div>`;
+}
+function kInv(){
+  const items=S.kitems.filter(it=>S.showOut?true:it.status!=='out');const groups={};for(const it of items){const c=KCATS[it.category]?it.category:'other';(groups[c]=groups[c]||[]).push(it)}
+  const outCount=S.kitems.filter(it=>it.status==='out').length;
+  return h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">On hand<span class="sub">tap an item to mark low or out</span></h2>${outCount?h`<button class="linkbtn" data-act="kshowout">${S.showOut?'hide used up':'show '+outCount+' used up'}</button>`:''}</div>
+    ${items.length?Object.keys(KCATS).filter(c=>groups[c]).map(c=>h`<div class="kgroup"><div class="eyebrow">${KCATS[c]}</div><div class="kitems">${groups[c].map(kItem).join('')}</div></div>`).join(''):h`<p class="small muted" style="margin:0">Empty. Scan the fridge, a pantry shelf, or a receipt, and everything lands here with a good / ok / avoid tag against your house rules.</p>`}
+    <p class="tiny muted" style="margin:10px 0 0">Things get eaten without telling anyone, so treat this as a best guess. Items not seen in a scan for 10 days go dim. Tap an item when it is low or gone; it joins the shopping list.</p></div>`;
+}
+function kScans(limit){
+  if(!S.kscans.length)return '';
+  return h`<div class="card"><h2>Scans<span class="sub">receipts graded A to F against the house rules</span></h2><div class="scans">${S.kscans.slice(0,limit||6).map(sc=>h`<div class="scan">${sc.photoId?h`<img src="/_blob/${esc(sc.photoId)}" alt="">`:''}<div class="b"><div class="row between"><b>${esc(sc.kind==='receipt'?'Receipt':'Fridge')} · ${esc(fmtShort(sc.date))}${sc.total?' · $'+esc(String(sc.total)):''}</b>${sc.grade?h`<span class="chip ${receiptGradeClass(sc.grade)}">${esc(sc.grade)}</span>`:''}</div><div class="md small">${md(sc.summary||'')}</div>${Array.isArray(sc.swaps)&&sc.swaps.length?h`<ul class="nudges" style="margin-top:6px">${sc.swaps.map(x=>h`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div></div>`).join('')}</div></div>`;
+}
+function kRules(){return h`<div class="card"><h2>House rules<span class="sub">what scans and recipes are graded against</span></h2><textarea class="talkbox" id="houseText" style="min-height:120px;font-size:14px">${esc(houseRules())}</textarea><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn sm ghost" data-act="ksaverules">Save rules</button></div></div>`}
+function renderKitchen(){return kHead()+kRecipes()+kInv()+kScans(6)+kRules()}
+function renderHome(){return kHead()+kInv()+kScans(3)+kRules()}
+function renderRecipes(){return kRecipes()}
+function renderGrocery(){
+  const need=S.kitems.filter(it=>it.status==='low'||it.status==='out');
+  const receipts=S.kscans.filter(sc=>sc.kind==='receipt');
+  const gradeNum=g=>({A:5,B:4,C:3,D:2,F:1})[(g||'').charAt(0)]||0;
+  const list=h`<div class="card hero"><h2>Shopping list<span class="sub">everything marked low or out</span></h2>
+    ${need.length?h`<div class="shop">${need.map(it=>h`<label><input type="checkbox" data-act="kbought" data-id="${esc(it.id)}"><span>${esc(it.name)}${it.qty?' <span class="muted">'+esc(it.qty)+'</span>':''}</span><small>${it.status==='out'?'out':'low'}</small></label>`).join('')}</div><p class="tiny muted" style="margin:8px 0 0">Tick an item when it is back in the house.</p>`:h`<p class="small muted" style="margin:0">Nothing on the list. Tap items on the Kitchen tab when they run low.</p>`}
+    <form class="askbar" id="shopForm" style="margin-top:10px"><input id="shopInput" placeholder="Add something to buy…" autocomplete="off"><button class="btn sm" type="submit">Add</button></form>
+  </div>`;
+  const chart=receipts.length>=2?(()=>{const rows=receipts.slice(0,10).reverse();const W=chartW(),H=120,padL=28,padR=8,padT=10,padB=24;const slot=(W-padL-padR)/rows.length;const bw=Math.max(8,Math.min(34,slot-8));const y=v=>padT+(H-padT-padB)*(1-v/5);
+    return h`<div class="chartwrap"><svg class="chart" viewBox="0 0 ${W} ${H}" aria-label="Receipt grades over time">${['A','C','F'].map(g=>h`<line class="grid" x1="${padL}" x2="${W-padR}" y1="${y(gradeNum(g)).toFixed(1)}" y2="${y(gradeNum(g)).toFixed(1)}"/><text x="${padL-6}" y="${(y(gradeNum(g))+4).toFixed(1)}" text-anchor="end">${g}</text>`).join('')}
+      ${rows.map((sc,i)=>{const v=gradeNum(sc.grade);const x=padL+slot*i+(slot-bw)/2;const col=receiptGradeClass(sc.grade)==='normal'?'var(--good)':receiptGradeClass(sc.grade)==='borderline'?'var(--warn)':'var(--crit)';return h`<g data-tip="${esc(fmtShort(sc.date))}: ${esc(sc.grade||'?')}"><rect x="${x.toFixed(1)}" y="${y(v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(y(0)-y(v)).toFixed(1)}" rx="4" fill="${col}"/><text x="${(x+bw/2).toFixed(1)}" y="${H-6}" text-anchor="middle">${esc(fmtShort(sc.date))}</text></g>`}).join('')}</svg></div>`})():'';
+  const trips=h`<div class="card"><h2>Grocery trips<span class="sub">${receipts.length?receipts.length+' receipts scanned':'scan a receipt after each shop'}</span></h2>${chart||h`<p class="small muted" style="margin:0">After two receipts a grade trend shows here.</p>`}</div>`;
+  return list+trips+kScans(10);
+}
+function kItem(it){
+  const ds=daysSince(it.lastSeen||it.addedAt);const stale=ds!=null&&ds>10;
+  return h`<button type="button" class="kitem ${esc(it.status||'in')} ${stale?'stale':''} g-${esc(it.grade||'ok')}" data-act="kcycle" data-id="${esc(it.id)}" title="${esc(it.note||'')}"><i></i><span class="n">${esc(it.name)}</span>${it.qty?h`<span class="q">${esc(it.qty)}</span>`:''}${it.status==='low'?'<span class="st">low</span>':it.status==='out'?'<span class="st">out</span>':''}</button>`;
+}
+function recipeCard(r,i,saved){
+  const ps=r.per_serving||{};const missing=Array.isArray(r.missing)?r.missing:[];
+  return h`<div class="recipe"><div class="row between"><b>${esc(r.name)}</b><span class="tiny muted">${r.minutes?r.minutes+' min':''}${r.serves?' · serves '+r.serves:''}</span></div>
+    <div class="tiny muted">${esc(r.why||'')}</div>
+    <div class="tiny" style="display:flex;gap:8px;flex-wrap:wrap;color:var(--muted)">${ps.cal!=null?h`<span><b style="color:var(--fg)">${r0(num(ps.cal))}</b> kcal</span>`:''}${ps.protein!=null?h`<span>P <b style="color:var(--fg)">${r0(num(ps.protein))}g</b></span>`:''}${ps.fiber!=null?h`<span>Fiber <b style="color:var(--fg)">${r0(num(ps.fiber))}g</b></span>`:''}${ps.satfat!=null?h`<span>Sat <b style="color:var(--fg)">${r1(num(ps.satfat))}g</b></span>`:''}${ps.sodium!=null?h`<span>Na <b style="color:var(--fg)">${r0(num(ps.sodium))}</b></span>`:''}</div>
+    ${missing.length?h`<div class="tiny" style="color:var(--warn)">Missing: ${esc(missing.join(', '))}</div>`:''}
+    <details><summary>Ingredients and steps</summary><ul class="items" style="margin-top:6px">${(r.ingredients||[]).map(x=>h`<li><span>${esc(x)}</span></li>`).join('')}</ul><ol class="steps" style="margin-top:8px;font-size:13px">${(r.steps||[]).map(x=>h`<li>${esc(x)}</li>`).join('')}</ol></details>
+    <div class="row" style="justify-content:flex-end;gap:8px"><button class="btn sm ghost" data-act="klog" data-i="${i}" data-saved="${saved?1:0}">Log a serving</button>${saved?h`<button class="linkbtn danger" data-act="kdelrecipe" data-id="${esc(r.id)}">remove</button>`:h`<button class="btn sm" data-act="ksave" data-i="${i}">Save</button>`}</div>
+  </div>`;
+}
+const kit={busy:false,task:'',text:'',recipes:[],kind:'fridge',blob:null,url:'',result:null};
+async function kitchenScan(kind){
+  if(!S.sample||!S.canImages){toast('Scanning needs Claude in this view');return}
+  kit.kind=kind;const inp=document.getElementById('kitInput');inp.value='';inp.click();
+}
+document.getElementById('kitInput').addEventListener('change',async()=>{const inp=document.getElementById('kitInput');const f=inp.files&&inp.files[0];if(!f)return;
+  kit.blob=await downscale(f,1400);kit.url=URL.createObjectURL(kit.blob);kit.result=null;kit.busy=false;renderKScan();analyzeKitchen();});
+function renderKScan(){
+  const root=document.getElementById('sheetRoot');const r=kit.result;const receipt=kit.kind==='receipt';
+  root.innerHTML=h`<div class="sheet-bg" id="ksBg"><div class="sheet" role="dialog" aria-label="Kitchen scan"><div class="grab"></div>
+    <h2>${receipt?'Receipt':'Fridge or pantry'} scan</h2>
+    <img class="preview" src="${esc(kit.url)}" alt="" style="max-height:200px">
+    ${kit.busy?h`<div class="stream"><span class="pulse"></span>${esc(kit.text||(receipt?'Reading the receipt…':'Looking at the shelves…'))}</div>`:''}
+    ${r?h`<div class="result">${r.grade?h`<div class="row"><span class="chip ${/^[AB]/.test(r.grade)?'normal':/^C/.test(r.grade)?'borderline':'high'}" style="font-size:14px;padding:5px 12px">Trip grade ${esc(r.grade)}</span></div>`:''}
+      <div class="md small">${md(r.summary||'')}</div>
+      ${Array.isArray(r.swaps)&&r.swaps.length?h`<div class="questions" style="background:var(--accent-soft)"><b style="color:var(--accent)">Swaps worth making</b><ul>${r.swaps.map(x=>h`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
+      <div class="eyebrow">Items found · untick anything wrong</div>
+      <div class="kpick">${(r.items||[]).map((it,i)=>h`<label class="kp g-${esc(KGRADE[it.grade]||'ok')}"><input type="checkbox" data-i="${i}" checked><i></i><span><b>${esc(it.name)}</b>${it.qty?' · '+esc(it.qty):''}<small>${esc(KCATS[it.category]||'Other')}${it.note?' · '+esc(it.note):''}</small></span></label>`).join('')}</div></div>`:''}
+    <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="ksCancel">Cancel</button>${r?h`<button class="btn" id="ksSave">Add to kitchen</button>`:''}</div>
+  </div></div>`;
+  document.getElementById('ksBg').addEventListener('click',e=>{if(e.target.id==='ksBg'&&!kit.busy)closeKScan()});
+  document.getElementById('ksCancel').addEventListener('click',closeKScan);
+  const sv=document.getElementById('ksSave');if(sv)sv.addEventListener('click',saveKScan);
+}
+function closeKScan(){if(kit.url)URL.revokeObjectURL(kit.url);kit.blob=null;kit.url='';kit.result=null;kit.busy=false;document.getElementById('sheetRoot').innerHTML=''}
+function kitchenPrompt(kind){
+  const receipt=kind==='receipt';const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');
+  return 'You are the kitchen scanner inside Macro Polo, a household food app for Adrian and Katie. House rules: '+houseRules().replace(/\n/g,' ')+' '+
+    (receipt?'The attached photo is a grocery receipt. Read every food or drink line (skip non-food). ':'The attached photo shows a fridge, freezer or pantry. List every food or drink you can identify, with a rough quantity. ')+
+    'For each item give a category from: produce, protein, dairy, grains, pantry, snacks, drinks, frozen, condiments, other; and a grade against the house rules: "good", "ok" or "avoid", with a short note only when it is avoid or notably good. '+
+    (receipt?'Grade the whole trip A to F for how well it serves the house rules (A = mostly produce, lean protein, fiber, little saturated fat or sugar), and list up to 3 concrete swaps for next time. ':'Write a two-sentence summary of what the kitchen looks like for the house rules. ')+
+    'Reply with only JSON: {"summary": "", "grade": "'+(receipt?'A|B|C|D|F':'')+'", "items": [{"name": "", "qty": "", "category": "", "grade": "good|ok|avoid", "note": ""}], "swaps": []}.'+(onHand?' Already on hand (for context, still list what you see): '+onHand+'.':'');
+}
+async function analyzeKitchen(){
+  if(!S.sample||!kit.blob)return;const receipt=kit.kind==='receipt';
+  const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');
+  const prompt=kitchenPrompt(receipt?'receipt':'fridge');
+  kit.busy=true;kit.task='scan';kit.text='';renderKScan();
+  try{const r=await S.sample.json(prompt,{images:kit.blob,modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
+    if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};kit.result=r;kit.busy=false;renderKScan();
+  }catch(e){kit.busy=false;renderKScan();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':'Could not read it ('+code+'). Try a closer, brighter shot.')}
+}
+async function saveKitchenResult(kind,r,picked,blob,date,by){
+  const now=new Date().toISOString();let photoId='';
+  if(blob&&S.assets){try{const up=await S.assets.upload(blob);photoId=up.id}catch(e){}}
+  for(const it of picked){const name=String(it.name||'').trim();if(!name)continue;const ex=S.kitems.find(k=>k.name.toLowerCase()===name.toLowerCase());
+    const doc={name,qty:String(it.qty||''),category:KCATS[it.category]?it.category:'other',grade:KGRADE[it.grade]||'ok',note:String(it.note||''),status:'in',lastSeen:now,addedAt:ex?ex.addedAt||now:now,source:kind,by:by||S.profile,updatedAt:now};
+    await kstore.set('items',ex?ex.id:'k-'+uid(),doc)}
+  const scan={date,kind,summary:String(r.summary||''),grade:kind==='receipt'?String(r.grade||''):'',swaps:Array.isArray(r.swaps)?r.swaps.map(String).slice(0,3):[],items:picked.map(i=>i.name),by:by||S.profile,createdAt:now};if(photoId)scan.photoId=photoId;if(r.total)scan.total=String(r.total);
+  await kstore.set('scans',date+'-'+kind+'-'+uid().slice(-4),scan);
+}
+async function saveKScan(){
+  const r=kit.result;if(!r)return;const btn=document.getElementById('ksSave');btn.disabled=true;btn.textContent='Saving…';
+  const picked=[...document.querySelectorAll('.kpick input:checked')].map(c=>r.items[+c.dataset.i]).filter(Boolean);
+  try{await saveKitchenResult(kit.kind,r,picked,kit.blob,todayStr());closeKScan();celebrate();toast(picked.length+' items added to the kitchen');render()}
+  catch(e){btn.disabled=false;btn.textContent='Add to kitchen';toast('Could not save ('+(e&&e.code||'error')+')')}
+}
+async function suggestRecipes(){
+  if(!S.sample||kit.busy)return;const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name+(i.qty?' ('+i.qty+')':'')+(i.status==='low'?' [low]':''));
+  if(!onHand.length){toast('Scan the fridge first');return}
+  const who=isHome()?(S.cookFor||'both'):S.profile;
+  const forText=who==='both'?'Cooking for both Adrian and Katie: '+introFor('a')+' '+introFor('b'):'Cooking for '+profName(who)+': '+introFor(who)+(who===S.profile?(()=>{const t=dayTotals(todayStr());const tg=targets();return ' Left in their budget today: '+NUTR.map(n=>n.l+' '+Math.max(0,Math.round(tg[n.k]-t[n.k]))+n.u).join(', ')+'.'})():'');
+  const prompt='You are the household cook inside Macro Polo. House rules: '+houseRules().replace(/\n/g,' ')+' On hand: '+onHand.join('; ')+'. '+forText+' '+
+    'Suggest 3 meals that use mostly what is on hand (a pantry staple like oil, salt, spices or an egg may be assumed), each quick enough for a weeknight with four kids, and each pointed at this person\'s goals. Reply with only JSON: {"recipes": [{"name": "", "minutes": 0, "serves": 0, "why": "one line tying it to the goals", "uses": ["items on hand"], "missing": ["things to buy, if any"], "ingredients": ["with amounts"], "steps": ["short steps"], "per_serving": {"cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}}]}. Numbers only in per_serving.';
+  kit.busy=true;kit.task='recipes';kit.text='';render();
+  try{const r=await S.sample.json(prompt,{modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
+    kit.recipes=Array.isArray(r&&r.recipes)?r.recipes.slice(0,3):[];kit.busy=false;render();
+  }catch(e){kit.busy=false;render();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':'Could not suggest ('+code+').')}
+}
+function introFor(p){
+  if(p==='b'){const q=pp();return profName('b')+' is a woman in her early thirties, '+weeksPP()+' weeks postpartum after her fourth baby'+(q.breastfeeding?', breastfeeding':'')+'; she needs enough calories, protein, iron, calcium, omega-3 and fiber, never restriction.'}
+  return profName('a')+' has ApoB 170 and LDL 224: low saturated fat and dietary cholesterol, high fiber, calm blood sugar.';
+}
+async function setFor(p,coll,id,data){
+  if(S.db&&S.uid){await S.db.doc('data/users/'+S.uid+'/'+PROFILES[p].root).collection(coll).doc(id).set(data);return}
+  const key=(p==='b'?'macropolo:b:':p==='h'?'macropolo:h:':'macropolo:')+coll;let arr=[];try{arr=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}arr=arr.filter(d=>d.id!==id);arr.push(Object.assign({id},data));try{localStorage.setItem(key,JSON.stringify(arr))}catch(e){}if(p===S.profile)lsEmit(coll);
+}
+async function logRecipe(r){
+  const ps=r.per_serving||{};const item=Object.assign({name:r.name+' (1 serving)',qty:'1 serving'},Object.fromEntries(NUTR.map(n=>[n.k,num(ps[n.k])])));
+  const doc={date:todayStr(),time:nowTime(),name:r.name,source:'recipe',createdAt:new Date().toISOString(),items:[item],analysis:String(r.why||''),notes:'From the Kitchen'};
+  const who=isHome()?(S.cookFor||'both'):S.profile;const targetsP=who==='both'?['a','b']:[who];
+  for(const p of targetsP)await setFor(p,'meals',todayStr()+'-'+slug(r.name)+'-'+uid().slice(-4),Object.assign({},doc));
+  celebrate();toast('Logged '+r.name+' for '+(who==='both'?'both of you':profName(who))+(who===S.profile?scoreTail():''));
+}
+function openKAdd(){
+  const root=document.getElementById('sheetRoot');
+  root.innerHTML=h`<div class="sheet-bg" id="kaBg"><div class="sheet" role="dialog" aria-label="Add kitchen item"><div class="grab"></div><h2>Add to the kitchen</h2>
+    <form id="kaForm" class="add"><label class="full">Item<input id="ka_name" required placeholder="e.g. Greek yogurt, 32 oz"></label><label>Quantity<input id="ka_qty" placeholder="1 tub"></label><label>Category<select id="ka_cat">${Object.keys(KCATS).map(c=>h`<option value="${c}">${KCATS[c]}</option>`).join('')}</select></label>
+    <div class="actions"><button type="button" class="btn ghost sm" id="kaCancel">Cancel</button><button class="btn sm" type="submit">Add</button></div></form></div></div>`;
+  document.getElementById('kaBg').addEventListener('click',e=>{if(e.target.id==='kaBg')root.innerHTML=''});document.getElementById('kaCancel').addEventListener('click',()=>root.innerHTML='');
+  document.getElementById('kaForm').addEventListener('submit',async e=>{e.preventDefault();const name=document.getElementById('ka_name').value.trim();if(!name)return;const now=new Date().toISOString();
+    try{await kstore.set('items','k-'+uid(),{name,qty:document.getElementById('ka_qty').value.trim(),category:document.getElementById('ka_cat').value,grade:'ok',status:'in',lastSeen:now,addedAt:now,source:'manual',by:S.profile,updatedAt:now});root.innerHTML='';toast('Added');render()}catch(err){toast('Could not add ('+(err&&err.code||'error')+')')}});
+  document.getElementById('ka_name').focus();
+}
+
 // --- Labs ---
 function labFlag(m){
   if(m.flag) return m.flag;
@@ -1079,10 +1562,70 @@ function markerRow(m){
 
 // --- Coach ---
 const KIND_LABEL={daily:'Daily recap',weekly:'Weekly review',labs:'Bloodwork',meal:'Meal note',tip:'Tip',welcome:'Welcome'};
+function coachTurns(){const c=S.coach&&S.coach.chat;return Array.isArray(c&&c.turns)?c.turns:[]}
+function coachFacts(){const m=S.coach&&S.coach.memory;return Array.isArray(m&&m.facts)?m.facts:[]}
 function renderCoach(){
-  if(!S.insights.length) return h`<div class="card"><div class="empty"><b>No notes from Claude yet</b><p>Ask for a recap of your day or week in chat and it shows up here, with what your meals are likely doing to your cholesterol and blood sugar.</p></div></div>${howItWorks()}`;
-  return S.insights.map(i=>h`<div class="card insight"><div class="meta"><span class="chip ${i.kind==='labs'?'accent':''}">${esc(KIND_LABEL[i.kind]||i.kind||'Note')}</span><span class="tiny muted">${i.date?esc(fmtDate(i.date,{month:'short',day:'numeric',year:'numeric'})):''}</span></div><h3>${esc(i.title||'')}</h3><div class="md">${md(i.body||'')}</div></div>`).join('');
+  const turns=coachTurns();const facts=coachFacts();const who=isHome()?'the house':dispName(me());
+  const canAsk=!!S.sample;
+  const chat=h`<div class="card hero coachcard"><h2>${isHome()?'Ask the house coach':'Ask Coach'}<span class="sub">${isHome()?'meal plans, what to buy, what to do with what is in the fridge':'anything about food, '+(isPP()?'recovery, milk supply':'cholesterol, blood sugar')+', what to eat next'}</span></h2>
+    <div class="chat" id="chatLog">${turns.length?turns.slice(-12).map(t=>h`<div class="msg ${t.role==='user'?'me':'coach'}"><div class="md">${t.role==='user'?esc(t.content):md(t.content)}</div></div>`).join(''):h`<div class="msg coach"><div class="md"><p>Hi ${esc(who)}. I know your targets, your log and ${isPP()?'where you are postpartum':'your bloodwork'}. Ask me things like:</p><ul><li>What should dinner be with what I have left today?</li><li>${isPP()?'Is this enough to keep my supply up?':'Which of today\'s meals hurt my ApoB most?'}</li><li>${isPP()?'What are good iron-rich snacks for night feeds?':'How long should my overnight fast be?'}</li></ul></div></div>`}
+      ${coach.busy?h`<div class="msg coach"><div class="stream" id="coachStream" style="margin:0"><span class="pulse"></span>${esc(coach.text||'Thinking…')}</div></div>`:''}</div>
+    ${canAsk?h`<form class="askbar" id="askForm"><input id="askInput" placeholder="Ask anything…" autocomplete="off" ${coach.busy?'disabled':''}><button class="btn" type="submit" ${coach.busy?'disabled':''}>Ask</button></form>
+      <div class="row between" style="margin-top:8px"><span class="tiny muted">Coach learns as you talk. Not medical advice.</span>${turns.length?h`<button class="linkbtn" data-act="clearchat">Clear chat</button>`:''}</div>`
+    :h`<div class="notice warn" style="margin-top:10px">Claude is not available in this view, so Coach cannot answer here. Ask in the Claude app instead.</div>`}
+  </div>`;
+  const mem=h`<div class="card"><h2>What Coach knows about ${esc(who)}<span class="sub">${facts.length?facts.length+' notes':'learns from your questions'}</span></h2>
+    ${facts.length?h`<ul class="facts">${facts.map((f,i)=>h`<li><span>${esc(f.text)}</span><button class="linkbtn danger" data-act="forget" data-i="${i}" aria-label="Forget this">forget</button></li>`).join('')}</ul>`:h`<p class="small muted" style="margin:0">Tell Coach things that matter: foods you avoid, how you sleep, what your doctor said, what you are training for. It keeps a short list here and uses it every time.</p>`}
+    <form class="askbar" id="factForm" style="margin-top:10px"><input id="factInput" placeholder="Add something Coach should remember…" autocomplete="off"><button class="btn ghost sm" type="submit">Remember</button></form>
+  </div>`;
+  const notes=S.insights.length?h`<h2 style="font-family:var(--display);font-size:16px;margin:6px 0 0;font-weight:700">Notes from Claude</h2>`+S.insights.map(i=>h`<div class="card insight"><div class="meta"><span class="chip ${i.kind==='labs'?'accent':''}">${esc(KIND_LABEL[i.kind]||i.kind||'Note')}</span><span class="tiny muted">${i.date?esc(fmtDate(i.date,{month:'short',day:'numeric',year:'numeric'})):''}</span></div><h3>${esc(i.title||'')}</h3><div class="md">${md(i.body||'')}</div></div>`).join(''):'';
+  return chat+mem+notes;
 }
+const coach={busy:false,text:''};
+function weekSummary(){
+  const days=[];for(let i=6;i>=0;i--)days.push(shiftDate(todayStr(),-i));
+  const logged=days.filter(d=>dayEntries(d).length);if(!logged.length)return 'No meals logged in the last 7 days.';
+  const avg={};for(const n of NUTR)avg[n.k]=Math.round(logged.reduce((a,d)=>a+dayTotals(d)[n.k],0)/logged.length);
+  const wins=logged.map(d=>dayWindow(d)).filter(w=>w&&w.count>1);const avgWin=wins.length?Math.round(wins.reduce((a,w)=>a+w.len,0)/wins.length):null;
+  return 'Last 7 days ('+logged.length+' logged): daily averages '+NUTR.map(n=>n.l+' '+avg[n.k]+n.u).join(', ')+(avgWin!=null?'; average eating window '+fmtDur(avgWin):'')+'.';
+}
+function todaySummary(){
+  const es=dayEntries(todayStr());if(!es.length)return 'Nothing logged yet today.';const t=dayTotals(todayStr());const tg=targets();
+  return 'Today so far: '+es.map(e=>fmtTime(e.time)+' '+e.name+' ('+Math.round(entryTotals(e).cal)+' kcal)').join('; ')+'. Totals '+NUTR.map(n=>n.l+' '+Math.round(t[n.k])+'/'+tg[n.k]+n.u).join(', ')+'. Fasting now '+fmtDur(fastingNow())+'.';
+}
+function coachContext(){
+  const facts=coachFacts();const lab=S.labs[0];
+  if(isHome()){const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');const need=S.kitems.filter(i=>i.status!=='in').map(i=>i.name).join(', ');
+    return personIntro()+' Kitchen on hand: '+(onHand||'nothing scanned yet')+'. Shopping list: '+(need||'empty')+'.'+(facts.length?' Things you have learned about the household: '+facts.map(f=>f.text).join('; ')+'.':'')+
+    ' Answer as the family cook and planner: meal plans, what to buy, how to use what is there, kid-friendly swaps that still fit both adults, under 180 words unless asked, plain text with - bullets and **bold** allowed. Reply with only JSON: {"answer": "your reply", "remember": ["at most 2 short durable facts about the household learned from THIS message, else empty"]}.'}
+  return personIntro().replace('the nutrition logger','the nutrition coach')+' Standard in use: '+STD_LABEL[standard()]+'. '+profileContext()+' '+weekSummary()+' '+todaySummary()+
+    (lab?' Latest labs dated '+lab.date+(lab.summary?': '+lab.summary.replace(/\*\*/g,''):'')+'.':' No labs loaded yet.')+
+    (facts.length?' Things you have learned about '+dispName(me())+': '+facts.map(f=>f.text).join('; ')+'.':'')+
+    ' Answer as a sharp, warm coach: specific, with their real numbers, under 160 words unless they ask for more, plain text with - bullets and **bold** allowed. For medication, diagnosis or anything alarming, say to ask their doctor or provider. Reply with only JSON: {"answer": "your reply", "remember": ["at most 2 short durable facts about this person learned from THIS message, else empty"]}.';
+}
+async function askCoach(q){
+  if(!S.sample||coach.busy||!q.trim())return;
+  const turns=coachTurns().slice(-8).map(t=>({role:t.role==='user'?'user':'assistant',content:t.content}));
+  const msgs=[{role:'user',content:coachContext()}].concat(turns,[{role:'user',content:q.trim()}]);
+  coach.busy=true;coach.text='';
+  const chatDoc={turns:coachTurns().concat([{role:'user',content:q.trim(),t:new Date().toISOString()}]).slice(-24)};
+  S.coach.chat=Object.assign({id:'chat'},chatDoc);render();scrollChat();
+  try{
+    const r=await S.sample.json(msgs,{modelTier:'default',cache:false,onText:({text})=>{coach.text=text.slice(-200);const el=document.getElementById('coachStream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(coach.text)}});
+    const answer=r&&typeof r.answer==='string'?r.answer:(typeof r==='string'?r:'I could not form an answer. Try asking another way.');
+    chatDoc.turns=chatDoc.turns.concat([{role:'assistant',content:answer,t:new Date().toISOString()}]).slice(-24);
+    S.coach.chat=Object.assign({id:'chat'},chatDoc);coach.busy=false;render();scrollChat();
+    await store.set('coach','chat',chatDoc);
+    const newFacts=Array.isArray(r&&r.remember)?r.remember.filter(x=>typeof x==='string'&&x.trim()).slice(0,2):[];
+    if(newFacts.length)await rememberFacts(newFacts);
+  }catch(e){coach.busy=false;render();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then ask again.':code==='rate_limited'?'Claude is busy. Try again in a bit.':'Coach could not answer ('+code+').')}
+}
+async function rememberFacts(list){
+  const cur=coachFacts();const add=list.map(t=>({text:String(t).trim().slice(0,160),t:new Date().toISOString()})).filter(f=>f.text&&!cur.some(c=>c.text.toLowerCase()===f.text.toLowerCase()));
+  if(!add.length)return;const facts=cur.concat(add).slice(-60);S.coach.memory={id:'memory',facts};render();
+  try{await store.set('coach','memory',{facts,updatedAt:new Date().toISOString()})}catch(e){}
+}
+function scrollChat(){const el=document.getElementById('chatLog');if(el)el.scrollTop=el.scrollHeight}
 function md(src){
   const lines=String(src).split(/\r?\n/);let out='',inList=false,para=[];
   const inline=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
@@ -1102,12 +1645,31 @@ async function onAction(ev){
   if(act==='shuffle'){S.shuffle++;render();return}
   if(act==='lib'){S.libOpen=!S.libOpen;render();return}
   if(act==='done'){const id=b.dataset.id;const d=dayDoc(S.date);const moves=Array.isArray(d.moves)?d.moves.slice():[];const i=moves.indexOf(id);if(i>=0)moves.splice(i,1);else moves.push(id);
-    const doc={water:num(d.water),moves,updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
+    const doc={water:num(d.water),moves,supps:Array.isArray(d.supps)?d.supps:[],updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
     try{await store.set('days',S.date,doc);if(i<0)toast('Nice. Logged for '+fmtShort(S.date))}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
-  if(act==='water'){const d=dayDoc(S.date);const water=Math.max(0,Math.min(30,num(d.water)+(+b.dataset.n)));const doc={water,moves:Array.isArray(d.moves)?d.moves:[],updatedAt:new Date().toISOString()};
+  if(act==='water'){const d=dayDoc(S.date);const water=Math.max(0,Math.min(30,num(d.water)+(+b.dataset.n)));const doc={water,moves:Array.isArray(d.moves)?d.moves:[],supps:Array.isArray(d.supps)?d.supps:[],updatedAt:new Date().toISOString()};
     if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
     try{await store.set('days',S.date,doc)}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
   if(act==='lab'){S.labIndex=+b.dataset.n;render();return}
+  if(act==='supps'){openSupps();return}
+  if(act==='kscan'){kitchenScan(b.dataset.kind);return}
+  if(act==='kadd'){openKAdd();return}
+  if(act==='batch'){openBatch();return}
+  if(act==='kshowout'){S.showOut=!S.showOut;render();return}
+  if(act==='kcycle'){const it=S.kitems.find(k=>k.id===b.dataset.id);if(!it)return;const next={in:'low',low:'out',out:'in'}[it.status||'in'];const doc=Object.assign({},it,{status:next,updatedAt:new Date().toISOString()});delete doc.id;if(next==='in')doc.lastSeen=new Date().toISOString();
+    try{await kstore.set('items',it.id,doc)}catch(err){toast('Could not save')}if(S.mode==='local')render();return}
+  if(act==='krecipes'){suggestRecipes();return}
+  if(act==='cookfor'){S.cookFor=b.dataset.who;render();return}
+  if(act==='kbought'){const it=S.kitems.find(k=>k.id===b.dataset.id);if(!it)return;const doc=Object.assign({},it,{status:'in',lastSeen:new Date().toISOString(),updatedAt:new Date().toISOString()});delete doc.id;try{await kstore.set('items',it.id,doc);toast(it.name+' back in the house')}catch(err){toast('Could not save')}if(S.mode==='local')render();return}
+  if(act==='ksave'){const r=kit.recipes[+b.dataset.i];if(!r)return;try{await kstore.set('recipes','r-'+uid(),Object.assign({},r,{createdAt:new Date().toISOString(),by:S.profile}));toast('Recipe saved')}catch(err){toast('Could not save')}return}
+  if(act==='kdelrecipe'){try{await kstore.del('recipes',b.dataset.id)}catch(err){}return}
+  if(act==='klog'){const r=b.dataset.saved==='1'?S.krecipes[+b.dataset.i]:kit.recipes[+b.dataset.i];if(!r)return;try{await logRecipe(r)}catch(err){toast('Could not log ('+(err&&err.code||'error')+')')}return}
+  if(act==='ksaverules'){const t=(document.getElementById('houseText')||{}).value||'';try{await kstore.set('house','rules',{text:t.trim(),updatedAt:new Date().toISOString(),by:S.profile});toast('House rules saved')}catch(err){toast('Could not save')}return}
+  if(act==='supp'){const id=b.dataset.id;const d=dayDoc(S.date);const supps=Array.isArray(d.supps)?d.supps.slice():[];const i=supps.indexOf(id);if(i>=0)supps.splice(i,1);else supps.push(id);
+    const doc={water:num(d.water),moves:Array.isArray(d.moves)?d.moves:[],supps,updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
+    try{await store.set('days',S.date,doc)}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
+  if(act==='clearchat'){S.coach.chat={id:'chat',turns:[]};render();try{await store.set('coach','chat',{turns:[],updatedAt:new Date().toISOString()})}catch(e){}return}
+  if(act==='forget'){const facts=coachFacts().slice();facts.splice(+b.dataset.i,1);S.coach.memory={id:'memory',facts};render();try{await store.set('coach','memory',{facts,updatedAt:new Date().toISOString()})}catch(e){}return}
   if(act==='toggleAdd'){S.addOpen=!S.addOpen;render();if(S.addOpen){const f=document.getElementById('add_name');f&&f.focus()}return}
   if(act==='edit'){openEdit(b.dataset.id);return}
   if(act==='confirm'){S.confirmId=b.dataset.id;render();return}
@@ -1127,7 +1689,22 @@ async function onAddSubmit(ev){
 
 // ---------- camera: photo → Claude → log ----------
 const cam=document.getElementById('camInput');
-document.getElementById('snapBtn').addEventListener('click',()=>{cam.accept=S.canImages?S.imageTypes:'image/*';cam.value='';cam.click()});
+document.getElementById('snapBtn').addEventListener('click',()=>{if(isHome()){openKChooser();return}cam.accept=S.canImages?S.imageTypes:'image/*';cam.value='';cam.click()});
+function openKChooser(){const root=document.getElementById('sheetRoot');
+  root.innerHTML=h`<div class="sheet-bg" id="kcBg"><div class="sheet" role="dialog" aria-label="What are you scanning?"><div class="grab"></div><h2>What are you scanning?</h2>
+    <div class="bigpick"><button type="button" data-kind="fridge">${ICONS.home}Fridge or pantry</button><button type="button" data-kind="receipt">${ICONS.grocery}Receipt</button><button type="button" data-kind="batch" style="grid-column:1/-1">${ICONS.trends}Several photos at once</button></div></div></div>`;
+  document.getElementById('kcBg').addEventListener('click',e=>{if(e.target.id==='kcBg')root.innerHTML=''});
+  root.querySelectorAll('[data-kind]').forEach(b=>b.addEventListener('click',()=>{root.innerHTML='';if(b.dataset.kind==='batch')openBatch();else kitchenScan(b.dataset.kind)}));}
+async function talkKitchen(text){
+  if(!S.sample){toast('Claude is not available in this view');return}
+  const onHand=S.kitems.map(i=>i.name+' ['+(i.status||'in')+']').slice(0,120).join('; ');
+  const prompt='You keep the household kitchen inventory inside Macro Polo. Current items with status: '+(onHand||'none')+'. Someone says: "'+text.replace(/"/g,'\'')+'". Turn that into inventory changes. Reply with only JSON: {"add": [{"name": "", "qty": "", "category": "produce|protein|dairy|grains|pantry|snacks|drinks|frozen|condiments|other"}], "low": ["existing item names"], "out": ["existing item names"], "back": ["existing item names now restocked"], "note": "one short confirmation sentence"}. Match existing names exactly when they refer to the same thing.';
+  const r=await S.sample.json(prompt,{modelTier:'quick',cache:false});const now=new Date().toISOString();let n=0;
+  const find=nm=>S.kitems.find(i=>i.name.toLowerCase()===String(nm).toLowerCase());
+  for(const it of (r.add||[])){if(!it||!it.name)continue;const ex=find(it.name);await kstore.set('items',ex?ex.id:'k-'+uid(),Object.assign({},ex||{},{name:String(it.name),qty:String(it.qty||(ex&&ex.qty)||''),category:KCATS[it.category]?it.category:(ex&&ex.category)||'other',grade:(ex&&ex.grade)||'ok',status:'in',lastSeen:now,addedAt:(ex&&ex.addedAt)||now,source:'voice',by:S.profile,updatedAt:now,id:undefined}));n++}
+  for(const [list,status] of [[r.low||[],'low'],[r.out||[],'out'],[r.back||[],'in']]){for(const nm of list){const ex=find(nm);if(!ex)continue;const doc=Object.assign({},ex,{status,updatedAt:now});if(status==='in')doc.lastSeen=now;delete doc.id;await kstore.set('items',ex.id,doc);n++}}
+  toast(r.note?String(r.note):n+' changes made');if(S.mode==='local')render();
+}
 cam.addEventListener('change',()=>{const f=cam.files&&cam.files[0];if(f)openSnap(f)});
 
 async function downscale(file,maxPx){
@@ -1139,25 +1716,52 @@ async function downscale(file,maxPx){
   return await new Promise(res=>c.toBlob(b=>res(b||file),'image/jpeg',0.86));
 }
 
-const snap={blob:null,url:'',result:null,turns:[],busy:false,ctl:null};
+const snap={mode:'photo',blob:null,url:'',result:null,turns:[],busy:false,ctl:null,rec:null};
 async function openSnap(file){
-  snap.blob=await downscale(file,1280);snap.url=URL.createObjectURL(snap.blob);snap.result=null;snap.turns=[];snap.busy=false;
+  snap.mode='photo';snap.blob=await downscale(file,1280);snap.url=URL.createObjectURL(snap.blob);snap.result=null;snap.turns=[];snap.busy=false;
   renderSnap();
 }
-function closeSnap(){if(snap.ctl)snap.ctl.abort();if(snap.url)URL.revokeObjectURL(snap.url);snap.blob=null;snap.url='';snap.result=null;document.getElementById('sheetRoot').innerHTML=''}
+// Talk: describe the meal in words. The keyboard's dictation key works everywhere; the page's own
+// microphone button appears only where the browser offers speech recognition and allows it.
+document.getElementById('talkBtn').addEventListener('click',()=>{if(isHome()){openKTalk();return}snap.mode='talk';snap.blob=null;snap.url='';snap.result=null;snap.turns=[];snap.busy=false;renderSnap();const t=document.getElementById('snapNote');if(t)t.focus()});
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition||null;
+function toggleMic(){
+  const btn=document.getElementById('micBtn');const box=document.getElementById('snapNote');if(!SR||!btn||!box)return;
+  if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null;btn.classList.remove('live');return}
+  const rec=new SR();rec.lang=navigator.language||'en-US';rec.interimResults=true;rec.continuous=true;let base=box.value?box.value.trim()+' ':'';
+  rec.onresult=ev=>{let fin='',interim='';for(let i=ev.resultIndex;i<ev.results.length;i++){const t=ev.results[i][0].transcript;if(ev.results[i].isFinal)fin+=t+' ';else interim+=t}
+    if(fin){base+=fin}box.value=(base+interim).trim()};
+  rec.onerror=ev=>{snap.rec=null;btn.classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){btn.hidden=true;const hint=document.getElementById('micHint');if(hint)hint.textContent='The microphone is blocked here. Tap the mic key on your keyboard and dictate instead.'}};
+  rec.onend=()=>{snap.rec=null;btn.classList.remove('live')};
+  try{rec.start();snap.rec=rec;btn.classList.add('live')}catch(e){snap.rec=null}
+}
+function snapOpen(){return !!document.getElementById('snapBg')}
+function openKTalk(){const root=document.getElementById('sheetRoot');
+  root.innerHTML=h`<div class="sheet-bg" id="ktBg"><div class="sheet" role="dialog" aria-label="Tell the kitchen"><div class="grab"></div><h2>Tell the kitchen what changed</h2>
+    <textarea class="talkbox" id="ktText" placeholder="We're out of eggs. Bought 2 lb of chicken thighs and a bag of spinach. Milk is low."></textarea>
+    <p class="tiny muted" style="margin:8px 0 0">Use the mic key on your keyboard to say it.</p>
+    <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="ktCancel">Cancel</button><button class="btn" id="ktGo">Update kitchen</button></div></div></div>`;
+  document.getElementById('ktBg').addEventListener('click',e=>{if(e.target.id==='ktBg')root.innerHTML=''});document.getElementById('ktCancel').addEventListener('click',()=>root.innerHTML='');
+  document.getElementById('ktGo').addEventListener('click',async()=>{const t=document.getElementById('ktText').value.trim();if(!t){toast('Say what changed first');return}const b=document.getElementById('ktGo');b.disabled=true;b.textContent='Working…';try{await talkKitchen(t);root.innerHTML=''}catch(e){b.disabled=false;b.textContent='Update kitchen';toast('Could not update ('+(e&&e.code||'error')+')')}});
+  document.getElementById('ktText').focus();}
+function closeSnap(){if(snap.ctl)snap.ctl.abort();if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null}if(snap.url)URL.revokeObjectURL(snap.url);snap.blob=null;snap.url='';snap.result=null;document.getElementById('sheetRoot').innerHTML=''}
 function renderSnap(streamText){
-  const root=document.getElementById('sheetRoot');const r=snap.result;const canAsk=!!(S.sample&&S.canImages);
+  const root=document.getElementById('sheetRoot');const r=snap.result;const talk=snap.mode==='talk';const canAsk=!!(S.sample&&(talk||S.canImages));
   const time=(document.getElementById('snapTime')||{}).value||nowTime();const note=(document.getElementById('snapNote')||{}).value||'';
-  root.innerHTML=h`<div class="sheet-bg" id="snapBg"><div class="sheet" role="dialog" aria-label="Log a photo">
+  const who=h`<div class="row between" style="margin-top:10px"><span class="small">Logging for <b>${esc(dispName(me()))}</b></span><button class="linkbtn" id="snapWho" type="button">not ${isPP()?'her':'him'}? switch</button></div>`;
+  root.innerHTML=h`<div class="sheet-bg" id="snapBg"><div class="sheet" role="dialog" aria-label="${talk?'Tell Claude what you ate':'Log a photo'}">
     <div class="grab"></div>
-    <img class="preview" src="${esc(snap.url)}" alt="Your photo">
-    <div class="row between" style="margin-top:10px"><span class="small">Logging for <b>${esc(dispName(me()))}</b></span><button class="linkbtn" id="snapWho" type="button">not ${isPP()?'her':'him'}? switch</button></div>
+    ${talk?h`<h2>What did you eat?</h2>
+      <textarea class="talkbox" id="snapNote" placeholder="Just talk: two scrambled eggs, sourdough toast with butter, a black coffee. Tap the mic key on your keyboard and say it.">${esc(note)}</textarea>
+      <div class="microw">${SR?h`<button type="button" class="mic" id="micBtn" aria-label="Start or stop listening"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button>`:''}<span class="tiny muted" id="micHint">${SR?'Tap to listen, tap again to stop. Or use the mic key on your keyboard.':'Tap the mic key on your keyboard and dictate.'}</span>
+        <div class="field" style="margin-left:auto"><span>Eaten at</span><input id="snapTime" type="time" value="${esc(time)}" style="width:118px"></div></div>${who}`
+    :h`<img class="preview" src="${esc(snap.url)}" alt="Your photo">${who}
     <div class="snapgrid">
       <div class="field"><span>Anything Claude should know? (optional)</span><input id="snapNote" placeholder="double chicken, no sour cream, 12 oz" value="${esc(note)}"></div>
       <div class="field"><span>Eaten at</span><input id="snapTime" type="time" value="${esc(time)}" style="width:118px"></div>
-    </div>
-    ${!canAsk?h`<div class="notice warn" style="margin-top:12px">${S.sample?'This view cannot send photos to Claude, so the entry is saved as waiting. Send the same photo to Claude in chat and the numbers get filled in.':'Claude is not available in this view. The photo is saved as waiting; send it to Claude in chat to fill in the numbers.'}</div>`:''}
-    ${snap.busy?h`<div class="stream"><span class="pulse"></span>${esc(streamText||'Looking at the plate…')}</div>`:''}
+    </div>`}
+    ${!canAsk?h`<div class="notice warn" style="margin-top:12px">${S.sample?'This view cannot send photos to Claude, so the entry is saved as waiting. Send the same photo to Claude in chat and the numbers get filled in.':'Claude is not available in this view. The entry is saved as waiting; tell Claude in chat to fill in the numbers.'}</div>`:''}
+    ${snap.busy?h`<div class="stream"><span class="pulse"></span>${esc(streamText||(talk?'Working it out…':'Looking at the plate…'))}</div>`:''}
     ${r?snapResult(r):''}
     <div class="row" style="margin-top:14px;justify-content:flex-end">
       <button class="btn ghost sm" id="snapCancel">Cancel</button>
@@ -1172,6 +1776,7 @@ function renderSnap(streamText){
   const go=document.getElementById('snapGo');if(go)go.addEventListener('click',()=>analyze(false));
   const ans=document.getElementById('snapAnswer');if(ans)ans.addEventListener('click',()=>analyze(true));
   const sv=document.getElementById('snapSave');if(sv)sv.addEventListener('click',saveSnap);
+  const mic=document.getElementById('micBtn');if(mic)mic.addEventListener('click',toggleMic);
 }
 function snapResult(r){
   const items=Array.isArray(r.items)?r.items:[];const tot={};for(const n of NUTR)tot[n.k]=items.reduce((a,it)=>a+num(it[n.k]),0);
@@ -1187,30 +1792,40 @@ function snapResult(r){
 }
 function personIntro(){
   const p=me();
-  if(isPP()){const q=pp();return 'You are the nutrition logger inside Macro Polo. This log belongs to '+dispName(p)+', who is '+weeksPP()+' weeks postpartum after her fourth baby'+(q.breastfeeding?' and is breastfeeding':'')+'. Her priorities are enough total calories (never push restriction), protein, iron, calcium, fiber, omega-3 and hydration, with steady blood sugar. Cholesterol is not a concern for her.'}
+  if(isHome())return 'You are the household coach inside Macro Polo for Adrian and Katie and their four kids. '+introFor('a')+' '+introFor('b')+' House rules: '+houseRules().replace(/\n/g,' ');
+  if(isPP()){const q=pp();return 'You are the nutrition logger inside Macro Polo. This log belongs to '+dispName(p)+', a woman in her early thirties who is '+weeksPP()+' weeks postpartum after her fourth baby'+(q.breastfeeding?' and is breastfeeding':'')+'. Her priorities are enough total calories (never push restriction), protein, iron, calcium, fiber, omega-3 and hydration, with steady blood sugar. Cholesterol is not a concern for her.'}
   return 'You are the nutrition logger inside Macro Polo, Adrian\'s food tracker. His priorities are lowering LDL and ApoB (saturated fat, dietary cholesterol, fiber) and calm blood sugar.';
 }
 function analysisAsk(){return isPP()?'2 or 3 plain sentences: what this plate does well for postpartum recovery and milk supply, the biggest gap (protein, iron, calcium or fiber), and one easy addition':'2 or 3 plain sentences: the biggest cholesterol, sodium or blood-sugar driver on the plate and one easy swap'}
 function profileContext(){
   const tg=targets();const parts=['Daily targets: '+NUTR.map(n=>n.l+' '+tg[n.k]+n.u).join(', ')+'.'];
+  if(S.supps.length){const tk=Array.isArray(dayDoc(todayStr()).supps)?dayDoc(todayStr()).supps:[];parts.push('Supplements: '+S.supps.map(sp=>sp.name+(sp.dose?' '+sp.dose:'')+' ('+(SCHED[sp.schedule]||'every day').toLowerCase()+(tk.includes(sp.id)?', taken today':suppDue(sp,todayStr())?', not yet today':'')+')').join('; ')+'.')}
   if(S.labs.length){const p=S.labs[0];const fl=(p.markers||[]).filter(m=>['high','low','borderline'].includes(labFlag(m))).map(m=>m.name+' '+m.value+(m.unit||'')+' ('+labFlag(m)+')');if(fl.length)parts.push('Latest bloodwork flags ('+p.date+'): '+fl.join('; ')+'.')}
   return parts.join(' ');
 }
-async function analyze(withAnswer){
-  if(!S.sample||!snap.blob||snap.busy)return;
-  const note=(document.getElementById('snapNote')||{}).value||'';const time=(document.getElementById('snapTime')||{}).value||nowTime();
-  const reply=withAnswer?((document.getElementById('snapReply')||{}).value||''):'';
-  if(withAnswer&&!reply.trim()){toast('Type an answer first');return}
-  const who=dispName(me());
-  const base=personIntro()+' The attached photo is food '+who+' is eating or about to eat at '+fmtTime(time)+'.'+(note?' Note from '+who+': "'+note.replace(/"/g,'\'')+'".':'')+
+function mealPrompt(time,note,who,talk){
+  return personIntro()+(talk?' '+who+' describes what they ate at '+fmtTime(time)+', in their own words (possibly dictated, so read past typos): "'+note.replace(/"/g,'\'')+'". There is no photo.':' The attached photo is food '+who+' is eating or about to eat at '+fmtTime(time)+'.'+(note?' Note from '+who+': "'+note.replace(/"/g,'\'')+'".':''))+
     ' Identify every distinct item and a realistic portion (restaurant portions are large). Estimate nutrition per item from standard USDA-style references.'+
     ' Reply with only JSON of this shape: {"name": "short meal name", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "'+analysisAsk()+'", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": "one short clause"}, "confidence": "high|medium|low", "questions": []}.'+
     ' Units: grams for protein, carbs, fat, fiber, sugar (added or free sugar only), satfat; milligrams for chol and sodium; numbers only, no unit strings. impact: gl under 10 low, 10 to 20 moderate, over 20 high. Put at most 2 short questions in "questions" only when an item, portion or preparation is genuinely unclear and changes the numbers a lot; otherwise leave it empty and commit to your best estimate. '+profileContext();
-  if(withAnswer&&snap.result){snap.turns.push({role:'assistant',content:JSON.stringify(snap.result)});snap.turns.push({role:'user',content:'My answer to your question: "'+reply.replace(/"/g,'\'')+'". Re-estimate with the same photo and reply with the same JSON shape only, with "questions" empty.'})}
+}
+async function analyze(withAnswer){
+  const talk=snap.mode==='talk';
+  if(!S.sample||snap.busy||(!talk&&!snap.blob))return;
+  const note=(document.getElementById('snapNote')||{}).value||'';const time=(document.getElementById('snapTime')||{}).value||nowTime();
+  if(talk&&!note.trim()){toast('Say or type what you ate first');return}
+  if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null}
+  const reply=withAnswer?((document.getElementById('snapReply')||{}).value||''):'';
+  if(withAnswer&&!reply.trim()){toast('Type an answer first');return}
+  const who=dispName(me());
+  const base=mealPrompt(time,note,who,talk);
+  if(withAnswer&&snap.result){snap.turns.push({role:'assistant',content:JSON.stringify(snap.result)});snap.turns.push({role:'user',content:'My answer to your question: "'+reply.replace(/"/g,'\'')+'". Re-estimate '+(talk?'':'with the same photo ')+'and reply with the same JSON shape only, with "questions" empty.'})}
   else{snap.turns=[{role:'user',content:base}]}
   snap.busy=true;snap.result=null;snap.ctl=new AbortController();renderSnap();
   try{
-    const r=await S.sample.json(snap.turns,{images:snap.blob,modelTier:'default',cache:false,signal:snap.ctl.signal,onText:({text})=>{const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(text.slice(-160))}});
+    const opts={modelTier:'default',cache:false,signal:snap.ctl.signal,onText:({text})=>{const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(text.slice(-160))}};
+    if(snap.blob)opts.images=snap.blob;
+    const r=await S.sample.json(snap.turns,opts);
     if(!r||typeof r!=='object'||!Array.isArray(r.items))throw {code:'invalid_json',message:'no items'};
     snap.result=r;snap.busy=false;renderSnap();
   }catch(e){
@@ -1221,22 +1836,123 @@ async function analyze(withAnswer){
   }
 }
 async function saveSnap(){
-  if(snap.busy||!snap.blob)return;
+  const talk=snap.mode==='talk';
+  if(snap.busy||(!talk&&!snap.blob))return;
+  const note=(document.getElementById('snapNote')||{}).value||'';
+  if(talk&&!note.trim()){toast('Say or type what you ate first');return}
   const btn=document.getElementById('snapSave');btn.disabled=true;btn.textContent='Saving…';
-  const name=(document.getElementById('snapName')||{}).value||(snap.result&&snap.result.name)||'Photo meal';
-  const time=(document.getElementById('snapTime')||{}).value||nowTime();const note=(document.getElementById('snapNote')||{}).value||'';
+  const name=(document.getElementById('snapName')||{}).value||(snap.result&&snap.result.name)||(talk?note.trim().slice(0,40):'Photo meal');
+  const time=(document.getElementById('snapTime')||{}).value||nowTime();
   const r=snap.result;const date=todayStr();
-  const doc={date,time,name:String(name).trim(),source:'photo',createdAt:new Date().toISOString(),userNote:note};
+  const doc={date,time,name:String(name).trim(),source:talk?'voice':'photo',createdAt:new Date().toISOString(),userNote:note};
   if(r){doc.items=r.items.map(it=>Object.assign({name:String(it.name||''),qty:String(it.qty||'')},Object.fromEntries(NUTR.map(n=>[n.k,num(it[n.k])]))));doc.analysis=String(r.analysis||'');if(r.glycemic&&r.glycemic.impact)doc.glycemic={gl:num(r.glycemic.gl),impact:String(r.glycemic.impact),note:String(r.glycemic.note||'')};doc.confidence=r.confidence||''}
   else{doc.pending=true;doc.items=[]}
   try{
-    if(S.assets){try{const up=await S.assets.upload(snap.blob);doc.photoId=up.id}catch(e){/* photo stays unsaved; the entry still logs */}}
-    else if(S.mode==='local'){doc.photoData=await blobToDataUrl(snap.blob,640)}
+    if(snap.blob&&S.assets){try{const up=await S.assets.upload(snap.blob);doc.photoId=up.id}catch(e){/* photo stays unsaved; the entry still logs */}}
+    else if(snap.blob&&S.mode==='local'){doc.photoData=await blobToDataUrl(snap.blob,640)}
     await store.set('meals',date+'-'+slug(doc.name)+'-'+uid().slice(-4),doc);
-    closeSnap();S.date=date;render();if(r)celebrate();toast(r?'Logged '+doc.name+scoreTail():'Saved. Send the photo to Claude in chat to fill it in.');
+    closeSnap();S.date=date;render();if(r)celebrate();toast(r?'Logged '+doc.name+scoreTail():'Saved. Tell Claude in chat to fill it in.');
   }catch(e){btn.disabled=false;btn.textContent='Save to log';toast('Could not save ('+(e&&e.code||'error')+')')}
 }
 async function blobToDataUrl(blob,maxPx){const small=await downscale(blob,maxPx);return await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.readAsDataURL(small)})}
+
+// ---------- bulk upload: many photos at once, classified, analyzed, double-checked, saved ----------
+const batch={items:[],busy:false,step:'',progress:''};
+const BKIND={auto:'Let Claude decide',meal:'Meal or food',receipt:'Receipt',fridge:'Fridge or pantry'};
+function openBatch(){const inp=document.getElementById('batchInput');inp.value='';inp.click()}
+document.getElementById('batchInput').addEventListener('change',async()=>{
+  const inp=document.getElementById('batchInput');const files=[...(inp.files||[])];if(!files.length)return;
+  toast('Preparing '+files.length+' photo'+(files.length>1?'s':'')+'…');
+  for(const f of files.slice(0,24)){const blob=await downscale(f,1280);const d=new Date(f.lastModified||Date.now());const pad2=n=>String(n).padStart(2,'0');
+    batch.items.push({id:uid(),blob,url:URL.createObjectURL(blob),kind:'auto',date:d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate()),time:pad2(d.getHours())+':'+pad2(d.getMinutes()),who:isHome()?'a':S.profile,note:'',status:'new',result:null,changes:[],err:''})}
+  renderBatch();
+});
+function readBatchForm(){const root=document.getElementById('sheetRoot');root.querySelectorAll('.bitem').forEach(row=>{const it=batch.items.find(x=>x.id===row.dataset.id);if(!it)return;for(const f of ['kind','who','date','time','note']){const el=row.querySelector('[data-f='+f+']');if(el)it[f]=el.value}})}
+function bSummary(it){const r=it.result;if(!r)return '';
+  if(it.kind==='meal'){const items=Array.isArray(r.items)?r.items:[];const cal=items.reduce((a,x)=>a+num(x.cal),0);return h`<b>${esc(r.name||'Meal')}</b> · ${r0(cal)} kcal · ${items.length} item${items.length===1?'':'s'}${r.confidence?' · '+esc(r.confidence)+' confidence':''}`}
+  const n=Array.isArray(r.items)?r.items.length:0;return h`<b>${it.kind==='receipt'?'Receipt':'Fridge'}</b> · ${n} item${n===1?'':'s'}${r.grade?' · grade '+esc(r.grade):''}`}
+function renderBatch(){
+  const root=document.getElementById('sheetRoot');const canAsk=!!(S.sample&&S.canImages);const n=batch.items.length;
+  const done=batch.items.filter(i=>i.status==='done'||i.status==='checked').length;const checked=batch.items.filter(i=>i.status==='checked').length;
+  root.innerHTML=h`<div class="sheet-bg" id="bBg"><div class="sheet" role="dialog" aria-label="Upload photos"><div class="grab"></div>
+    <div class="row between"><h2 style="margin:0">${n} photo${n===1?'':'s'}</h2><button class="linkbtn" id="bMore">add more</button></div>
+    <p class="small muted" style="margin:0 0 10px">Meals, receipts and fridge shots can mix. Each photo's own date and time is used, so older pictures land on the right day. Fix anything, then Analyze all. Double-check runs a second, slower pass on every photo for accuracy.</p>
+    ${!canAsk?h`<div class="notice warn" style="margin-bottom:10px">Claude is not available in this view, so these can only be saved as waiting meals.</div>`:''}
+    ${batch.busy?h`<div class="stream"><span class="pulse"></span>${esc(batch.progress)}</div>`:''}
+    <div class="bitems">${batch.items.map(it=>h`<div class="bitem ${esc(it.status)}" data-id="${esc(it.id)}">
+      <img src="${esc(it.url)}" alt="">
+      <div class="bb">
+        <div class="row" style="gap:6px"><select data-f="kind" ${batch.busy?'disabled':''}>${Object.keys(BKIND).map(k=>h`<option value="${k}" ${it.kind===k?'selected':''}>${BKIND[k]}</option>`).join('')}</select>
+          ${isHome()?h`<select data-f="who" ${batch.busy?'disabled':''}>${['a','b'].map(p=>h`<option value="${p}" ${it.who===p?'selected':''}>${esc(profName(p))}</option>`).join('')}</select>`:''}</div>
+        <div class="row" style="gap:6px"><input data-f="date" type="date" value="${esc(it.date)}" ${batch.busy?'disabled':''}><input data-f="time" type="time" value="${esc(it.time)}" ${batch.busy?'disabled':''}></div>
+        <input data-f="note" placeholder="anything Claude should know" value="${esc(it.note)}" ${batch.busy?'disabled':''}>
+        <div class="tiny ${it.status==='error'?'':'muted'}" style="${it.status==='error'?'color:var(--crit)':''}">${it.status==='new'?'Ready':it.status==='classifying'?'Working out what this is…':it.status==='analyzing'?'Reading…':it.status==='checking'?'Double-checking…':it.status==='error'?esc(it.err||'Failed'):it.status==='saved'?'Saved':bSummary(it)}${it.changes.length?h`<div style="color:var(--accent)">Second pass: ${esc(it.changes.join('; '))}</div>`:''}</div>
+      </div>
+      <button type="button" class="tools x" data-brm="${esc(it.id)}" ${batch.busy?'disabled':''} aria-label="Remove">✕</button>
+    </div>`).join('')}</div>
+    <div class="row" style="margin-top:14px;justify-content:flex-end;gap:8px"><button class="btn ghost sm" id="bCancel" ${batch.busy?'disabled':''}>Cancel</button>
+      ${canAsk?h`<button class="btn sm ghost" id="bAnalyze" ${batch.busy||!n?'disabled':''}>Analyze all</button><button class="btn sm ghost" id="bCheck" ${batch.busy||!done?'disabled':''}>Double-check${done?' '+done:''}</button>`:''}
+      <button class="btn sm" id="bSave" ${batch.busy||!n?'disabled':''}>Save ${canAsk&&done?done+' ready':'all'}</button></div>
+  </div></div>`;
+  document.getElementById('bBg').addEventListener('click',e=>{if(e.target.id==='bBg'&&!batch.busy)closeBatch()});
+  document.getElementById('bCancel').addEventListener('click',closeBatch);
+  document.getElementById('bMore').addEventListener('click',()=>{readBatchForm();openBatch()});
+  root.querySelectorAll('[data-brm]').forEach(b=>b.addEventListener('click',()=>{readBatchForm();const it=batch.items.find(x=>x.id===b.dataset.brm);if(it&&it.url)URL.revokeObjectURL(it.url);batch.items=batch.items.filter(x=>x.id!==b.dataset.brm);if(batch.items.length)renderBatch();else closeBatch()}));
+  const an=document.getElementById('bAnalyze');if(an)an.addEventListener('click',()=>runBatch(false));
+  const ck=document.getElementById('bCheck');if(ck)ck.addEventListener('click',()=>runBatch(true));
+  document.getElementById('bSave').addEventListener('click',saveBatch);
+}
+function closeBatch(){for(const it of batch.items){if(it.url)URL.revokeObjectURL(it.url)}batch.items=[];batch.busy=false;document.getElementById('sheetRoot').innerHTML=''}
+function bProgress(i,total,what){batch.progress=what+' '+(i+1)+' of '+total;const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(batch.progress)}
+async function runBatch(checkPass){
+  if(!S.sample||batch.busy)return;readBatchForm();batch.busy=true;renderBatch();
+  const todo=batch.items.filter(it=>checkPass?(it.status==='done'):(it.status==='new'||it.status==='error'));
+  for(let i=0;i<todo.length;i++){const it=todo[i];
+    try{
+      if(!checkPass){
+        if(it.kind==='auto'){it.status='classifying';bProgress(i,todo.length,'Sorting');renderBatch();
+          const c=await S.sample.json('Look at this photo and say what it is for a food-tracking app. Reply with only JSON: {"kind": "meal|receipt|fridge|other"}. meal = a plate, dish, drink, snack, menu or nutrition label; receipt = a store receipt; fridge = the inside of a fridge, freezer or pantry shelf; other = none of these.',{images:it.blob,modelTier:'quick',cache:false});
+          it.kind=(c&&['meal','receipt','fridge'].includes(c.kind))?c.kind:'meal'}
+        it.status='analyzing';bProgress(i,todo.length,'Reading');renderBatch();
+        const who=isHome()?it.who:S.profile;
+        if(it.kind==='meal'){const saveP=S.profile;const prompt=withProfile(who,()=>mealPrompt(it.time,it.note,profName(who),false));
+          const r=await S.sample.json([{role:'user',content:prompt}],{images:it.blob,modelTier:'default',cache:false});if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};it.result=r}
+        else{const r=await S.sample.json(kitchenPrompt(it.kind)+(it.note?' Note from the person: "'+it.note.replace(/"/g,'\'')+'".':''),{images:it.blob,modelTier:'default',cache:false});if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};it.result=r}
+        it.status='done';
+      }else{
+        it.status='checking';bProgress(i,todo.length,'Double-checking');renderBatch();
+        const shape=it.kind==='meal'?'the meal JSON (name, items with qty and the nine nutrition numbers, analysis, glycemic, confidence, questions)':'the kitchen JSON (summary, grade, items with name, qty, category, grade, note, swaps)';
+        const r=await S.sample.json('Second pass for accuracy. Here is a first read of the attached photo as JSON: '+JSON.stringify(it.result).slice(0,12000)+'. Look at the photo again slowly and carefully. Find anything missed, misread, double-counted or mis-sized'+(it.kind==='receipt'?', re-read every receipt line and its price, and check that quantities match the receipt':it.kind==='meal'?', and sanity-check portions against the plate and typical serving sizes':'')+'. Reply with only JSON: {"result": <corrected '+shape+', same shape as given>, "changes": ["one short line per correction, or empty if the first read was right"]}',{images:it.blob,modelTier:'complex',cache:false});
+        if(r&&r.result&&Array.isArray(r.result.items)){it.result=r.result;it.changes=Array.isArray(r.changes)?r.changes.map(String).slice(0,6):[]}
+        it.status='checked';
+      }
+    }catch(e){it.status='error';it.err=(e&&e.code==='not_granted')?'Allow this app to use Claude from the artifact menu.':'Could not read this one ('+(e&&e.code||'error')+'). Try again or remove it.';if(e&&e.code==='not_granted')break}
+    renderBatch();
+  }
+  batch.busy=false;renderBatch();
+}
+function withProfile(p,fn){if(p===S.profile||!PROFILES[p])return fn();const saved=S.profile;S.profile=p;try{return fn()}finally{S.profile=saved}}
+async function saveBatch(){
+  readBatchForm();const canAsk=!!(S.sample&&S.canImages);const ready=batch.items.filter(it=>canAsk?(it.status==='done'||it.status==='checked'):(it.status!=='saved'));
+  if(!ready.length){toast('Analyze first, or remove the ones that failed');return}
+  batch.busy=true;renderBatch();let meals=0,scans=0;
+  for(let i=0;i<ready.length;i++){const it=ready[i];bProgress(i,ready.length,'Saving');
+    try{
+      const who=isHome()?it.who:S.profile;
+      if(it.kind==='meal'||!it.result){const r=it.result;const doc={date:it.date,time:it.time,name:r?String(r.name||'Meal'):'Photo meal',source:'photo',createdAt:new Date().toISOString(),userNote:it.note,batch:true};
+        if(r){doc.items=r.items.map(x=>Object.assign({name:String(x.name||''),qty:String(x.qty||'')},Object.fromEntries(NUTR.map(n=>[n.k,num(x[n.k])]))));doc.analysis=String(r.analysis||'');if(r.glycemic&&r.glycemic.impact)doc.glycemic={gl:num(r.glycemic.gl),impact:String(r.glycemic.impact),note:String(r.glycemic.note||'')};doc.confidence=r.confidence||'';if(it.changes.length)doc.notes='Double-checked: '+it.changes.join('; ')}
+        else{doc.pending=true;doc.items=[]}
+        if(S.assets){try{const up=await S.assets.upload(it.blob);doc.photoId=up.id}catch(e){}}else if(S.mode==='local'){doc.photoData=await blobToDataUrl(it.blob,640)}
+        await setFor(who,'meals',it.date+'-'+slug(doc.name)+'-'+uid().slice(-4),doc);meals++}
+      else{await saveKitchenResult(it.kind,it.result,it.result.items,it.blob,it.date,who);scans++}
+      it.status='saved';
+    }catch(e){it.status='error';it.err='Could not save ('+(e&&e.code||'error')+')'}
+    renderBatch();
+  }
+  batch.busy=false;const left=batch.items.filter(it=>it.status!=='saved');
+  if(left.length){renderBatch();toast('Saved '+(meals+scans)+'; '+left.length+' still need attention')}else{closeBatch();celebrate();toast('Saved '+meals+' meal'+(meals===1?'':'s')+' and '+scans+' scan'+(scans===1?'':'s'))}
+  render();
+}
 
 // ---------- edit sheet: fix an entry by hand or by telling Claude what changed ----------
 const ed={id:null,doc:null,items:[],busy:false};
@@ -1309,6 +2025,17 @@ async function saveEdit(){
 document.getElementById('settingsBtn').addEventListener('click',openSettings);
 function openSettings(){
   const tg=targets();const root=document.getElementById('sheetRoot');const q=pp();
+  if(isHome()){root.innerHTML=h`<div class="sheet-bg" id="sheetBg"><div class="sheet" role="dialog" aria-label="Kitchen settings"><div class="grab"></div><h2>Kitchen settings</h2>
+    <form id="hForm"><div class="field"><span>Kitchen name</span><input id="h_name" value="${esc((S.settings&&S.settings.name&&S.settings.name!=='Home')?S.settings.name:'The Holguin kitchen')}" maxlength="30"></div><div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn sm" type="submit">Save</button></div></form>
+    <div class="looks"><div class="eyebrow">Look</div><div class="swatches">${Object.keys(THEMES.h).map(t=>h`<button type="button" class="swatch ${S.theme===t?'on':''}" data-theme="${t}"><i style="background:${SWATCH[t]}"></i>${THEMES.h[t]}</button>`).join('')}</div></div>
+    <div class="looks"><div class="eyebrow">Background feel</div><div class="swatches bgs">${Object.keys(BGS.h).map(b=>h`<button type="button" class="swatch ${S.bg===b?'on':''}" data-bg="${b}"><i style="background:${BGSWATCH[b]}"></i>${BGS.h[b]}</button>`).join('')}</div><p class="tiny muted" style="margin:6px 0 0">"Our photos" uses your own fridge and receipt scans behind the card.</p></div>
+    <div class="photos"><div class="eyebrow">Cover photo</div><div class="prow"><div class="pthumb" style="${coverUrl()?'background-image:url(\''+esc(coverUrl())+'\')':''}"></div><div class="pinfo"><b>Cover photo</b><span class="tiny muted">Farm, market, your kitchen, the family at the table.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="cover">${coverUrl()?'Change':'Choose'}</button>${coverUrl()?'<button type="button" class="linkbtn danger" data-rmpic="cover">Remove</button>':''}</div></div></div></div>
+  </div></div>`;
+    document.getElementById('sheetBg').addEventListener('click',e=>{if(e.target.id==='sheetBg')root.innerHTML=''});
+    root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setLook('theme',b.dataset.theme)));root.querySelectorAll('[data-bg]').forEach(b=>b.addEventListener('click',()=>setLook('bg',b.dataset.bg)));
+    root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{pic.kind=b.dataset.pick;const inp=document.getElementById('picInput');inp.value='';inp.click()}));root.querySelectorAll('[data-rmpic]').forEach(b=>b.addEventListener('click',()=>savePhoto(b.dataset.rmpic,null)));
+    document.getElementById('hForm').addEventListener('submit',async e=>{e.preventDefault();const doc=Object.assign({},S.settings||{},{name:document.getElementById('h_name').value.trim()||'The Holguin kitchen',updatedAt:new Date().toISOString()});delete doc.id;try{await store.set('settings','profile',doc);S.settings=Object.assign({id:'profile'},doc);root.innerHTML='';toast('Saved');render()}catch(err){toast('Could not save')}});
+    return}
   root.innerHTML=h`<div class="sheet-bg" id="sheetBg"><div class="sheet" role="dialog" aria-label="Settings"><div class="grab"></div>
     <h2>${esc(profName(S.profile))}'s settings</h2>
     <form id="tgForm">
@@ -1321,14 +2048,13 @@ function openSettings(){
       <label class="chk full"><input type="checkbox" name="cleared" id="st_cleared" ${q.cleared?'checked':''}>Cleared for exercise by my provider (unlocks core and yoga)</label>`:''}
     </div>
     <h2 style="font-size:16px">Daily targets</h2>
+    <div class="seg" style="margin-bottom:8px">${['standard','prime'].map(k=>h`<button type="button" class="${standard()===k?'on':''}" data-std="${k}">${STD_LABEL[k]}</button>`).join('')}</div>
+    <p class="small muted" style="margin:0 0 10px">${esc(STD_BLURB[S.profile][standard()])}</p>
     <p class="small muted" style="margin:0 0 12px">${isPP()?'Protein, fiber and calories are floors right now: recovery and milk come first. Sugar, saturated fat and sodium are ceilings.':'Protein and fiber are floors to reach. Calories, carbs and fat are budgets. Sugar, saturated fat, cholesterol and sodium are ceilings. Claude tunes these from bloodwork.'}</p>
     <div class="targets">${NUTR.map(n=>h`<label>${n.l} (${n.u})<input type="number" step="any" min="0" name="${n.k}" id="tg_${n.k}" value="${tg[n.k]}"></label>`).join('')}</div>
     <div class="row between" style="margin-top:14px"><span class="row" style="gap:8px"><button type="button" class="linkbtn" id="tgReset">Reset targets to defaults</button><span class="tiny muted">${S.mode==='db'?'Saved to this log only.':'Saved in this browser only.'}</span></span><span class="row"><button type="button" class="btn ghost sm" id="tgCancel">Cancel</button><button class="btn sm" type="submit">Save</button></span></div></form>
-    ${S.profile==='a'?h`<div class="looks"><div class="eyebrow">Look</div><div class="swatches">
-      <button type="button" class="swatch ${S.theme==='jungle'?'on':''}" data-theme="jungle"><i style="background:linear-gradient(135deg,#153B22 40%,#9BFF3F)"></i>Jungle</button>
-      <button type="button" class="swatch ${S.theme==='mint'?'on':''}" data-theme="mint"><i style="background:linear-gradient(135deg,#113A33 35%,#2EE6A6 75%,#3D8BFF)"></i>Mint</button>
-      <button type="button" class="swatch ${S.theme==='navy'?'on':''}" data-theme="navy"><i style="background:linear-gradient(135deg,#142341 40%,#3D8BFF 80%,#FF7A1A)"></i>Navy</button>
-    </div></div>`:''}
+    <div class="looks"><div class="eyebrow">Look</div><div class="swatches">${Object.keys(THEMES[S.profile]).map(t=>h`<button type="button" class="swatch ${S.theme===t?'on':''}" data-theme="${t}"><i style="background:${SWATCH[t]}"></i>${THEMES[S.profile][t]}</button>`).join('')}</div></div>
+    <div class="looks"><div class="eyebrow">Background feel</div><div class="swatches bgs">${Object.keys(BGS[S.profile]).map(b=>h`<button type="button" class="swatch ${S.bg===b?'on':''}" data-bg="${b}"><i style="background:${BGSWATCH[b]}"></i>${BGS[S.profile][b]}</button>`).join('')}</div></div>
     <div class="photos"><div class="eyebrow">Photos</div>
       <div class="prow"><div class="pthumb" style="${coverUrl()?'background-image:url(\''+esc(coverUrl())+'\')':''}"></div><div class="pinfo"><b>Cover photo</b><span class="tiny muted">Sits behind the Today card. The kids, the family, a trip.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="cover">${coverUrl()?'Change':'Choose'}</button>${coverUrl()?'<button type="button" class="linkbtn danger" data-rmpic="cover">Remove</button>':''}</div></div></div>
       <div class="prow"><div class="pthumb round" style="${avatarUrl()?'background-image:url(\''+esc(avatarUrl())+'\')':''}"></div><div class="pinfo"><b>Toggle photo</b><span class="tiny muted">A face for your button at the top.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="avatar">${avatarUrl()?'Change':'Choose'}</button>${avatarUrl()?'<button type="button" class="linkbtn danger" data-rmpic="avatar">Remove</button>':''}</div></div></div>
@@ -1337,16 +2063,21 @@ function openSettings(){
   </div></div>`;
   document.getElementById('sheetBg').addEventListener('click',e=>{if(e.target.id==='sheetBg')root.innerHTML=''});
   document.getElementById('tgCancel').addEventListener('click',()=>root.innerHTML='');
-  root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.theme)));
+  root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setLook('theme',b.dataset.theme)));
+  root.querySelectorAll('[data-bg]').forEach(b=>b.addEventListener('click',()=>setLook('bg',b.dataset.bg)));
   root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{pic.kind=b.dataset.pick;const inp=document.getElementById('picInput');inp.value='';inp.click()}));
   root.querySelectorAll('[data-rmpic]').forEach(b=>b.addEventListener('click',()=>savePhoto(b.dataset.rmpic,null)));
+  root.querySelectorAll('[data-std]').forEach(b=>b.addEventListener('click',async()=>{const k=b.dataset.std;if(k===standard())return;
+    const doc=Object.assign({},S.settings||{},{standard:k,updatedAt:new Date().toISOString()});delete doc.id;delete doc.targets;if(!doc.name)doc.name=PROFILES[S.profile].name;
+    try{await store.set('settings','profile',doc);S.settings=Object.assign({id:'profile'},doc);toast(STD_LABEL[k]+' targets on');render();openSettings()}catch(err){toast('Could not save: '+(err&&err.code||'error'))}}));
   document.getElementById('tgReset').addEventListener('click',async()=>{const doc=Object.assign({},S.settings||{},{updatedAt:new Date().toISOString()});delete doc.id;delete doc.targets;
     try{await store.set('settings','profile',doc);if(S.mode==='local')S.settings=Object.assign({id:'profile'},doc);root.innerHTML='';toast('Targets reset');render()}catch(err){toast('Could not reset: '+(err&&err.code||'error'))}});
   document.getElementById('tgForm').addEventListener('submit',async e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const t={};for(const n of NUTR)t[n.k]=num(fd.get(n.k));
     const doc=Object.assign({},S.settings||{},{targets:t,name:String(fd.get('name')||'').trim()||PROFILES[S.profile].name,updatedAt:new Date().toISOString()});delete doc.id;
     if(isPP()){doc.postpartum={born:String(fd.get('born')||q.born),delivery:String(fd.get('delivery')||'vaginal'),breastfeeding:!!fd.get('bf'),cleared:!!fd.get('cleared')};
       // If only the breastfeeding switch changed and the targets were left at the old defaults, let the new defaults apply.
-      const was=q.breastfeeding?PP_TARGETS_BF:PP_TARGETS_NOBF;if(NUTR.every(n=>t[n.k]===was[n.k]))delete doc.targets;}
+      const was=stdSet(standard(),q.breastfeeding);if(NUTR.every(n=>t[n.k]===was[n.k]))delete doc.targets;}
+    else{const was=stdSet(standard(),false);if(NUTR.every(n=>t[n.k]===was[n.k]))delete doc.targets;}
     try{await store.set('settings','profile',doc);if(S.mode==='local')S.settings=Object.assign({id:'profile'},doc);root.innerHTML='';toast('Saved');profileNames();render()}catch(err){toast('Could not save: '+(err&&err.code||'error'))}});
 }
 
