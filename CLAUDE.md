@@ -49,6 +49,15 @@ can compute eating windows and fasts.
   other day from 2026-11-04), wholier-night-minerals (nightly). A Routine named "Katie magnesium reminder"
   fires into the original build session at 8:37 pm Pacific, checks that day's `supps` and emails
   katie.holguin.813@gmail.com (cc Adrian) only if the magnesium is not ticked.
+- **Kitchen (shared).** Joint household inventory under `data/users/me/kitchen/...` (one for both profiles):
+  `items` {name, qty, category: produce|protein|dairy|grains|pantry|snacks|drinks|frozen|condiments|other,
+  grade: good|ok|avoid, note, status: in|low|out, lastSeen, addedAt, source: fridge|receipt|manual, by},
+  `scans` {date, kind: fridge|receipt, summary, grade (A..F for receipts), swaps:[], items:[names], photoId},
+  `recipes` {name, minutes, serves, why, uses, missing, ingredients, steps, per_serving{...NUTR}}, and the doc
+  `house/rules` {text}. The app scans fridge and receipt photos in-page and grades them against the house rules.
+  When Adrian sends a fridge or receipt photo in chat, do the same: write/merge `items` (match by name, case-
+  insensitive, set lastSeen), add a `scans` doc, and for a receipt grade the trip A to F with up to 3 swaps.
+  Logging a recipe serving writes a `meals` doc with source `recipe` for the current profile.
 - `settings/profile` also carries `name` (shown on the toggle), `coverId` (asset behind the Today card) and `avatarId` (asset on the toggle button); the app uploads these itself from the gear sheet. The app computes a day score
   (0 to 100 from targets) and a logging streak; both are derived, never stored.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at

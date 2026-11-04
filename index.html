@@ -106,9 +106,9 @@ main{flex:1;padding-block:8px 110px;padding-left:max(16px,env(safe-area-inset-le
 
 nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(20,27,34,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line);
   padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px));
-  display:grid;grid-template-columns:repeat(5,1fr);align-items:end}
-nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 9px;text-decoration:none;color:var(--muted);font-size:11px;font-weight:500}
-nav.tabs a svg{width:22px;height:22px}
+  display:grid;grid-template-columns:1fr 1fr 1fr 78px 1fr 1fr;align-items:end}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 2px 9px;text-decoration:none;color:var(--muted);font-size:10.5px;font-weight:500;min-width:0}
+nav.tabs a svg{width:21px;height:21px}
 nav.tabs a.active{color:var(--accent)}
 nav.tabs .snapwrap{display:flex;justify-content:center;align-items:flex-end;padding-bottom:6px;position:relative}
 .talk{position:absolute;right:-6px;bottom:10px;width:38px;height:38px;border-radius:50%;background:var(--surface-2);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .15s ease}
@@ -364,6 +364,31 @@ table.t tr:last-child td{border-bottom:none}
 .etotals b{color:var(--fg)}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 
+/* kitchen */
+.kgroup{margin-top:10px}
+.kitems{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kitem{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:6px 11px 6px 8px;font-size:13px;color:var(--fg);max-width:100%}
+.kitem i{width:8px;height:8px;border-radius:50%;flex:none;background:var(--muted)}
+.kitem.g-good i{background:var(--good)}.kitem.g-ok i{background:var(--warn)}.kitem.g-avoid i{background:var(--crit)}
+.kitem .q{color:var(--muted);font-size:12px}
+.kitem .st{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--warn)}
+.kitem.out{opacity:.45;text-decoration:line-through}.kitem.out .st{color:var(--crit)}
+.kitem.stale{opacity:.6;border-style:dashed}
+.kpick{display:flex;flex-direction:column;gap:6px}
+.kp{display:flex;align-items:center;gap:10px;background:var(--surface-2);border-radius:10px;padding:8px 10px;font-size:13px}
+.kp input{width:18px;height:18px;accent-color:var(--accent);flex:none}
+.kp i{width:8px;height:8px;border-radius:50%;flex:none;background:var(--muted)}
+.kp.g-good i{background:var(--good)}.kp.g-ok i{background:var(--warn)}.kp.g-avoid i{background:var(--crit)}
+.kp span{display:flex;flex-direction:column;min-width:0}.kp small{color:var(--muted);font-size:11.5px}
+.recipes{display:flex;flex-direction:column;gap:8px}
+.recipe{background:var(--surface-2);border-radius:14px;padding:11px 12px;display:flex;flex-direction:column;gap:6px}
+.recipe details summary{cursor:pointer;font-size:12px;color:var(--accent);font-weight:500;list-style:none}
+.recipe details summary::-webkit-details-marker{display:none}
+.scans{display:flex;flex-direction:column;gap:10px}
+.scan{display:grid;grid-template-columns:auto 1fr;gap:10px}
+.scan img{width:56px;height:72px;object-fit:cover;border-radius:8px;background:var(--surface-3)}
+.scan .b{min-width:0;display:flex;flex-direction:column;gap:4px}
+
 /* supplements */
 .supps{display:flex;flex-direction:column;gap:8px}
 .supp{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;background:var(--surface-2);border-radius:12px;padding:9px 10px;border:1px solid transparent}
@@ -469,6 +494,7 @@ table.t tr:last-child td{border-bottom:none}
   <main>
     <section class="view" id="view-today"></section>
     <section class="view" id="view-trends" hidden></section>
+    <section class="view" id="view-kitchen" hidden></section>
     <section class="view" id="view-labs" hidden></section>
     <section class="view" id="view-coach" hidden></section>
   </main>
@@ -476,6 +502,7 @@ table.t tr:last-child td{border-bottom:none}
   <nav class="tabs" id="tabs">
     <a href="#today" data-v="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Today</a>
     <a href="#trends" data-v="trends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Trends</a>
+    <a href="#kitchen" data-v="kitchen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 10h14M9 6v2M9 13v3"/></svg>Kitchen</a>
     <div class="snapwrap"><button class="snap" id="snapBtn" aria-label="Photograph a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button>
       <button class="talk" id="talkBtn" aria-label="Tell Claude what you ate" title="Speak or type a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button></div>
     <a href="#labs" data-v="labs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg>Labs</a>
@@ -483,6 +510,7 @@ table.t tr:last-child td{border-bottom:none}
   </nav>
   <input type="file" id="camInput" accept="image/*" capture="environment" hidden>
   <input type="file" id="picInput" accept="image/*" hidden>
+  <input type="file" id="kitInput" accept="image/*" hidden>
 </div>
 
 <div id="sheetRoot"></div>
@@ -576,6 +604,7 @@ const S = {
   mode:'local', db:null, root:null, uid:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
   labIndex:0, addOpen:false, confirmId:null,
   days:[], shuffle:0, libOpen:false, coach:{chat:null,memory:null}, supps:[],
+  kroot:null, kitems:[], kscans:[], krecipes:[], khouse:null, kunsubs:[], showOut:false,
 };
 
 // ---------- helpers ----------
@@ -679,6 +708,26 @@ const store={
     lsSet(coll,lsGet(coll).filter(d=>d.id!==id));lsEmit(coll);
   }
 };
+// Kitchen is joint: one inventory for the household, under data/users/<id>/kitchen, shared by both profiles.
+function kls(coll){try{return JSON.parse(localStorage.getItem('macropolo:k:'+coll)||'[]')}catch(e){return []}}
+function klsSet(coll,arr){try{localStorage.setItem('macropolo:k:'+coll,JSON.stringify(arr))}catch(e){}}
+const klisteners={};
+function klsEmit(coll){(klisteners[coll]||[]).forEach(fn=>fn(kls(coll)))}
+const kstore={
+  subscribe(coll,cb,onErr){
+    if(S.db){return S.kroot.collection(coll).limit(1000).onSnapshot(snap=>cb(snap.docs.map(d=>Object.assign({id:d.id},d.data()))),err=>{onErr&&onErr(err)})}
+    (klisteners[coll]=klisteners[coll]||[]).push(cb);cb(kls(coll));return ()=>{klisteners[coll]=(klisteners[coll]||[]).filter(f=>f!==cb)};
+  },
+  async set(coll,id,data){if(S.db){await S.kroot.collection(coll).doc(id).set(data);return}const arr=kls(coll).filter(d=>d.id!==id);arr.push(Object.assign({id},data));klsSet(coll,arr);klsEmit(coll)},
+  async del(coll,id){if(S.db){await S.kroot.collection(coll).doc(id).delete();return}klsSet(coll,kls(coll).filter(d=>d.id!==id));klsEmit(coll)}
+};
+function subscribeKitchen(){
+  if(S.kunsubs.length)return;
+  S.kunsubs.push(kstore.subscribe('items',rows=>{S.kitems=rows;if(S.view==='kitchen')render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('scans',rows=>{S.kscans=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));if(S.view==='kitchen')render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('recipes',rows=>{S.krecipes=rows.sort((a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||'')));if(S.view==='kitchen')render()},()=>{}));
+  S.kunsubs.push(kstore.subscribe('house',rows=>{S.khouse=rows.find(r=>r.id==='rules')||null;if(S.view==='kitchen')render()},()=>{}));
+}
 async function useCap(name){try{return (window.claude&&window.claude.use)?await window.claude.use(name):null}catch(e){return null}}
 
 // Looks (palette) and backgrounds (ambient art) are per profile. Each phone caches its last pick so the right
@@ -710,7 +759,7 @@ async function boot(){
     if(uid){S.uid=uid}}
   S.sample=sample;S.assets=assets;
   if(sample){try{const lim=await sample.limits();if(lim&&lim.images){S.canImages=true;S.imageTypes=lim.images.mediaTypes.join(',')||'image/*'}}catch(e){}}
-  setRoot();setSync();subscribeAll();
+  setRoot();S.kroot=(S.db&&S.uid)?S.db.doc('data/users/'+S.uid+'/kitchen'):null;setSync();subscribeAll();subscribeKitchen();
   let seen=null;try{seen=localStorage.getItem('macropolo:profile')}catch(e){}
   if(!seen)openPicker(true);
 }
@@ -845,7 +894,7 @@ function celebrate(){
 }
 
 // ---------- routing ----------
-const VIEWS=['today','trends','labs','coach'];
+const VIEWS=['today','trends','kitchen','labs','coach'];
 function route(){const v=(location.hash||'#today').slice(1);S.view=VIEWS.includes(v)?v:'today'}
 window.addEventListener('hashchange',()=>{route();render();window.scrollTo(0,0)});
 
@@ -856,7 +905,7 @@ function render(){
   for(const v of VIEWS){document.getElementById('view-'+v).hidden=(v!==S.view)}
   document.querySelectorAll('#tabs a').forEach(a=>a.classList.toggle('active',a.dataset.v===S.view));
   const el=document.getElementById('view-'+S.view);
-  el.innerHTML={today:renderToday,trends:renderTrends,labs:renderLabs,coach:renderCoach}[S.view]();
+  el.innerHTML={today:renderToday,trends:renderTrends,kitchen:renderKitchen,labs:renderLabs,coach:renderCoach}[S.view]();
   wire(el);
 }
 function wire(el){
@@ -1187,6 +1236,130 @@ function wireChart(wrap){
   wrap.addEventListener('pointerout',ev=>{if(tip&&!(ev.relatedTarget&&ev.relatedTarget.closest&&ev.relatedTarget.closest('[data-tip]')))tip.hidden=true});
 }
 
+// --- Kitchen: shared inventory from fridge and receipt scans, recipes from what is on hand ---
+const KCATS={produce:'Produce',protein:'Meat, fish, eggs',dairy:'Dairy',grains:'Grains & bread',pantry:'Pantry & canned',snacks:'Snacks & sweets',drinks:'Drinks',frozen:'Frozen',condiments:'Condiments & oils',other:'Other'};
+const KGRADE={good:'good',ok:'ok',avoid:'avoid'};
+function houseRules(){
+  if(S.khouse&&S.khouse.text)return S.khouse.text;
+  return 'Adrian: ApoB 170 and LDL 224, so saturated fat and dietary cholesterol are the enemies; fiber, fish, beans, oats, olive oil, nuts and lean protein are the heroes. Keep added sugar low.\nKatie: postpartum and breastfeeding; needs enough calories, protein, iron, calcium, omega-3 and fiber. Never restrictive.\nKids: whole foods, limited added sugar, plenty of fruit and vegetables.\nHousehold: fewer ultra-processed snacks, less cheese and butter, more produce.';
+}
+function daysSince(iso){if(!iso)return null;return Math.floor((Date.now()-new Date(iso).getTime())/864e5)}
+function renderKitchen(){
+  const items=S.kitems.filter(it=>S.showOut?true:it.status!=='out');
+  const groups={};for(const it of items){const c=KCATS[it.category]?it.category:'other';(groups[c]=groups[c]||[]).push(it)}
+  const canAsk=!!(S.sample&&S.canImages);const outCount=S.kitems.filter(it=>it.status==='out').length;
+  const head=h`<div class="card hero"><div class="row between"><div><h2 style="margin:0">Kitchen<span class="sub">shared by both of you</span></h2><div class="tiny muted" style="margin-top:2px">${S.kitems.length?S.kitems.filter(i=>i.status!=='out').length+' items on hand':'Nothing scanned yet'}${S.kscans.length?' · last scan '+esc(fmtShort(S.kscans[0].date))+' ('+esc(S.kscans[0].kind)+')':''}</div></div></div>
+    <div class="row" style="margin-top:12px;gap:8px">
+      <button class="btn sm" data-act="kscan" data-kind="fridge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 10h14M9 6v2M9 13v3"/></svg>Scan fridge or pantry</button>
+      <button class="btn sm ghost" data-act="kscan" data-kind="receipt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>Scan receipt</button>
+      <button class="btn sm ghost" data-act="kadd">Add by hand</button></div>
+    ${!canAsk?h`<div class="notice warn" style="margin-top:10px">Scanning needs Claude in this view. You can still add items by hand.</div>`:''}
+  </div>`;
+  const recipes=h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">What can we make?<span class="sub">from what is on hand, for ${esc(dispName(me()))}'s targets</span></h2><button class="btn sm" data-act="krecipes" ${kit.busy||!S.sample?'disabled':''}>${kit.busy&&kit.task==='recipes'?'Thinking…':'Suggest 3'}</button></div>
+    ${kit.busy&&kit.task==='recipes'?h`<div class="stream"><span class="pulse"></span>${esc(kit.text||'Looking at the kitchen…')}</div>`:''}
+    ${kit.recipes.length?h`<div class="recipes">${kit.recipes.map((r,i)=>recipeCard(r,i,false)).join('')}</div>`:(!kit.busy?h`<p class="small muted" style="margin:0">${S.kitems.length?'Tap Suggest 3. It uses the inventory, both of your goals and what is left of today\'s budget.':'Scan the fridge first, then ask.'}</p>`:'')}
+    ${S.krecipes.length?h`<div class="eyebrow" style="margin:14px 0 6px">Saved recipes</div><div class="recipes">${S.krecipes.slice(0,8).map((r,i)=>recipeCard(r,i,true)).join('')}</div>`:''}
+  </div>`;
+  const inv=h`<div class="card"><div class="row between" style="margin-bottom:8px"><h2 style="margin:0">On hand<span class="sub">tap an item to mark low or out</span></h2>${outCount?h`<button class="linkbtn" data-act="kshowout">${S.showOut?'hide used up':'show '+outCount+' used up'}</button>`:''}</div>
+    ${items.length?Object.keys(KCATS).filter(c=>groups[c]).map(c=>h`<div class="kgroup"><div class="eyebrow">${KCATS[c]}</div><div class="kitems">${groups[c].map(kItem).join('')}</div></div>`).join(''):h`<p class="small muted" style="margin:0">Empty. Scan the fridge, a pantry shelf, or a receipt, and everything lands here with a good / ok / avoid tag against your house rules.</p>`}
+    <p class="tiny muted" style="margin:10px 0 0">Things get eaten without telling anyone, so treat this as a best guess. Items not seen in a scan for 10 days go dim. Logging a meal that uses an item does not remove it; tap it when it is gone.</p></div>`;
+  const scans=S.kscans.length?h`<div class="card"><h2>Scans<span class="sub">receipts graded A to F against the house rules</span></h2><div class="scans">${S.kscans.slice(0,6).map(sc=>h`<div class="scan">${sc.photoId?h`<img src="/_blob/${esc(sc.photoId)}" alt="">`:''}<div class="b"><div class="row between"><b>${esc(sc.kind==='receipt'?'Receipt':'Fridge')} · ${esc(fmtShort(sc.date))}</b>${sc.grade?h`<span class="chip ${/^[AB]/.test(sc.grade)?'normal':/^C/.test(sc.grade)?'borderline':'high'}">${esc(sc.grade)}</span>`:''}</div><div class="md small">${md(sc.summary||'')}</div>${Array.isArray(sc.swaps)&&sc.swaps.length?h`<ul class="nudges" style="margin-top:6px">${sc.swaps.map(x=>h`<li>${esc(x)}</li>`).join('')}</ul>`:''}</div></div>`).join('')}</div></div>`:'';
+  const rules=h`<div class="card"><h2>House rules<span class="sub">what scans and recipes are graded against</span></h2><textarea class="talkbox" id="houseText" style="min-height:120px;font-size:14px">${esc(houseRules())}</textarea><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn sm ghost" data-act="ksaverules">Save rules</button></div></div>`;
+  return head+recipes+inv+scans+rules;
+}
+function kItem(it){
+  const ds=daysSince(it.lastSeen||it.addedAt);const stale=ds!=null&&ds>10;
+  return h`<button type="button" class="kitem ${esc(it.status||'in')} ${stale?'stale':''} g-${esc(it.grade||'ok')}" data-act="kcycle" data-id="${esc(it.id)}" title="${esc(it.note||'')}"><i></i><span class="n">${esc(it.name)}</span>${it.qty?h`<span class="q">${esc(it.qty)}</span>`:''}${it.status==='low'?'<span class="st">low</span>':it.status==='out'?'<span class="st">out</span>':''}</button>`;
+}
+function recipeCard(r,i,saved){
+  const ps=r.per_serving||{};const missing=Array.isArray(r.missing)?r.missing:[];
+  return h`<div class="recipe"><div class="row between"><b>${esc(r.name)}</b><span class="tiny muted">${r.minutes?r.minutes+' min':''}${r.serves?' · serves '+r.serves:''}</span></div>
+    <div class="tiny muted">${esc(r.why||'')}</div>
+    <div class="tiny" style="display:flex;gap:8px;flex-wrap:wrap;color:var(--muted)">${ps.cal!=null?h`<span><b style="color:var(--fg)">${r0(num(ps.cal))}</b> kcal</span>`:''}${ps.protein!=null?h`<span>P <b style="color:var(--fg)">${r0(num(ps.protein))}g</b></span>`:''}${ps.fiber!=null?h`<span>Fiber <b style="color:var(--fg)">${r0(num(ps.fiber))}g</b></span>`:''}${ps.satfat!=null?h`<span>Sat <b style="color:var(--fg)">${r1(num(ps.satfat))}g</b></span>`:''}${ps.sodium!=null?h`<span>Na <b style="color:var(--fg)">${r0(num(ps.sodium))}</b></span>`:''}</div>
+    ${missing.length?h`<div class="tiny" style="color:var(--warn)">Missing: ${esc(missing.join(', '))}</div>`:''}
+    <details><summary>Ingredients and steps</summary><ul class="items" style="margin-top:6px">${(r.ingredients||[]).map(x=>h`<li><span>${esc(x)}</span></li>`).join('')}</ul><ol class="steps" style="margin-top:8px;font-size:13px">${(r.steps||[]).map(x=>h`<li>${esc(x)}</li>`).join('')}</ol></details>
+    <div class="row" style="justify-content:flex-end;gap:8px"><button class="btn sm ghost" data-act="klog" data-i="${i}" data-saved="${saved?1:0}">Log a serving</button>${saved?h`<button class="linkbtn danger" data-act="kdelrecipe" data-id="${esc(r.id)}">remove</button>`:h`<button class="btn sm" data-act="ksave" data-i="${i}">Save</button>`}</div>
+  </div>`;
+}
+const kit={busy:false,task:'',text:'',recipes:[],kind:'fridge',blob:null,url:'',result:null};
+async function kitchenScan(kind){
+  if(!S.sample||!S.canImages){toast('Scanning needs Claude in this view');return}
+  kit.kind=kind;const inp=document.getElementById('kitInput');inp.value='';inp.click();
+}
+document.getElementById('kitInput').addEventListener('change',async()=>{const inp=document.getElementById('kitInput');const f=inp.files&&inp.files[0];if(!f)return;
+  kit.blob=await downscale(f,1400);kit.url=URL.createObjectURL(kit.blob);kit.result=null;kit.busy=false;renderKScan();analyzeKitchen();});
+function renderKScan(){
+  const root=document.getElementById('sheetRoot');const r=kit.result;const receipt=kit.kind==='receipt';
+  root.innerHTML=h`<div class="sheet-bg" id="ksBg"><div class="sheet" role="dialog" aria-label="Kitchen scan"><div class="grab"></div>
+    <h2>${receipt?'Receipt':'Fridge or pantry'} scan</h2>
+    <img class="preview" src="${esc(kit.url)}" alt="" style="max-height:200px">
+    ${kit.busy?h`<div class="stream"><span class="pulse"></span>${esc(kit.text||(receipt?'Reading the receipt…':'Looking at the shelves…'))}</div>`:''}
+    ${r?h`<div class="result">${r.grade?h`<div class="row"><span class="chip ${/^[AB]/.test(r.grade)?'normal':/^C/.test(r.grade)?'borderline':'high'}" style="font-size:14px;padding:5px 12px">Trip grade ${esc(r.grade)}</span></div>`:''}
+      <div class="md small">${md(r.summary||'')}</div>
+      ${Array.isArray(r.swaps)&&r.swaps.length?h`<div class="questions" style="background:var(--accent-soft)"><b style="color:var(--accent)">Swaps worth making</b><ul>${r.swaps.map(x=>h`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
+      <div class="eyebrow">Items found · untick anything wrong</div>
+      <div class="kpick">${(r.items||[]).map((it,i)=>h`<label class="kp g-${esc(KGRADE[it.grade]||'ok')}"><input type="checkbox" data-i="${i}" checked><i></i><span><b>${esc(it.name)}</b>${it.qty?' · '+esc(it.qty):''}<small>${esc(KCATS[it.category]||'Other')}${it.note?' · '+esc(it.note):''}</small></span></label>`).join('')}</div></div>`:''}
+    <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="ksCancel">Cancel</button>${r?h`<button class="btn" id="ksSave">Add to kitchen</button>`:''}</div>
+  </div></div>`;
+  document.getElementById('ksBg').addEventListener('click',e=>{if(e.target.id==='ksBg'&&!kit.busy)closeKScan()});
+  document.getElementById('ksCancel').addEventListener('click',closeKScan);
+  const sv=document.getElementById('ksSave');if(sv)sv.addEventListener('click',saveKScan);
+}
+function closeKScan(){if(kit.url)URL.revokeObjectURL(kit.url);kit.blob=null;kit.url='';kit.result=null;kit.busy=false;document.getElementById('sheetRoot').innerHTML=''}
+async function analyzeKitchen(){
+  if(!S.sample||!kit.blob)return;const receipt=kit.kind==='receipt';
+  const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');
+  const prompt='You are the kitchen scanner inside Macro Polo, a household food app for Adrian and Katie. House rules: '+houseRules().replace(/\n/g,' ')+' '+
+    (receipt?'The attached photo is a grocery receipt. Read every food or drink line (skip non-food). ':'The attached photo shows a fridge, freezer or pantry. List every food or drink you can identify, with a rough quantity. ')+
+    'For each item give a category from: produce, protein, dairy, grains, pantry, snacks, drinks, frozen, condiments, other; and a grade against the house rules: "good", "ok" or "avoid", with a short note only when it is avoid or notably good. '+
+    (receipt?'Grade the whole trip A to F for how well it serves the house rules (A = mostly produce, lean protein, fiber, little saturated fat or sugar), and list up to 3 concrete swaps for next time. ':'Write a two-sentence summary of what the kitchen looks like for the house rules. ')+
+    'Reply with only JSON: {"summary": "", "grade": "'+(receipt?'A|B|C|D|F':'')+'", "items": [{"name": "", "qty": "", "category": "", "grade": "good|ok|avoid", "note": ""}], "swaps": []}.'+(onHand?' Already on hand (for context, still list what you see): '+onHand+'.':'');
+  kit.busy=true;kit.task='scan';kit.text='';renderKScan();
+  try{const r=await S.sample.json(prompt,{images:kit.blob,modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
+    if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};kit.result=r;kit.busy=false;renderKScan();
+  }catch(e){kit.busy=false;renderKScan();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':'Could not read it ('+code+'). Try a closer, brighter shot.')}
+}
+async function saveKScan(){
+  const r=kit.result;if(!r)return;const btn=document.getElementById('ksSave');btn.disabled=true;btn.textContent='Saving…';
+  const picked=[...document.querySelectorAll('.kpick input:checked')].map(c=>r.items[+c.dataset.i]).filter(Boolean);
+  const now=new Date().toISOString();const date=todayStr();let photoId='';
+  try{
+    if(S.assets){try{const up=await S.assets.upload(kit.blob);photoId=up.id}catch(e){}}
+    for(const it of picked){const name=String(it.name||'').trim();if(!name)continue;const ex=S.kitems.find(k=>k.name.toLowerCase()===name.toLowerCase());
+      const doc={name,qty:String(it.qty||''),category:KCATS[it.category]?it.category:'other',grade:KGRADE[it.grade]||'ok',note:String(it.note||''),status:'in',lastSeen:now,addedAt:ex?ex.addedAt||now:now,source:kit.kind,by:S.profile,updatedAt:now};
+      await kstore.set('items',ex?ex.id:'k-'+uid(),doc)}
+    const scan={date,kind:kit.kind,summary:String(r.summary||''),grade:kit.kind==='receipt'?String(r.grade||''):'',swaps:Array.isArray(r.swaps)?r.swaps.map(String).slice(0,3):[],items:picked.map(i=>i.name),by:S.profile,createdAt:now};if(photoId)scan.photoId=photoId;
+    await kstore.set('scans',date+'-'+kit.kind+'-'+uid().slice(-4),scan);
+    closeKScan();celebrate();toast(picked.length+' items added to the kitchen');render();
+  }catch(e){btn.disabled=false;btn.textContent='Add to kitchen';toast('Could not save ('+(e&&e.code||'error')+')')}
+}
+async function suggestRecipes(){
+  if(!S.sample||kit.busy)return;const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name+(i.qty?' ('+i.qty+')':'')+(i.status==='low'?' [low]':''));
+  if(!onHand.length){toast('Scan the fridge first');return}
+  const t=dayTotals(todayStr());const tg=targets();const left=NUTR.map(n=>n.l+' '+Math.max(0,Math.round(tg[n.k]-t[n.k]))+n.u).join(', ');
+  const prompt='You are the household cook inside Macro Polo. House rules: '+houseRules().replace(/\n/g,' ')+' On hand: '+onHand.join('; ')+'. Cooking for '+dispName(me())+' right now ('+personIntro().replace('You are the nutrition logger inside Macro Polo. ','').replace('You are the nutrition logger inside Macro Polo, ','')+'). Left in their budget today: '+left+'. '+
+    'Suggest 3 meals that use mostly what is on hand (a pantry staple like oil, salt, spices or an egg may be assumed), each quick enough for a weeknight with four kids, and each pointed at this person\'s goals. Reply with only JSON: {"recipes": [{"name": "", "minutes": 0, "serves": 0, "why": "one line tying it to the goals", "uses": ["items on hand"], "missing": ["things to buy, if any"], "ingredients": ["with amounts"], "steps": ["short steps"], "per_serving": {"cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}}]}. Numbers only in per_serving.';
+  kit.busy=true;kit.task='recipes';kit.text='';render();
+  try{const r=await S.sample.json(prompt,{modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
+    kit.recipes=Array.isArray(r&&r.recipes)?r.recipes.slice(0,3):[];kit.busy=false;render();
+  }catch(e){kit.busy=false;render();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':'Could not suggest ('+code+').')}
+}
+async function logRecipe(r){
+  const ps=r.per_serving||{};const item=Object.assign({name:r.name+' (1 serving)',qty:'1 serving'},Object.fromEntries(NUTR.map(n=>[n.k,num(ps[n.k])])));
+  const doc={date:todayStr(),time:nowTime(),name:r.name,source:'recipe',createdAt:new Date().toISOString(),items:[item],analysis:String(r.why||''),notes:'From the Kitchen tab'};
+  await store.set('meals',todayStr()+'-'+slug(r.name)+'-'+uid().slice(-4),doc);celebrate();toast('Logged '+r.name+scoreTail());
+}
+function openKAdd(){
+  const root=document.getElementById('sheetRoot');
+  root.innerHTML=h`<div class="sheet-bg" id="kaBg"><div class="sheet" role="dialog" aria-label="Add kitchen item"><div class="grab"></div><h2>Add to the kitchen</h2>
+    <form id="kaForm" class="add"><label class="full">Item<input id="ka_name" required placeholder="e.g. Greek yogurt, 32 oz"></label><label>Quantity<input id="ka_qty" placeholder="1 tub"></label><label>Category<select id="ka_cat">${Object.keys(KCATS).map(c=>h`<option value="${c}">${KCATS[c]}</option>`).join('')}</select></label>
+    <div class="actions"><button type="button" class="btn ghost sm" id="kaCancel">Cancel</button><button class="btn sm" type="submit">Add</button></div></form></div></div>`;
+  document.getElementById('kaBg').addEventListener('click',e=>{if(e.target.id==='kaBg')root.innerHTML=''});document.getElementById('kaCancel').addEventListener('click',()=>root.innerHTML='');
+  document.getElementById('kaForm').addEventListener('submit',async e=>{e.preventDefault();const name=document.getElementById('ka_name').value.trim();if(!name)return;const now=new Date().toISOString();
+    try{await kstore.set('items','k-'+uid(),{name,qty:document.getElementById('ka_qty').value.trim(),category:document.getElementById('ka_cat').value,grade:'ok',status:'in',lastSeen:now,addedAt:now,source:'manual',by:S.profile,updatedAt:now});root.innerHTML='';toast('Added');render()}catch(err){toast('Could not add ('+(err&&err.code||'error')+')')}});
+  document.getElementById('ka_name').focus();
+}
+
 // --- Labs ---
 function labFlag(m){
   if(m.flag) return m.flag;
@@ -1313,6 +1486,16 @@ async function onAction(ev){
     try{await store.set('days',S.date,doc)}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
   if(act==='lab'){S.labIndex=+b.dataset.n;render();return}
   if(act==='supps'){openSupps();return}
+  if(act==='kscan'){kitchenScan(b.dataset.kind);return}
+  if(act==='kadd'){openKAdd();return}
+  if(act==='kshowout'){S.showOut=!S.showOut;render();return}
+  if(act==='kcycle'){const it=S.kitems.find(k=>k.id===b.dataset.id);if(!it)return;const next={in:'low',low:'out',out:'in'}[it.status||'in'];const doc=Object.assign({},it,{status:next,updatedAt:new Date().toISOString()});delete doc.id;if(next==='in')doc.lastSeen=new Date().toISOString();
+    try{await kstore.set('items',it.id,doc)}catch(err){toast('Could not save')}if(S.mode==='local')render();return}
+  if(act==='krecipes'){suggestRecipes();return}
+  if(act==='ksave'){const r=kit.recipes[+b.dataset.i];if(!r)return;try{await kstore.set('recipes','r-'+uid(),Object.assign({},r,{createdAt:new Date().toISOString(),by:S.profile}));toast('Recipe saved')}catch(err){toast('Could not save')}return}
+  if(act==='kdelrecipe'){try{await kstore.del('recipes',b.dataset.id)}catch(err){}return}
+  if(act==='klog'){const r=b.dataset.saved==='1'?S.krecipes[+b.dataset.i]:kit.recipes[+b.dataset.i];if(!r)return;try{await logRecipe(r)}catch(err){toast('Could not log ('+(err&&err.code||'error')+')')}return}
+  if(act==='ksaverules'){const t=(document.getElementById('houseText')||{}).value||'';try{await kstore.set('house','rules',{text:t.trim(),updatedAt:new Date().toISOString(),by:S.profile});toast('House rules saved')}catch(err){toast('Could not save')}return}
   if(act==='supp'){const id=b.dataset.id;const d=dayDoc(S.date);const supps=Array.isArray(d.supps)?d.supps.slice():[];const i=supps.indexOf(id);if(i>=0)supps.splice(i,1);else supps.push(id);
     const doc={water:num(d.water),moves:Array.isArray(d.moves)?d.moves:[],supps,updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
     try{await store.set('days',S.date,doc)}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
