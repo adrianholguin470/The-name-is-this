@@ -20,23 +20,40 @@
   --radius:18px;
 }
 /* Profile A looks. Jungle: deep greens, highlighter lime, amber. Mint: sea green with electric blue. */
-:root[data-theme="jungle"]{--dot-a:#9BFF3F}
-:root[data-theme="mint"]{--dot-a:#2EE6A6}
-:root[data-profile="a"][data-theme="jungle"]{
+:root[data-theme-a="jungle"]{--dot-a:#9BFF3F}
+:root[data-theme-a="mint"]{--dot-a:#2EE6A6}
+:root[data-profile="a"][data-theme-a="jungle"]{
   --bg:#05100A; --bg-glow:rgba(155,255,63,.14); --surface:#0C1A12; --surface-2:#122419; --surface-3:#1A3123; --line:#1C3025; --line-2:#2B4737;
   --fg:#EEF7EF; --muted:#9BB8A3; --faint:#5F7E68;
   --accent:#9BFF3F; --accent-ink:#06180A; --accent-soft:rgba(155,255,63,.16); --accent-rgb:155,255,63; --accent-glow:0 0 0 6px rgba(155,255,63,.18),0 10px 34px rgba(155,255,63,.42);
   --accent-2:#FFC53D; --accent-2-rgb:255,197,61; --accent-2-soft:rgba(255,197,61,.18);
   --hero-a:#153B22; --hero-b:#0A1A10; --hero-rgb:10,26,16;
 }
-:root[data-profile="a"][data-theme="mint"]{
+:root[data-profile="a"][data-theme-a="mint"]{
   --bg:#05100F; --bg-glow:rgba(46,230,166,.16); --surface:#0C1B1A; --surface-2:#122624; --surface-3:#19332F; --line:#1C302D; --line-2:#2B4843;
   --fg:#EDF7F4; --muted:#95B6AD; --faint:#5B7C74;
   --accent:#2EE6A6; --accent-ink:#04170F; --accent-soft:rgba(46,230,166,.16); --accent-rgb:46,230,166; --accent-glow:0 0 0 6px rgba(46,230,166,.18),0 10px 34px rgba(46,230,166,.42);
   --accent-2:#3D8BFF; --accent-2-rgb:61,139,255; --accent-2-soft:rgba(61,139,255,.18);
   --hero-a:#113A33; --hero-b:#0A1C1A; --hero-rgb:10,28,26;
 }
-/* Profile B (hers): deep plum, hot pink, lavender. */
+/* Profile B looks. Orchid: deep plum, hot pink, lavender. Rosé: warm mauve, dusty rose, apricot. Sage: eucalyptus with blush and mint. */
+:root{--dot-b:#FF5FA8}
+:root[data-theme-b="rose"]{--dot-b:#F28C9B}
+:root[data-theme-b="sage"]{--dot-b:#F4A6C1}
+:root[data-profile="b"][data-theme-b="rose"]{
+  --bg:#1A0F13; --bg-glow:rgba(242,140,155,.22); --surface:#241519; --surface-2:#2F1D22; --surface-3:#3C272D; --line:#3D2930; --line-2:#523842;
+  --fg:#FBF2F0; --muted:#D3B3B6; --faint:#957479;
+  --accent:#F28C9B; --accent-ink:#2E0F15; --accent-soft:rgba(242,140,155,.2); --accent-rgb:242,140,155; --accent-glow:0 0 0 6px rgba(242,140,155,.22),0 10px 34px rgba(242,140,155,.5);
+  --accent-2:#F6B26B; --accent-2-rgb:246,178,107; --accent-2-soft:rgba(246,178,107,.2);
+  --hero-a:#4A2630; --hero-b:#22121A; --hero-rgb:34,18,26;
+}
+:root[data-profile="b"][data-theme-b="sage"]{
+  --bg:#0F1613; --bg-glow:rgba(244,166,193,.18); --surface:#17211C; --surface-2:#1F2C25; --surface-3:#28382F; --line:#28362E; --line-2:#3A4C41;
+  --fg:#F3F7F3; --muted:#B3C4B8; --faint:#728579;
+  --accent:#F4A6C1; --accent-ink:#2A0E1A; --accent-soft:rgba(244,166,193,.2); --accent-rgb:244,166,193; --accent-glow:0 0 0 6px rgba(244,166,193,.22),0 10px 34px rgba(244,166,193,.5);
+  --accent-2:#9FD3B3; --accent-2-rgb:159,211,179; --accent-2-soft:rgba(159,211,179,.2);
+  --hero-a:#24402F; --hero-b:#13201A; --hero-rgb:19,32,26;
+}
 :root[data-profile="b"]{
   --bg:#150B21; --bg-glow:rgba(255,95,168,.22); --surface:#1F1232; --surface-2:#2A1A42; --surface-3:#372552; --line:#3A2755; --line-2:#4D386E;
   --fg:#FBF1FA; --muted:#C9B0DA; --faint:#8E74A8;
@@ -46,6 +63,7 @@
 }
 .looks{display:flex;flex-direction:column;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.swatches.bgs .swatch i{background-size:cover}
 .swatch{background:var(--surface-2);border:2px solid var(--line-2);border-radius:12px;padding:8px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted)}
 .swatch i{width:100%;height:34px;border-radius:8px;display:block}
 .swatch.on{border-color:var(--accent);color:var(--fg)}
@@ -74,7 +92,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background
 .ptoggle button span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ptoggle button i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
 .ptoggle button[data-p="a"] i{background:var(--dot-a);box-shadow:0 0 6px var(--dot-a)}
-.ptoggle button[data-p="b"] i{background:#FF5FA8;box-shadow:0 0 6px #FF5FA8}
+.ptoggle button[data-p="b"] i{background:var(--dot-b);box-shadow:0 0 6px var(--dot-b)}
 .ptoggle button.on{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 14px var(--accent-soft)}
 .ptoggle button.on i{background:var(--accent-ink);box-shadow:none}
 .sync{display:flex;align-items:center;flex:none}
@@ -349,18 +367,18 @@ table.t tr:last-child td{border-bottom:none}
 /* who: profile chip in the header, picker sheet */
 .who{background:var(--surface);border:1px solid var(--line);border-radius:999px;height:38px;padding:0 12px 0 8px;display:inline-flex;align-items:center;gap:7px;color:var(--fg);font-weight:600;font-size:13px;max-width:150px}
 .who .av{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:12px;color:var(--accent-ink);background:var(--accent);flex:none}
-.who.pp .av{background:#FF5FA8}
+.who.pp .av{background:var(--dot-b)}
 .who span.n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pickgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
 @media (max-width:380px){.pickgrid{grid-template-columns:1fr}}
 .pick{background:var(--surface-2);border:1px solid var(--line-2);border-radius:16px;padding:16px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;min-width:0}
 .pick.on{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .pick .av{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:17px;color:#03101F;background:#3D8BFF}
-.pick.pp .av{background:#FF5FA8;color:#2B0818}
+.pick.pp .av{background:var(--dot-b);color:#2B0818}
 .pick b{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:-.01em}
 .pick .d{font-size:12px;color:var(--muted);line-height:1.35}
 .pick.on::after{content:"on this phone";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
-.pick.pp.on::after{color:#FF5FA8}
+.pick.pp.on::after{color:var(--dot-b)}
 
 /* suggestions card */
 .card.sugg{border-color:var(--line-2)}
@@ -513,7 +531,7 @@ function lsPrefix(){return S.profile==='b'?'macropolo:b:':'macropolo:'}
 
 // ---------- state ----------
 const S = {
-  view:'today', date: todayStr(), range:7, profile:'a', theme:'jungle', unsubs:[],
+  view:'today', date: todayStr(), range:7, profile:'a', theme:'jungle', bg:'constellation', unsubs:[],
   settings:null, meals:[], labs:[], insights:[],
   loaded:{meals:false,labs:false,insights:false,settings:false},
   mode:'local', db:null, root:null, uid:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
@@ -622,17 +640,29 @@ const store={
 };
 async function useCap(name){try{return (window.claude&&window.claude.use)?await window.claude.use(name):null}catch(e){return null}}
 
-const THEMES={jungle:'Jungle',mint:'Mint',navy:'Navy'};
-function applyTheme(t){t=THEMES[t]?t:'jungle';S.theme=t;document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('macropolo:theme',t)}catch(e){}}
-async function setTheme(t){
-  applyTheme(t);render();
-  const doc=Object.assign({},S.settings||{},{theme:t,updatedAt:new Date().toISOString()});delete doc.id;if(!doc.name)doc.name=PROFILES.a.name;
+// Looks (palette) and backgrounds (ambient art) are per profile. Each phone caches its last pick so the right
+// colors paint before the settings doc arrives; the settings doc wins once it loads.
+const THEMES={a:{jungle:'Jungle',mint:'Mint',navy:'Navy'},b:{orchid:'Orchid',rose:'Rosé',sage:'Sage'}};
+const BGS={a:{constellation:'Constellation',aurora:'Aurora',sparkle:'Sparkle'},b:{petals:'Petals',sparkle:'Sparkle',aurora:'Aurora'}};
+const DEFAULT_THEME={a:'jungle',b:'orchid'},DEFAULT_BG={a:'constellation',b:'petals'};
+const SWATCH={jungle:'linear-gradient(135deg,#153B22 40%,#9BFF3F)',mint:'linear-gradient(135deg,#113A33 35%,#2EE6A6 75%,#3D8BFF)',navy:'linear-gradient(135deg,#142341 40%,#3D8BFF 80%,#FF7A1A)',
+  orchid:'linear-gradient(135deg,#3A1C54 35%,#FF5FA8 75%,#B48CFF)',rose:'linear-gradient(135deg,#4A2630 35%,#F28C9B 75%,#F6B26B)',sage:'linear-gradient(135deg,#24402F 35%,#F4A6C1 72%,#9FD3B3)'};
+const BGSWATCH={petals:'radial-gradient(circle at 30% 40%,rgba(255,255,255,.55) 0 4px,transparent 5px),radial-gradient(circle at 70% 60%,rgba(255,255,255,.4) 0 7px,transparent 8px),radial-gradient(circle at 55% 25%,rgba(255,255,255,.3) 0 3px,transparent 4px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
+  sparkle:'radial-gradient(circle at 20% 30%,#fff 0 1px,transparent 2px),radial-gradient(circle at 60% 70%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 80% 25%,#fff 0 1px,transparent 2px),radial-gradient(circle at 40% 55%,#fff 0 1px,transparent 2px),linear-gradient(135deg,var(--hero-a),var(--hero-b))',
+  aurora:'linear-gradient(180deg,var(--hero-b) 30%,rgba(var(--accent-rgb),.45) 60%,rgba(var(--accent-2-rgb),.4) 80%,var(--hero-b))',
+  constellation:'radial-gradient(circle at 25% 35%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 65% 60%,#fff 0 1.5px,transparent 2.5px),linear-gradient(25deg,transparent 48%,rgba(255,255,255,.35) 49% 51%,transparent 52%),linear-gradient(135deg,var(--hero-a),var(--hero-b))'};
+function applyTheme(t,p){p=p||S.profile;t=THEMES[p][t]?t:DEFAULT_THEME[p];if(p===S.profile)S.theme=t;document.documentElement.setAttribute('data-theme-'+p,t);try{localStorage.setItem('macropolo:theme:'+p,t)}catch(e){}}
+function applyBg(b,p){p=p||S.profile;b=BGS[p][b]?b:DEFAULT_BG[p];if(p===S.profile)S.bg=b;try{localStorage.setItem('macropolo:bg:'+p,b)}catch(e){}art.state={}}
+function loadLookFor(p){let t=null,b=null;try{t=localStorage.getItem('macropolo:theme:'+p);b=localStorage.getItem('macropolo:bg:'+p)}catch(e){}applyTheme(t,p);applyBg(b,p)}
+async function setLook(field,val){
+  if(field==='theme')applyTheme(val);else applyBg(val);render();
+  const doc=Object.assign({},S.settings||{},{[field]:val,updatedAt:new Date().toISOString()});delete doc.id;if(!doc.name)doc.name=PROFILES[S.profile].name;
   try{await store.set('settings','profile',doc);S.settings=Object.assign({id:'profile'},doc)}catch(e){}
   openSettings();
 }
 async function boot(){
   try{const p=localStorage.getItem('macropolo:profile');if(p==='b')S.profile='b'}catch(e){}
-  let th='jungle';try{th=localStorage.getItem('macropolo:theme')||'jungle'}catch(e){}applyTheme(th);
+  loadLookFor('a');loadLookFor('b');loadLookFor(S.profile);
   applyProfile();route();render();
   const [db,user,sample,assets]=await Promise.all([useCap('db'),useCap('user'),useCap('sample'),useCap('assets')]);
   if(db){S.db=db;S.mode='db';let uid=null;try{uid=user?await user.id():null}catch(e){}
@@ -662,29 +692,42 @@ function profileNames(){
 
 // ---------- ambient art behind the Today card ----------
 const art={state:{}};
-function artSeed(p,W,H){const n=p==='b'?30:54;const list=[];
-  for(let i=0;i<n;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:p==='b'?(i%3===0?14+Math.random()*26:5+Math.random()*9):1+Math.random()*2.2,
-    vx:(Math.random()-.5)*(p==='b'?.14:.1),vy:p==='b'?-(.06+Math.random()*.16):(Math.random()-.5)*.1,a:p==='b'?.10+Math.random()*.25:.25+Math.random()*.5,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.004,k:i%4,ph:Math.random()*6.28});
-  return {W,H,list,t:0}}
+function artCols(){const cs=getComputedStyle(document.documentElement);return [cs.getPropertyValue('--accent-rgb').trim()||'61,139,255',cs.getPropertyValue('--accent-2-rgb').trim()||'255,122,26']}
+function artSeed(style,W,H){const list=[];
+  if(style==='petals'){for(let i=0;i<30;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:i%3===0?14+Math.random()*26:5+Math.random()*9,vx:(Math.random()-.5)*.14,vy:-(.06+Math.random()*.16),a:.10+Math.random()*.25,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.004,k:i%4,ph:Math.random()*6.28})}
+  else if(style==='sparkle'){for(let i=0;i<70;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.9,a:.2+Math.random()*.7,k:i%5,ph:Math.random()*6.28,sp:.6+Math.random()*1.4});list.shoot=null}
+  else if(style==='aurora'){for(let i=0;i<3;i++)list.push({base:H*(.55+i*.14),amp:10+i*6,k:.012-i*.002,sp:.004+i*.002,ph:i*2.1,alpha:.16-i*.03,c:i%2})}
+  else{for(let i=0;i<54;i++)list.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.2,vx:(Math.random()-.5)*.1,vy:(Math.random()-.5)*.1,a:.25+Math.random()*.5,k:i%4,ph:Math.random()*6.28})}
+  return {W,H,list,t:0,style}}
 function drawArt(){
   const c=document.getElementById('heroArt');
   if(c&&!document.hidden){
     const dpr=Math.min(2,window.devicePixelRatio||1);const W=c.clientWidth,H=c.clientHeight;
     if(W&&H){if(c.width!==Math.round(W*dpr)||c.height!==Math.round(H*dpr)){c.width=Math.round(W*dpr);c.height=Math.round(H*dpr)}
       const ctx=c.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
-      const p=S.profile;let s=art.state[p];if(!s||Math.abs(s.W-W)>2||Math.abs(s.H-H)>2)s=art.state[p]=artSeed(p,W,H);
+      const style=S.bg;let s=art.state[style];if(!s||Math.abs(s.W-W)>2||Math.abs(s.H-H)>2)s=art.state[style]=artSeed(style,W,H);
       const still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;s.t++;
-      if(p==='b'){
+      if(!art.cols||s.t%30===1)art.cols=artCols();const c1=art.cols[0],c2=art.cols[1];
+      if(style==='petals'){
         for(const q of s.list){ctx.save();ctx.translate(q.x,q.y);ctx.rotate(q.rot);
-          const col=q.k===0?'255,95,168':q.k===1?'180,140,255':q.k===2?'255,170,210':'255,255,255';
+          const col=q.k===0?c1:q.k===1?c2:q.k===2?c1:'255,255,255';
           if(q.r>12){const g=ctx.createRadialGradient(0,0,0,0,0,q.r);g.addColorStop(0,'rgba('+col+','+(q.a*.9)+')');g.addColorStop(1,'rgba('+col+',0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(0,0,q.r,0,6.283);ctx.fill()}
           else{ctx.fillStyle='rgba('+col+','+q.a+')';ctx.beginPath();ctx.ellipse(0,0,q.r,q.r*.55,0,0,6.283);ctx.fill()}
           ctx.restore();
           if(!still){q.x+=q.vx+Math.sin(s.t/60+q.ph)*.12;q.y+=q.vy;q.rot+=q.vr;if(q.y<-40){q.y=H+30;q.x=Math.random()*W}if(q.x<-40)q.x=W+30;if(q.x>W+40)q.x=-30}}
+      }else if(style==='sparkle'){
+        for(const q of s.list){const tw=still?1:(.45+.55*Math.abs(Math.sin(s.t/40*q.sp+q.ph)));const col=q.k===0?c2:q.k===1?'255,255,255':c1;
+          ctx.fillStyle='rgba('+col+','+(q.a*tw).toFixed(3)+')';ctx.beginPath();ctx.arc(q.x,q.y,q.r*(0.8+0.4*tw),0,6.283);ctx.fill();
+          if(q.r>2){ctx.strokeStyle='rgba('+col+','+(q.a*tw*.5).toFixed(3)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(q.x-q.r*3,q.y);ctx.lineTo(q.x+q.r*3,q.y);ctx.moveTo(q.x,q.y-q.r*3);ctx.lineTo(q.x,q.y+q.r*3);ctx.stroke()}}
+        if(!still){if(!s.list.shoot&&Math.random()<.004)s.list.shoot={x:Math.random()*W*.7,y:Math.random()*H*.4,life:0};
+          const sh=s.list.shoot;if(sh){sh.life++;sh.x+=5;sh.y+=2.2;const a=Math.max(0,1-sh.life/28);const g=ctx.createLinearGradient(sh.x-60,sh.y-26,sh.x,sh.y);g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(255,255,255,'+(a*.9)+')');ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(sh.x-60,sh.y-26);ctx.lineTo(sh.x,sh.y);ctx.stroke();if(sh.life>28||sh.x>W+60)s.list.shoot=null}}
+      }else if(style==='aurora'){
+        for(const rb of s.list){const col=rb.c?c2:c1;const g=ctx.createLinearGradient(0,rb.base-rb.amp-20,0,H);g.addColorStop(0,'rgba('+col+',0)');g.addColorStop(.35,'rgba('+col+','+rb.alpha+')');g.addColorStop(1,'rgba('+col+',0)');
+          ctx.fillStyle=g;ctx.beginPath();ctx.moveTo(0,H);const tt=still?0:s.t;
+          for(let x=0;x<=W;x+=8){const y=rb.base+Math.sin(x*rb.k+tt*rb.sp+rb.ph)*rb.amp+Math.sin(x*rb.k*2.3+tt*rb.sp*1.6)*rb.amp*.4;ctx.lineTo(x,y)}
+          ctx.lineTo(W,H);ctx.closePath();ctx.fill()}
       }else{
         const L=s.list;ctx.lineWidth=1;
-        if(!art.cols||s.t%30===1){const cs=getComputedStyle(document.documentElement);art.cols=[cs.getPropertyValue('--accent-rgb').trim()||'61,139,255',cs.getPropertyValue('--accent-2-rgb').trim()||'255,122,26']}
-        const c1=art.cols[0],c2=art.cols[1];
         for(let i=0;i<L.length;i++){const a=L[i];for(let j=i+1;j<L.length;j++){const b=L[j];const dx=a.x-b.x,dy=a.y-b.y;const d=dx*dx+dy*dy;if(d<5600){ctx.strokeStyle='rgba('+c1+','+(0.16*(1-d/5600)).toFixed(3)+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}}
         for(const q of L){const tw=still?1:(0.7+0.3*Math.sin(s.t/40+q.ph));const col=q.k===0?c2:c1;
           ctx.fillStyle='rgba('+col+','+(q.a*tw).toFixed(3)+')';ctx.beginPath();ctx.arc(q.x,q.y,q.r,0,6.283);ctx.fill();
@@ -700,7 +743,7 @@ function switchProfile(p){
   S.profile=p;try{localStorage.setItem('macropolo:profile',p)}catch(e){}
   S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];
   S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.days=[];S.shuffle=0;S.libOpen=false;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
-  applyProfile();setRoot();setSync();render();subscribeAll();
+  loadLookFor(p);applyProfile();setRoot();setSync();render();subscribeAll();
   document.getElementById('pickRoot').innerHTML='';if(snapOpen())renderSnap();
   toast(profName(p)+(p==='b'?'\'s log. Pink mode on.':'\'s log. Game on.'));
 }
@@ -724,7 +767,7 @@ function subscribeAll(){
   S.unsubs.push(store.subscribe('meals',rows=>{S.meals=rows;S.loaded.meals=true;clearTimeout(timer);render()},e=>{S.loaded.meals=true;toast('Could not load meals: '+(e&&e.code||'error'))}));
   S.unsubs.push(store.subscribe('labs',rows=>{S.labs=rows.sort((a,b)=>String(b.date).localeCompare(String(a.date)));S.loaded.labs=true;render()},()=>{S.loaded.labs=true}));
   S.unsubs.push(store.subscribe('insights',rows=>{S.insights=rows.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.createdAt||'').localeCompare(String(a.createdAt||'')));S.loaded.insights=true;render()},()=>{S.loaded.insights=true}));
-  S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;if(S.profile==='a'&&S.settings&&S.settings.theme&&S.settings.theme!==S.theme)applyTheme(S.settings.theme);profileNames();render()},()=>{S.loaded.settings=true}));
+  S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;if(S.settings&&S.settings.theme&&THEMES[S.profile][S.settings.theme]&&S.settings.theme!==S.theme)applyTheme(S.settings.theme);if(S.settings&&S.settings.bg&&BGS[S.profile][S.settings.bg]&&S.settings.bg!==S.bg)applyBg(S.settings.bg);profileNames();render()},()=>{S.loaded.settings=true}));
   S.unsubs.push(store.subscribe('days',rows=>{S.days=rows;render()},()=>{}));
 }
 
@@ -1361,11 +1404,8 @@ function openSettings(){
     <p class="small muted" style="margin:0 0 12px">${isPP()?'Protein, fiber and calories are floors right now: recovery and milk come first. Sugar, saturated fat and sodium are ceilings.':'Protein and fiber are floors to reach. Calories, carbs and fat are budgets. Sugar, saturated fat, cholesterol and sodium are ceilings. Claude tunes these from bloodwork.'}</p>
     <div class="targets">${NUTR.map(n=>h`<label>${n.l} (${n.u})<input type="number" step="any" min="0" name="${n.k}" id="tg_${n.k}" value="${tg[n.k]}"></label>`).join('')}</div>
     <div class="row between" style="margin-top:14px"><span class="row" style="gap:8px"><button type="button" class="linkbtn" id="tgReset">Reset targets to defaults</button><span class="tiny muted">${S.mode==='db'?'Saved to this log only.':'Saved in this browser only.'}</span></span><span class="row"><button type="button" class="btn ghost sm" id="tgCancel">Cancel</button><button class="btn sm" type="submit">Save</button></span></div></form>
-    ${S.profile==='a'?h`<div class="looks"><div class="eyebrow">Look</div><div class="swatches">
-      <button type="button" class="swatch ${S.theme==='jungle'?'on':''}" data-theme="jungle"><i style="background:linear-gradient(135deg,#153B22 40%,#9BFF3F)"></i>Jungle</button>
-      <button type="button" class="swatch ${S.theme==='mint'?'on':''}" data-theme="mint"><i style="background:linear-gradient(135deg,#113A33 35%,#2EE6A6 75%,#3D8BFF)"></i>Mint</button>
-      <button type="button" class="swatch ${S.theme==='navy'?'on':''}" data-theme="navy"><i style="background:linear-gradient(135deg,#142341 40%,#3D8BFF 80%,#FF7A1A)"></i>Navy</button>
-    </div></div>`:''}
+    <div class="looks"><div class="eyebrow">Look</div><div class="swatches">${Object.keys(THEMES[S.profile]).map(t=>h`<button type="button" class="swatch ${S.theme===t?'on':''}" data-theme="${t}"><i style="background:${SWATCH[t]}"></i>${THEMES[S.profile][t]}</button>`).join('')}</div></div>
+    <div class="looks"><div class="eyebrow">Background feel</div><div class="swatches bgs">${Object.keys(BGS[S.profile]).map(b=>h`<button type="button" class="swatch ${S.bg===b?'on':''}" data-bg="${b}"><i style="background:${BGSWATCH[b]}"></i>${BGS[S.profile][b]}</button>`).join('')}</div></div>
     <div class="photos"><div class="eyebrow">Photos</div>
       <div class="prow"><div class="pthumb" style="${coverUrl()?'background-image:url(\''+esc(coverUrl())+'\')':''}"></div><div class="pinfo"><b>Cover photo</b><span class="tiny muted">Sits behind the Today card. The kids, the family, a trip.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="cover">${coverUrl()?'Change':'Choose'}</button>${coverUrl()?'<button type="button" class="linkbtn danger" data-rmpic="cover">Remove</button>':''}</div></div></div>
       <div class="prow"><div class="pthumb round" style="${avatarUrl()?'background-image:url(\''+esc(avatarUrl())+'\')':''}"></div><div class="pinfo"><b>Toggle photo</b><span class="tiny muted">A face for your button at the top.</span><div class="row"><button type="button" class="btn ghost sm" data-pick="avatar">${avatarUrl()?'Change':'Choose'}</button>${avatarUrl()?'<button type="button" class="linkbtn danger" data-rmpic="avatar">Remove</button>':''}</div></div></div>
@@ -1374,7 +1414,8 @@ function openSettings(){
   </div></div>`;
   document.getElementById('sheetBg').addEventListener('click',e=>{if(e.target.id==='sheetBg')root.innerHTML=''});
   document.getElementById('tgCancel').addEventListener('click',()=>root.innerHTML='');
-  root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.theme)));
+  root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setLook('theme',b.dataset.theme)));
+  root.querySelectorAll('[data-bg]').forEach(b=>b.addEventListener('click',()=>setLook('bg',b.dataset.bg)));
   root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{pic.kind=b.dataset.pick;const inp=document.getElementById('picInput');inp.value='';inp.click()}));
   root.querySelectorAll('[data-rmpic]').forEach(b=>b.addEventListener('click',()=>savePhoto(b.dataset.rmpic,null)));
   document.getElementById('tgReset').addEventListener('click',async()=>{const doc=Object.assign({},S.settings||{},{updatedAt:new Date().toISOString()});delete doc.id;delete doc.targets;

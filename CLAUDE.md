@@ -33,6 +33,9 @@ can compute eating windows and fasts.
   pick with videos, water cups, and nudges. Her settings doc carries `postpartum: {born, delivery,
   breastfeeding, cleared}`. A `days` collection (doc id = date) holds `{water, moves:[ids]}` per day for either
   profile. A "whose phone is this?" picker shows on first open; the camera sheet says who it is logging for.
+- Looks and backgrounds are per profile, picked from the gear sheet and saved on `settings/profile` as
+  `theme` and `bg`. Adrian: themes jungle | mint | navy, backgrounds constellation | aurora | sparkle.
+  Katie: themes orchid | rose | sage, backgrounds petals | sparkle | aurora.
 - `settings/profile` also carries `name` (shown on the toggle), `coverId` (asset behind the Today card) and `avatarId` (asset on the toggle button); the app uploads these itself from the gear sheet. The app computes a day score
   (0 to 100 from targets) and a logging streak; both are derived, never stored.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at
