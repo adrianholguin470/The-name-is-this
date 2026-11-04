@@ -307,7 +307,7 @@ table.t tr:last-child td{border-bottom:none}
     <div class="brand"><h1>Macro<span>Polo</span></h1></div>
     <div class="ptoggle" id="ptoggle" role="group" aria-label="Whose log">
       <button type="button" data-p="a" id="pA"><i></i><span>Adrian</span></button>
-      <button type="button" data-p="b" id="pB"><i></i><span>Her</span></button>
+      <button type="button" data-p="b" id="pB"><i></i><span>Katie</span></button>
     </div>
     <div class="row" style="gap:8px;flex-wrap:nowrap">
       <span class="sync" id="sync" title="connecting"><span class="dot"></span></span>
@@ -353,7 +353,7 @@ const NUTR = [
   {k:'sodium',l:'Sodium',u:'mg',kind:'ceiling'},
 ];
 const DEFAULT_TARGETS = {cal:2000,protein:150,carbs:200,fat:65,fiber:30,sugar:36,satfat:20,chol:300,sodium:2300};
-const PROFILES={a:{root:'root',name:'Adrian'},b:{root:'root-b',name:'Her'}};
+const PROFILES={a:{root:'root',name:'Adrian'},b:{root:'root-b',name:'Katie'}};
 function lsPrefix(){return S.profile==='b'?'macropolo:b:':'macropolo:'}
 
 // ---------- state ----------
@@ -478,7 +478,7 @@ function switchProfile(p){
   S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];
   S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
   applyProfile();setRoot();setSync();render();subscribeAll();
-  toast(p==='b'?'Her log. Pink mode on.':'Adrian\'s log. Game on.');
+  toast(p==='b'?'Katie\'s log. Pink mode on.':'Adrian\'s log. Game on.');
 }
 function setSync(){const el=document.getElementById('sync');
   if(S.mode==='db'){el.classList.add('on');el.title=S.root?'synced, private to you':'synced'}else{el.classList.remove('on');el.title='this device only'}}
@@ -991,7 +991,7 @@ document.getElementById('settingsBtn').addEventListener('click',openSettings);
 function openSettings(){
   const tg=targets();const root=document.getElementById('sheetRoot');
   root.innerHTML=h`<div class="sheet-bg" id="sheetBg"><div class="sheet" role="dialog" aria-label="Targets"><div class="grab"></div>
-    <h2>${S.profile==='b'?'Her':'Adrian\'s'} targets</h2>
+    <h2>${S.profile==='b'?'Katie\'s':'Adrian\'s'} targets</h2>
     <form id="tgForm"><div class="field" style="margin-bottom:12px"><span>Name on the toggle</span><input id="tg_name" name="name" value="${esc((S.settings&&S.settings.name)||PROFILES[S.profile].name)}" maxlength="14"></div>
     <p class="small muted" style="margin:0 0 12px">Protein and fiber are floors to reach. Calories, carbs and fat are budgets. Sugar, saturated fat, cholesterol and sodium are ceilings. Claude tunes these from bloodwork.</p>
     <div class="targets">${NUTR.map(n=>h`<label>${n.l} (${n.u})<input type="number" step="any" min="0" name="${n.k}" id="tg_${n.k}" value="${tg[n.k]}"></label>`).join('')}</div>
