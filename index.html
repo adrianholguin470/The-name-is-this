@@ -92,7 +92,15 @@ nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(20,27,
 nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 9px;text-decoration:none;color:var(--muted);font-size:11px;font-weight:500}
 nav.tabs a svg{width:22px;height:22px}
 nav.tabs a.active{color:var(--accent)}
-nav.tabs .snapwrap{display:flex;justify-content:center;align-items:flex-end;padding-bottom:6px}
+nav.tabs .snapwrap{display:flex;justify-content:center;align-items:flex-end;padding-bottom:6px;position:relative}
+.talk{position:absolute;right:-6px;bottom:10px;width:38px;height:38px;border-radius:50%;background:var(--surface-2);border:1.5px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .15s ease}
+.talk:active{transform:scale(.92)}
+.talk svg{width:18px;height:18px}
+.talkbox{width:100%;min-height:96px;resize:vertical;background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:11px 12px;font-size:16px;line-height:1.4;color:var(--fg)}
+.microw{display:flex;align-items:center;gap:10px;margin-top:8px}
+.mic{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--accent);background:var(--surface-2);color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.mic.live{background:var(--accent);color:var(--accent-ink);animation:breathe 1.4s ease-in-out infinite}
+.mic svg{width:20px;height:20px}
 .snap{width:64px;height:64px;border-radius:50%;background:linear-gradient(145deg,var(--accent),var(--accent-2));color:var(--accent-ink);border:none;margin-top:-28px;box-shadow:var(--accent-glow);display:flex;align-items:center;justify-content:center;transition:transform .15s ease;animation:breathe 2.6s ease-in-out infinite}
 .snap:active{transform:scale(.92)}
 @keyframes breathe{0%,100%{box-shadow:var(--accent-glow)}50%{box-shadow:0 0 0 10px rgba(var(--accent-rgb),.12),0 14px 40px rgba(var(--accent-rgb),.55)}}
@@ -364,7 +372,8 @@ table.t tr:last-child td{border-bottom:none}
   <nav class="tabs" id="tabs">
     <a href="#today" data-v="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Today</a>
     <a href="#trends" data-v="trends"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Trends</a>
-    <div class="snapwrap"><button class="snap" id="snapBtn" aria-label="Photograph a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button></div>
+    <div class="snapwrap"><button class="snap" id="snapBtn" aria-label="Photograph a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="12.5" r="3.5"/></svg></button>
+      <button class="talk" id="talkBtn" aria-label="Tell Claude what you ate" title="Speak or type a meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button></div>
     <a href="#labs" data-v="labs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg>Labs</a>
     <a href="#coach" data-v="coach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>Coach</a>
   </nav>
@@ -635,7 +644,7 @@ setInterval(()=>{const el=document.getElementById('fastNow');if(el&&S.view==='to
 function howItWorks(){
   return h`<div class="card"><h2>How Macro Polo works</h2>
   <ol class="steps">
-    <li><b>Tap the camera</b> and shoot your plate, the menu, a label or a receipt. Add a word if it helps ("double meat", "no cheese").</li>
+    <li><b>Tap the camera</b> and shoot your plate, the menu, a label or a receipt. Add a word if it helps ("double meat", "no cheese"). No photo? Tap the little mic next to it and just say what you ate.</li>
     <li><b>Claude reads it right here</b> and logs calories, macros, cholesterol, sodium and a blood-sugar spike estimate, stamped with the time you ate. Got a detail wrong? Tap Edit on the entry and tell it what changed.</li>
     <li><b>Times build your windows</b>: first bite to last bite, overnight fast, and how long you have been fasting right now.</li>
     <li><b>Bloodwork screenshots</b> go to Claude in chat and land in Labs. Coach ties your meals back to them.</li>
@@ -919,24 +928,42 @@ async function downscale(file,maxPx){
   return await new Promise(res=>c.toBlob(b=>res(b||file),'image/jpeg',0.86));
 }
 
-const snap={blob:null,url:'',result:null,turns:[],busy:false,ctl:null};
+const snap={mode:'photo',blob:null,url:'',result:null,turns:[],busy:false,ctl:null,rec:null};
 async function openSnap(file){
-  snap.blob=await downscale(file,1280);snap.url=URL.createObjectURL(snap.blob);snap.result=null;snap.turns=[];snap.busy=false;
+  snap.mode='photo';snap.blob=await downscale(file,1280);snap.url=URL.createObjectURL(snap.blob);snap.result=null;snap.turns=[];snap.busy=false;
   renderSnap();
 }
-function closeSnap(){if(snap.ctl)snap.ctl.abort();if(snap.url)URL.revokeObjectURL(snap.url);snap.blob=null;snap.url='';snap.result=null;document.getElementById('sheetRoot').innerHTML=''}
+// Talk: describe the meal in words. The keyboard's dictation key works everywhere; the page's own
+// microphone button appears only where the browser offers speech recognition and allows it.
+document.getElementById('talkBtn').addEventListener('click',()=>{snap.mode='talk';snap.blob=null;snap.url='';snap.result=null;snap.turns=[];snap.busy=false;renderSnap();const t=document.getElementById('snapNote');if(t)t.focus()});
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition||null;
+function toggleMic(){
+  const btn=document.getElementById('micBtn');const box=document.getElementById('snapNote');if(!SR||!btn||!box)return;
+  if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null;btn.classList.remove('live');return}
+  const rec=new SR();rec.lang=navigator.language||'en-US';rec.interimResults=true;rec.continuous=true;let base=box.value?box.value.trim()+' ':'';
+  rec.onresult=ev=>{let fin='',interim='';for(let i=ev.resultIndex;i<ev.results.length;i++){const t=ev.results[i][0].transcript;if(ev.results[i].isFinal)fin+=t+' ';else interim+=t}
+    if(fin){base+=fin}box.value=(base+interim).trim()};
+  rec.onerror=ev=>{snap.rec=null;btn.classList.remove('live');if(ev.error==='not-allowed'||ev.error==='service-not-allowed'){btn.hidden=true;const hint=document.getElementById('micHint');if(hint)hint.textContent='The microphone is blocked here. Tap the mic key on your keyboard and dictate instead.'}};
+  rec.onend=()=>{snap.rec=null;btn.classList.remove('live')};
+  try{rec.start();snap.rec=rec;btn.classList.add('live')}catch(e){snap.rec=null}
+}
+function closeSnap(){if(snap.ctl)snap.ctl.abort();if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null}if(snap.url)URL.revokeObjectURL(snap.url);snap.blob=null;snap.url='';snap.result=null;document.getElementById('sheetRoot').innerHTML=''}
 function renderSnap(streamText){
-  const root=document.getElementById('sheetRoot');const r=snap.result;const canAsk=!!(S.sample&&S.canImages);
+  const root=document.getElementById('sheetRoot');const r=snap.result;const talk=snap.mode==='talk';const canAsk=!!(S.sample&&(talk||S.canImages));
   const time=(document.getElementById('snapTime')||{}).value||nowTime();const note=(document.getElementById('snapNote')||{}).value||'';
-  root.innerHTML=h`<div class="sheet-bg" id="snapBg"><div class="sheet" role="dialog" aria-label="Log a photo">
+  root.innerHTML=h`<div class="sheet-bg" id="snapBg"><div class="sheet" role="dialog" aria-label="${talk?'Tell Claude what you ate':'Log a photo'}">
     <div class="grab"></div>
-    <img class="preview" src="${esc(snap.url)}" alt="Your photo">
+    ${talk?h`<h2>What did you eat?</h2>
+      <textarea class="talkbox" id="snapNote" placeholder="Just talk: two scrambled eggs, sourdough toast with butter, a black coffee. Tap the mic key on your keyboard and say it.">${esc(note)}</textarea>
+      <div class="microw">${SR?h`<button type="button" class="mic" id="micBtn" aria-label="Start or stop listening"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button>`:''}<span class="tiny muted" id="micHint">${SR?'Tap to listen, tap again to stop. Or use the mic key on your keyboard.':'Tap the mic key on your keyboard and dictate.'}</span>
+        <div class="field" style="margin-left:auto"><span>Eaten at</span><input id="snapTime" type="time" value="${esc(time)}" style="width:118px"></div></div>`
+    :h`<img class="preview" src="${esc(snap.url)}" alt="Your photo">
     <div class="snapgrid">
       <div class="field"><span>Anything Claude should know? (optional)</span><input id="snapNote" placeholder="double chicken, no sour cream, 12 oz" value="${esc(note)}"></div>
       <div class="field"><span>Eaten at</span><input id="snapTime" type="time" value="${esc(time)}" style="width:118px"></div>
-    </div>
-    ${!canAsk?h`<div class="notice warn" style="margin-top:12px">${S.sample?'This view cannot send photos to Claude, so the entry is saved as waiting. Send the same photo to Claude in chat and the numbers get filled in.':'Claude is not available in this view. The photo is saved as waiting; send it to Claude in chat to fill in the numbers.'}</div>`:''}
-    ${snap.busy?h`<div class="stream"><span class="pulse"></span>${esc(streamText||'Looking at the plate…')}</div>`:''}
+    </div>`}
+    ${!canAsk?h`<div class="notice warn" style="margin-top:12px">${S.sample?'This view cannot send photos to Claude, so the entry is saved as waiting. Send the same photo to Claude in chat and the numbers get filled in.':'Claude is not available in this view. The entry is saved as waiting; tell Claude in chat to fill in the numbers.'}</div>`:''}
+    ${snap.busy?h`<div class="stream"><span class="pulse"></span>${esc(streamText||(talk?'Working it out…':'Looking at the plate…'))}</div>`:''}
     ${r?snapResult(r):''}
     <div class="row" style="margin-top:14px;justify-content:flex-end">
       <button class="btn ghost sm" id="snapCancel">Cancel</button>
@@ -950,6 +977,7 @@ function renderSnap(streamText){
   const go=document.getElementById('snapGo');if(go)go.addEventListener('click',()=>analyze(false));
   const ans=document.getElementById('snapAnswer');if(ans)ans.addEventListener('click',()=>analyze(true));
   const sv=document.getElementById('snapSave');if(sv)sv.addEventListener('click',saveSnap);
+  const mic=document.getElementById('micBtn');if(mic)mic.addEventListener('click',toggleMic);
 }
 function snapResult(r){
   const items=Array.isArray(r.items)?r.items:[];const tot={};for(const n of NUTR)tot[n.k]=items.reduce((a,it)=>a+num(it[n.k]),0);
@@ -969,19 +997,25 @@ function profileContext(){
   return parts.join(' ');
 }
 async function analyze(withAnswer){
-  if(!S.sample||!snap.blob||snap.busy)return;
+  const talk=snap.mode==='talk';
+  if(!S.sample||snap.busy||(!talk&&!snap.blob))return;
   const note=(document.getElementById('snapNote')||{}).value||'';const time=(document.getElementById('snapTime')||{}).value||nowTime();
+  if(talk&&!note.trim()){toast('Say or type what you ate first');return}
+  if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null}
   const reply=withAnswer?((document.getElementById('snapReply')||{}).value||''):'';
   if(withAnswer&&!reply.trim()){toast('Type an answer first');return}
-  const base='You are the nutrition logger inside Macro Polo, Adrian\'s food tracker. The attached photo is food he is eating or about to eat at '+fmtTime(time)+'.'+(note?' His note: "'+note.replace(/"/g,'\'')+'".':'')+
+  const who=S.profile==='b'?((S.settings&&S.settings.name)||'Katie'):'Adrian';
+  const base='You are the nutrition logger inside Macro Polo, '+who+'\'s food tracker. '+(talk?who+' describes what they ate at '+fmtTime(time)+', in their own words (possibly dictated, so read past typos): "'+note.replace(/"/g,'\'')+'". There is no photo.':'The attached photo is food '+who+' is eating or about to eat at '+fmtTime(time)+'.'+(note?' Their note: "'+note.replace(/"/g,'\'')+'".':''))+
     ' Identify every distinct item and a realistic portion (restaurant portions are large). Estimate nutrition per item from standard USDA-style references.'+
     ' Reply with only JSON of this shape: {"name": "short meal name", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "2 or 3 plain sentences: the biggest cholesterol, sodium or blood-sugar driver on the plate and one easy swap", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": "one short clause"}, "confidence": "high|medium|low", "questions": []}.'+
     ' Units: grams for protein, carbs, fat, fiber, sugar (added or free sugar only), satfat; milligrams for chol and sodium; numbers only, no unit strings. impact: gl under 10 low, 10 to 20 moderate, over 20 high. Put at most 2 short questions in "questions" only when an item, portion or preparation is genuinely unclear and changes the numbers a lot; otherwise leave it empty and commit to your best estimate. '+profileContext();
-  if(withAnswer&&snap.result){snap.turns.push({role:'assistant',content:JSON.stringify(snap.result)});snap.turns.push({role:'user',content:'My answer to your question: "'+reply.replace(/"/g,'\'')+'". Re-estimate with the same photo and reply with the same JSON shape only, with "questions" empty.'})}
+  if(withAnswer&&snap.result){snap.turns.push({role:'assistant',content:JSON.stringify(snap.result)});snap.turns.push({role:'user',content:'My answer to your question: "'+reply.replace(/"/g,'\'')+'". Re-estimate '+(talk?'':'with the same photo ')+'and reply with the same JSON shape only, with "questions" empty.'})}
   else{snap.turns=[{role:'user',content:base}]}
   snap.busy=true;snap.result=null;snap.ctl=new AbortController();renderSnap();
   try{
-    const r=await S.sample.json(snap.turns,{images:snap.blob,modelTier:'default',cache:false,signal:snap.ctl.signal,onText:({text})=>{const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(text.slice(-160))}});
+    const opts={modelTier:'default',cache:false,signal:snap.ctl.signal,onText:({text})=>{const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(text.slice(-160))}};
+    if(snap.blob)opts.images=snap.blob;
+    const r=await S.sample.json(snap.turns,opts);
     if(!r||typeof r!=='object'||!Array.isArray(r.items))throw {code:'invalid_json',message:'no items'};
     snap.result=r;snap.busy=false;renderSnap();
   }catch(e){
@@ -992,19 +1026,22 @@ async function analyze(withAnswer){
   }
 }
 async function saveSnap(){
-  if(snap.busy||!snap.blob)return;
+  const talk=snap.mode==='talk';
+  if(snap.busy||(!talk&&!snap.blob))return;
+  const note=(document.getElementById('snapNote')||{}).value||'';
+  if(talk&&!note.trim()){toast('Say or type what you ate first');return}
   const btn=document.getElementById('snapSave');btn.disabled=true;btn.textContent='Saving…';
-  const name=(document.getElementById('snapName')||{}).value||(snap.result&&snap.result.name)||'Photo meal';
-  const time=(document.getElementById('snapTime')||{}).value||nowTime();const note=(document.getElementById('snapNote')||{}).value||'';
+  const name=(document.getElementById('snapName')||{}).value||(snap.result&&snap.result.name)||(talk?note.trim().slice(0,40):'Photo meal');
+  const time=(document.getElementById('snapTime')||{}).value||nowTime();
   const r=snap.result;const date=todayStr();
-  const doc={date,time,name:String(name).trim(),source:'photo',createdAt:new Date().toISOString(),userNote:note};
+  const doc={date,time,name:String(name).trim(),source:talk?'voice':'photo',createdAt:new Date().toISOString(),userNote:note};
   if(r){doc.items=r.items.map(it=>Object.assign({name:String(it.name||''),qty:String(it.qty||'')},Object.fromEntries(NUTR.map(n=>[n.k,num(it[n.k])]))));doc.analysis=String(r.analysis||'');if(r.glycemic&&r.glycemic.impact)doc.glycemic={gl:num(r.glycemic.gl),impact:String(r.glycemic.impact),note:String(r.glycemic.note||'')};doc.confidence=r.confidence||''}
   else{doc.pending=true;doc.items=[]}
   try{
-    if(S.assets){try{const up=await S.assets.upload(snap.blob);doc.photoId=up.id}catch(e){/* photo stays unsaved; the entry still logs */}}
-    else if(S.mode==='local'){doc.photoData=await blobToDataUrl(snap.blob,640)}
+    if(snap.blob&&S.assets){try{const up=await S.assets.upload(snap.blob);doc.photoId=up.id}catch(e){/* photo stays unsaved; the entry still logs */}}
+    else if(snap.blob&&S.mode==='local'){doc.photoData=await blobToDataUrl(snap.blob,640)}
     await store.set('meals',date+'-'+slug(doc.name)+'-'+uid().slice(-4),doc);
-    closeSnap();S.date=date;render();if(r)celebrate();toast(r?'Logged '+doc.name+scoreTail():'Saved. Send the photo to Claude in chat to fill it in.');
+    closeSnap();S.date=date;render();if(r)celebrate();toast(r?'Logged '+doc.name+scoreTail():'Saved. Tell Claude in chat to fill it in.');
   }catch(e){btn.disabled=false;btn.textContent='Save to log';toast('Could not save ('+(e&&e.code||'error')+')')}
 }
 async function blobToDataUrl(blob,maxPx){const small=await downscale(blob,maxPx);return await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.readAsDataURL(small)})}

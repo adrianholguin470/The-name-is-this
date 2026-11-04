@@ -45,7 +45,7 @@ Collection names below are relative to the person's root (`data/users/me/root/`)
 {
   "date": "2026-11-04", "time": "12:30",
   "name": "Chicken burrito bowl",
-  "source": "photo|claude|manual", "createdAt": "ISO timestamp",
+  "source": "photo|voice|claude|manual", "createdAt": "ISO timestamp",
   "items": [
     {"name": "Grilled chicken", "qty": "4 oz",
      "cal": 190, "protein": 35, "carbs": 0, "fat": 4, "fiber": 0, "sugar": 0,
