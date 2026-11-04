@@ -239,6 +239,24 @@ table.t tr:last-child td{border-bottom:none}
 .questions b{color:var(--warn)}
 .questions ul{margin:4px 0 8px;padding-left:18px}
 .pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 1s infinite ease-in-out;margin-right:6px}
+
+/* edit sheet */
+.edithead{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}
+.askrow{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px;align-items:end}
+.askrow .btn{white-space:nowrap}
+.eitems{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.eitem{background:var(--surface-2);border-radius:12px;padding:10px 11px;display:flex;flex-direction:column;gap:8px}
+.eitem .top{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+.eitem .top input{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:7px 9px;font-size:14px;width:100%;min-width:0;font-weight:600}
+.eitem .qty input{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:6px 9px;font-size:13px;width:100%;min-width:0}
+.eitem .tools{display:flex;gap:6px;align-items:center}
+.eitem .tools button{background:var(--surface-3);border:none;border-radius:8px;padding:6px 9px;font-size:12px;font-weight:600;color:var(--fg)}
+.eitem .tools button.x{color:var(--crit)}
+.egrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.egrid label{display:flex;flex-direction:column;gap:2px;font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.egrid input{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:6px 8px;font-size:13px;width:100%;min-width:0;font-family:var(--mono);text-transform:none;letter-spacing:0}
+.etotals{margin-top:12px;font-size:13px;color:var(--muted);display:flex;gap:9px;flex-wrap:wrap}
+.etotals b{color:var(--fg)}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 </style>
 
@@ -426,7 +444,7 @@ function howItWorks(){
   return h`<div class="card"><h2>How Macro Polo works</h2>
   <ol class="steps">
     <li><b>Tap the camera</b> and shoot your plate, the menu, a label or a receipt. Add a word if it helps ("double meat", "no cheese").</li>
-    <li><b>Claude reads it right here</b> and logs calories, macros, cholesterol, sodium and a blood-sugar spike estimate, stamped with the time you ate.</li>
+    <li><b>Claude reads it right here</b> and logs calories, macros, cholesterol, sodium and a blood-sugar spike estimate, stamped with the time you ate. Got a detail wrong? Tap Edit on the entry and tell it what changed.</li>
     <li><b>Times build your windows</b>: first bite to last bite, overnight fast, and how long you have been fasting right now.</li>
     <li><b>Bloodwork screenshots</b> go to Claude in chat and land in Labs. Coach ties your meals back to them.</li>
   </ol></div>`;
@@ -527,7 +545,7 @@ function entryCard(e){
       ${g.note?h`<p class="tiny muted" style="margin:6px 0 0">${esc(g.note)}</p>`:''}
     </details>`:''}
     <div class="foot"><span class="tiny muted">${e.notes?esc(e.notes):''}</span>
-      ${confirm?h`<span class="confirm">Delete this entry? <button class="btn sm" data-act="del" data-id="${esc(e.id)}">Delete</button><button class="btn sm ghost" data-act="cancel">Keep</button></span>`:h`<button class="linkbtn danger" data-act="confirm" data-id="${esc(e.id)}">Remove</button>`}
+      ${confirm?h`<span class="confirm">Delete this entry? <button class="btn sm" data-act="del" data-id="${esc(e.id)}">Delete</button><button class="btn sm ghost" data-act="cancel">Keep</button></span>`:h`<span class="row" style="gap:12px"><button class="btn ghost sm" data-act="edit" data-id="${esc(e.id)}">Edit</button><button class="linkbtn danger" data-act="confirm" data-id="${esc(e.id)}">Remove</button></span>`}
     </div></div>
   </div>`;
 }
@@ -673,6 +691,7 @@ async function onAction(ev){
   if(act==='range'){S.range=+b.dataset.n;render();return}
   if(act==='lab'){S.labIndex=+b.dataset.n;render();return}
   if(act==='toggleAdd'){S.addOpen=!S.addOpen;render();if(S.addOpen){const f=document.getElementById('add_name');f&&f.focus()}return}
+  if(act==='edit'){openEdit(b.dataset.id);return}
   if(act==='confirm'){S.confirmId=b.dataset.id;render();return}
   if(act==='cancel'){S.confirmId=null;render();return}
   if(act==='del'){const id=b.dataset.id;const e=S.meals.find(m=>m.id===id);S.confirmId=null;
@@ -791,6 +810,73 @@ async function saveSnap(){
   }catch(e){btn.disabled=false;btn.textContent='Save to log';toast('Could not save ('+(e&&e.code||'error')+')')}
 }
 async function blobToDataUrl(blob,maxPx){const small=await downscale(blob,maxPx);return await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.readAsDataURL(small)})}
+
+// ---------- edit sheet: fix an entry by hand or by telling Claude what changed ----------
+const ed={id:null,doc:null,items:[],busy:false};
+function blankItem(){const it={name:'',qty:''};for(const n of NUTR)it[n.k]=0;return it}
+function openEdit(id){
+  const src=S.meals.find(m=>m.id===id);if(!src)return;
+  ed.id=id;ed.doc=JSON.parse(JSON.stringify(src));delete ed.doc.id;
+  ed.items=(Array.isArray(src.items)&&src.items.length?src.items:[Object.assign(blankItem(),{name:src.name||'',qty:''},entryTotals(src))]).map(it=>Object.assign(blankItem(),it));
+  ed.busy=false;renderEdit();
+}
+function readEditForm(){
+  const root=document.getElementById('sheetRoot');if(!root.querySelector('#edName'))return;
+  ed.doc.name=root.querySelector('#edName').value.trim();ed.doc.time=root.querySelector('#edTime').value;
+  root.querySelectorAll('.eitem').forEach((row,i)=>{const it=ed.items[i];if(!it)return;it.name=row.querySelector('[data-f=name]').value;it.qty=row.querySelector('[data-f=qty]').value;for(const n of NUTR)it[n.k]=num(row.querySelector('[data-f='+n.k+']').value)});
+}
+function renderEdit(streamText){
+  const root=document.getElementById('sheetRoot');const tot={};for(const n of NUTR)tot[n.k]=ed.items.reduce((a,it)=>a+num(it[n.k]),0);
+  const canAsk=!!S.sample;
+  root.innerHTML=h`<div class="sheet-bg" id="edBg"><div class="sheet" role="dialog" aria-label="Edit entry"><div class="grab"></div>
+    <h2>Edit entry</h2>
+    <div class="edithead"><div class="field"><span>Name</span><input id="edName" value="${esc(ed.doc.name||'')}"></div><div class="field"><span>Eaten at</span><input id="edTime" type="time" value="${esc(ed.doc.time||'')}" style="width:118px"></div></div>
+    ${canAsk?h`<div class="askrow"><div class="field"><span>Tell Claude what to change</span><input id="edAsk" placeholder="only one bacon slice, no cheese, it was a large tortilla"></div><button class="btn sm" id="edAskBtn" ${ed.busy?'disabled':''}>Adjust</button></div>`:''}
+    ${ed.busy?h`<div class="stream"><span class="pulse"></span>${esc(streamText||'Re-estimating…')}</div>`:''}
+    <div class="eitems">${ed.items.map((it,i)=>h`<div class="eitem" data-i="${i}">
+      <div class="top"><input data-f="name" value="${esc(it.name)}" placeholder="Item" aria-label="Item name"><div class="tools"><button type="button" data-scale="0.5" title="Half">½</button><button type="button" data-scale="2" title="Double">×2</button><button type="button" class="x" data-remove="1" title="Remove item">✕</button></div></div>
+      <div class="qty"><input data-f="qty" value="${esc(it.qty||'')}" placeholder="Portion (1 slice, 6 oz, 1 cup)" aria-label="Portion"></div>
+      <div class="egrid">${NUTR.map(n=>h`<label>${n.l} ${n.u}<input data-f="${n.k}" type="number" step="any" inputmode="decimal" value="${num(it[n.k])}"></label>`).join('')}</div>
+    </div>`).join('')}</div>
+    <div class="row" style="margin-top:10px"><button class="btn ghost sm" id="edAddItem">+ Add item</button></div>
+    <div class="etotals">Total <b class="num">${r0(tot.cal)} kcal</b> · P <b>${fmtN(tot.protein,'g')}g</b> · C <b>${fmtN(tot.carbs,'g')}g</b> · F <b>${fmtN(tot.fat,'g')}g</b> · Chol <b>${fmtN(tot.chol,'mg')}mg</b> · Na <b>${fmtN(tot.sodium,'mg')}mg</b></div>
+    <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="edCancel">Cancel</button><button class="btn" id="edSave" ${ed.busy?'disabled':''}>Save changes</button></div>
+  </div></div>`;
+  document.getElementById('edBg').addEventListener('click',e=>{if(e.target.id==='edBg'&&!ed.busy)root.innerHTML=''});
+  document.getElementById('edCancel').addEventListener('click',()=>{root.innerHTML=''});
+  document.getElementById('edSave').addEventListener('click',saveEdit);
+  document.getElementById('edAddItem').addEventListener('click',()=>{readEditForm();ed.items.push(blankItem());renderEdit();const rows=document.querySelectorAll('.eitem');const last=rows[rows.length-1];last&&last.querySelector('[data-f=name]').focus()});
+  const ask=document.getElementById('edAskBtn');if(ask)ask.addEventListener('click',adjustWithClaude);
+  root.querySelectorAll('.eitem').forEach(row=>{
+    row.querySelectorAll('[data-scale]').forEach(b=>b.addEventListener('click',()=>{readEditForm();const it=ed.items[+row.dataset.i];const f=+b.dataset.scale;for(const n of NUTR)it[n.k]=Math.round(num(it[n.k])*f*10)/10;renderEdit()}));
+    const rm=row.querySelector('[data-remove]');rm.addEventListener('click',()=>{readEditForm();ed.items.splice(+row.dataset.i,1);renderEdit()});
+    row.querySelectorAll('.egrid input').forEach(inp=>inp.addEventListener('input',()=>{readEditForm();const tot={};for(const n of NUTR)tot[n.k]=ed.items.reduce((a,it)=>a+num(it[n.k]),0);const el=root.querySelector('.etotals');if(el)el.innerHTML=h`Total <b class="num">${r0(tot.cal)} kcal</b> · P <b>${fmtN(tot.protein,'g')}g</b> · C <b>${fmtN(tot.carbs,'g')}g</b> · F <b>${fmtN(tot.fat,'g')}g</b> · Chol <b>${fmtN(tot.chol,'mg')}mg</b> · Na <b>${fmtN(tot.sodium,'mg')}mg</b>`}));
+  });
+}
+async function adjustWithClaude(){
+  if(!S.sample||ed.busy)return;readEditForm();
+  const ask=(document.getElementById('edAsk')||{}).value||'';if(!ask.trim()){toast('Say what to change first');return}
+  const prompt='You are the nutrition logger inside Macro Polo, Adrian\'s food tracker. Here is a logged meal as JSON: '+JSON.stringify({name:ed.doc.name,time:ed.doc.time,items:ed.items})+
+    '. Adrian says this correction: "'+ask.replace(/"/g,'\'')+'". Apply it: change, remove, add or rescale only the items the correction touches, keep everything else as it is, and recompute realistically from standard USDA-style references.'+
+    ' Reply with only JSON: {"name": "", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "2 or 3 plain sentences on the biggest cholesterol, sodium or blood-sugar driver and one easy swap", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": ""}}. Units: grams for protein, carbs, fat, fiber, sugar (added sugar only), satfat; milligrams for chol and sodium; numbers only. '+profileContext();
+  ed.busy=true;renderEdit();
+  try{
+    const r=await S.sample.json(prompt,{modelTier:'default',cache:false,onText:({text})=>{const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(text.slice(-160))}});
+    if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};
+    ed.items=r.items.map(it=>Object.assign(blankItem(),{name:String(it.name||''),qty:String(it.qty||'')},Object.fromEntries(NUTR.map(n=>[n.k,num(it[n.k])]))));
+    if(r.name)ed.doc.name=String(r.name);if(r.analysis)ed.doc.analysis=String(r.analysis);if(r.glycemic&&r.glycemic.impact)ed.doc.glycemic={gl:num(r.glycemic.gl),impact:String(r.glycemic.impact),note:String(r.glycemic.note||'')};
+    ed.doc.notes=((ed.doc.notes?ed.doc.notes+' ':'')+'Corrected: '+ask.trim()).slice(0,300);
+    ed.busy=false;renderEdit();toast('Adjusted. Check it, then save.');
+  }catch(e){ed.busy=false;renderEdit();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':code==='rate_limited'?'Claude is busy. Edit the numbers by hand or try again shortly.':'Could not adjust ('+code+'). Edit by hand instead.')}
+}
+async function saveEdit(){
+  if(ed.busy)return;readEditForm();
+  const btn=document.getElementById('edSave');btn.disabled=true;btn.textContent='Saving…';
+  const doc=Object.assign({},ed.doc,{items:ed.items.filter(it=>it.name.trim()||num(it.cal)>0),updatedAt:new Date().toISOString()});
+  if(!doc.name)doc.name='Meal';if(doc.items.length)doc.pending=false;
+  try{await store.set('meals',ed.id,doc);document.getElementById('sheetRoot').innerHTML='';toast('Saved');render()}
+  catch(e){btn.disabled=false;btn.textContent='Save changes';toast('Could not save ('+(e&&e.code||'error')+')')}
+}
 
 // ---------- settings sheet ----------
 document.getElementById('settingsBtn').addEventListener('click',openSettings);
