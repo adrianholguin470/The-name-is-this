@@ -28,6 +28,11 @@ can compute eating windows and fasts.
   reachable from his chat at `data/users/me/root-b/...`; if she signs in with her own
   account it is not. The top-level `meals`, `labs`, `insights`, `settings` collections are
   no longer used (migrated on 2026-11-04).
+- Katie's profile runs in **postpartum mode** (baby born 2026-09-04, breastfeeding by default): different
+  default targets, prompts that ask about recovery and milk supply instead of cholesterol, a daily movement
+  pick with videos, water cups, and nudges. Her settings doc carries `postpartum: {born, delivery,
+  breastfeeding, cleared}`. A `days` collection (doc id = date) holds `{water, moves:[ids]}` per day for either
+  profile. A "whose phone is this?" picker shows on first open; the camera sheet says who it is logging for.
 - `settings/profile` also carries `name` (shown on the toggle), `coverId` (asset behind the Today card) and `avatarId` (asset on the toggle button); the app uploads these itself from the gear sheet. The app computes a day score
   (0 to 100 from targets) and a logging streak; both are derived, never stored.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at

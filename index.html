@@ -302,7 +302,7 @@ table.t tr:last-child td{border-bottom:none}
 .md li{margin:3px 0}
 .md strong{font-weight:600;color:var(--fg)}
 
-.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20;}#pickRoot .sheet-bg{z-index:25}.sheet-bg{display:flex;align-items:flex-end;justify-content:center}
 .sheet{background:var(--surface);border-radius:22px 22px 0 0;width:100%;max-width:720px;max-height:92vh;overflow:auto;border-top:1px solid var(--line-2);
   padding-block:14px calc(18px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .sheet .grab{width:40px;height:4px;border-radius:2px;background:var(--line-2);margin:0 auto 12px}
@@ -345,6 +345,66 @@ table.t tr:last-child td{border-bottom:none}
 .etotals{margin-top:12px;font-size:13px;color:var(--muted);display:flex;gap:9px;flex-wrap:wrap}
 .etotals b{color:var(--fg)}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* who: profile chip in the header, picker sheet */
+.who{background:var(--surface);border:1px solid var(--line);border-radius:999px;height:38px;padding:0 12px 0 8px;display:inline-flex;align-items:center;gap:7px;color:var(--fg);font-weight:600;font-size:13px;max-width:150px}
+.who .av{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:12px;color:var(--accent-ink);background:var(--accent);flex:none}
+.who.pp .av{background:#FF5FA8}
+.who span.n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pickgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+@media (max-width:380px){.pickgrid{grid-template-columns:1fr}}
+.pick{background:var(--surface-2);border:1px solid var(--line-2);border-radius:16px;padding:16px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;min-width:0}
+.pick.on{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.pick .av{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:17px;color:#03101F;background:#3D8BFF}
+.pick.pp .av{background:#FF5FA8;color:#2B0818}
+.pick b{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:-.01em}
+.pick .d{font-size:12px;color:var(--muted);line-height:1.35}
+.pick.on::after{content:"on this phone";font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.pick.pp.on::after{color:#FF5FA8}
+
+/* suggestions card */
+.card.sugg{border-color:var(--line-2)}
+.card.sugg.pp{background:linear-gradient(160deg,var(--hero-a),var(--hero-b))}
+.sugg .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+.sugg h2{margin:0}
+.moves{display:flex;flex-direction:column;gap:8px}
+.move{background:var(--surface-2);border-radius:14px;padding:11px 12px;display:grid;grid-template-columns:1fr auto;gap:6px 10px;align-items:center;min-width:0;border:1px solid transparent}
+.move.done{border-color:var(--good);opacity:.85}
+.move .t{font-weight:600;line-height:1.3;min-width:0}
+.move .t .cat{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-bottom:3px}
+.move .t .cat i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.move .meta{font-size:12px;color:var(--muted);grid-column:1}
+.move .acts{grid-row:1/3;grid-column:2;display:flex;flex-direction:column;gap:6px;align-items:stretch}
+.move .acts a,.move .acts button{font-size:12px;font-weight:600;padding:7px 11px;border-radius:9px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap}
+.move .acts a{background:var(--accent);color:var(--accent-ink)}
+.move .acts a svg{width:13px;height:13px}
+.move .acts button{background:var(--surface-3);border:1px solid var(--line-2);color:var(--fg)}
+.move.done .acts button{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.move .alt{font-size:11px;color:var(--faint);grid-column:1}
+.move .alt a{color:var(--muted)}
+.c-breath{color:#7fd0f0}.c-core{color:#f0a06a}.c-yoga{color:#c99af5}.c-stretch{color:#5fd39a}.c-walk{color:#f2d04b}
+.c-breath i{background:#7fd0f0}.c-core i{background:#f0a06a}.c-yoga i{background:#c99af5}.c-stretch i{background:#5fd39a}.c-walk i{background:#f2d04b}
+.nudges{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.nudges li{display:flex;gap:8px;align-items:flex-start;line-height:1.4}
+.nudges li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;margin-top:7px}
+.nudges li.warn::before{background:var(--warn)}
+.nudges li.crit::before{background:var(--crit)}
+.nudges li.good::before{background:var(--good)}
+.water{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface-2);border-radius:12px;padding:9px 12px;margin-top:12px}
+.water .cups{display:flex;gap:3px;flex-wrap:wrap}
+.water .cups i{width:9px;height:14px;border-radius:2px 2px 4px 4px;background:var(--surface-3);display:inline-block}
+.water .cups i.on{background:#7fd0f0}
+.water .ctl{display:flex;gap:6px;align-items:center}
+.water .ctl button{width:30px;height:30px;border-radius:9px;border:1px solid var(--line-2);background:var(--surface-3);color:var(--fg);font-weight:700;font-size:16px;line-height:1}
+.flag{font-size:12px;color:var(--muted);margin:10px 0 0;line-height:1.4}
+.flag b{color:var(--warn)}
+.libgroup h3{font-family:var(--display);font-size:14px;margin:14px 0 6px;letter-spacing:.02em}
+.ppform{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.ppform .full{grid-column:1/-1}
+.ppform label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);font-weight:500;min-width:0}
+.ppform input[type=text],.ppform input[type=date],.ppform select{background:var(--bg);border:1px solid var(--line-2);border-radius:10px;padding:9px 11px;font-size:14px;color:var(--fg);width:100%;min-width:0}
+.ppform label.chk{flex-direction:row;align-items:center;gap:8px;font-size:13.5px;color:var(--fg);background:var(--surface-2);border-radius:10px;padding:9px 11px}
+.ppform label.chk input{width:18px;height:18px;accent-color:var(--accent)}
 </style>
 
 <div class="app">
@@ -382,6 +442,7 @@ table.t tr:last-child td{border-bottom:none}
 </div>
 
 <div id="sheetRoot"></div>
+<div id="pickRoot"></div>
 <div id="toastRoot"></div>
 
 <script>
@@ -400,7 +461,54 @@ const NUTR = [
   {k:'sodium',l:'Sodium',u:'mg',kind:'ceiling'},
 ];
 const DEFAULT_TARGETS = {cal:2000,protein:150,carbs:200,fat:65,fiber:30,sugar:36,satfat:20,chol:300,sodium:2300};
-const PROFILES={a:{root:'root',name:'Adrian'},b:{root:'root-b',name:'Katie'}};
+// Postpartum + breastfeeding: roughly 330 to 400 kcal above a 1,900 baseline, protein near 1.3 g/kg, fiber 28 g,
+// added sugar kept low. Cholesterol and sodium stay at general limits; they are not her focus.
+const PP_TARGETS_BF   = {cal:2300,protein:95,carbs:260,fat:75,fiber:28,sugar:25,satfat:20,chol:300,sodium:2300};
+const PP_TARGETS_NOBF = {cal:1900,protein:85,carbs:210,fat:65,fiber:28,sugar:25,satfat:20,chol:300,sodium:2300};
+// Two people share this app, usually from one Claude account on two phones. Each phone remembers whose it is
+// (a picker on first open, the toggle up top after that). Adrian's log lives at data/users/<id>/root, hers at
+// data/users/<id>/root-b. Her profile runs in postpartum mode: different targets, prompts and a daily movement pick.
+const PROFILES={a:{root:'root',name:'Adrian',mode:'heart',blurb:'Cholesterol, blood sugar, eating windows. Bloodwork loaded.'},b:{root:'root-b',name:'Katie',mode:'postpartum',blurb:'Postpartum recovery, breastfeeding fuel, and a daily movement pick.'}};
+const CATS = {breath:'Breath & pelvic floor',core:'Deep core (DR-safe)',yoga:'Gentle yoga',stretch:'Nursing-posture stretch',walk:'Walk & low impact'};
+// Movement library for the postpartum profile. Every item links to a video to watch (opens in a new tab),
+// plus a search link in case a video is ever taken down. minWeek gates core and yoga until the usual
+// 6-week clearance; the "cleared by provider" switch in settings gates them too.
+const MOVES = [
+  {id:'pf3',    cat:'breath',  mins:10, minWeek:0, by:'Michelle Kenway, pelvic floor physiotherapist', title:'Pelvic floor exercises for beginners in 3 easy steps', yt:'-1lViRMMdJg', note:'Find the muscles first, then short holds. No bearing down.'},
+  {id:'pfpt',   cat:'breath',  mins:8,  minWeek:0, by:'Physical therapist', title:'Physical therapist pelvic floor exercises for beginners', yt:'kQKR5uLkeUM', note:'Lying down is the easiest place to start.'},
+  {id:'diaph',  cat:'breath',  mins:6,  minWeek:0, by:'Dr. Riva Preil, pelvic floor PT', title:'Diaphragmatic breathing (Pelvic Pearls)', yt:'XAyzSCRJZOs', note:'Ribs wide on the inhale, pelvic floor lifts gently on the exhale.'},
+  {id:'ppdia',  cat:'breath',  mins:6,  minWeek:0, by:'Pelvic physiotherapy', title:'Postpartum pelvic physio: diaphragmatic breathing', yt:'eFkqvl8Q574', note:'Good while feeding or when the baby finally sleeps.'},
+  {id:'ywapf',  cat:'breath',  mins:25, minWeek:6, by:'Yoga With Adriene', title:'Yoga for pelvic floor', yt:'2aEceax_be4', note:'Awareness and strength, all levels. Skip anything that makes you bear down.'},
+  {id:'nml8',   cat:'core',    mins:10, minWeek:6, by:'Nourish Move Love', title:'10 minute abs after baby: 8 diastasis recti safe exercises', yt:'u4z7sBiGFA8', note:'Breathing, heel taps, bent-knee marches. No crunches, no planks.'},
+  {id:'nml5',   cat:'core',    mins:10, minWeek:6, by:'Nourish Move Love', title:'Diastasis recti workout 5: 10-minute post-baby Pilates abs', yt:'0AJBIwWbTfI', note:'Pilates-style, floor based, pelvic floor friendly.'},
+  {id:'yogadr', cat:'core',    mins:10, minWeek:6, by:'Postnatal yoga', title:'10 minute postnatal yoga workout for core and diastasis recti', yt:'0en654FHyLY', note:'If your belly domes or coning shows, make the move smaller.'},
+  {id:'csec',   cat:'core',    mins:10, minWeek:8, by:'Postpartum trainer', title:'10 minute C-section ab workout for diastasis recti', yt:'pdjyHQzQvEA', note:'Built for a healing incision. Fine after a vaginal birth too.'},
+  {id:'y6wk',   cat:'yoga',    mins:30, minWeek:6, by:'Postnatal yoga teacher', title:'Postnatal yoga class suitable from 6 weeks after birth', yt:'y-C-Wpmk6Xo', note:'A full gentle class. Rest in child\'s pose whenever you want.'},
+  {id:'ystart', cat:'yoga',    mins:20, minWeek:2, by:'Postnatal yoga teacher', title:'Gentle postnatal recovery yoga: start here', yt:'2mr5XEpPZCM', note:'The easiest class in the list. Reconnects breath, core and pelvic floor.'},
+  {id:'yfeel',  cat:'yoga',    mins:20, minWeek:6, by:'Postnatal yoga teacher', title:'Feel-good postnatal yoga', yt:'EH18ikq09BQ', note:'For the days you need energy more than effort.'},
+  {id:'yupper', cat:'yoga',    mins:15, minWeek:2, by:'Postnatal yoga teacher', title:'Postnatal yoga for upper body tension (15 minutes)', yt:'WLSnIrBWrNk', note:'Neck and shoulders after a long feeding day.'},
+  {id:'ybf',    cat:'yoga',    mins:35, minWeek:6, by:'Postnatal yoga teacher', title:'35-minute postnatal yoga for breastfeeding mothers', yt:'nm3qwuS4zPs', note:'Longer and slower. Save it for a weekend nap window.'},
+  {id:'ystr',   cat:'yoga',    mins:30, minWeek:10, by:'Postnatal yoga teacher', title:'Postnatal yoga for strength and flexibility (30 minutes)', yt:'FuFQdJQSiuc', note:'A step up once the gentle classes feel easy.'},
+  {id:'y40',    cat:'yoga',    mins:40, minWeek:6, by:'Postnatal yoga teacher', title:'40-minute postnatal gentle recovery class', yt:'fRE5jKgU6xk', note:'Asks for provider clearance first. Full-length and slow.'},
+  {id:'sneck',  cat:'stretch', mins:20, minWeek:0, by:'Yoga teacher', title:'Yoga for breastfeeding moms with sore neck, shoulders and back', yt:'w9jt2s95gf0', note:'Chest openers undo the feeding hunch.'},
+  {id:'s13',    cat:'stretch', mins:13, minWeek:0, by:'Yoga teacher', title:'13-minute breastfeeding yoga stretches', yt:'WwMbv3jYVxk', note:'Short enough for a nap window.'},
+  {id:'spt3',   cat:'stretch', mins:6,  minWeek:0, by:'Physical therapist', title:'3 effective stretches to fix upper back pain from breastfeeding', yt:'Oxml7XmzKTI', note:'Three moves. Do them a few times a day, even for two minutes.'},
+  {id:'sbf',    cat:'stretch', mins:30, minWeek:2, by:'Postnatal yoga teacher', title:'Postnatal yoga for breastfeeding: back and neck pain', yt:'sd1tLoD-EKw', note:'Slower and longer, for a stiff-all-over day.'},
+  {id:'sneck2', cat:'stretch', mins:10, minWeek:0, by:'Postpartum trainer', title:'Postpartum neck and shoulder pain relief', yt:'Q4gDKdb9dlM', note:'Can be done sitting with the baby on you.'},
+  {id:'sback',  cat:'stretch', mins:12, minWeek:0, by:'Physical therapist', title:'Best exercises for pregnant and postpartum back pain relief', yt:'DzIdcO52qEI', note:'Hips and low back. Stop at any sharp pain.'},
+  {id:'wout',   cat:'walk',    mins:20, minWeek:0, by:'Just you and the stroller', title:'Outdoor walk with the stroller or the carrier', yt:'', note:'Easy pace, flat route, 15 to 25 minutes. Fresh air counts double right now.'},
+  {id:'w10',    cat:'walk',    mins:10, minWeek:0, by:'Walk at home', title:'10-minute low-impact home walking workout', yt:'jE4Bkill_wk', note:'All standing, no jumping. Works while babywearing.'},
+  {id:'wdaily', cat:'walk',    mins:10, minWeek:0, by:'Walk at home', title:'10-minute daily walking workout', yt:'J8tAvSI_QYo', note:'Rainy-day option. Keep it conversational pace.'},
+  {id:'wcard',  cat:'walk',    mins:10, minWeek:6, by:'Low-impact trainer', title:'10-minute standing cardio workout (low impact)', yt:'KqqqdwC9Alc', note:'A little more heart rate, still no impact. Only after clearance.'},
+];
+// Adrian's movement picks: ApoB and LDL respond to steady aerobic work more than anything else.
+const HEART_MOVES = [
+  {id:'z2walk', title:'Brisk walk, 30 to 40 minutes', meta:'Zone 2 pace: can talk, cannot sing. The single best thing for LDL and ApoB outside the kitchen.'},
+  {id:'z2bike', title:'Easy bike or incline walk, 30 minutes', meta:'Same idea, less pounding. Keep it steady rather than hard.'},
+  {id:'str',    title:'Strength session, 20 to 30 minutes', meta:'Big movements: squat, hinge, push, pull. Two or three sets each. Muscle is where the carbs should go.'},
+  {id:'mob',    title:'10-minute mobility', meta:'Hips, thoracic spine, calves. Good on a day you ate late or slept short.'},
+  {id:'post',   title:'10-minute walk after the biggest meal', meta:'Flattens the glucose spike from that meal more than any supplement.'},
+];
 function lsPrefix(){return S.profile==='b'?'macropolo:b:':'macropolo:'}
 
 // ---------- state ----------
@@ -410,6 +518,7 @@ const S = {
   loaded:{meals:false,labs:false,insights:false,settings:false},
   mode:'local', db:null, root:null, uid:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
   labIndex:0, addOpen:false, confirmId:null,
+  days:[], shuffle:0, libOpen:false,
 };
 
 // ---------- helpers ----------
@@ -431,7 +540,21 @@ function fmtN(v,u){v=num(v);const s=(u==='g'&&v<10&&v!==Math.round(v))?r1(v):r0(
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
 function slug(s){return String(s||'meal').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'meal'}
 function h(strings,...vals){return strings.reduce((a,s,i)=>a+s+(i<vals.length?vals[i]:''),'')}
-function targets(){return Object.assign({},DEFAULT_TARGETS,(S.settings&&S.settings.targets)||{})}
+function profName(id){return (id===S.profile&&S.settings&&S.settings.name)||(S.names&&S.names[id])||PROFILES[id].name}
+function profiles(){return Object.keys(PROFILES).map(id=>Object.assign({},PROFILES[id],{id,name:profName(id)}))}
+function me(){const p=PROFILES[S.profile]||PROFILES.a;return Object.assign({},p,{id:S.profile,name:profName(S.profile)})}
+function isPP(){return (PROFILES[S.profile]||PROFILES.a).mode==='postpartum'}
+function dispName(p){return p.name||PROFILES[p.id].name}
+function initials(p){const n=dispName(p);return n.trim().slice(0,1).toUpperCase()||'?'}
+function pp(){return Object.assign({born:'2026-09-04',breastfeeding:true,cleared:true,delivery:'vaginal'},(S.settings&&S.settings.postpartum)||{})}
+function weeksPP(){const b=pp().born||'2026-09-04';const [y,m,d]=b.split('-').map(Number);const days=Math.floor((Date.now()-new Date(y,m-1,d).getTime())/864e5);return Math.max(0,Math.floor(days/7))}
+function baseTargets(){return isPP()?(pp().breastfeeding?PP_TARGETS_BF:PP_TARGETS_NOBF):DEFAULT_TARGETS}
+function targets(){return Object.assign({},baseTargets(),(S.settings&&S.settings.targets)||{})}
+function waterGoal(){return isPP()?(pp().breastfeeding?12:9):8}
+function dayDoc(date){return S.days.find(d=>d.id===date)||{id:date,water:0,moves:[]}}
+function hashStr(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function ytUrl(id){return 'https://www.youtube.com/watch?v='+encodeURIComponent(id)}
+function ytSearch(q){return 'https://www.youtube.com/results?search_query='+encodeURIComponent(q)}
 
 function entryTotals(e){
   const t={};
@@ -517,6 +640,8 @@ async function boot(){
   S.sample=sample;S.assets=assets;
   if(sample){try{const lim=await sample.limits();if(lim&&lim.images){S.canImages=true;S.imageTypes=lim.images.mediaTypes.join(',')||'image/*'}}catch(e){}}
   setRoot();setSync();subscribeAll();
+  let seen=null;try{seen=localStorage.getItem('macropolo:profile')}catch(e){}
+  if(!seen)openPicker(true);
 }
 function setRoot(){S.root=(S.db&&S.uid)?S.db.doc('data/users/'+S.uid+'/'+PROFILES[S.profile].root):null}
 function applyProfile(){
@@ -574,9 +699,23 @@ document.getElementById('ptoggle').addEventListener('click',e=>{const b=e.target
 function switchProfile(p){
   S.profile=p;try{localStorage.setItem('macropolo:profile',p)}catch(e){}
   S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];
-  S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
+  S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.days=[];S.shuffle=0;S.libOpen=false;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
   applyProfile();setRoot();setSync();render();subscribeAll();
-  toast(p==='b'?'Katie\'s log. Pink mode on.':'Adrian\'s log. Game on.');
+  document.getElementById('pickRoot').innerHTML='';if(snapOpen())renderSnap();
+  toast(profName(p)+(p==='b'?'\'s log. Pink mode on.':'\'s log. Game on.'));
+}
+
+// ---------- picker: whose phone is this? (first open, and from the camera sheet) ----------
+function openPicker(first){
+  const root=document.getElementById('pickRoot');const ps=profiles();
+  root.innerHTML=h`<div class="sheet-bg" id="pickBg"><div class="sheet" role="dialog" aria-label="Whose phone is this?"><div class="grab"></div>
+    <h2>${first?'Whose phone is this?':'Switch person'}</h2>
+    <p class="small muted" style="margin:0 0 10px">Each of you has a separate log. This phone remembers your pick, so photos always land in the right place. Switch any time with the toggle at the top.</p>
+    <div class="pickgrid">${ps.map(p=>h`<button class="pick ${p.mode==='postpartum'?'pp':''} ${!first&&S.profile===p.id?'on':''}" data-pick="${p.id}"><span class="av">${esc(initials(p))}</span><b>${esc(dispName(p))}</b><span class="d">${esc(p.blurb)}</span></button>`).join('')}</div>
+    ${first?'':h`<div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="pickCancel">Cancel</button></div>`}
+  </div></div>`;
+  root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.pick;if(id===S.profile){try{localStorage.setItem('macropolo:profile',id)}catch(e){}root.innerHTML='';toast('This phone logs for '+profName(id));if(snapOpen())renderSnap()}else switchProfile(id)}));
+  if(!first){document.getElementById('pickBg').addEventListener('click',e=>{if(e.target.id==='pickBg')root.innerHTML=''});document.getElementById('pickCancel').addEventListener('click',()=>root.innerHTML='')}
 }
 function setSync(){const el=document.getElementById('sync');
   if(S.mode==='db'){el.classList.add('on');el.title=S.root?'synced, private to you':'synced'}else{el.classList.remove('on');el.title='this device only'}}
@@ -586,6 +725,7 @@ function subscribeAll(){
   S.unsubs.push(store.subscribe('labs',rows=>{S.labs=rows.sort((a,b)=>String(b.date).localeCompare(String(a.date)));S.loaded.labs=true;render()},()=>{S.loaded.labs=true}));
   S.unsubs.push(store.subscribe('insights',rows=>{S.insights=rows.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.createdAt||'').localeCompare(String(a.createdAt||'')));S.loaded.insights=true;render()},()=>{S.loaded.insights=true}));
   S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;if(S.profile==='a'&&S.settings&&S.settings.theme&&S.settings.theme!==S.theme)applyTheme(S.settings.theme);profileNames();render()},()=>{S.loaded.settings=true}));
+  S.unsubs.push(store.subscribe('days',rows=>{S.days=rows;render()},()=>{}));
 }
 
 // ---------- day score, streak, celebration ----------
@@ -644,7 +784,8 @@ setInterval(()=>{const el=document.getElementById('fastNow');if(el&&S.view==='to
 function howItWorks(){
   return h`<div class="card"><h2>How Macro Polo works</h2>
   <ol class="steps">
-    <li><b>Tap the camera</b> and shoot your plate, the menu, a label or a receipt. Add a word if it helps ("double meat", "no cheese"). No photo? Tap the little mic next to it and just say what you ate.</li>
+    <li><b>Two logs, one app.</b> Each phone remembers whose it is (tap the name up top to switch). Nothing from one log shows in the other.</li>
+    <li><b>Tap the camera</b> and shoot your plate, the menu, a label or a receipt. Add a word if it helps ("double meat", "no cheese"). No photo? Tap the little mic next to the camera and just say what you ate.</li>
     <li><b>Claude reads it right here</b> and logs calories, macros, cholesterol, sodium and a blood-sugar spike estimate, stamped with the time you ate. Got a detail wrong? Tap Edit on the entry and tell it what changed.</li>
     <li><b>Times build your windows</b>: first bite to last bite, overnight fast, and how long you have been fasting right now.</li>
     <li><b>Bloodwork screenshots</b> go to Claude in chat and land in Labs. Coach ties your meals back to them.</li>
@@ -666,6 +807,7 @@ function renderToday(){
   const sc=entries.length?dayScore(t,tg):null;const st=streak();
 
   return h`
+  ${suggestions(date,t,tg,entries,isToday)}
   <div class="datebar">
     <button class="iconbtn" data-act="date" data-n="-1" aria-label="Previous day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
     <div class="d">${isToday?'Today':fmtDate(date,{weekday:'long'})}<small>${fmtDate(date,{month:'long',day:'numeric',year:'numeric'})}</small></div>
@@ -701,6 +843,69 @@ function renderToday(){
     ${entries.length?entryList(entries):h`<div class="empty"><b>Nothing logged ${isToday?'yet today':'this day'}</b><p>Tap the camera below and shoot what you are eating.</p></div>`}
   </div>
   ${(S.meals.length<=1&&S.loaded.meals)?howItWorks():''}`;
+}
+
+// --- Suggestions: the first thing on the Today screen for either person ---
+function pickMoves(date){
+  const q=pp();const wk=weeksPP();const seed=hashStr(date+':'+S.shuffle);
+  const ok=MOVES.filter(m=>wk>=m.minWeek&&(q.cleared||['breath','stretch','walk'].includes(m.cat)));
+  const even=(hashStr(date)%2)===0;
+  const plan=even?['core','yoga','walk']:['breath','stretch','walk'];
+  const out=[];
+  plan.forEach((cat,i)=>{let pool=ok.filter(m=>m.cat===cat);if(!pool.length)pool=ok.filter(m=>!out.includes(m));if(!pool.length)return;const m=pool[(seed+i*7919)%pool.length];if(m&&!out.includes(m))out.push(m)});
+  return out;
+}
+function moveCard(m,done){
+  const cat=m.cat?CATS[m.cat]:'';
+  return h`<div class="move ${done?'done':''}">
+    <div class="t">${cat?h`<span class="cat c-${m.cat}"><i></i>${esc(cat)}</span><br>`:''}${esc(m.title)}</div>
+    <div class="meta">${m.mins?m.mins+' min · ':''}${esc(m.by||m.meta||'')}${m.note?' · '+esc(m.note):''}</div>
+    <div class="acts">${m.yt?h`<a href="${esc(ytUrl(m.yt))}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Watch</a>`:''}<button type="button" data-act="done" data-id="${esc(m.id)}">${done?'Done ✓':'Mark done'}</button></div>
+    ${m.yt?h`<div class="alt">Video missing? <a href="${esc(ytSearch(m.title))}" target="_blank" rel="noopener">search for it</a></div>`:''}
+  </div>`;
+}
+function suggestions(date,t,tg,entries,isToday){
+  const dd=dayDoc(date);const done=Array.isArray(dd.moves)?dd.moves:[];const left=k=>Math.max(0,tg[k]-t[k]);
+  if(isPP()){
+    const q=pp();const wk=weeksPP();const picks=pickMoves(date);const goal=waterGoal();const water=num(dd.water);
+    const nudges=[];
+    if(q.breastfeeding)nudges.push({c:'',t:'Breastfeeding burns about 400 kcal a day. Your target is '+tg.cal.toLocaleString()+' kcal; '+(t.cal<tg.cal*0.5&&mins(nowTime())>14*60&&isToday?'you are well under it so far today. Eat.':'under-eating costs supply and energy before it costs weight.')});
+    nudges.push({c:left('protein')>tg.protein*0.4?'warn':'good',t:left('protein')>0?r0(left('protein'))+' g of protein still to go. Eggs, Greek yogurt, chicken, beans and cottage cheese are the easy ones.':'Protein floor reached. Nice.'});
+    if(left('fiber')>tg.fiber*0.4)nudges.push({c:'',t:'Fiber is at '+r0(t.fiber)+' of '+tg.fiber+' g. Oats, berries, beans and a big handful of greens get you there and help postpartum digestion.'});
+    const rot=['Iron day: red meat, lentils or spinach with something citrus. Blood loss at delivery plus night feeds make low iron the usual reason for the wall of tiredness.','Calcium check: three servings of dairy or fortified alternatives. Breastfeeding pulls calcium from bone if the plate does not supply it.','Omega-3: salmon or sardines twice a week, or walnuts and chia today. DHA goes straight into milk.','Choline and vitamin D: eggs cover the first, a supplement usually covers the second. Ask your provider what dose.'];
+    nudges.push({c:'',t:rot[hashStr(date)%rot.length]});
+    const cups=Array.from({length:goal},(_,i)=>h`<i class="${i<water?'on':''}"></i>`).join('');
+    return h`<div class="card sugg pp">
+      <div class="head"><div><div class="eyebrow" style="color:var(--accent-2)">Week ${wk} postpartum · baby no. 4</div><h2 style="margin-top:4px">Today's movement<span class="sub">pick one, two if you feel good</span></h2></div>
+        <div class="row" style="gap:6px;flex-wrap:nowrap"><button class="iconbtn" data-act="shuffle" aria-label="Other options" title="Other options"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></button><button class="btn ghost sm" data-act="lib">${S.libOpen?'Less':'All'}</button></div></div>
+      ${q.cleared?'':h`<div class="notice warn" style="margin-bottom:10px">Core and yoga stay hidden until you flip "cleared by my provider" in settings. Breath, stretches and walks are safe now.</div>`}
+      <div class="moves">${picks.map(m=>moveCard(m,done.includes(m.id))).join('')}</div>
+      ${S.libOpen?library(done):''}
+      <p class="flag"><b>Stop and call your provider</b> if bleeding gets heavier or turns bright red again, you feel heaviness or pressure in the pelvis, you leak with the move, or anything hurts rather than works. Pelvic floor physio is worth asking for after a fourth baby even when nothing is wrong.</p>
+      <div class="water"><div><div class="eyebrow">Water</div><div class="small"><b class="num">${water}</b> of ${goal} cups${q.breastfeeding?' · nursing':''}</div><div class="cups" style="margin-top:5px">${cups}</div></div><div class="ctl"><button type="button" data-act="water" data-n="-1" aria-label="One cup less">−</button><button type="button" data-act="water" data-n="1" aria-label="One cup more">+</button></div></div>
+      <ul class="nudges">${nudges.map(n=>h`<li class="${n.c}">${esc(n.t)}</li>`).join('')}</ul>
+    </div>`;
+  }
+  // Heart profile: nutrition nudges from today's numbers plus one movement pick.
+  const nudges=[];const lab=S.labs[0];
+  if(left('protein')>0)nudges.push({c:left('protein')>tg.protein*0.5&&mins(nowTime())>15*60&&isToday?'warn':'',t:r0(left('protein'))+' g of protein left to reach '+tg.protein+'. '+(left('protein')>60?'That is two solid servings: a chicken breast and a Greek yogurt get you there.':'One more protein-first meal does it.')});
+  else nudges.push({c:'good',t:'Protein floor hit for the day.'});
+  if(t.chol>tg.chol*0.8)nudges.push({c:t.chol>tg.chol?'crit':'warn',t:'Cholesterol is at '+r0(t.chol)+' of '+tg.chol+' mg. Keep the rest of the day egg-free and lean.'});
+  else nudges.push({c:'',t:'Cholesterol budget: '+r0(left('chol'))+' mg left. One egg is about 185 mg; a 6 oz chicken breast about 145.'});
+  if(t.satfat>tg.satfat*0.8)nudges.push({c:t.satfat>tg.satfat?'crit':'warn',t:'Saturated fat is '+r0(t.satfat)+' of '+tg.satfat+' g. Cheese, butter and fatty cuts are the usual culprits with an ApoB of '+(lab?'170':'yours')+'.'});
+  if(left('fiber')>10)nudges.push({c:'',t:'Fiber: '+r0(t.fiber)+' of '+tg.fiber+' g. Oats, beans, lentils and psyllium are the ones that move LDL.'});
+  const win=dayWindow(date);if(win&&win.len>10*60)nudges.push({c:'warn',t:'Eating window is already '+fmtDur(win.len)+'. Closing it by 8 pm keeps the overnight fast past 12 hours.'});
+  const mv=HEART_MOVES[(hashStr(date+':'+S.shuffle))%HEART_MOVES.length];
+  return h`<div class="card sugg">
+    <div class="head"><h2>Today's suggestions<span class="sub">from your numbers and your bloodwork</span></h2><button class="iconbtn" data-act="shuffle" aria-label="Another movement option" title="Another option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg></button></div>
+    <div class="moves">${moveCard(mv,done.includes(mv.id))}</div>
+    <ul class="nudges">${nudges.slice(0,4).map(n=>h`<li class="${n.c}">${esc(n.t)}</li>`).join('')}</ul>
+  </div>`;
+}
+function library(done){
+  const q=pp();const wk=weeksPP();
+  return Object.keys(CATS).map(cat=>{const items=MOVES.filter(m=>m.cat===cat);if(!items.length)return'';
+    return h`<div class="libgroup"><h3 class="c-${cat}">${esc(CATS[cat])}</h3><div class="moves">${items.map(m=>{const locked=wk<m.minWeek||(!q.cleared&&!['breath','stretch','walk'].includes(cat));return locked?h`<div class="move" style="opacity:.5"><div class="t">${esc(m.title)}</div><div class="meta">${m.mins} min · ${wk<m.minWeek?'from week '+m.minWeek:'after provider clearance'}</div></div>`:moveCard(m,done.includes(m.id))}).join('')}</div></div>`}).join('');
 }
 
 function timeline(entries,win,isToday){
@@ -851,7 +1056,14 @@ function labFlag(m){
   if(hi!=null&&v>hi) return 'high';if(lo!=null&&v<lo) return 'low';if(hi!=null&&v>hi*0.92) return 'borderline';return 'normal';
 }
 function renderLabs(){
-  if(!S.labs.length) return h`<div class="card"><div class="empty"><b>No bloodwork yet</b><p>Send your lab report screenshots to Claude in chat. Every marker lands here with its reference range, and Coach ties your meals back to it.</p></div></div>${howItWorks()}`;
+  if(!S.labs.length) return (isPP()?h`<div class="card"><div class="empty"><b>No bloodwork for ${esc(dispName(me()))} yet</b><p>When you get a panel, send the report screenshots to Claude in chat and every marker lands here with its range.</p></div>
+    <h2 style="margin-top:6px">Worth asking for at the postpartum visit</h2>
+    <ul class="nudges" style="margin-top:0">
+      <li>CBC and ferritin. Iron stores after a fourth delivery and months of night feeds are the first thing to check when tiredness feels bigger than sleep debt.</li>
+      <li>TSH and free T4. Postpartum thyroid swings peak between 2 and 6 months and look exactly like new-mom exhaustion or low mood.</li>
+      <li>Vitamin D, and B12 if meat is rare on the plate.</li>
+      <li>Fasting glucose or A1c if there was gestational diabetes, and a lipid panel once breastfeeding is done, since nursing shifts it.</li>
+    </ul></div>`:h`<div class="card"><div class="empty"><b>No bloodwork yet</b><p>Send your lab report screenshots to Claude in chat. Every marker lands here with its reference range, and Coach ties your meals back to it.</p></div></div>`)+howItWorks();
   const panel=S.labs[Math.min(S.labIndex,S.labs.length-1)];const markers=Array.isArray(panel.markers)?panel.markers:[];
   const groups=[];for(const m of markers){const gname=m.group||'Other';let g=groups.find(x=>x.name===gname);if(!g){g={name:gname,items:[]};groups.push(g)}g.items.push(m)}
   const flagged=markers.filter(m=>['high','low'].includes(labFlag(m)));const border=markers.filter(m=>labFlag(m)==='borderline');
@@ -896,6 +1108,14 @@ async function onAction(ev){
   const b=ev.currentTarget;const act=b.dataset.act;
   if(act==='date'){const d=shiftDate(S.date,+b.dataset.n);if(d>todayStr())return;S.date=d;S.confirmId=null;S.addOpen=false;render();return}
   if(act==='range'){S.range=+b.dataset.n;render();return}
+  if(act==='shuffle'){S.shuffle++;render();return}
+  if(act==='lib'){S.libOpen=!S.libOpen;render();return}
+  if(act==='done'){const id=b.dataset.id;const d=dayDoc(S.date);const moves=Array.isArray(d.moves)?d.moves.slice():[];const i=moves.indexOf(id);if(i>=0)moves.splice(i,1);else moves.push(id);
+    const doc={water:num(d.water),moves,updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
+    try{await store.set('days',S.date,doc);if(i<0)toast('Nice. Logged for '+fmtShort(S.date))}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
+  if(act==='water'){const d=dayDoc(S.date);const water=Math.max(0,Math.min(30,num(d.water)+(+b.dataset.n)));const doc={water,moves:Array.isArray(d.moves)?d.moves:[],updatedAt:new Date().toISOString()};
+    if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
+    try{await store.set('days',S.date,doc)}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
   if(act==='lab'){S.labIndex=+b.dataset.n;render();return}
   if(act==='toggleAdd'){S.addOpen=!S.addOpen;render();if(S.addOpen){const f=document.getElementById('add_name');f&&f.focus()}return}
   if(act==='edit'){openEdit(b.dataset.id);return}
@@ -947,17 +1167,19 @@ function toggleMic(){
   rec.onend=()=>{snap.rec=null;btn.classList.remove('live')};
   try{rec.start();snap.rec=rec;btn.classList.add('live')}catch(e){snap.rec=null}
 }
+function snapOpen(){return !!document.getElementById('snapBg')}
 function closeSnap(){if(snap.ctl)snap.ctl.abort();if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null}if(snap.url)URL.revokeObjectURL(snap.url);snap.blob=null;snap.url='';snap.result=null;document.getElementById('sheetRoot').innerHTML=''}
 function renderSnap(streamText){
   const root=document.getElementById('sheetRoot');const r=snap.result;const talk=snap.mode==='talk';const canAsk=!!(S.sample&&(talk||S.canImages));
   const time=(document.getElementById('snapTime')||{}).value||nowTime();const note=(document.getElementById('snapNote')||{}).value||'';
+  const who=h`<div class="row between" style="margin-top:10px"><span class="small">Logging for <b>${esc(dispName(me()))}</b></span><button class="linkbtn" id="snapWho" type="button">not ${isPP()?'her':'him'}? switch</button></div>`;
   root.innerHTML=h`<div class="sheet-bg" id="snapBg"><div class="sheet" role="dialog" aria-label="${talk?'Tell Claude what you ate':'Log a photo'}">
     <div class="grab"></div>
     ${talk?h`<h2>What did you eat?</h2>
       <textarea class="talkbox" id="snapNote" placeholder="Just talk: two scrambled eggs, sourdough toast with butter, a black coffee. Tap the mic key on your keyboard and say it.">${esc(note)}</textarea>
       <div class="microw">${SR?h`<button type="button" class="mic" id="micBtn" aria-label="Start or stop listening"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></svg></button>`:''}<span class="tiny muted" id="micHint">${SR?'Tap to listen, tap again to stop. Or use the mic key on your keyboard.':'Tap the mic key on your keyboard and dictate.'}</span>
-        <div class="field" style="margin-left:auto"><span>Eaten at</span><input id="snapTime" type="time" value="${esc(time)}" style="width:118px"></div></div>`
-    :h`<img class="preview" src="${esc(snap.url)}" alt="Your photo">
+        <div class="field" style="margin-left:auto"><span>Eaten at</span><input id="snapTime" type="time" value="${esc(time)}" style="width:118px"></div></div>${who}`
+    :h`<img class="preview" src="${esc(snap.url)}" alt="Your photo">${who}
     <div class="snapgrid">
       <div class="field"><span>Anything Claude should know? (optional)</span><input id="snapNote" placeholder="double chicken, no sour cream, 12 oz" value="${esc(note)}"></div>
       <div class="field"><span>Eaten at</span><input id="snapTime" type="time" value="${esc(time)}" style="width:118px"></div>
@@ -974,6 +1196,7 @@ function renderSnap(streamText){
   </div></div>`;
   document.getElementById('snapBg').addEventListener('click',e=>{if(e.target.id==='snapBg'&&!snap.busy)closeSnap()});
   document.getElementById('snapCancel').addEventListener('click',closeSnap);
+  document.getElementById('snapWho').addEventListener('click',()=>openPicker(false));
   const go=document.getElementById('snapGo');if(go)go.addEventListener('click',()=>analyze(false));
   const ans=document.getElementById('snapAnswer');if(ans)ans.addEventListener('click',()=>analyze(true));
   const sv=document.getElementById('snapSave');if(sv)sv.addEventListener('click',saveSnap);
@@ -991,6 +1214,12 @@ function snapResult(r){
     ${r.questions&&r.questions.length?h`<div class="questions"><b>Claude asks</b><ul>${r.questions.map(q=>h`<li>${esc(q)}</li>`).join('')}</ul><input id="snapReply" placeholder="Type your answer, then re-analyze" style="width:100%;background:var(--bg);border:1px solid var(--line-2);border-radius:10px;padding:8px 10px"></div>`:''}
   </div>`;
 }
+function personIntro(){
+  const p=me();
+  if(isPP()){const q=pp();return 'You are the nutrition logger inside Macro Polo. This log belongs to '+dispName(p)+', who is '+weeksPP()+' weeks postpartum after her fourth baby'+(q.breastfeeding?' and is breastfeeding':'')+'. Her priorities are enough total calories (never push restriction), protein, iron, calcium, fiber, omega-3 and hydration, with steady blood sugar. Cholesterol is not a concern for her.'}
+  return 'You are the nutrition logger inside Macro Polo, Adrian\'s food tracker. His priorities are lowering LDL and ApoB (saturated fat, dietary cholesterol, fiber) and calm blood sugar.';
+}
+function analysisAsk(){return isPP()?'2 or 3 plain sentences: what this plate does well for postpartum recovery and milk supply, the biggest gap (protein, iron, calcium or fiber), and one easy addition':'2 or 3 plain sentences: the biggest cholesterol, sodium or blood-sugar driver on the plate and one easy swap'}
 function profileContext(){
   const tg=targets();const parts=['Daily targets: '+NUTR.map(n=>n.l+' '+tg[n.k]+n.u).join(', ')+'.'];
   if(S.labs.length){const p=S.labs[0];const fl=(p.markers||[]).filter(m=>['high','low','borderline'].includes(labFlag(m))).map(m=>m.name+' '+m.value+(m.unit||'')+' ('+labFlag(m)+')');if(fl.length)parts.push('Latest bloodwork flags ('+p.date+'): '+fl.join('; ')+'.')}
@@ -1004,10 +1233,10 @@ async function analyze(withAnswer){
   if(snap.rec){try{snap.rec.stop()}catch(e){}snap.rec=null}
   const reply=withAnswer?((document.getElementById('snapReply')||{}).value||''):'';
   if(withAnswer&&!reply.trim()){toast('Type an answer first');return}
-  const who=S.profile==='b'?((S.settings&&S.settings.name)||'Katie'):'Adrian';
-  const base='You are the nutrition logger inside Macro Polo, '+who+'\'s food tracker. '+(talk?who+' describes what they ate at '+fmtTime(time)+', in their own words (possibly dictated, so read past typos): "'+note.replace(/"/g,'\'')+'". There is no photo.':'The attached photo is food '+who+' is eating or about to eat at '+fmtTime(time)+'.'+(note?' Their note: "'+note.replace(/"/g,'\'')+'".':''))+
+  const who=dispName(me());
+  const base=personIntro()+(talk?' '+who+' describes what they ate at '+fmtTime(time)+', in their own words (possibly dictated, so read past typos): "'+note.replace(/"/g,'\'')+'". There is no photo.':' The attached photo is food '+who+' is eating or about to eat at '+fmtTime(time)+'.'+(note?' Note from '+who+': "'+note.replace(/"/g,'\'')+'".':''))+
     ' Identify every distinct item and a realistic portion (restaurant portions are large). Estimate nutrition per item from standard USDA-style references.'+
-    ' Reply with only JSON of this shape: {"name": "short meal name", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "2 or 3 plain sentences: the biggest cholesterol, sodium or blood-sugar driver on the plate and one easy swap", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": "one short clause"}, "confidence": "high|medium|low", "questions": []}.'+
+    ' Reply with only JSON of this shape: {"name": "short meal name", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "'+analysisAsk()+'", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": "one short clause"}, "confidence": "high|medium|low", "questions": []}.'+
     ' Units: grams for protein, carbs, fat, fiber, sugar (added or free sugar only), satfat; milligrams for chol and sodium; numbers only, no unit strings. impact: gl under 10 low, 10 to 20 moderate, over 20 high. Put at most 2 short questions in "questions" only when an item, portion or preparation is genuinely unclear and changes the numbers a lot; otherwise leave it empty and commit to your best estimate. '+profileContext();
   if(withAnswer&&snap.result){snap.turns.push({role:'assistant',content:JSON.stringify(snap.result)});snap.turns.push({role:'user',content:'My answer to your question: "'+reply.replace(/"/g,'\'')+'". Re-estimate '+(talk?'':'with the same photo ')+'and reply with the same JSON shape only, with "questions" empty.'})}
   else{snap.turns=[{role:'user',content:base}]}
@@ -1091,9 +1320,9 @@ function renderEdit(streamText){
 async function adjustWithClaude(){
   if(!S.sample||ed.busy)return;readEditForm();
   const ask=(document.getElementById('edAsk')||{}).value||'';if(!ask.trim()){toast('Say what to change first');return}
-  const prompt='You are the nutrition logger inside Macro Polo, Adrian\'s food tracker. Here is a logged meal as JSON: '+JSON.stringify({name:ed.doc.name,time:ed.doc.time,items:ed.items})+
-    '. Adrian says this correction: "'+ask.replace(/"/g,'\'')+'". Apply it: change, remove, add or rescale only the items the correction touches, keep everything else as it is, and recompute realistically from standard USDA-style references.'+
-    ' Reply with only JSON: {"name": "", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "2 or 3 plain sentences on the biggest cholesterol, sodium or blood-sugar driver and one easy swap", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": ""}}. Units: grams for protein, carbs, fat, fiber, sugar (added sugar only), satfat; milligrams for chol and sodium; numbers only. '+profileContext();
+  const prompt=personIntro()+' Here is a logged meal as JSON: '+JSON.stringify({name:ed.doc.name,time:ed.doc.time,items:ed.items})+
+    '. '+dispName(me())+' says this correction: "'+ask.replace(/"/g,'\'')+'". Apply it: change, remove, add or rescale only the items the correction touches, keep everything else as it is, and recompute realistically from standard USDA-style references.'+
+    ' Reply with only JSON: {"name": "", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "'+analysisAsk()+'", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": ""}}. Units: grams for protein, carbs, fat, fiber, sugar (added sugar only), satfat; milligrams for chol and sodium; numbers only. '+profileContext();
   ed.busy=true;renderEdit();
   try{
     const r=await S.sample.json(prompt,{modelTier:'default',cache:false,onText:({text})=>{const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(text.slice(-160))}});
@@ -1116,13 +1345,22 @@ async function saveEdit(){
 // ---------- settings sheet ----------
 document.getElementById('settingsBtn').addEventListener('click',openSettings);
 function openSettings(){
-  const tg=targets();const root=document.getElementById('sheetRoot');
-  root.innerHTML=h`<div class="sheet-bg" id="sheetBg"><div class="sheet" role="dialog" aria-label="Targets"><div class="grab"></div>
-    <h2>${S.profile==='b'?'Katie\'s':'Adrian\'s'} targets</h2>
-    <form id="tgForm"><div class="field" style="margin-bottom:12px"><span>Name on the toggle</span><input id="tg_name" name="name" value="${esc((S.settings&&S.settings.name)||PROFILES[S.profile].name)}" maxlength="14"></div>
-    <p class="small muted" style="margin:0 0 12px">Protein and fiber are floors to reach. Calories, carbs and fat are budgets. Sugar, saturated fat, cholesterol and sodium are ceilings. Claude tunes these from bloodwork.</p>
+  const tg=targets();const root=document.getElementById('sheetRoot');const q=pp();
+  root.innerHTML=h`<div class="sheet-bg" id="sheetBg"><div class="sheet" role="dialog" aria-label="Settings"><div class="grab"></div>
+    <h2>${esc(profName(S.profile))}'s settings</h2>
+    <form id="tgForm">
+    <div class="ppform">
+      <label class="full">Name on the toggle<input type="text" name="name" id="tg_name" value="${esc((S.settings&&S.settings.name)||PROFILES[S.profile].name)}" maxlength="14"></label>
+      ${isPP()?h`
+      <label>Baby born<input type="date" name="born" id="st_born" value="${esc(q.born)}"></label>
+      <label>Delivery<select name="delivery" id="st_delivery"><option value="vaginal" ${q.delivery==='vaginal'?'selected':''}>Vaginal</option><option value="csection" ${q.delivery==='csection'?'selected':''}>C-section</option></select></label>
+      <label class="chk full"><input type="checkbox" name="bf" id="st_bf" ${q.breastfeeding?'checked':''}>Breastfeeding (adds about 400 kcal and 3 cups of water to the targets)</label>
+      <label class="chk full"><input type="checkbox" name="cleared" id="st_cleared" ${q.cleared?'checked':''}>Cleared for exercise by my provider (unlocks core and yoga)</label>`:''}
+    </div>
+    <h2 style="font-size:16px">Daily targets</h2>
+    <p class="small muted" style="margin:0 0 12px">${isPP()?'Protein, fiber and calories are floors right now: recovery and milk come first. Sugar, saturated fat and sodium are ceilings.':'Protein and fiber are floors to reach. Calories, carbs and fat are budgets. Sugar, saturated fat, cholesterol and sodium are ceilings. Claude tunes these from bloodwork.'}</p>
     <div class="targets">${NUTR.map(n=>h`<label>${n.l} (${n.u})<input type="number" step="any" min="0" name="${n.k}" id="tg_${n.k}" value="${tg[n.k]}"></label>`).join('')}</div>
-    <div class="row between" style="margin-top:14px"><span class="tiny muted">${S.mode==='db'?(S.root?'Saved to this private log.':'Saved to the shared store.'):'Saved in this browser only.'}</span><span class="row"><button type="button" class="btn ghost sm" id="tgCancel">Cancel</button><button class="btn sm" type="submit">Save</button></span></div></form>
+    <div class="row between" style="margin-top:14px"><span class="row" style="gap:8px"><button type="button" class="linkbtn" id="tgReset">Reset targets to defaults</button><span class="tiny muted">${S.mode==='db'?'Saved to this log only.':'Saved in this browser only.'}</span></span><span class="row"><button type="button" class="btn ghost sm" id="tgCancel">Cancel</button><button class="btn sm" type="submit">Save</button></span></div></form>
     ${S.profile==='a'?h`<div class="looks"><div class="eyebrow">Look</div><div class="swatches">
       <button type="button" class="swatch ${S.theme==='jungle'?'on':''}" data-theme="jungle"><i style="background:linear-gradient(135deg,#153B22 40%,#9BFF3F)"></i>Jungle</button>
       <button type="button" class="swatch ${S.theme==='mint'?'on':''}" data-theme="mint"><i style="background:linear-gradient(135deg,#113A33 35%,#2EE6A6 75%,#3D8BFF)"></i>Mint</button>
@@ -1139,9 +1377,14 @@ function openSettings(){
   root.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.theme)));
   root.querySelectorAll('[data-pick]').forEach(b=>b.addEventListener('click',()=>{pic.kind=b.dataset.pick;const inp=document.getElementById('picInput');inp.value='';inp.click()}));
   root.querySelectorAll('[data-rmpic]').forEach(b=>b.addEventListener('click',()=>savePhoto(b.dataset.rmpic,null)));
+  document.getElementById('tgReset').addEventListener('click',async()=>{const doc=Object.assign({},S.settings||{},{updatedAt:new Date().toISOString()});delete doc.id;delete doc.targets;
+    try{await store.set('settings','profile',doc);if(S.mode==='local')S.settings=Object.assign({id:'profile'},doc);root.innerHTML='';toast('Targets reset');render()}catch(err){toast('Could not reset: '+(err&&err.code||'error'))}});
   document.getElementById('tgForm').addEventListener('submit',async e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const t={};for(const n of NUTR)t[n.k]=num(fd.get(n.k));
     const doc=Object.assign({},S.settings||{},{targets:t,name:String(fd.get('name')||'').trim()||PROFILES[S.profile].name,updatedAt:new Date().toISOString()});delete doc.id;
-    try{await store.set('settings','profile',doc);root.innerHTML='';toast('Targets saved');render()}catch(err){toast('Could not save targets: '+(err&&err.code||'error'))}});
+    if(isPP()){doc.postpartum={born:String(fd.get('born')||q.born),delivery:String(fd.get('delivery')||'vaginal'),breastfeeding:!!fd.get('bf'),cleared:!!fd.get('cleared')};
+      // If only the breastfeeding switch changed and the targets were left at the old defaults, let the new defaults apply.
+      const was=q.breastfeeding?PP_TARGETS_BF:PP_TARGETS_NOBF;if(NUTR.every(n=>t[n.k]===was[n.k]))delete doc.targets;}
+    try{await store.set('settings','profile',doc);if(S.mode==='local')S.settings=Object.assign({id:'profile'},doc);root.innerHTML='';toast('Saved');profileNames();render()}catch(err){toast('Could not save: '+(err&&err.code||'error'))}});
 }
 
 // ---------- profile photos (cover + avatar) ----------
