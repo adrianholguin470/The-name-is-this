@@ -55,6 +55,12 @@ can compute eating windows and fasts.
   grade trend), Recipes (cook for Adrian, Katie or both; "Log a serving" writes a `meals` doc to each chosen
   person's root) and a household Coach (coach chat/memory under `data/users/me/home/coach`). The camera
   button on Home asks fridge-or-receipt; the mic button takes spoken inventory changes.
+- **Bulk upload.** "Upload photos" (Today log card), "Upload several" (Home) and the Home camera chooser open a
+  multi-select picker. Each photo is dated from the file's own timestamp, classified (meal | receipt | fridge),
+  analyzed with the same prompts as single shots, optionally double-checked with a second, slower pass that
+  returns corrections, and saved: meals to the chosen person's root (field `batch: true`), scans to the kitchen.
+  When Adrian sends several photos in chat, do the same: sort them, log each to the right day and person, and
+  run a second look on receipts and crowded plates before writing.
 - **Kitchen (shared).** Joint household inventory under `data/users/me/kitchen/...` (one for both profiles):
   `items` {name, qty, category: produce|protein|dairy|grains|pantry|snacks|drinks|frozen|condiments|other,
   grade: good|ok|avoid, note, status: in|low|out, lastSeen, addedAt, source: fridge|receipt|manual, by},

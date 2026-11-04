@@ -423,6 +423,18 @@ table.t tr:last-child td{border-bottom:none}
 .etotals b{color:var(--fg)}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 
+/* bulk upload */
+.bitems{display:flex;flex-direction:column;gap:10px}
+.bitem{display:grid;grid-template-columns:64px 1fr auto;gap:10px;align-items:start;background:var(--surface-2);border-radius:12px;padding:10px;border:1px solid transparent}
+.bitem img{width:64px;height:64px;object-fit:cover;border-radius:9px;background:var(--surface-3)}
+.bitem .bb{display:flex;flex-direction:column;gap:6px;min-width:0}
+.bitem select,.bitem input{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:6px 8px;font-size:13px;color:var(--fg);min-width:0;width:100%}
+.bitem .row select,.bitem .row input{flex:1}
+.bitem.done,.bitem.checked{border-color:var(--good)}
+.bitem.saved{opacity:.6}
+.bitem.error{border-color:var(--crit)}
+.bitem .tools.x{background:var(--surface-3);border:none;border-radius:8px;width:30px;height:30px;color:var(--crit);font-weight:700}
+
 /* kitchen */
 .kgroup{margin-top:10px}
 .kitems{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
@@ -571,6 +583,7 @@ table.t tr:last-child td{border-bottom:none}
   <input type="file" id="camInput" accept="image/*" capture="environment" hidden>
   <input type="file" id="picInput" accept="image/*" hidden>
   <input type="file" id="kitInput" accept="image/*" hidden>
+  <input type="file" id="batchInput" accept="image/*" multiple hidden>
 </div>
 
 <div id="sheetRoot"></div>
@@ -1070,7 +1083,7 @@ function renderToday(){
   <div class="card"><h2>Blood-sugar impact<span class="sub">estimated glycemic load per meal</span></h2>
     ${entries.length?h`<div class="row between" style="margin-bottom:8px"><span class="chip ${dayImpact}">${IMPACT_LABEL[dayImpact]} day</span><span class="small muted">Load today <b class="num" style="color:var(--fg)">${glSum}</b> · ${glSum<80?'under 80 is a calm day':'over 80 is a rough day for insulin'}</span></div>${spikeChart(spikes)}`:h`<p class="small muted" style="margin:0">Nothing logged for this day yet.</p>`}
   </div>
-  <div class="card"><div class="row between" style="margin-bottom:10px"><h2 style="margin:0">Log<span class="sub">${entries.length?entries.length+' entries':''}</span></h2><button class="btn ghost sm" data-act="toggleAdd">${S.addOpen?'Close':'Add by hand'}</button></div>
+  <div class="card"><div class="row between" style="margin-bottom:10px"><h2 style="margin:0">Log<span class="sub">${entries.length?entries.length+' entries':''}</span></h2><span class="row" style="gap:6px"><button class="btn ghost sm" data-act="batch">Upload photos</button><button class="btn ghost sm" data-act="toggleAdd">${S.addOpen?'Close':'Add by hand'}</button></span></div>
     ${S.addOpen?addForm():''}
     ${entries.length?entryList(entries):h`<div class="empty"><b>Nothing logged ${isToday?'yet today':'this day'}</b><p>Tap the camera below and shoot what you are eating.</p></div>`}
   </div>
@@ -1352,6 +1365,7 @@ function kHead(){
     <div class="row" style="margin-top:12px;gap:8px">
       <button class="btn sm" data-act="kscan" data-kind="fridge">${ICONS.home}Scan fridge or pantry</button>
       <button class="btn sm ghost" data-act="kscan" data-kind="receipt">${ICONS.grocery}Scan receipt</button>
+      <button class="btn sm ghost" data-act="batch">Upload several</button>
       <button class="btn sm ghost" data-act="kadd">Add by hand</button></div>
     ${!canAsk?h`<div class="notice warn" style="margin-top:10px">Scanning needs Claude in this view. You can still add items by hand.</div>`:''}
   </div>`;
@@ -1434,32 +1448,37 @@ function renderKScan(){
   const sv=document.getElementById('ksSave');if(sv)sv.addEventListener('click',saveKScan);
 }
 function closeKScan(){if(kit.url)URL.revokeObjectURL(kit.url);kit.blob=null;kit.url='';kit.result=null;kit.busy=false;document.getElementById('sheetRoot').innerHTML=''}
-async function analyzeKitchen(){
-  if(!S.sample||!kit.blob)return;const receipt=kit.kind==='receipt';
-  const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');
-  const prompt='You are the kitchen scanner inside Macro Polo, a household food app for Adrian and Katie. House rules: '+houseRules().replace(/\n/g,' ')+' '+
+function kitchenPrompt(kind){
+  const receipt=kind==='receipt';const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');
+  return 'You are the kitchen scanner inside Macro Polo, a household food app for Adrian and Katie. House rules: '+houseRules().replace(/\n/g,' ')+' '+
     (receipt?'The attached photo is a grocery receipt. Read every food or drink line (skip non-food). ':'The attached photo shows a fridge, freezer or pantry. List every food or drink you can identify, with a rough quantity. ')+
     'For each item give a category from: produce, protein, dairy, grains, pantry, snacks, drinks, frozen, condiments, other; and a grade against the house rules: "good", "ok" or "avoid", with a short note only when it is avoid or notably good. '+
     (receipt?'Grade the whole trip A to F for how well it serves the house rules (A = mostly produce, lean protein, fiber, little saturated fat or sugar), and list up to 3 concrete swaps for next time. ':'Write a two-sentence summary of what the kitchen looks like for the house rules. ')+
     'Reply with only JSON: {"summary": "", "grade": "'+(receipt?'A|B|C|D|F':'')+'", "items": [{"name": "", "qty": "", "category": "", "grade": "good|ok|avoid", "note": ""}], "swaps": []}.'+(onHand?' Already on hand (for context, still list what you see): '+onHand+'.':'');
+}
+async function analyzeKitchen(){
+  if(!S.sample||!kit.blob)return;const receipt=kit.kind==='receipt';
+  const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name).slice(0,80).join(', ');
+  const prompt=kitchenPrompt(receipt?'receipt':'fridge');
   kit.busy=true;kit.task='scan';kit.text='';renderKScan();
   try{const r=await S.sample.json(prompt,{images:kit.blob,modelTier:'default',cache:false,onText:({text})=>{kit.text=text.slice(-160);const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(kit.text)}});
     if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};kit.result=r;kit.busy=false;renderKScan();
   }catch(e){kit.busy=false;renderKScan();const code=e&&e.code||'error';toast(code==='not_granted'?'Allow this app to use Claude from the artifact menu, then try again.':'Could not read it ('+code+'). Try a closer, brighter shot.')}
 }
+async function saveKitchenResult(kind,r,picked,blob,date,by){
+  const now=new Date().toISOString();let photoId='';
+  if(blob&&S.assets){try{const up=await S.assets.upload(blob);photoId=up.id}catch(e){}}
+  for(const it of picked){const name=String(it.name||'').trim();if(!name)continue;const ex=S.kitems.find(k=>k.name.toLowerCase()===name.toLowerCase());
+    const doc={name,qty:String(it.qty||''),category:KCATS[it.category]?it.category:'other',grade:KGRADE[it.grade]||'ok',note:String(it.note||''),status:'in',lastSeen:now,addedAt:ex?ex.addedAt||now:now,source:kind,by:by||S.profile,updatedAt:now};
+    await kstore.set('items',ex?ex.id:'k-'+uid(),doc)}
+  const scan={date,kind,summary:String(r.summary||''),grade:kind==='receipt'?String(r.grade||''):'',swaps:Array.isArray(r.swaps)?r.swaps.map(String).slice(0,3):[],items:picked.map(i=>i.name),by:by||S.profile,createdAt:now};if(photoId)scan.photoId=photoId;if(r.total)scan.total=String(r.total);
+  await kstore.set('scans',date+'-'+kind+'-'+uid().slice(-4),scan);
+}
 async function saveKScan(){
   const r=kit.result;if(!r)return;const btn=document.getElementById('ksSave');btn.disabled=true;btn.textContent='Saving…';
   const picked=[...document.querySelectorAll('.kpick input:checked')].map(c=>r.items[+c.dataset.i]).filter(Boolean);
-  const now=new Date().toISOString();const date=todayStr();let photoId='';
-  try{
-    if(S.assets){try{const up=await S.assets.upload(kit.blob);photoId=up.id}catch(e){}}
-    for(const it of picked){const name=String(it.name||'').trim();if(!name)continue;const ex=S.kitems.find(k=>k.name.toLowerCase()===name.toLowerCase());
-      const doc={name,qty:String(it.qty||''),category:KCATS[it.category]?it.category:'other',grade:KGRADE[it.grade]||'ok',note:String(it.note||''),status:'in',lastSeen:now,addedAt:ex?ex.addedAt||now:now,source:kit.kind,by:S.profile,updatedAt:now};
-      await kstore.set('items',ex?ex.id:'k-'+uid(),doc)}
-    const scan={date,kind:kit.kind,summary:String(r.summary||''),grade:kit.kind==='receipt'?String(r.grade||''):'',swaps:Array.isArray(r.swaps)?r.swaps.map(String).slice(0,3):[],items:picked.map(i=>i.name),by:S.profile,createdAt:now};if(photoId)scan.photoId=photoId;
-    await kstore.set('scans',date+'-'+kit.kind+'-'+uid().slice(-4),scan);
-    closeKScan();celebrate();toast(picked.length+' items added to the kitchen');render();
-  }catch(e){btn.disabled=false;btn.textContent='Add to kitchen';toast('Could not save ('+(e&&e.code||'error')+')')}
+  try{await saveKitchenResult(kit.kind,r,picked,kit.blob,todayStr());closeKScan();celebrate();toast(picked.length+' items added to the kitchen');render()}
+  catch(e){btn.disabled=false;btn.textContent='Add to kitchen';toast('Could not save ('+(e&&e.code||'error')+')')}
 }
 async function suggestRecipes(){
   if(!S.sample||kit.busy)return;const onHand=S.kitems.filter(i=>i.status!=='out').map(i=>i.name+(i.qty?' ('+i.qty+')':'')+(i.status==='low'?' [low]':''));
@@ -1630,6 +1649,7 @@ async function onAction(ev){
   if(act==='supps'){openSupps();return}
   if(act==='kscan'){kitchenScan(b.dataset.kind);return}
   if(act==='kadd'){openKAdd();return}
+  if(act==='batch'){openBatch();return}
   if(act==='kshowout'){S.showOut=!S.showOut;render();return}
   if(act==='kcycle'){const it=S.kitems.find(k=>k.id===b.dataset.id);if(!it)return;const next={in:'low',low:'out',out:'in'}[it.status||'in'];const doc=Object.assign({},it,{status:next,updatedAt:new Date().toISOString()});delete doc.id;if(next==='in')doc.lastSeen=new Date().toISOString();
     try{await kstore.set('items',it.id,doc)}catch(err){toast('Could not save')}if(S.mode==='local')render();return}
@@ -1667,9 +1687,9 @@ const cam=document.getElementById('camInput');
 document.getElementById('snapBtn').addEventListener('click',()=>{if(isHome()){openKChooser();return}cam.accept=S.canImages?S.imageTypes:'image/*';cam.value='';cam.click()});
 function openKChooser(){const root=document.getElementById('sheetRoot');
   root.innerHTML=h`<div class="sheet-bg" id="kcBg"><div class="sheet" role="dialog" aria-label="What are you scanning?"><div class="grab"></div><h2>What are you scanning?</h2>
-    <div class="bigpick"><button type="button" data-kind="fridge">${ICONS.home}Fridge or pantry</button><button type="button" data-kind="receipt">${ICONS.grocery}Receipt</button></div></div></div>`;
+    <div class="bigpick"><button type="button" data-kind="fridge">${ICONS.home}Fridge or pantry</button><button type="button" data-kind="receipt">${ICONS.grocery}Receipt</button><button type="button" data-kind="batch" style="grid-column:1/-1">${ICONS.trends}Several photos at once</button></div></div></div>`;
   document.getElementById('kcBg').addEventListener('click',e=>{if(e.target.id==='kcBg')root.innerHTML=''});
-  root.querySelectorAll('[data-kind]').forEach(b=>b.addEventListener('click',()=>{root.innerHTML='';kitchenScan(b.dataset.kind)}));}
+  root.querySelectorAll('[data-kind]').forEach(b=>b.addEventListener('click',()=>{root.innerHTML='';if(b.dataset.kind==='batch')openBatch();else kitchenScan(b.dataset.kind)}));}
 async function talkKitchen(text){
   if(!S.sample){toast('Claude is not available in this view');return}
   const onHand=S.kitems.map(i=>i.name+' ['+(i.status||'in')+']').slice(0,120).join('; ');
@@ -1778,6 +1798,12 @@ function profileContext(){
   if(S.labs.length){const p=S.labs[0];const fl=(p.markers||[]).filter(m=>['high','low','borderline'].includes(labFlag(m))).map(m=>m.name+' '+m.value+(m.unit||'')+' ('+labFlag(m)+')');if(fl.length)parts.push('Latest bloodwork flags ('+p.date+'): '+fl.join('; ')+'.')}
   return parts.join(' ');
 }
+function mealPrompt(time,note,who,talk){
+  return personIntro()+(talk?' '+who+' describes what they ate at '+fmtTime(time)+', in their own words (possibly dictated, so read past typos): "'+note.replace(/"/g,'\'')+'". There is no photo.':' The attached photo is food '+who+' is eating or about to eat at '+fmtTime(time)+'.'+(note?' Note from '+who+': "'+note.replace(/"/g,'\'')+'".':''))+
+    ' Identify every distinct item and a realistic portion (restaurant portions are large). Estimate nutrition per item from standard USDA-style references.'+
+    ' Reply with only JSON of this shape: {"name": "short meal name", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "'+analysisAsk()+'", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": "one short clause"}, "confidence": "high|medium|low", "questions": []}.'+
+    ' Units: grams for protein, carbs, fat, fiber, sugar (added or free sugar only), satfat; milligrams for chol and sodium; numbers only, no unit strings. impact: gl under 10 low, 10 to 20 moderate, over 20 high. Put at most 2 short questions in "questions" only when an item, portion or preparation is genuinely unclear and changes the numbers a lot; otherwise leave it empty and commit to your best estimate. '+profileContext();
+}
 async function analyze(withAnswer){
   const talk=snap.mode==='talk';
   if(!S.sample||snap.busy||(!talk&&!snap.blob))return;
@@ -1787,10 +1813,7 @@ async function analyze(withAnswer){
   const reply=withAnswer?((document.getElementById('snapReply')||{}).value||''):'';
   if(withAnswer&&!reply.trim()){toast('Type an answer first');return}
   const who=dispName(me());
-  const base=personIntro()+(talk?' '+who+' describes what they ate at '+fmtTime(time)+', in their own words (possibly dictated, so read past typos): "'+note.replace(/"/g,'\'')+'". There is no photo.':' The attached photo is food '+who+' is eating or about to eat at '+fmtTime(time)+'.'+(note?' Note from '+who+': "'+note.replace(/"/g,'\'')+'".':''))+
-    ' Identify every distinct item and a realistic portion (restaurant portions are large). Estimate nutrition per item from standard USDA-style references.'+
-    ' Reply with only JSON of this shape: {"name": "short meal name", "items": [{"name": "", "qty": "", "cal": 0, "protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "sugar": 0, "satfat": 0, "chol": 0, "sodium": 0}], "analysis": "'+analysisAsk()+'", "glycemic": {"gl": 0, "impact": "low|moderate|high", "note": "one short clause"}, "confidence": "high|medium|low", "questions": []}.'+
-    ' Units: grams for protein, carbs, fat, fiber, sugar (added or free sugar only), satfat; milligrams for chol and sodium; numbers only, no unit strings. impact: gl under 10 low, 10 to 20 moderate, over 20 high. Put at most 2 short questions in "questions" only when an item, portion or preparation is genuinely unclear and changes the numbers a lot; otherwise leave it empty and commit to your best estimate. '+profileContext();
+  const base=mealPrompt(time,note,who,talk);
   if(withAnswer&&snap.result){snap.turns.push({role:'assistant',content:JSON.stringify(snap.result)});snap.turns.push({role:'user',content:'My answer to your question: "'+reply.replace(/"/g,'\'')+'". Re-estimate '+(talk?'':'with the same photo ')+'and reply with the same JSON shape only, with "questions" empty.'})}
   else{snap.turns=[{role:'user',content:base}]}
   snap.busy=true;snap.result=null;snap.ctl=new AbortController();renderSnap();
@@ -1827,6 +1850,104 @@ async function saveSnap(){
   }catch(e){btn.disabled=false;btn.textContent='Save to log';toast('Could not save ('+(e&&e.code||'error')+')')}
 }
 async function blobToDataUrl(blob,maxPx){const small=await downscale(blob,maxPx);return await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.readAsDataURL(small)})}
+
+// ---------- bulk upload: many photos at once, classified, analyzed, double-checked, saved ----------
+const batch={items:[],busy:false,step:'',progress:''};
+const BKIND={auto:'Let Claude decide',meal:'Meal or food',receipt:'Receipt',fridge:'Fridge or pantry'};
+function openBatch(){const inp=document.getElementById('batchInput');inp.value='';inp.click()}
+document.getElementById('batchInput').addEventListener('change',async()=>{
+  const inp=document.getElementById('batchInput');const files=[...(inp.files||[])];if(!files.length)return;
+  toast('Preparing '+files.length+' photo'+(files.length>1?'s':'')+'…');
+  for(const f of files.slice(0,24)){const blob=await downscale(f,1280);const d=new Date(f.lastModified||Date.now());const pad2=n=>String(n).padStart(2,'0');
+    batch.items.push({id:uid(),blob,url:URL.createObjectURL(blob),kind:'auto',date:d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate()),time:pad2(d.getHours())+':'+pad2(d.getMinutes()),who:isHome()?'a':S.profile,note:'',status:'new',result:null,changes:[],err:''})}
+  renderBatch();
+});
+function readBatchForm(){const root=document.getElementById('sheetRoot');root.querySelectorAll('.bitem').forEach(row=>{const it=batch.items.find(x=>x.id===row.dataset.id);if(!it)return;for(const f of ['kind','who','date','time','note']){const el=row.querySelector('[data-f='+f+']');if(el)it[f]=el.value}})}
+function bSummary(it){const r=it.result;if(!r)return '';
+  if(it.kind==='meal'){const items=Array.isArray(r.items)?r.items:[];const cal=items.reduce((a,x)=>a+num(x.cal),0);return h`<b>${esc(r.name||'Meal')}</b> · ${r0(cal)} kcal · ${items.length} item${items.length===1?'':'s'}${r.confidence?' · '+esc(r.confidence)+' confidence':''}`}
+  const n=Array.isArray(r.items)?r.items.length:0;return h`<b>${it.kind==='receipt'?'Receipt':'Fridge'}</b> · ${n} item${n===1?'':'s'}${r.grade?' · grade '+esc(r.grade):''}`}
+function renderBatch(){
+  const root=document.getElementById('sheetRoot');const canAsk=!!(S.sample&&S.canImages);const n=batch.items.length;
+  const done=batch.items.filter(i=>i.status==='done'||i.status==='checked').length;const checked=batch.items.filter(i=>i.status==='checked').length;
+  root.innerHTML=h`<div class="sheet-bg" id="bBg"><div class="sheet" role="dialog" aria-label="Upload photos"><div class="grab"></div>
+    <div class="row between"><h2 style="margin:0">${n} photo${n===1?'':'s'}</h2><button class="linkbtn" id="bMore">add more</button></div>
+    <p class="small muted" style="margin:0 0 10px">Meals, receipts and fridge shots can mix. Each photo's own date and time is used, so older pictures land on the right day. Fix anything, then Analyze all. Double-check runs a second, slower pass on every photo for accuracy.</p>
+    ${!canAsk?h`<div class="notice warn" style="margin-bottom:10px">Claude is not available in this view, so these can only be saved as waiting meals.</div>`:''}
+    ${batch.busy?h`<div class="stream"><span class="pulse"></span>${esc(batch.progress)}</div>`:''}
+    <div class="bitems">${batch.items.map(it=>h`<div class="bitem ${esc(it.status)}" data-id="${esc(it.id)}">
+      <img src="${esc(it.url)}" alt="">
+      <div class="bb">
+        <div class="row" style="gap:6px"><select data-f="kind" ${batch.busy?'disabled':''}>${Object.keys(BKIND).map(k=>h`<option value="${k}" ${it.kind===k?'selected':''}>${BKIND[k]}</option>`).join('')}</select>
+          ${isHome()?h`<select data-f="who" ${batch.busy?'disabled':''}>${['a','b'].map(p=>h`<option value="${p}" ${it.who===p?'selected':''}>${esc(profName(p))}</option>`).join('')}</select>`:''}</div>
+        <div class="row" style="gap:6px"><input data-f="date" type="date" value="${esc(it.date)}" ${batch.busy?'disabled':''}><input data-f="time" type="time" value="${esc(it.time)}" ${batch.busy?'disabled':''}></div>
+        <input data-f="note" placeholder="anything Claude should know" value="${esc(it.note)}" ${batch.busy?'disabled':''}>
+        <div class="tiny ${it.status==='error'?'':'muted'}" style="${it.status==='error'?'color:var(--crit)':''}">${it.status==='new'?'Ready':it.status==='classifying'?'Working out what this is…':it.status==='analyzing'?'Reading…':it.status==='checking'?'Double-checking…':it.status==='error'?esc(it.err||'Failed'):it.status==='saved'?'Saved':bSummary(it)}${it.changes.length?h`<div style="color:var(--accent)">Second pass: ${esc(it.changes.join('; '))}</div>`:''}</div>
+      </div>
+      <button type="button" class="tools x" data-brm="${esc(it.id)}" ${batch.busy?'disabled':''} aria-label="Remove">✕</button>
+    </div>`).join('')}</div>
+    <div class="row" style="margin-top:14px;justify-content:flex-end;gap:8px"><button class="btn ghost sm" id="bCancel" ${batch.busy?'disabled':''}>Cancel</button>
+      ${canAsk?h`<button class="btn sm ghost" id="bAnalyze" ${batch.busy||!n?'disabled':''}>Analyze all</button><button class="btn sm ghost" id="bCheck" ${batch.busy||!done?'disabled':''}>Double-check${done?' '+done:''}</button>`:''}
+      <button class="btn sm" id="bSave" ${batch.busy||!n?'disabled':''}>Save ${canAsk&&done?done+' ready':'all'}</button></div>
+  </div></div>`;
+  document.getElementById('bBg').addEventListener('click',e=>{if(e.target.id==='bBg'&&!batch.busy)closeBatch()});
+  document.getElementById('bCancel').addEventListener('click',closeBatch);
+  document.getElementById('bMore').addEventListener('click',()=>{readBatchForm();openBatch()});
+  root.querySelectorAll('[data-brm]').forEach(b=>b.addEventListener('click',()=>{readBatchForm();const it=batch.items.find(x=>x.id===b.dataset.brm);if(it&&it.url)URL.revokeObjectURL(it.url);batch.items=batch.items.filter(x=>x.id!==b.dataset.brm);if(batch.items.length)renderBatch();else closeBatch()}));
+  const an=document.getElementById('bAnalyze');if(an)an.addEventListener('click',()=>runBatch(false));
+  const ck=document.getElementById('bCheck');if(ck)ck.addEventListener('click',()=>runBatch(true));
+  document.getElementById('bSave').addEventListener('click',saveBatch);
+}
+function closeBatch(){for(const it of batch.items){if(it.url)URL.revokeObjectURL(it.url)}batch.items=[];batch.busy=false;document.getElementById('sheetRoot').innerHTML=''}
+function bProgress(i,total,what){batch.progress=what+' '+(i+1)+' of '+total;const el=document.querySelector('.stream');if(el)el.innerHTML='<span class="pulse"></span>'+esc(batch.progress)}
+async function runBatch(checkPass){
+  if(!S.sample||batch.busy)return;readBatchForm();batch.busy=true;renderBatch();
+  const todo=batch.items.filter(it=>checkPass?(it.status==='done'):(it.status==='new'||it.status==='error'));
+  for(let i=0;i<todo.length;i++){const it=todo[i];
+    try{
+      if(!checkPass){
+        if(it.kind==='auto'){it.status='classifying';bProgress(i,todo.length,'Sorting');renderBatch();
+          const c=await S.sample.json('Look at this photo and say what it is for a food-tracking app. Reply with only JSON: {"kind": "meal|receipt|fridge|other"}. meal = a plate, dish, drink, snack, menu or nutrition label; receipt = a store receipt; fridge = the inside of a fridge, freezer or pantry shelf; other = none of these.',{images:it.blob,modelTier:'quick',cache:false});
+          it.kind=(c&&['meal','receipt','fridge'].includes(c.kind))?c.kind:'meal'}
+        it.status='analyzing';bProgress(i,todo.length,'Reading');renderBatch();
+        const who=isHome()?it.who:S.profile;
+        if(it.kind==='meal'){const saveP=S.profile;const prompt=withProfile(who,()=>mealPrompt(it.time,it.note,profName(who),false));
+          const r=await S.sample.json([{role:'user',content:prompt}],{images:it.blob,modelTier:'default',cache:false});if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};it.result=r}
+        else{const r=await S.sample.json(kitchenPrompt(it.kind)+(it.note?' Note from the person: "'+it.note.replace(/"/g,'\'')+'".':''),{images:it.blob,modelTier:'default',cache:false});if(!r||!Array.isArray(r.items))throw {code:'invalid_json'};it.result=r}
+        it.status='done';
+      }else{
+        it.status='checking';bProgress(i,todo.length,'Double-checking');renderBatch();
+        const shape=it.kind==='meal'?'the meal JSON (name, items with qty and the nine nutrition numbers, analysis, glycemic, confidence, questions)':'the kitchen JSON (summary, grade, items with name, qty, category, grade, note, swaps)';
+        const r=await S.sample.json('Second pass for accuracy. Here is a first read of the attached photo as JSON: '+JSON.stringify(it.result).slice(0,12000)+'. Look at the photo again slowly and carefully. Find anything missed, misread, double-counted or mis-sized'+(it.kind==='receipt'?', re-read every receipt line and its price, and check that quantities match the receipt':it.kind==='meal'?', and sanity-check portions against the plate and typical serving sizes':'')+'. Reply with only JSON: {"result": <corrected '+shape+', same shape as given>, "changes": ["one short line per correction, or empty if the first read was right"]}',{images:it.blob,modelTier:'complex',cache:false});
+        if(r&&r.result&&Array.isArray(r.result.items)){it.result=r.result;it.changes=Array.isArray(r.changes)?r.changes.map(String).slice(0,6):[]}
+        it.status='checked';
+      }
+    }catch(e){it.status='error';it.err=(e&&e.code==='not_granted')?'Allow this app to use Claude from the artifact menu.':'Could not read this one ('+(e&&e.code||'error')+'). Try again or remove it.';if(e&&e.code==='not_granted')break}
+    renderBatch();
+  }
+  batch.busy=false;renderBatch();
+}
+function withProfile(p,fn){if(p===S.profile||!PROFILES[p])return fn();const saved=S.profile;S.profile=p;try{return fn()}finally{S.profile=saved}}
+async function saveBatch(){
+  readBatchForm();const canAsk=!!(S.sample&&S.canImages);const ready=batch.items.filter(it=>canAsk?(it.status==='done'||it.status==='checked'):(it.status!=='saved'));
+  if(!ready.length){toast('Analyze first, or remove the ones that failed');return}
+  batch.busy=true;renderBatch();let meals=0,scans=0;
+  for(let i=0;i<ready.length;i++){const it=ready[i];bProgress(i,ready.length,'Saving');
+    try{
+      const who=isHome()?it.who:S.profile;
+      if(it.kind==='meal'||!it.result){const r=it.result;const doc={date:it.date,time:it.time,name:r?String(r.name||'Meal'):'Photo meal',source:'photo',createdAt:new Date().toISOString(),userNote:it.note,batch:true};
+        if(r){doc.items=r.items.map(x=>Object.assign({name:String(x.name||''),qty:String(x.qty||'')},Object.fromEntries(NUTR.map(n=>[n.k,num(x[n.k])]))));doc.analysis=String(r.analysis||'');if(r.glycemic&&r.glycemic.impact)doc.glycemic={gl:num(r.glycemic.gl),impact:String(r.glycemic.impact),note:String(r.glycemic.note||'')};doc.confidence=r.confidence||'';if(it.changes.length)doc.notes='Double-checked: '+it.changes.join('; ')}
+        else{doc.pending=true;doc.items=[]}
+        if(S.assets){try{const up=await S.assets.upload(it.blob);doc.photoId=up.id}catch(e){}}else if(S.mode==='local'){doc.photoData=await blobToDataUrl(it.blob,640)}
+        await setFor(who,'meals',it.date+'-'+slug(doc.name)+'-'+uid().slice(-4),doc);meals++}
+      else{await saveKitchenResult(it.kind,it.result,it.result.items,it.blob,it.date,who);scans++}
+      it.status='saved';
+    }catch(e){it.status='error';it.err='Could not save ('+(e&&e.code||'error')+')'}
+    renderBatch();
+  }
+  batch.busy=false;const left=batch.items.filter(it=>it.status!=='saved');
+  if(left.length){renderBatch();toast('Saved '+(meals+scans)+'; '+left.length+' still need attention')}else{closeBatch();celebrate();toast('Saved '+meals+' meal'+(meals===1?'':'s')+' and '+scans+' scan'+(scans===1?'':'s'))}
+  render();
+}
 
 // ---------- edit sheet: fix an entry by hand or by telling Claude what changed ----------
 const ed={id:null,doc:null,items:[],busy:false};
