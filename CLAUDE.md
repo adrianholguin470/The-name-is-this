@@ -13,15 +13,26 @@ can compute eating windows and fasts.
   https://claude.ai/artifact/YNW3ggSSi4RMyuVomw4ms9
 - Republish after editing `index.html`: Artifact publish with that `url` (read it first if
   this session has not published it). Keep
-  `capabilities: {db: {}, user: {}, sample: {images: true}, assets: {}}`.
+  `capabilities: {db: {}, user: {}, sample: {images: true}, assets: {upload: "interact"}}`.
 - Data is written with the `ArtifactData` tool against that URL. Never hardcode data
   into the page.
+- **Every person has a private log.** The app is shared with Adrian's wife; each signed-in
+  viewer reads and writes only `data/users/<their id>/root/...`, invisible to everyone else,
+  the owner included. From Adrian's chat, address his data with the `me` segment:
+  collections `data/users/me/root/meals`, `data/users/me/root/labs`,
+  `data/users/me/root/insights`, and the settings doc at collection
+  `data/users/me/root/settings`, doc id `profile`. The top-level `meals`, `labs`,
+  `insights`, `settings` collections are no longer used (they were migrated on 2026-11-04).
+  His wife's data cannot be reached from his chat; she uses the in-app camera, or her own
+  Claude account.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at
   it from chat: Artifact `read` with that `url` and `path: <photoId>`.
 
 ## Database collections
 
 All dates are local calendar dates as `YYYY-MM-DD`. Times are `HH:MM` 24h.
+
+Collection names below are relative to the person's root (`data/users/me/root/`).
 
 ### `meals` — one document per logged meal or food
 

@@ -314,7 +314,7 @@ const S = {
   view:'today', date: todayStr(), range:7,
   settings:null, meals:[], labs:[], insights:[],
   loaded:{meals:false,labs:false,insights:false,settings:false},
-  mode:'local', db:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
+  mode:'local', db:null, root:null, uid:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
   labIndex:0, addOpen:false, confirmId:null,
 };
 
@@ -383,18 +383,21 @@ const listeners={};
 function lsGet(coll){try{return JSON.parse(localStorage.getItem(LS_PREFIX+coll)||'[]')}catch(e){return []}}
 function lsSet(coll,arr){try{localStorage.setItem(LS_PREFIX+coll,JSON.stringify(arr))}catch(e){}}
 function lsEmit(coll){(listeners[coll]||[]).forEach(fn=>fn(lsGet(coll)))}
+// Each signed-in person gets their own private subtree (data/users/<id>/root/...), invisible to
+// everyone else on the artifact, the owner included. Without a user id, shared top-level collections.
+function collRef(coll){return S.root?S.root.collection(coll):S.db.collection(coll)}
 const store={
   subscribe(coll,cb,onErr){
-    if(S.db){return S.db.collection(coll).limit(1000).onSnapshot(snap=>cb(snap.docs.map(d=>Object.assign({id:d.id},d.data()))),err=>{onErr&&onErr(err)})}
+    if(S.db){return collRef(coll).limit(1000).onSnapshot(snap=>cb(snap.docs.map(d=>Object.assign({id:d.id},d.data()))),err=>{onErr&&onErr(err)})}
     (listeners[coll]=listeners[coll]||[]).push(cb);cb(lsGet(coll));
     return ()=>{listeners[coll]=(listeners[coll]||[]).filter(f=>f!==cb)};
   },
   async set(coll,id,data){
-    if(S.db){await S.db.collection(coll).doc(id).set(data);return}
+    if(S.db){await collRef(coll).doc(id).set(data);return}
     const arr=lsGet(coll).filter(d=>d.id!==id);arr.push(Object.assign({id},data));lsSet(coll,arr);lsEmit(coll);
   },
   async del(coll,id){
-    if(S.db){await S.db.collection(coll).doc(id).delete();return}
+    if(S.db){await collRef(coll).doc(id).delete();return}
     lsSet(coll,lsGet(coll).filter(d=>d.id!==id));lsEmit(coll);
   }
 };
@@ -402,14 +405,15 @@ async function useCap(name){try{return (window.claude&&window.claude.use)?await 
 
 async function boot(){
   route();render();
-  const [db,sample,assets]=await Promise.all([useCap('db'),useCap('sample'),useCap('assets')]);
-  if(db){S.db=db;S.mode='db'}
+  const [db,user,sample,assets]=await Promise.all([useCap('db'),useCap('user'),useCap('sample'),useCap('assets')]);
+  if(db){S.db=db;S.mode='db';let uid=null;try{uid=user?await user.id():null}catch(e){}
+    if(uid){S.uid=uid;S.root=db.doc('data/users/'+uid+'/root')}}
   S.sample=sample;S.assets=assets;
   if(sample){try{const lim=await sample.limits();if(lim&&lim.images){S.canImages=true;S.imageTypes=lim.images.mediaTypes.join(',')||'image/*'}}catch(e){}}
   setSync();subscribeAll();
 }
 function setSync(){const el=document.getElementById('sync'),lbl=document.getElementById('syncLabel');
-  if(S.mode==='db'){el.classList.add('on');lbl.textContent='synced'}else{el.classList.remove('on');lbl.textContent='this device only'}}
+  if(S.mode==='db'){el.classList.add('on');lbl.textContent=S.root?'synced · private to you':'synced'}else{el.classList.remove('on');lbl.textContent='this device only'}}
 function subscribeAll(){
   const timer=setTimeout(()=>{if(!S.loaded.meals)toast('Still reaching the data store. Showing what is cached.')},10000);
   store.subscribe('meals',rows=>{S.meals=rows;S.loaded.meals=true;clearTimeout(timer);render()},e=>{S.loaded.meals=true;toast('Could not load meals: '+(e&&e.code||'error'))});
@@ -886,7 +890,7 @@ function openSettings(){
     <h2>Daily targets</h2>
     <p class="small muted" style="margin:0 0 12px">Protein and fiber are floors to reach. Calories, carbs and fat are budgets. Sugar, saturated fat, cholesterol and sodium are ceilings. Claude tunes these from your bloodwork.</p>
     <form id="tgForm"><div class="targets">${NUTR.map(n=>h`<label>${n.l} (${n.u})<input type="number" step="any" min="0" name="${n.k}" id="tg_${n.k}" value="${tg[n.k]}"></label>`).join('')}</div>
-    <div class="row between" style="margin-top:14px"><span class="tiny muted">${S.mode==='db'?'Saved to the shared store.':'Saved in this browser only.'}</span><span class="row"><button type="button" class="btn ghost sm" id="tgCancel">Cancel</button><button class="btn sm" type="submit">Save</button></span></div></form>
+    <div class="row between" style="margin-top:14px"><span class="tiny muted">${S.mode==='db'?(S.root?'Saved to your private log.':'Saved to the shared store.'):'Saved in this browser only.'}</span><span class="row"><button type="button" class="btn ghost sm" id="tgCancel">Cancel</button><button class="btn sm" type="submit">Save</button></span></div></form>
   </div></div>`;
   document.getElementById('sheetBg').addEventListener('click',e=>{if(e.target.id==='sheetBg')root.innerHTML=''});
   document.getElementById('tgCancel').addEventListener('click',()=>root.innerHTML='');
