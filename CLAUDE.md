@@ -43,6 +43,12 @@ can compute eating windows and fasts.
   and `memory` {facts:[{text,t}]}). The page answers with Claude in-page using targets, labs, the last 7 days
   and the memory facts, and saves up to 2 new facts per exchange. From chat, read `coach/memory` to learn what
   each person has said, and add facts there when Adrian tells you something durable.
+- **Supplements.** Collection `supplements` per profile: `{name, dose, schedule: daily|alt|asneeded, time:
+  morning|midday|night, start: YYYY-MM-DD (anchor for every-other-day), note, reminder, photoId, order}`.
+  Ticks live on the `days` doc as `supps: [ids]`. Katie's: pinkstork-postnatal (daily), ritual-iron (every
+  other day from 2026-11-04), wholier-night-minerals (nightly). A Routine named "Katie magnesium reminder"
+  fires into the original build session at 8:37 pm Pacific, checks that day's `supps` and emails
+  katie.holguin.813@gmail.com (cc Adrian) only if the magnesium is not ticked.
 - `settings/profile` also carries `name` (shown on the toggle), `coverId` (asset behind the Today card) and `avatarId` (asset on the toggle button); the app uploads these itself from the gear sheet. The app computes a day score
   (0 to 100 from targets) and a logging streak; both are derived, never stored.
 - A meal photo the app saved is an asset; `photoId` on the meal doc is its id. To look at

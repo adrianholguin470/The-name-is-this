@@ -364,6 +364,19 @@ table.t tr:last-child td{border-bottom:none}
 .etotals b{color:var(--fg)}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 
+/* supplements */
+.supps{display:flex;flex-direction:column;gap:8px}
+.supp{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;background:var(--surface-2);border-radius:12px;padding:9px 10px;border:1px solid transparent}
+.supp img,.supp i{width:44px;height:44px;border-radius:9px;object-fit:cover;background:var(--surface-3);display:block}
+.supp .b{display:flex;flex-direction:column;gap:2px;min-width:0}
+.supp .b b{font-weight:600;line-height:1.25}
+.supp.off{opacity:.6}
+.supp.on{border-color:var(--good)}
+.tick{width:36px;height:36px;border-radius:50%;border:2px solid var(--line-2);background:transparent;color:var(--accent-ink);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none}
+.supp.on .tick{background:var(--good);border-color:var(--good)}
+.srow select{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:6px 8px;font-size:13px;width:100%;min-width:0;color:var(--fg);text-transform:none;letter-spacing:0}
+.srow input[type=text],.srow input[type=date]{font-family:var(--body)}
+
 /* coach chat */
 .coachcard h2{margin-bottom:8px}
 .chat{display:flex;flex-direction:column;gap:8px;max-height:46vh;overflow:auto;padding:2px 0}
@@ -562,7 +575,7 @@ const S = {
   loaded:{meals:false,labs:false,insights:false,settings:false},
   mode:'local', db:null, root:null, uid:null, sample:null, assets:null, canImages:false, imageTypes:'image/*',
   labIndex:0, addOpen:false, confirmId:null,
-  days:[], shuffle:0, libOpen:false, coach:{chat:null,memory:null},
+  days:[], shuffle:0, libOpen:false, coach:{chat:null,memory:null}, supps:[],
 };
 
 // ---------- helpers ----------
@@ -597,7 +610,7 @@ function stdSet(std,bf){const set=STANDARDS[S.profile]||STANDARDS.a;const x=set[
 function baseTargets(){return stdSet(standard(),pp().breastfeeding)}
 function targets(){return Object.assign({},baseTargets(),(S.settings&&S.settings.targets)||{})}
 function waterGoal(){return isPP()?(pp().breastfeeding?12:9):8}
-function dayDoc(date){return S.days.find(d=>d.id===date)||{id:date,water:0,moves:[]}}
+function dayDoc(date){return S.days.find(d=>d.id===date)||{id:date,water:0,moves:[],supps:[]}}
 function hashStr(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
 function ytUrl(id){return 'https://www.youtube.com/watch?v='+encodeURIComponent(id)}
 function ytSearch(q){return 'https://www.youtube.com/results?search_query='+encodeURIComponent(q)}
@@ -770,7 +783,7 @@ document.getElementById('ptoggle').addEventListener('click',e=>{const b=e.target
 function switchProfile(p){
   S.profile=p;try{localStorage.setItem('macropolo:profile',p)}catch(e){}
   S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];
-  S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.days=[];S.coach={chat:null,memory:null};coach.busy=false;S.shuffle=0;S.libOpen=false;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
+  S.meals=[];S.labs=[];S.insights=[];S.settings=null;S.days=[];S.coach={chat:null,memory:null};coach.busy=false;S.supps=[];S.shuffle=0;S.libOpen=false;S.loaded={meals:false,labs:false,insights:false,settings:false};S.confirmId=null;S.addOpen=false;S.labIndex=0;S.date=todayStr();
   loadLookFor(p);applyProfile();setRoot();setSync();render();subscribeAll();
   document.getElementById('pickRoot').innerHTML='';if(snapOpen())renderSnap();
   toast(profName(p)+(p==='b'?'\'s log. Pink mode on.':'\'s log. Game on.'));
@@ -797,6 +810,7 @@ function subscribeAll(){
   S.unsubs.push(store.subscribe('insights',rows=>{S.insights=rows.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||String(b.createdAt||'').localeCompare(String(a.createdAt||'')));S.loaded.insights=true;render()},()=>{S.loaded.insights=true}));
   S.unsubs.push(store.subscribe('settings',rows=>{S.settings=rows.find(r=>r.id==='profile')||null;S.loaded.settings=true;if(S.settings&&S.settings.theme&&THEMES[S.profile][S.settings.theme]&&S.settings.theme!==S.theme)applyTheme(S.settings.theme);if(S.settings&&S.settings.bg&&BGS[S.profile][S.settings.bg]&&S.settings.bg!==S.bg)applyBg(S.settings.bg);profileNames();render()},()=>{S.loaded.settings=true}));
   S.unsubs.push(store.subscribe('days',rows=>{S.days=rows;render()},()=>{}));
+  S.unsubs.push(store.subscribe('supplements',rows=>{S.supps=rows.sort((a,b)=>String(a.order||a.name).localeCompare(String(b.order||b.name)));render()},()=>{}));
   S.unsubs.push(store.subscribe('coach',rows=>{S.coach={chat:rows.find(r=>r.id==='chat')||null,memory:rows.find(r=>r.id==='memory')||null};if(S.view==='coach')render()},()=>{}));
 }
 
@@ -910,6 +924,7 @@ function renderToday(){
                :h`<div class="win"><div class="k">Meals</div><div class="v">${entries.length}<small>logged</small></div></div>`}
     </div>
   </div>
+  ${suppCard(date,isToday)}
   <div class="card"><h2>Heart &amp; blood-sugar ceilings<span class="sub">daily limits</span></h2><div class="limits">${limits}</div></div>
   <div class="card"><h2>Blood-sugar impact<span class="sub">estimated glycemic load per meal</span></h2>
     ${entries.length?h`<div class="row between" style="margin-bottom:8px"><span class="chip ${dayImpact}">${IMPACT_LABEL[dayImpact]} day</span><span class="small muted">Load today <b class="num" style="color:var(--fg)">${glSum}</b> · ${glSum<80?'under 80 is a calm day':'over 80 is a rough day for insulin'}</span></div>${spikeChart(spikes)}`:h`<p class="small muted" style="margin:0">Nothing logged for this day yet.</p>`}
@@ -982,6 +997,53 @@ function library(done){
   const q=pp();const wk=weeksPP();
   return Object.keys(CATS).map(cat=>{const items=MOVES.filter(m=>m.cat===cat);if(!items.length)return'';
     return h`<div class="libgroup"><h3 class="c-${cat}">${esc(CATS[cat])}</h3><div class="moves">${items.map(m=>{const locked=wk<m.minWeek||(!q.cleared&&!['breath','stretch','walk'].includes(cat));return locked?h`<div class="move" style="opacity:.5"><div class="t">${esc(m.title)}</div><div class="meta">${m.mins} min · ${wk<m.minWeek?'from week '+m.minWeek:'after provider clearance'}</div></div>`:moveCard(m,done.includes(m.id))}).join('')}</div></div>`}).join('');
+}
+
+// --- Supplements: what each person takes, due today or not, ticked off per day ---
+const SCHED={daily:'Every day',alt:'Every other day',asneeded:'As needed'};const WHEN={morning:'Morning',midday:'Midday',night:'Night'};
+function dayNum(d){const [y,m,dd]=d.split('-').map(Number);return Math.round(new Date(y,m-1,dd).getTime()/864e5)}
+function suppDue(sp,date){if(sp.schedule==='alt'){const a=dayNum(sp.start||date);return ((dayNum(date)-a)%2+2)%2===0}return sp.schedule!=='asneeded'}
+function suppUrl(sp){return sp.photoId?'/_blob/'+encodeURIComponent(sp.photoId):''}
+function suppCard(date,isToday){
+  const dd=dayDoc(date);const taken=Array.isArray(dd.supps)?dd.supps:[];
+  if(!S.supps.length)return h`<div class="card"><div class="row between"><h2 style="margin:0">Supplements<span class="sub">vitamins and minerals</span></h2><button class="btn ghost sm" data-act="supps">Add</button></div><p class="small muted" style="margin:8px 0 0">Nothing listed yet. Add what ${esc(dispName(me()))} takes and tick it off each day.</p></div>`;
+  const due=S.supps.filter(sp=>suppDue(sp,date));const done=due.filter(sp=>taken.includes(sp.id)).length;
+  return h`<div class="card"><div class="row between" style="margin-bottom:10px"><h2 style="margin:0">Supplements<span class="sub">${done} of ${due.length} due ${isToday?'today':'that day'} taken</span></h2><button class="btn ghost sm" data-act="supps">Manage</button></div>
+    <div class="supps">${S.supps.map(sp=>{const isDue=suppDue(sp,date);const on=taken.includes(sp.id);const url=suppUrl(sp);
+      return h`<div class="supp ${on?'on':''} ${isDue?'':'off'}">${url?h`<img src="${esc(url)}" alt="">`:h`<i></i>`}
+        <div class="b"><b>${esc(sp.name)}</b><span class="tiny muted">${esc(sp.dose||'')}${sp.dose?' · ':''}${SCHED[sp.schedule]||'Every day'}${sp.time?' · '+WHEN[sp.time]:''}${sp.reminder?' · <span style="color:var(--accent)">email reminder</span>':''}</span>${sp.note?h`<span class="tiny muted">${esc(sp.note)}</span>`:''}${!isDue&&sp.schedule==='alt'?h`<span class="tiny muted">Not due ${isToday?'today':'this day'}; next ${esc(fmtShort(shiftDate(date,1)))}.</span>`:''}</div>
+        <button type="button" class="tick" data-act="supp" data-id="${esc(sp.id)}" aria-label="${on?'Taken':'Mark taken'}">${on?'✓':''}</button></div>`}).join('')}</div></div>`;
+}
+function openSupps(){
+  const root=document.getElementById('sheetRoot');const list=S.supps.length?S.supps.map(sp=>Object.assign({},sp)):[];
+  const rowHtml=(sp,i)=>h`<div class="eitem srow" data-i="${i}">
+      <div class="top"><input data-f="name" value="${esc(sp.name||'')}" placeholder="Name (brand and product)"><div class="tools"><button type="button" class="x" data-remove="1" title="Remove">✕</button></div></div>
+      <div class="egrid" style="grid-template-columns:1fr 1fr 1fr">
+        <label>Dose<input data-f="dose" type="text" value="${esc(sp.dose||'')}" placeholder="2 gummies"></label>
+        <label>How often<select data-f="schedule">${Object.keys(SCHED).map(k=>h`<option value="${k}" ${(sp.schedule||'daily')===k?'selected':''}>${SCHED[k]}</option>`).join('')}</select></label>
+        <label>When<select data-f="time">${Object.keys(WHEN).map(k=>h`<option value="${k}" ${(sp.time||'morning')===k?'selected':''}>${WHEN[k]}</option>`).join('')}</select></label>
+        <label>Start (for every other day)<input data-f="start" type="date" value="${esc(sp.start||todayStr())}"></label>
+        <label style="grid-column:span 2">Note<input data-f="note" type="text" value="${esc(sp.note||'')}" placeholder="why, or what the doctor said"></label>
+      </div></div>`;
+  root.innerHTML=h`<div class="sheet-bg" id="spBg"><div class="sheet" role="dialog" aria-label="Supplements"><div class="grab"></div>
+    <h2>${esc(dispName(me()))}'s supplements</h2>
+    <p class="small muted" style="margin:0 0 10px">Each one shows on Today with a tick box. Every-other-day items count from their start date. Coach sees this list too.</p>
+    <div class="eitems" id="spList" style="margin-top:0">${list.map(rowHtml).join('')}</div>
+    <div class="row" style="margin-top:10px"><button class="btn ghost sm" id="spAdd">+ Add one</button></div>
+    <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn ghost sm" id="spCancel">Cancel</button><button class="btn" id="spSave">Save</button></div>
+  </div></div>`;
+  const read=()=>{root.querySelectorAll('.srow').forEach((row,i)=>{const sp=list[i];if(!sp)return;for(const f of ['name','dose','schedule','time','start','note'])sp[f]=row.querySelector('[data-f='+f+']').value})};
+  const rerender=()=>{read();document.getElementById('spList').innerHTML=list.map(rowHtml).join('');wireRows()};
+  const wireRows=()=>{root.querySelectorAll('.srow [data-remove]').forEach(b=>b.addEventListener('click',()=>{read();list.splice(+b.closest('.srow').dataset.i,1);rerender()}))};
+  wireRows();
+  document.getElementById('spBg').addEventListener('click',e=>{if(e.target.id==='spBg')root.innerHTML=''});
+  document.getElementById('spCancel').addEventListener('click',()=>root.innerHTML='');
+  document.getElementById('spAdd').addEventListener('click',()=>{read();list.push({id:'sp-'+uid(),name:'',dose:'',schedule:'daily',time:'morning',start:todayStr()});rerender();const rows=root.querySelectorAll('.srow');const last=rows[rows.length-1];last&&last.querySelector('[data-f=name]').focus()});
+  document.getElementById('spSave').addEventListener('click',async()=>{read();const btn=document.getElementById('spSave');btn.disabled=true;
+    try{const keep=list.filter(sp=>sp.name.trim());const gone=S.supps.filter(sp=>!keep.some(k=>k.id===sp.id));
+      for(const sp of keep){const id=sp.id||('sp-'+uid());const doc=Object.assign({},sp,{name:sp.name.trim(),order:String(keep.indexOf(sp)).padStart(2,'0'),updatedAt:new Date().toISOString()});delete doc.id;await store.set('supplements',id,doc)}
+      for(const sp of gone)await store.del('supplements',sp.id);
+      root.innerHTML='';toast('Supplements saved');render()}catch(e){btn.disabled=false;toast('Could not save ('+(e&&e.code||'error')+')')}});
 }
 
 function timeline(entries,win,isToday){
@@ -1244,12 +1306,16 @@ async function onAction(ev){
   if(act==='shuffle'){S.shuffle++;render();return}
   if(act==='lib'){S.libOpen=!S.libOpen;render();return}
   if(act==='done'){const id=b.dataset.id;const d=dayDoc(S.date);const moves=Array.isArray(d.moves)?d.moves.slice():[];const i=moves.indexOf(id);if(i>=0)moves.splice(i,1);else moves.push(id);
-    const doc={water:num(d.water),moves,updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
+    const doc={water:num(d.water),moves,supps:Array.isArray(d.supps)?d.supps:[],updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
     try{await store.set('days',S.date,doc);if(i<0)toast('Nice. Logged for '+fmtShort(S.date))}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
-  if(act==='water'){const d=dayDoc(S.date);const water=Math.max(0,Math.min(30,num(d.water)+(+b.dataset.n)));const doc={water,moves:Array.isArray(d.moves)?d.moves:[],updatedAt:new Date().toISOString()};
+  if(act==='water'){const d=dayDoc(S.date);const water=Math.max(0,Math.min(30,num(d.water)+(+b.dataset.n)));const doc={water,moves:Array.isArray(d.moves)?d.moves:[],supps:Array.isArray(d.supps)?d.supps:[],updatedAt:new Date().toISOString()};
     if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
     try{await store.set('days',S.date,doc)}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
   if(act==='lab'){S.labIndex=+b.dataset.n;render();return}
+  if(act==='supps'){openSupps();return}
+  if(act==='supp'){const id=b.dataset.id;const d=dayDoc(S.date);const supps=Array.isArray(d.supps)?d.supps.slice():[];const i=supps.indexOf(id);if(i>=0)supps.splice(i,1);else supps.push(id);
+    const doc={water:num(d.water),moves:Array.isArray(d.moves)?d.moves:[],supps,updatedAt:new Date().toISOString()};if(S.mode==='local')S.days=S.days.filter(x=>x.id!==S.date).concat([Object.assign({id:S.date},doc)]);
+    try{await store.set('days',S.date,doc)}catch(err){toast('Could not save: '+(err&&err.code||'error'))}render();return}
   if(act==='clearchat'){S.coach.chat={id:'chat',turns:[]};render();try{await store.set('coach','chat',{turns:[],updatedAt:new Date().toISOString()})}catch(e){}return}
   if(act==='forget'){const facts=coachFacts().slice();facts.splice(+b.dataset.i,1);S.coach.memory={id:'memory',facts};render();try{await store.set('coach','memory',{facts,updatedAt:new Date().toISOString()})}catch(e){}return}
   if(act==='toggleAdd'){S.addOpen=!S.addOpen;render();if(S.addOpen){const f=document.getElementById('add_name');f&&f.focus()}return}
@@ -1357,6 +1423,7 @@ function personIntro(){
 function analysisAsk(){return isPP()?'2 or 3 plain sentences: what this plate does well for postpartum recovery and milk supply, the biggest gap (protein, iron, calcium or fiber), and one easy addition':'2 or 3 plain sentences: the biggest cholesterol, sodium or blood-sugar driver on the plate and one easy swap'}
 function profileContext(){
   const tg=targets();const parts=['Daily targets: '+NUTR.map(n=>n.l+' '+tg[n.k]+n.u).join(', ')+'.'];
+  if(S.supps.length){const tk=Array.isArray(dayDoc(todayStr()).supps)?dayDoc(todayStr()).supps:[];parts.push('Supplements: '+S.supps.map(sp=>sp.name+(sp.dose?' '+sp.dose:'')+' ('+(SCHED[sp.schedule]||'every day').toLowerCase()+(tk.includes(sp.id)?', taken today':suppDue(sp,todayStr())?', not yet today':'')+')').join('; ')+'.')}
   if(S.labs.length){const p=S.labs[0];const fl=(p.markers||[]).filter(m=>['high','low','borderline'].includes(labFlag(m))).map(m=>m.name+' '+m.value+(m.unit||'')+' ('+labFlag(m)+')');if(fl.length)parts.push('Latest bloodwork flags ('+p.date+'): '+fl.join('; ')+'.')}
   return parts.join(' ');
 }
